@@ -1,0 +1,252 @@
+{
+  "main": {
+    "id": "e4bafde3c68a6fb3",
+    "type": "split",
+    "children": [
+      {
+        "id": "9f49114072faf459",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d38f83e0ee8fffa8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "README.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2d6696abc82c3796",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Backend/Backend MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "686f44fbab6746d4",
+    "type": "split",
+    "children": [
+      {
+        "id": "4bb57e58b8f80419",
+        "type": "tabs",
+        "dimension": 62.00716845878136,
+        "children": [
+          {
+            "id": "c6d173446b8ea23c",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "87b3971a23f9da73",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#computer-science",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "2c9f7d276f7c17c2",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "12647ddaae5d883c",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      },
+      {
+        "id": "4291af2bb5f79574",
+        "type": "tabs",
+        "dimension": 37.992831541218635,
+        "children": [
+          {
+            "id": "de9bbc59fe5a4b25",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "README.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "8cf2b2f99d2fd9eb",
+    "type": "split",
+    "children": [
+      {
+        "id": "aa73b7c38d889831",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "60e18b1cd30fd04e",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "README.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "8f660ea5fa464db9",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "README.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "7e94e118fbed72e4",
+            "type": "leaf",
+            "state": {
+              "type": "calendar",
+              "state": {}
+            }
+          },
+          {
+            "id": "f0730ee2735a8bac",
+            "type": "leaf",
+            "state": {
+              "type": "Strange New Worlds",
+              "state": {}
+            }
+          },
+          {
+            "id": "c46930d4dbe73541",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 4
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
+      "obsidian-excalidraw-plugin:Create new drawing": false,
+      "templater-obsidian:Templater": false,
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
+      "omnisearch:Omnisearch": false,
+      "obsidian-textgenerator-plugin:Generate Text!": false,
+      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
+      "obsidian42-brat:BRAT": false,
+      "graph:Open graph view": false,
+      "dbfolder:Create a new database table": false,
+      "homepage:Open homepage": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
+    }
+  },
+  "active": "c6d173446b8ea23c",
+  "lastOpenFiles": [
+    "Productivity/Productivity MOC.md",
+    "Personal/Personal MOC.md",
+    "Personal/Life/Life MOC.md",
+    "Personal/About Me/AboutMe.md",
+    "Technical/Technical MOC.md",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Backend/Backend MOC.md",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Algorithms/Algorithms MOC.md",
+    "Technical/DSA/Algorithms/Big-O Notation.md",
+    "Technical/DSA/Algorithms/Graph/Graph Alogrithms MOC.md",
+    "Technical/DSA/Algorithms/Graph/Minimun Spanning Tree.md",
+    "Technical/DSA/Algorithms/Graph/Shortest Path.md",
+    "Technical/DSA/Algorithms/Graph/Euler Path.md",
+    "Technical/DSA/Algorithms/Graph/Flow.md",
+    "Technical/DSA/Algorithms/Graph/DFS.md",
+    "Technical/DSA/Algorithms/Graph/BFS.md",
+    "Technical/DSA/Algorithms/Graph/Biconnected Components.md",
+    "README.md",
+    "Home.md",
+    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+    "Technical/Programming/JavaScript/JavaScript MOC.md",
+    "Technical/Databases/Databases MOC.md",
+    "Technical/Programming/Go/Quick Golang/Quick Golang MOC.md",
+    "Technical/Programming/Go/Quick Golang/Variables and declaration.md",
+    "Technical/Programming/Go/In Depth/Golang In Depth MOC.md",
+    "Kowledge/Technical/Programming/Java/JavaSE/Basic",
+    "Kowledge/Technical/Programming/Java/JavaSE",
+    "Kowledge/Technical/Programming/Java",
+    "Kowledge/Technical/Programming",
+    "Kowledge/Technical",
+    "\"Kowledge/Technical/Programming/Java/JavaSE/Basic",
+    "\"Kowledge/Technical/Programming/Java/JavaSE",
+    "\"Kowledge/Technical/Programming/Java",
+    "\"Kowledge/Technical/Programming",
+    "\"Kowledge/Technical",
+    "Extras/Media/2023060220061123.png",
+    "Extras/Media/132977191-17ecfef9-0ac5-45fc-ae51-f83563e40162.png",
+    "Extras/Media/2023-06-30_16-55-03.png",
+    "Extras/Media/Pasted image 20230630200359.png",
+    "Extras/Media/Pasted image 20230527220804.png",
+    "Extras/Media/Pasted image 20230529032525.png",
+    "Extras/Media/Pasted image 20230601220543.png",
+    "Extras/Media/Pasted image 20230525205635.png",
+    "Extras/Media/Pasted image 20230701223144.png",
+    "Extras/Media/Pasted image 20230601130528.png"
+  ]
+}

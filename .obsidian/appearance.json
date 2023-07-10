@@ -1,0 +1,10 @@
+{
+  "accentColor": "",
+  "cssTheme": "AnuPpuccin",
+  "enabledCssSnippets": [
+    "supercharged-links-gen",
+    "extended-colorschemes"
+  ],
+  "nativeMenus": true,
+  "translucency": false
+}

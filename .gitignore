@@ -1,0 +1,40 @@
+# System files
+logseq/bak
+logseq/.recycle
+.DS_Store
+.trash
+
+# token, key
+.obsidian/plugins/remotely-save/data.json
+.obsidian/plugins/obsidian-weread-plugin/data.json
+.obsidian/plugins/obsidian-textgenerator-plugin/data.json
+.obsidian/plugins/ava/data.json
+.obsidian/plugins/smart-connections/data.json
+
+# 
+.obsidian/plugins/recent-files-obsidian/data.json
+.obsidian/plugins/omnisearch/searchIndex.json
+.obsidian/plugins/omnisearch/notesCache.json
+.obsidian/plugins/obsidian-advanced-slides/**
+
+
+# obsidian publish
+publish.css
+publish.js
+
+# pdf,epub,mobi
+*.pdf
+*.epub
+*.mobi
+
+# office
+*.ppt
+*.pptx
+*.xls
+*.xlsx
+*.doc
+*.docx
+
+
+# Ignore Smart Connections folder because embeddings file is large and updated frequently
+.smart-connections
