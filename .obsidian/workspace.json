@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
+                "file": "Technical/Programming/Java/Java MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "be3f1603d00216b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +43,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java OOP.md"
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md"
               }
             }
           }
@@ -134,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -208,14 +221,15 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "17b703e0d6f76f4e",
+  "active": "be3f1603d00216b0",
   "lastOpenFiles": [
+    "Technical/Programming/Java/JavaSE/Basic/Java Method In Depth.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
+    "Technical/Programming/Java/Java MOC.md",
     "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
     "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Language Basic.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Basic Data Type In Depth.md",
-    "Technical/Programming/Java/Java MOC.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Basic MOC.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Development Environment.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Exception.md",
@@ -239,7 +253,6 @@
     "Productivity/Productivity MOC.md",
     "Personal/Personal MOC.md",
     "Personal/Life/Life MOC.md",
-    "Personal/About Me/AboutMe.md",
     "Kowledge/Technical/Programming/Java/JavaSE/Basic",
     "Kowledge/Technical/Programming/Java/JavaSE",
     "Kowledge/Technical/Programming/Java",

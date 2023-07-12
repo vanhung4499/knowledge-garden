@@ -3,7 +3,7 @@ tags: [java, javase]
 categories: [java, javase]
 title: JavaSE MOC
 date created: 2023-07-09
-date modified: 2023-07-12
+date modified: 2023-07-13
 ---
 
 - Basic
@@ -12,9 +12,9 @@ date modified: 2023-07-12
 	- [[Java Language Basic Features]]
 	- [[Java Basic Data Type In Depth]]
 	- [[Java OOP]]
+	- [[Java Method In Depth]]
 	- [[Java Array In Depth]]
 	- [[Java Enum In Depth]]
-	- [[Java Method In Dpeth]]
 	- [[Java Control Statements]]
 	- [[Java Exception]]
 	- [[Java Exception In Depth]]

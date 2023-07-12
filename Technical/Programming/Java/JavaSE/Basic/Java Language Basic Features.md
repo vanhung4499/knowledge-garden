@@ -3,7 +3,7 @@ title: Java Language Basic Features
 tags: [java, javase]
 categories: [java, javase]
 date created: 2023-07-11
-date modified: 2023-07-12
+date modified: 2023-07-13
 ---
 
 # Cú pháp cơ bản của Java
@@ -83,7 +83,9 @@ Java hỗ trợ các loại toán tử sau:
 
 ## Method (Phương thức)
 
-> 👉 Đọc thêm: [[Java Method In Dpeth]]
+![Java%20Method.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Method.svg)
+
+> 👉 Đọc thêm: [[Java Method In Depth]]
 
 ## Control statement (Câu lệnh điều khiển)
 
