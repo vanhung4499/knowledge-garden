@@ -69,6 +69,8 @@ So sánh các đặc điểm:
 
 ## Array (Mảng)
 
+![Java Array.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Array.svg)
+
 > 👉 Đọc thêm: [[Java Array In Depth]]
 
 ## Enum

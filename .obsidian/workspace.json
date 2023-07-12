@@ -32,6 +32,18 @@
             }
           },
           {
+            "id": "024eda25927eb8f1",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Method In Depth.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "cb2841221abb38c5",
             "type": "leaf",
             "state": {
@@ -223,12 +235,14 @@
   },
   "active": "be3f1603d00216b0",
   "lastOpenFiles": [
-    "Technical/Programming/Java/JavaSE/Basic/Java Method In Depth.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Language Basic.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Array In Depth.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Method In Depth.md",
     "Technical/Programming/Java/Java MOC.md",
     "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+    "Technical/Programming/JavaScript/JavaScript MOC.md",
     "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Language Basic.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Basic Data Type In Depth.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Basic MOC.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Development Environment.md",
@@ -251,8 +265,6 @@
     "Technical/Computer Science/Computer Science MOC.md",
     "README.md",
     "Productivity/Productivity MOC.md",
-    "Personal/Personal MOC.md",
-    "Personal/Life/Life MOC.md",
     "Kowledge/Technical/Programming/Java/JavaSE/Basic",
     "Kowledge/Technical/Programming/Java/JavaSE",
     "Kowledge/Technical/Programming/Java",
