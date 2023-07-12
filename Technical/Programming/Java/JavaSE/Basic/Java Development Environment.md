@@ -2,7 +2,7 @@
 categories: [java]
 title: Java Development Environment
 date created: 2023-07-08
-date modified: 2023-07-10
+date modified: 2023-07-11
 tags: [Java, JavaSE, JDK]
 ---
 
@@ -10,13 +10,17 @@ tags: [Java, JavaSE, JDK]
 
 > 📌 **Keyword:** JAVA_HOME, CLASSPATH, Path, Environment Variable, IDE
 
+> Hướng dẫn trực quan hơn: [Set JAVA\_HOME on Windows 7, 8, 10, Mac OS X, Linux | Baeldung](https://www.baeldung.com/java-home-on-windows-7-8-10-mac-os-x-linux)
+
 ## Download
 
-Truy cập vào [Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java8), sau đó tải về phiên bản phù hợp với hệ điều hành của bạn.
+Truy cập vào [Java Downloads | Oracle](https://www.oracle.com/java/technologies/downloads/#java8), sau đó tải về phiên bản JDK phù hợp với hệ điều hành của bạn.
 
 ## Install
 
 Gói JDK cho Windows là một tệp tin cài đặt exe, chỉ cần chạy tệp tin này và làm theo hướng dẫn để cài đặt.
+
+Gói JDK cho macOS là một tập tin nén dmg, mở nó ra sẽ có tập tin cài đặt và làm theo hướng dẫn như bình thường để cài.
 
 Gói JDK cho Linux chỉ cần giải nén và lưu trữ trên máy.
 
@@ -24,7 +28,7 @@ Gói JDK cho Linux chỉ cần giải nén và lưu trữ trên máy.
 
 ### Windows
 
-My Computer > Properties >  > Biến môi trường
+**My Computer / This PC** > **Properties** > **Advanced** > **Environment Variables**
 
 Thêm các biến môi trường sau:
 
@@ -34,9 +38,11 @@ Thêm các biến môi trường sau:
 
 `Path`: `%JAVA_HOME%\bin;%JAVA_HOME%\jre\bin;`
 
-### Linux
+### Linux / macOS
 
-Chạy lệnh `vi /etc/profile` để chỉnh sửa tệp biến môi trường
+Để chỉnh sửa tập biến môi trường:
+- Với Linux, chạy lệnh `vi /etc/profile` 
+- Với macOS, chạy lệnh `vi ~/.zshrc` 
 
 Thêm hai dòng sau:
 
@@ -45,17 +51,19 @@ export JAVA_HOME=path/to/java
 export PATH=JAVA_HOME/bin:JAVA_HOME/jre/bin:
 ```
 
-Chạy lệnh `source /etc/profile` để áp dụng ngay lập tức.
+Chạy lệnh để áp dụng thay đổi:
+- Với Linux, chạy lệnh `source /etc/profile` 
+- Với macOS, chạy lệnh `source ~/.zshrc` 
 
 ## Kiểm tra cài đặt thành công
 
 Chạy lệnh `java -version`, nếu cài đặt thành công, phiên bản Java hiện tại sẽ được hiển thị.
 
-## Công cụ phát triển
+## IDE - Integrated Development Environment
 
 Để làm việc với Java, chọn một IDE phù hợp là rất cần thiết.
 
-IDE (Integrated Development Environment - Môi trường phát triển tích hợp) là một ứng dụng cung cấp môi trường phát triển cho việc lập trình, bao gồm trình soạn thảo mã, trình biên dịch, trình gỡ lỗi và giao diện người dùng đồ họa.
+IDE (Integrated Development Environment - Môi trường phát triển tích hợp) là một ứng dụng cung cấp môi trường phát triển cho việc lập trình, bao gồm trình soạn thảo mã (code editor), trình biên dịch (compiler), trình gỡ lỗi (debugger) và giao diện người dùng đồ họa (user interface).
 
 Dưới đây là một số IDE phổ biến cho Java:
 
@@ -67,7 +75,7 @@ Dưới đây là một số IDE phổ biến cho Java:
 
 ## Chương trình đầu tiên: Hello World
 
-Thêm tệp HelloWorld.java với nội dung sau:
+Tạo tệp `HelloWorld.java` với nội dung sau:
 
 ```java
 public class HelloWorld {

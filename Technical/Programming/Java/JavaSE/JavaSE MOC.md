@@ -3,46 +3,30 @@ tags: [java, javase]
 categories: [java, javase]
 title: JavaSE MOC
 date created: 2023-07-09
-date modified: 2023-07-11
+date modified: 2023-07-12
 ---
 
 - Basic
-	- [Java Development Environment](Java%20Development%20Environment.md)
 	- [[Java Development Environment]]
 	- [[Java Basic OOP]]
 	- [[Java Language Basic]]
-	- [[Java Generics]]
-	- [[Java Annotation]]
+	- [[Java Language Basic Features]]
+	- [[Java Basic Data Type In Depth]]
+	- [[Java Array In Depth]]
+	- [[Java Enum In Depth]]
+	- [[Java Method In Dpeth]]
+	- [[Java Control Statements]]
 	- [[Java Exception]]
+	- [[Java Exception In Depth]]
+	- [[Java Generics]]
+	- [[Java Generic In Depth]]
 	- [[Java Reflection]]
+	- [[Java Reflection and Dynamic Proxy]]
+	- [[Java Annotation]]
+	- [[Java Annotation In Depth]]
+	- [[Java Serialization]]
 - Advanced
-	- [[Java SPI]]
 - Java Collection
-	- [[∑ Java Collection]]
-	- [[Java ArrayList]]
-	- [[Java LinkedList]]
-	- [[Java Stack and Queue]]
-	- [[Java PriorityQueue]]
-	- [[Java HashSet and HashMap]]
-	- [[Java LinkedHashSet and Map]]
-	- [[Java TreeSet and TreeMap]]
-	- [[Java WeakHashMap]]
 - Java IO
 - Java Concurency
-	- [[∑ Java Concurency]]
-	- [[Concurency Theory]]
-	- [[Java Thread Basic]]
-	- [[Java Lock]]
 - JVM
-	- [[∑ JVM Overview]]
-	- [[JVM Class]]
-	- [[JVM Class Enhancher]]
-	- [[JVM Classload]]
-	- [[JVM Memory Struct]]
-	- [[JVM - JMM Introduce]]
-	- [[JVM - JMM Detail]]
-	- [[JVM - GC Introduce]]
-	- [[JVM - GC - G1]]
-	- [[JVM - GC - ZGC]]
-	- [[JVM - GC - CMS]]
-

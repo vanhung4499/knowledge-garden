@@ -1,9 +1,8 @@
 {
   "accentColor": "",
-  "cssTheme": "AnuPpuccin",
+  "cssTheme": "Blue Topaz",
   "enabledCssSnippets": [
-    "supercharged-links-gen",
-    "extended-colorschemes"
+    "supercharged-links-gen"
   ],
   "nativeMenus": true,
   "translucency": false
