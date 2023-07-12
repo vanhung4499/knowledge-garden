@@ -11,7 +11,7 @@ tags: [moc, java]
 - JavaSE
 	- Basic
 		- [[Java Development Environment]]
-		- [[Java Basic OOP]]
+		- [[Java OOP]]
 		- [[Java Language Basic]]
 		- [[Java Language Basic Features]]
 		- [[Java Basic Data Type In Depth]]

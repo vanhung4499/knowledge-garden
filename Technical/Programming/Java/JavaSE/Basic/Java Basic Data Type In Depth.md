@@ -8,6 +8,8 @@ date modified: 2023-07-12
 
 # Hiểu sâu về các kiểu dữ liệu trong Java
 
+![Java Basic Data Type](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%20Basic%20Data%20Type.png)
+
 ## Phân loại kiểu dữ liệu
 
 Trong Java, có hai loại kiểu dữ liệu:

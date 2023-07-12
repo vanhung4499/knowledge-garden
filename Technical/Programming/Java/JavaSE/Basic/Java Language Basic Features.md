@@ -32,6 +32,8 @@ public class HelloWorld {
 
 ## Kiểu dữ liệu cơ bản (Basic Data Type)
 
+![Java Basic Data Type](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Basic%2520Data%2520Type.png)
+
 > 👉 Đọc thêm: [[Java Basic Data Type In Depth]]
 
 ## Biến (Variable)
