@@ -972,7 +972,7 @@ Tạo, ném và bắt đối tượng ngoại lệ: 47394475
 
 Tạo một đối tượng ngoại lệ mất khoảng 20 lần thời gian so với việc tạo một đối tượng thông thường (thực tế, khoảng cách này sẽ lớn hơn nhiều vì vòng lặp cũng mất thời gian, độc giả muốn chính xác hơn có thể đo thời gian của vòng lặp trống và trừ đi phần này trước khi so sánh), trong khi việc ném và bắt đối tượng ngoại lệ mất khoảng 4 lần thời gian so với việc tạo đối tượng ngoại lệ.
 
-## Best Practices
+## Khuyến nghị
 
 - Sử dụng các ngoại lệ kiểm tra (Exception) cho các trường hợp có thể khôi phục được, sử dụng các ngoại lệ chạy (RuntimeException) cho các lỗi lập trình.
 - Ưu tiên sử dụng các ngoại lệ tiêu chuẩn của Java.

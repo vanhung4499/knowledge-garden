@@ -1147,7 +1147,7 @@ public class Box<T> {
 
 Chú thích (Annotation) trong Java là các thông tin bổ sung được đính kèm trong mã nguồn, được sử dụng bởi các công cụ để phân tích và sử dụng trong quá trình biên dịch và thực thi. Chú thích không ảnh hưởng và không thay đổi logic thực tế của mã nguồn, mà chỉ đóng vai trò phụ trợ.
 
-Đọc thêm: [[Java Annotation]]
+Đọc thêm: [[Java Annotation In Depth]]
 
 ## Feature
 

@@ -388,7 +388,7 @@ public ArrayWithTypeToken(Class<T> type, int size) {
 
 Để biết chi tiết, xin vui lòng tham khảo giải thích dưới đây.
 
-## Hiểu sâu về Generics
+## Hiểu sâu sắc về Generics
 
 > Để hiểu sâu về Generics yêu cầu chúng ta tìm hiểu về khái niệm "type erasure" (loại bỏ kiểu dữ liệu) và các vấn đề liên quan.
 
@@ -1111,3 +1111,103 @@ public interface ParameterizedType extends Type {
 
 }
 ```
+
+## Ràng buộc của Generics
+
+- [Tham số kiểu của kiểu generics không thể là kiểu giá trị](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#instantiate)
+
+```java
+Pair<int, char> p = new Pair<>(8, 'a');  // Lỗi biên dịch
+```
+
+- [Không thể tạo một phiên bản của tham số kiểu](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#createObjects)
+
+```java
+public static <E> void append(List<E> list) {
+    E elem = new E();  // Lỗi biên dịch
+    list.add(elem);
+}
+```
+
+- [Không thể khai báo thành viên tĩnh có kiểu là tham số kiểu](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#createStatic)
+
+```java
+public class MobileDevice<T> {
+    private static T os; // Lỗi biên dịch
+
+    // ...
+}
+```
+
+- [Tham số kiểu không thể sử dụng chuyển đổi kiểu hoặc `instanceof`](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#cannotCast)
+
+```java
+public static <E> void rtti(List<E> list) {
+    if (list instanceof ArrayList<Integer>) {  // Lỗi biên dịch
+        // ...
+    }
+}
+```
+
+```java
+List<Integer> li = new ArrayList<>();
+List<Number>  ln = (List<Number>) li;  // Lỗi biên dịch
+```
+
+- [Không thể tạo một mảng của tham số kiểu](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#createArrays)
+
+```java
+List<Integer>[] arrayOfLists = new List<Integer>[2];  // Lỗi biên dịch
+```
+
+- [Không thể tạo, bắt hoặc ném đối tượng có kiểu tham số hóa](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#cannotCatch)
+
+```java
+// Kế thừa từ Throwable gián tiếp
+class MathException<T> extends Exception { /* ... */ }    // Lỗi biên dịch
+
+// Kế thừa từ Throwable trực tiếp
+class QueueFullException<T> extends Throwable { /* ... */ // Lỗi biên dịch
+```
+
+```java
+public static <T extends Exception, J> void execute(List<J> jobs) {
+    try {
+        for (J job : jobs)
+            // ...
+    } catch (T e) {   // Lỗi biên dịch
+        // ...
+    }
+}
+```
+
+- [Chỉ có thể tái định nghĩa phương thức với cùng lớp generics, nhưng các tham số kiểu khác nhau không thể tái định nghĩa](https://docs.oracle.com/javase/tutorial/java/generics/restrictions.html#cannotOverload)
+
+```java
+public class Example {
+    public void print(Set<String> strSet) { }
+    public void print(Set<Integer> intSet) { } // Lỗi biên dịch
+}
+```
+
+## Thực hành tốt nhất với Generics
+
+### Đặt tên cho Generics
+
+Có một số quy ước đặt tên thông thường cho generics:
+
+- E - Element
+- K - Key
+- N - Number
+- T - Type
+- V - Value
+- S,U,V v.v. - Thứ tự thứ 2, thứ 3, thứ 4 của các kiểu
+
+### Lời khuyên sử dụng Generics
+
+- Loại bỏ cảnh báo kiểm tra kiểu
+- Ưu tiên sử dụng List thay vì mảng
+- Ưu tiên sử dụng generics để tăng tính tổng quát của mã
+- Ưu tiên sử dụng phương thức generics để giới hạn phạm vi của generics
+- Sử dụng wildcard giới hạn để tăng tính linh hoạt của API
+- Ưu tiên sử dụng các bộ chứa không đồng nhất an toàn về kiểu

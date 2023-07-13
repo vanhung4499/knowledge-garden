@@ -1,5 +1,5 @@
 ---
-title: Java Array In Depth
+title: Java Array
 tags: 
 categories: 
 date created: 2023-07-13
@@ -51,7 +51,7 @@ Các phần tử của mảng được lưu trữ trong heap.
 
 Hình ảnh dưới đây chỉ ra rằng chỉ khi JVM thực thi `new String[]`, nó mới cấp phát một khu vực bộ nhớ tương ứng trong heap. Đối tượng mảng `array` có thể coi là một con trỏ, trỏ đến địa chỉ lưu trữ trong bộ nhớ này.
 
-![array-memory.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/array-memory.png)
+![JavaArrayMemory.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/JavaArrayMemory.png)
 
 ## Khai báo mảng
 
