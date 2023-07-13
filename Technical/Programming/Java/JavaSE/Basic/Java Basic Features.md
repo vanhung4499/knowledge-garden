@@ -71,7 +71,7 @@ So sánh các đặc điểm:
 
 ![Java Array.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Array.svg)
 
-> 👉 Đọc thêm: [[Java Array]]
+👉 Đọc thêm: [[Java Array]]
 
 ## Enum
 
