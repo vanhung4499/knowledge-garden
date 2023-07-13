@@ -1,9 +1,9 @@
 ---
-categories: [java]
-title: Java Annotation
+categories: [java, javase]
+title: Java Annotation In Depth
 date created: 2023-07-03
-date modified: 2023-07-10
-tags: [java]
+date modified: 2023-07-13
+tags: [java, javase]
 ---
 
 ## Khái niệm cơ bản về chú thích (Annotation)
@@ -540,15 +540,6 @@ Annotation không hỗ trợ kế thừa bằng từ khóa `extends` để kế 
 Mặc dù giao diện Java có thể triển khai đa kế thừa, nhưng khi định nghĩa Annotation, không thể sử dụng từ khóa `extends` để kế thừa `@interface`.
 
 Để kế thừa Annotation từ lớp cha, chúng ta có thể sử dụng `@Inherited`: Nếu một lớp sử dụng Annotation được đánh dấu bằng `@Inherited`, thì các lớp con của nó sẽ tự động kế thừa Annotation đó.
-
-### Nguyên lý hoạt động của Annotation là gì?
-
-> Có rất nhiều bài viết trên mạng không đề cập đúng đến nguyên lý hoạt động của Annotation.
-
-Dưới đây là hai bài viết mà tôi muốn giới thiệu cho bạn
-
-- https://blog.csdn.net/qq_20009015/article/details/106038023
-- https://www.race604.com/annotation-processing/  
 
 ## Ứng dụng thực tế của Annotation:
 

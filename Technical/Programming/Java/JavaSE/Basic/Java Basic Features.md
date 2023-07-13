@@ -113,4 +113,4 @@ Java hỗ trợ các loại toán tử sau:
 
 ## Serialization (Tuần tự hóa)
 
-👉 Đọc thêm: [Java Serialization](/Technical/Programming/Java/JavaSE/Basic/Java-Serialization)
+👉 Đọc thêm: [Java Serialization](/Technical/Programming/Java/JavaSE/JavaIO/Java-Serialization)

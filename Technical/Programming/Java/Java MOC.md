@@ -17,17 +17,22 @@ tags: [moc, java]
 		- [[Java Basic Data Type]]
 		- [[Java Method]]
 		- [[Java Array]]
+		- [[Java String]]
 		- [[Java Enum]]
 		- [[Java Control Statements]]
 		- [[Java Exception In Depth]]
 		- [[Java Generics In Depth]]
 		- [[Java Reflection]]
-		- [[Java Reflection]]
 		- [[Java Annotation In Depth]]
-		- [[Java Serialization]]
 	- Advanced
+		- [[Java Regex zero to hero]]
+		- [[Java Encoding and Encryption]]
+		- [[Java Internationalization]]
+		- [[JDK8 New Features]]
+		- [[Java SPI In Depth]]
 	- Java Collection
 	- Java IO
+		- [[Java Serialization]]
 	- Java Concurency
 	- JVM
 - JavaEE

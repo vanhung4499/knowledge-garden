@@ -1,9 +1,9 @@
 ---
-categories: [java]
+categories: [java, javase]
 title: Java Language Basic
 date created: 2023-07-02
-date modified: 2023-07-10
-tags: [java]
+date modified: 2023-07-13
+tags: [java, javase]
 ---
 
 ## Kiểu dữ liệu
