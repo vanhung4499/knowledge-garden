@@ -21,7 +21,7 @@ date modified: 2023-07-13
 	- [[Java Generics In Depth]]
 	- [[Java Generic In Depth]]
 	- [[Java Reflection]]
-	- [[Java Reflection and Dynamic Proxy]]
+	- [[Java Reflection]]
 	- [[Java Annotation]]
 	- [[Java Annotation In Depth]]
 	- [[Java Serialization]]
