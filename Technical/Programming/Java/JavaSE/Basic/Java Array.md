@@ -303,7 +303,7 @@ public class GenericArrayDemo<T> {
 // [0, 1, null, null]
 ```
 
-> Đọc thêm: [[Java Generics]]
+> Đọc thêm: [[Java Generics In Depth]]
 >
 > Tôi nghĩ rằng, hiểu về mảng Generic tạm thời đến đây là đủ. Trên thực tế, nếu thực sự cần lưu trữ Generic, sử dụng các cấu trúc dữ liệu khác như Collection sẽ tốt hơn.
 

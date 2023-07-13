@@ -1,9 +1,9 @@
 ---
-categories: [java]
-title: Java Exception
+categories: [java, javase]
+title: Java Exception In Depth
 date created: 2023-07-03
-date modified: 2023-07-10
-tags: [java]
+date modified: 2023-07-13
+tags: [java, javase, exception]
 ---
 
 ## Phân cấp ngoại lệ (Exception)
@@ -16,45 +16,111 @@ Sơ đồ cấu trúc lớp ngoại lệ trong Java:
 
 ### Throwable
 
-`Throwable` là lớp cha của tất cả các lỗi và ngoại lệ trong ngôn ngữ Java.  
+`Throwable` là một lớp cha của tất cả các lỗi (`Error`) và ngoại lệ (`Exception`) trong Java. Trong Java, chỉ có thể ném (`throw`) hoặc bắt (`catch`) các đối tượng kiểu `Throwable`, nó là thành phần cơ bản của cơ chế xử lý ngoại lệ.
 
-`Throwable` bao gồm hai lớp con: `Error` (Lỗi) và `Exception` (Ngoại lệ), chúng thường được sử dụng để chỉ ra tình huống ngoại lệ đã xảy ra.  
+`Throwable` chứa một bản chụp ngăn xếp thực thi của luồng khi nó được tạo ra, nó cung cấp các phương thức như `printStackTrace()` để lấy thông tin về ngăn xếp thực thi.
 
-`Throwable` bao gồm một bản chụp nhanh của ngăn xếp thực thi của luồng khi nó được tạo ra, nó cung cấp các giao diện như `printStackTrace()` để lấy dữ liệu theo dõi ngăn xếp.
+Các phương thức chính:
 
-### Error (Lỗi)
+- `fillInStackTrace` - Điền ngăn xếp thực thi của đối tượng `Throwable` với ngăn xếp thực thi của cuộc gọi hiện tại và thêm vào bất kỳ thông tin trước đó nào.
+- `getMessage` - Trả về thông tin chi tiết về lỗi đã xảy ra. Thông điệp này được khởi tạo trong constructor của `Throwable`.
+- `getCause` - Trả về một đối tượng `Throwable` đại diện cho nguyên nhân của ngoại lệ.
+- `getStackTrace` - Trả về một mảng chứa ngăn xếp thực thi. Phần tử có chỉ số 0 đại diện cho đỉnh ngăn xếp, phần tử cuối cùng đại diện cho đáy ngăn xếp thực thi.
+- `printStackTrace` - In kết quả của `toString()` và ngăn xếp thực thi ra `System.err`, tức là luồng lỗi.
+- `toString` - Trả về một chuỗi đại diện cho đối tượng `Throwable`.
 
-Lớp Error và các lớp con của nó: Lỗi không thể xử lý trong chương trình, đại diện cho lỗi nghiêm trọng xảy ra trong quá trình chạy ứng dụng.  
+### Error
 
-Các lỗi này thường chỉ ra rằng JVM gặp sự cố khi chạy mã. Thông thường có các lỗi như `Virtual MachineError` (Lỗi chạy máy ảo), `NoClassDefFoundError` (Lỗi định nghĩa lớp), v.v. Ví dụ: `OutOfMemoryError`: Lỗi không đủ bộ nhớ; `StackOverflowError`: Lỗi tràn ngăn xếp. Khi xảy ra các lỗi này, JVM sẽ dừng luồng (thread).
+`Error` là một lớp con của `Throwable`. `Error` đại diện cho các vấn đề nghiêm trọng mà trong tình huống bình thường thì không thể xảy ra. **Trình biên dịch không kiểm tra `Error`.** Hầu hết các `Error` sẽ dẫn đến trạng thái không bình thường và không thể khôi phục được của chương trình (ví dụ: `OutOfMemoryError` và các lớp con khác).
+
+Các `Error` phổ biến:
+
+- `AssertionError` - Lỗi khẳng định.
+- `VirtualMachineError` - Lỗi máy ảo.
+- `UnsupportedClassVersionError` - Lỗi phiên bản lớp Java.
+- `StackOverflowError` - Lỗi tràn ngăn xếp.
+- `OutOfMemoryError` - Lỗi tràn bộ nhớ.
 
 Những lỗi này không phải là ngoại lệ kiểm tra, không phải là lỗi liên quan đến mã. Do đó, khi xảy ra các lỗi này, ứng dụng không nên xử lý các lỗi này. Theo quy ước của Java, chúng ta không nên triển khai bất kỳ lớp con Error mới nào!
 
 ### Exception (Ngoại lệ)
 
-Ngoại lệ thì chương trình có thể bắt và xử lý được. Ngoại lệ này được chia thành hai loại: ngoại lệ thời gian chạy và ngoại lệ biên dịch.
+`Exception` là một lớp con của `Throwable`. `Exception` đại diện cho các điều kiện mà một ứng dụng hợp lý có thể muốn bắt (`catch`). Exception là những tình huống không bình thường có thể dự đoán được trong quá trình chạy chương trình và nên được bắt và xử lý.
 
-- **Ngoại lệ thời gian chạy**  
+`Exception` được chia thành hai loại: `checked exception` (ngoại lệ kiểm tra) và `unchecked exception` (ngoại lệ không kiểm tra). `checked exception` phải được khai báo hoặc xử lý bằng cách sử dụng `throws` hoặc `try catch`, trong khi `unchecked exception` không yêu cầu điều này và có thể được bỏ qua trong quá trình biên dịch.
 
-Đều là các ngoại lệ của lớp `RuntimeException` và các lớp con của nó, như `NullPointerException` (Ngoại lệ con trỏ null), `IndexOutOfBoundsException` (Ngoại lệ vượt quá chỉ số), v.v. Những ngoại lệ này là các ngoại lệ không kiểm tra, chương trình có thể chọn bắt và xử lý, hoặc không xử lý. Những ngoại lệ này thường là do lỗi logic của chương trình gây ra, chương trình nên cố gắng tránh xảy ra các ngoại lệ này từ góc nhìn logic.
+Các `Exception` phổ biến:
 
-Đặc điểm của ngoại lệ thời gian chạy là trình biên dịch Java không kiểm tra nó, có nghĩa là khi chương trình có thể gây ra các ngoại lệ này, ngay cả khi không bắt nó bằng câu lệnh try-catch, hoặc không khai báo nó bằng mệnh đề throws, nó cũng sẽ được biên dịch.
+- `ClassNotFoundException` - Thrown khi ứng dụng cố gắng tải một lớp nhưng không tìm thấy lớp đó.
+- `CloneNotSupportedException` - Thrown khi gọi phương thức clone của một đối tượng nhưng lớp đó không thể triển khai giao diện Cloneable.
+- `IllegalAccessException` - Thrown khi truy cập vào một lớp bị từ chối.
+- `InstantiationException` - Thrown khi cố gắng tạo một thể hiện của một lớp mà đối tượng của lớp đó không thể được tạo ra vì nó là một giao diện hoặc một lớp trừu tượng.
+- `InterruptedException` - Thrown khi một luồng khác đã ngắt một luồng hiện tại.
+- `NoSuchFieldException` - Thrown khi truy cập vào một trường không tồn tại.
+- `NoSuchMethodException` - Thrown khi truy cập vào một phương thức không tồn tại.  
 
-- **Ngoại lệ biên dịch**
+Ví dụ:
+
+```java
+public class ExceptionDemo {
+    public static void main(String[] args) {
+        Method method = String.class.getMethod("toString", int.class);
+    }
+};
+```
+
+Khi cố gắng biên dịch và chạy, sẽ có lỗi:
+
+```
+Error:(7, 47) java: unreported exception java.lang.NoSuchMethodException; must be caught or declared to be thrown
+```
+
+### RuntimeException
+
+`RuntimeException` là một lớp con của `Exception`. `RuntimeException` là lớp cha của các ngoại lệ có thể xảy ra trong quá trình chạy bình thường của máy ảo Java.
+
+**Trình biên dịch không kiểm tra các ngoại lệ `RuntimeException`.** Khi chương trình có thể gây ra ngoại lệ này, nếu không khai báo nó bằng cách sử dụng `throws`, cũng không sử dụng câu lệnh `try catch` để bắt nó, chương trình vẫn sẽ được biên dịch thành công.
+
+Ví dụ:
+
+```java
+public class RuntimeExceptionDemo {
+    public static void main(String[] args) {
+        // Gây ra ngoại lệ ở đây
+        int result = 10 / 0;
+        System.out.println("Kết quả của phép chia hai số là: " + result);
+        System.out.println("----------------------------");
+    }
+};
+```
+
+Kết quả chạy:
+
+```
+Exception in thread "main" java.lang.ArithmeticException: / by zero
+	at com.hnv99.javacore.exception.RumtimeExceptionDemo01.main(RumtimeExceptionDemo01.java:6)
+```
+
+Các `RuntimeException` phổ biến:
+
+- `ArrayIndexOutOfBoundsException` - Ngoại lệ xảy ra khi truy cập mảng với chỉ số không hợp lệ. Chỉ số không hợp lệ là số âm hoặc lớn hơn hoặc bằng kích thước của mảng.
+- `ArrayStoreException` - Ngoại lệ xảy ra khi cố gắng lưu trữ một đối tượng không đúng kiểu vào một mảng đối tượng.
+- `ClassCastException` - Ngoại lệ xảy ra khi cố gắng ép kiểu đối tượng sang một lớp con mà đối tượng không phải là một phiên bản của nó.
+- `IllegalArgumentException` - Ngoại lệ xảy ra khi đối số được truyền vào phương thức không hợp lệ hoặc không chính xác.
+- `IllegalMonitorStateException` - Ngoại lệ xảy ra khi một luồng đã cố gắng chờ đợi trình giám sát của một đối tượng hoặc cố gắng thông báo cho các luồng khác đang chờ đợi trình giám sát của đối tượng mà nó không sở hữu.
+- `IllegalStateException` - Ngoại lệ xảy ra khi gọi phương thức vào thời điểm không hợp lệ hoặc không thích hợp.
+- `IllegalThreadStateException` - Ngoại lệ xảy ra khi một luồng không ở trạng thái yêu cầu để thực hiện một hoạt động.
+- `IndexOutOfBoundsException` - Ngoại lệ xảy ra khi chỉ số sắp xếp (ví dụ: sắp xếp mảng, chuỗi hoặc vector) vượt quá phạm vi.
+- `NegativeArraySizeException` - Ngoại lệ xảy ra khi chương trình cố gắng tạo một mảng với kích thước âm.
+- `NullPointerException` - Ngoại lệ xảy ra khi chương trình cố gắng sử dụng null trong một vị trí yêu cầu một đối tượng.
+- `NumberFormatException` - Ngoại lệ xảy ra khi chương trình cố gắng chuyển đổi một chuỗi thành một kiểu số nhưng chuỗi không thể chuyển đổi thành định dạng phù hợp.
+- `SecurityException` - Ngoại lệ xảy ra khi có vi phạm bảo mật.
+- `StringIndexOutOfBoundsException` - Ngoại lệ xảy ra khi một phương thức của lớp String tham số chỉ mục không hợp lệ, là số âm hoặc vượt quá kích thước của chuỗi.
+- `UnsupportedOperationException` - Ngoại lệ xảy ra khi phương thức không hỗ trợ được yêu cầu.
+
+### Non Runtime Exception
 
 Là ngoại lệ khác `RuntimeException`, nó thuộc loại `Exception` và các lớp con của nó. Từ góc độ cú pháp chương trình, ngoại lệ này là ngoại lệ phải xử lý, nếu không xử lý, chương trình sẽ không được biên dịch. Ví dụ: `IOException`, `SQLException` và ngoại lệ do người dùng tự định nghĩa, thông thường không tự định nghĩa ngoại lệ kiểm tra.
-
-### Ngoại lệ có thể kiểm tra (checked exceptions) và ngoại lệ không thể kiểm tra (unchecked exceptions)
-
-- Ngoại lệ có thể kiểm tra (ngoại lệ phải được xử lý bởi trình biên dịch):
-
-Tình huống ngoại lệ dễ xảy ra, có thể chấp nhận được từ quan điểm lý thuyết của chương trình. Mặc dù ngoại lệ có thể kiểm tra là tình huống ngoại lệ, nhưng một mức độ nào đó, việc xảy ra tình huống ngoại lệ này có thể được dự đoán và một khi tình huống ngoại lệ này xảy ra, phải thực hiện xử lý theo một cách nào đó.
-
-Ngoại lệ thuộc loại này ngoại trừ `RuntimeException` và các lớp con của nó, tất cả các lớp `Exception` và các lớp con của nó đều thuộc loại ngoại lệ có thể kiểm tra. Đặc điểm của ngoại lệ này là trình biên dịch Java sẽ kiểm tra nó, có nghĩa là khi chương trình có thể gây ra ngoại lệ này, hãy bắt nó bằng câu lệnh try-catch hoặc khai báo nó bằng mệnh đề throws, nếu không, nó sẽ không được biên dịch.
-
-- **Ngoại lệ không thể kiểm tra** (ngoại lệ không được yêu cầu xử lý bởi trình biên dịch)
-
-Bao gồm ngoại lệ thời gian chạy (`RuntimeException` và các lớp con của nó) và lỗi (`Error`).
 
 ## Cơ bản về ngoại lệ
 
@@ -905,3 +971,20 @@ Tạo, ném và bắt đối tượng ngoại lệ: 47394475
 ```
 
 Tạo một đối tượng ngoại lệ mất khoảng 20 lần thời gian so với việc tạo một đối tượng thông thường (thực tế, khoảng cách này sẽ lớn hơn nhiều vì vòng lặp cũng mất thời gian, độc giả muốn chính xác hơn có thể đo thời gian của vòng lặp trống và trừ đi phần này trước khi so sánh), trong khi việc ném và bắt đối tượng ngoại lệ mất khoảng 4 lần thời gian so với việc tạo đối tượng ngoại lệ.
+
+## Best Practices
+
+- Sử dụng các ngoại lệ kiểm tra (Exception) cho các trường hợp có thể khôi phục được, sử dụng các ngoại lệ chạy (RuntimeException) cho các lỗi lập trình.
+- Ưu tiên sử dụng các ngoại lệ tiêu chuẩn của Java.
+- Ném các ngoại lệ tương ứng với trừu tượng tương ứng.
+- Bao gồm thông tin có thể dẫn đến việc xảy ra lỗi trong thông điệp chi tiết.
+- Giảm kích thước của khối try càng nhỏ càng tốt.
+- Giới hạn phạm vi của ngoại lệ càng nhỏ càng tốt. Ví dụ, nếu bạn biết rằng bạn chỉ đang cố gắng bắt một ArithmeticException, hãy bắt ArithmeticException thay vì RuntimeException hoặc thậm chí là Exception có phạm vi lớn hơn.
+- Tránh ném ngoại lệ hoặc trả về giá trị trong khối finally.
+- Không bỏ qua ngoại lệ, một khi đã bắt được ngoại lệ, bạn nên xử lý nó thay vì bỏ qua nó.
+- Xử lý ngoại lệ rất chậm, vì vậy không nên sử dụng ngoại lệ để xử lý logic kinh doanh.
+- Mỗi loại ngoại lệ phải có ghi chú riêng, phân loại và quản lý theo cấp độ, vì đôi khi chỉ muốn hiển thị ngoại lệ logic cho nhà quản trị hệ thống thứ ba mà không phải là thông tin chi tiết hơn.
+- Cách phân loại ngoại lệ:
+	- Ngoại lệ logic, được sử dụng để mô tả các tình huống không thể xử lý theo cách dự kiến trong kinh doanh, đó là những sự cố do người dùng tạo ra.
+	- Lỗi mã, được sử dụng để mô tả các lỗi mã lập trình, ví dụ: NPE, ILLARG, đều là lỗi do lập trình viên tạo ra.
+	- Ngoại lệ đặc biệt, thường được sử dụng trong các tình huống kinh doanh cụ thể, để mô tả các tình huống không thể xử lý trước đó của công việc cụ thể.

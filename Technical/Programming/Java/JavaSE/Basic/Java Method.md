@@ -1,5 +1,5 @@
 ---
-title: Java Method In Depth
+title: Java Method
 tags: [java, javase]
 categories: [java, javase]
 date created: 2023-07-13

@@ -4,52 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "3591add666c75a41",
+        "id": "53024798aee4d8bf",
         "type": "tabs",
         "children": [
           {
-            "id": "17b703e0d6f76f4e",
+            "id": "b00a9febdcf1d6ee",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Java/Java MOC.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "be3f1603d00216b0",
+            "id": "91c608695e41faa7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "024eda25927eb8f1",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Method In Depth.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cb2841221abb38c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
                 "mode": "source",
                 "source": false
               }
@@ -127,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md"
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md"
               }
             }
           }
@@ -159,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -191,7 +167,7 @@
             }
           },
           {
-            "id": "680e5b9e713f1cd9",
+            "id": "01fc8d6e3b9d4f35",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -199,7 +175,7 @@
             }
           },
           {
-            "id": "82c2bf1120a1549c",
+            "id": "45ef58aceb154efe",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -211,7 +187,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 515.5
+    "width": 447.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -233,24 +209,26 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "be3f1603d00216b0",
+  "active": "91c608695e41faa7",
   "lastOpenFiles": [
-    "Technical/Programming/Java/JavaSE/Basic/Java Language Basic.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Language Basic Features.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Array In Depth.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Method In Depth.md",
-    "Technical/Programming/Java/Java MOC.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md",
     "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
-    "Technical/Programming/JavaScript/JavaScript MOC.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Basic Data Type In Depth.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Basic MOC.md",
+    "Technical/Programming/Java/Java MOC.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Control Statements.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Enum.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Basic Data Type.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Development Environment.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Exception.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Generics.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Generics In Depth.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Reflection.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Annotation.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Method.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Language Basic.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Array.md",
     "Home.md",
+    "Technical/Programming/JavaScript/JavaScript MOC.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Basic MOC.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Annotation.md",
     "Calendar/Untitled",
     "Calendar/Weekly notes",
     "Calendar/Daily notes",
@@ -263,8 +241,6 @@
     "Technical/Programming/Programming MOC.md",
     "Technical/Technical MOC.md",
     "Technical/Computer Science/Computer Science MOC.md",
-    "README.md",
-    "Productivity/Productivity MOC.md",
     "Kowledge/Technical/Programming/Java/JavaSE/Basic",
     "Kowledge/Technical/Programming/Java/JavaSE",
     "Kowledge/Technical/Programming/Java",

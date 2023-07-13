@@ -1117,7 +1117,7 @@ Reflection is powerful, but should not be used indiscriminately. If it is possib
 - **Security Restrictions** : Reflection requires a runtime permission which may not be present when running under a security manager. This is in an important consideration for code which has to run in a restricted security context, such as in an Applet.
 - **Exposure of Internals** :Since reflection allows code to perform operations that would be illegal in non-reflective code, such as accessing private fields and methods, the use of reflection can result in unexpected side-effects, which may render code dysfunctional and may destroy portability. Reflective code breaks abstractions and therefore may change behavior with upgrades of the platform.
 
-> [[Java Exception]]
+> [[Java Exception In Depth]]
 
 ## Ngoại lệ (Exception)
 
@@ -1141,7 +1141,7 @@ public class Box<T> {
 }
 ```
 
-Đọc thêm: [[Java Generics]]
+Đọc thêm: [[Java Generics In Depth]]
 
 ## Annotation
 

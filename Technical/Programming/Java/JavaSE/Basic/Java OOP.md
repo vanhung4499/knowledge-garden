@@ -10,7 +10,7 @@ tags: [java, javase]
 
 Mỗi ngôn ngữ lập trình đều có cách riêng để thao tác với các phần tử trong bộ nhớ.
 
-Trong Java, chúng ta có các kiểu dữ liệu cơ bản ([[Java Basic Data Type In Depth]]), nhưng chúng vẫn không đáp ứng đủ nhu cầu trừu tượng hóa các kiểu dữ liệu phức tạp hơn trong quá trình viết chương trình. Do đó, trong Java, chúng ta được phép tạo ra các kiểu dữ liệu tùy chỉnh bằng cách sử dụng lớp (chúng ta sẽ tìm hiểu về cơ chế lớp sau).
+Trong Java, chúng ta có các kiểu dữ liệu cơ bản ([[Java Basic Data Type]]), nhưng chúng vẫn không đáp ứng đủ nhu cầu trừu tượng hóa các kiểu dữ liệu phức tạp hơn trong quá trình viết chương trình. Do đó, trong Java, chúng ta được phép tạo ra các kiểu dữ liệu tùy chỉnh bằng cách sử dụng lớp (chúng ta sẽ tìm hiểu về cơ chế lớp sau).
 
 Có được kiểu dữ liệu tùy chỉnh, tự nhiên kiểu dữ liệu sẽ thay đổi theo nhiều cách khác nhau, vì vậy, cần có một cơ chế để đảm bảo rằng chúng vẫn giữ một số đặc điểm cần thiết và chung.
 

@@ -1,5 +1,5 @@
 ---
-title: Java Language Basic Features
+title: Java Basic Features
 tags: [java, javase]
 categories: [java, javase]
 date created: 2023-07-11
@@ -34,7 +34,7 @@ public class HelloWorld {
 
 ![Java Basic Data Type](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Basic%2520Data%2520Type.png)
 
-> 👉 Đọc thêm: [[Java Basic Data Type In Depth]]
+> 👉 Đọc thêm: [[Java Basic Data Type]]
 
 ## Biến (Variable)
 
@@ -71,11 +71,13 @@ So sánh các đặc điểm:
 
 ![Java Array.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Array.svg)
 
-> 👉 Đọc thêm: [[Java Array In Depth]]
+> 👉 Đọc thêm: [[Java Array]]
 
 ## Enum
 
-> 👉 Đọc thêm: [[Java Enum In Depth]]
+![Java Enum](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%20Enum.svg)
+
+> 👉 Đọc thêm: [[Java Enum]]
 
 ## Opearator (Toán tử)
 
@@ -85,9 +87,9 @@ Java hỗ trợ các loại toán tử sau:
 
 ## Method (Phương thức)
 
-![Java%20Method.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Method.svg)
+![Java%20Method.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%20Method.svg)
 
-> 👉 Đọc thêm: [[Java Method In Depth]]
+> 👉 Đọc thêm: [[Java Method]]
 
 ## Control statement (Câu lệnh điều khiển)
 

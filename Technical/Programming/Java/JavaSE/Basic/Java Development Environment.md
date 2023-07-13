@@ -1,9 +1,9 @@
 ---
-categories: [java]
+categories: [java, javase]
 title: Java Development Environment
 date created: 2023-07-08
-date modified: 2023-07-11
-tags: [Java, JavaSE, JDK]
+date modified: 2023-07-13
+tags: [java, javase, jdk]
 ---
 
 # Java Development Environment
@@ -41,8 +41,9 @@ Thêm các biến môi trường sau:
 ### Linux / macOS
 
 Để chỉnh sửa tập biến môi trường:
-- Với Linux, chạy lệnh `vi /etc/profile` 
-- Với macOS, chạy lệnh `vi ~/.zshrc` 
+
+- Với Linux, chạy lệnh `vi /etc/profile`
+- Với macOS, chạy lệnh `vi ~/.zshrc`
 
 Thêm hai dòng sau:
 
@@ -52,8 +53,9 @@ export PATH=JAVA_HOME/bin:JAVA_HOME/jre/bin:
 ```
 
 Chạy lệnh để áp dụng thay đổi:
-- Với Linux, chạy lệnh `source /etc/profile` 
-- Với macOS, chạy lệnh `source ~/.zshrc` 
+
+- Với Linux, chạy lệnh `source /etc/profile`
+- Với macOS, chạy lệnh `source ~/.zshrc`
 
 ## Kiểm tra cài đặt thành công
 
