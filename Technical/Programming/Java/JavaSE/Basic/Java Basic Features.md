@@ -101,16 +101,16 @@ Java hỗ trợ các loại toán tử sau:
 
 ## Generic (Kiểu tham số hoá)
 
-> 👉 Đọc thêm: [Java Generics In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Generics-In-Depth)
+👉 Đọc thêm: [Java Generics In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Generics-In-Depth)
 
 ## Reflection (Phản chiếu)
 
-> 👉 Đọc thêm: [Java Reflection](/Technical/Programming/Java/JavaSE/Basic/Java-Reflection)
+👉 Đọc thêm: [Java Reflection](/Technical/Programming/Java/JavaSE/Basic/Java-Reflection)
 
 ## Annotation (Chú thích)
 
-> 👉 Đọc thêm: [Java Annotation In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Annotation-In-Depth)
+👉 Đọc thêm: [Java Annotation In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Annotation-In-Depth)
 
 ## Serialization (Tuần tự hóa)
 
-> 👉 Đọc thêm: [Java Serialization](/Technical/Programming/Java/JavaSE/Basic/Java-Serialization)
+👉 Đọc thêm: [Java Serialization](/Technical/Programming/Java/JavaSE/Basic/Java-Serialization)
