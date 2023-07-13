@@ -25,14 +25,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
+                "file": "Technical/Programming/Java/Java MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "c9a60fe04580e10c",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -103,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md"
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md"
               }
             }
           }
@@ -135,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
+                "file": "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -209,17 +221,19 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "91c608695e41faa7",
+  "active": "c9a60fe04580e10c",
   "lastOpenFiles": [
-    "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md",
-    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
     "Technical/Programming/Java/Java MOC.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Control Statements.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Enum.md",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Technical MOC.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Basic Features.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Basic Data Type.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Development Environment.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Control Statements.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Generics In Depth.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
+    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Enum.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Development Environment.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Reflection.md",
     "Technical/Programming/Java/JavaSE/Basic/Java OOP.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Method.md",
@@ -238,8 +252,6 @@
     "Technical/Programming/Java/JavaSE/Java IO/JavaIO MOC.md",
     "Technical/Programming/Java/JavaSE/JVM/JVM MOC.md",
     "Technical/Programming/Java/JavaEE/JavaEE MOC.md",
-    "Technical/Programming/Programming MOC.md",
-    "Technical/Technical MOC.md",
     "Technical/Computer Science/Computer Science MOC.md",
     "Kowledge/Technical/Programming/Java/JavaSE/Basic",
     "Kowledge/Technical/Programming/Java/JavaSE",

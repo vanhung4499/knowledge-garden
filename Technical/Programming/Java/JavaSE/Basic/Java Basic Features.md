@@ -34,7 +34,7 @@ public class HelloWorld {
 
 ![Java Basic Data Type](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Basic%2520Data%2520Type.png)
 
-> 👉 Đọc thêm: [[Java Basic Data Type]]
+> 👉 Đọc thêm: [Java Basic Data Type](/Technical/Programming/Java/JavaSE/Basic/Java-Basic-Data-Type)
 
 ## Biến (Variable)
 

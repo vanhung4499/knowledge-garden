@@ -1,10 +1,12 @@
 ---
 categories: [java]
-title: Java Generics
+title: Java Generics In Depth
 date created: 2023-07-02
-date modified: 2023-07-10
+date modified: 2023-07-13
 tags: [java]
 ---
+
+# Hiểu sâu hơn về Java Generics
 
 ## Tại sao cần Generics
 
