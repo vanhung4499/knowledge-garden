@@ -1,7 +1,7 @@
 ---
 title: Java MOC
 date created: 2023-07-04
-date modified: 2023-07-13
+date modified: 2023-07-14
 categories: [java, moc]
 tags: [moc, java]
 ---
@@ -25,7 +25,7 @@ tags: [moc, java]
 		- [[Java Reflection]]
 		- [[Java Annotation In Depth]]
 	- Advanced
-		- [[Java Regex zero to hero]]
+		- [[Java Regex Zero to Hero]]
 		- [[Java Encoding and Encryption]]
 		- [[Java Internationalization]]
 		- [[JDK8 New Features]]

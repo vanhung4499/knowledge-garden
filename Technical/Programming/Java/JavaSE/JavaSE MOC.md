@@ -3,7 +3,7 @@ tags: [java, javase]
 categories: [java, javase]
 title: JavaSE MOC
 date created: 2023-07-09
-date modified: 2023-07-13
+date modified: 2023-07-14
 ---
 
 - Basic
@@ -21,7 +21,7 @@ date modified: 2023-07-13
 	- [[Java Reflection]]
 	- [[Java Annotation In Depth]]
 - Advanced
-	- [[Java Regex zero to hero]]
+	- [[Java Regex Zero to Hero]]
 	- [[Java Encoding and Encryption]]
 	- [[Java Internationalization]]
 	- [[JDK8 New Features]]
