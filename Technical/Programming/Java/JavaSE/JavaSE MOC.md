@@ -26,7 +26,13 @@ date modified: 2023-07-14
 	- [[Java Internationalization]]
 	- [[JDK8 New Features]]
 	- [[Java SPI In Depth]]
-- Java Collection
+- Java Container
+	- [[Java Collection Intro]]
+	- [[Java Collection List]]
+	- [[Java Collection Map]]
+	- [[Java Collection Set]]
+	- [[Java Collection Queue]]
+	- [[Java Collection Stream]]
 - Java IO
 	- [[Java Serialization]]
 - Java Concurency
