@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "90d08af2194f5c65",
+        "id": "6835bc0459eac711",
         "type": "tabs",
         "children": [
           {
-            "id": "3b07267634e91a4e",
+            "id": "8553a6b56e088bcb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Internationalization.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md"
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Internationalization.md"
               }
             }
           }
@@ -123,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Internationalization.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Internationalization.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -205,12 +205,13 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "635224217c3558fc",
+  "active": "8553a6b56e088bcb",
   "lastOpenFiles": [
     "Technical/Programming/Java/Java MOC.md",
+    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+    "Technical/Programming/Java/JavaSE/Advanced/Java Internationalization.md",
     "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
     "Home.md",
-    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
     "Technical/Programming/Java/JavaSE/Advanced/Java Regex Zero to Hero.md",
     "Technical/Programming/Java/JavaSE/Advanced",
     "Technical/Programming/Java/JavaSE/Basic/Java String.md",
@@ -233,7 +234,6 @@
     "Technical/Programming/Programming MOC.md",
     "Technical/Technical MOC.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Method.md",
-    "Technical/Programming/Java/JavaSE/Basic/Java Basic MOC.md",
     "Calendar/Untitled",
     "Calendar/Weekly notes",
     "Calendar/Daily notes",
