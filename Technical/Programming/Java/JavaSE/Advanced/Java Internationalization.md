@@ -1,7 +1,7 @@
 ---
 title: Java Internationalization
-tags: 
-categories: 
+tags: [java, javase]
+categories: [java, javase]
 date created: 2023-07-14
 date modified: 2023-07-14
 ---
