@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "f691e18097b2cb1a",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Java/Java MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e7baae88286ec24b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Java/Java MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "3b07267634e91a4e",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JavaSE MOC.md"
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md"
               }
             }
           }
@@ -123,7 +98,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 268.5,
+    "collapsed": true
   },
   "right": {
     "id": "8cf2b2f99d2fd9eb",
@@ -147,7 +123,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +140,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+                "file": "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -179,7 +155,7 @@
             }
           },
           {
-            "id": "01fc8d6e3b9d4f35",
+            "id": "39b6e6e5bb0e5a2d",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -187,10 +163,18 @@
             }
           },
           {
-            "id": "45ef58aceb154efe",
+            "id": "635224217c3558fc",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "93964f8d74eb13d6",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
               "state": {}
             }
           }
@@ -221,11 +205,13 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "3b07267634e91a4e",
+  "active": "635224217c3558fc",
   "lastOpenFiles": [
-    "Technical/Programming/Java/JavaSE/Advanced/Java Regex Zero to Hero.md",
     "Technical/Programming/Java/Java MOC.md",
+    "Technical/Programming/Java/JavaSE/Advanced/Java Encoding and Encryption.md",
+    "Home.md",
     "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+    "Technical/Programming/Java/JavaSE/Advanced/Java Regex Zero to Hero.md",
     "Technical/Programming/Java/JavaSE/Advanced",
     "Technical/Programming/Java/JavaSE/Basic/Java String.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Reflection.md",
@@ -247,13 +233,11 @@
     "Technical/Programming/Programming MOC.md",
     "Technical/Technical MOC.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Method.md",
-    "Home.md",
     "Technical/Programming/Java/JavaSE/Basic/Java Basic MOC.md",
     "Calendar/Untitled",
     "Calendar/Weekly notes",
     "Calendar/Daily notes",
     "Calendar",
-    "Technical/Programming/Java/JavaSE/Concurency/Java Concurrency MOC.md",
     "Kowledge/Technical/Programming/Java/JavaSE/Basic",
     "Kowledge/Technical/Programming/Java/JavaSE",
     "Kowledge/Technical/Programming/Java",
