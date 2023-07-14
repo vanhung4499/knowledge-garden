@@ -26,37 +26,37 @@ Tiêu chuẩn [**ISO-3166**](https://www.iso.org/obp/ui/#iso:std:iso:3166:-2:ed-
 
 Bảng dưới đây liệt kê một số mã hóa ngôn ngữ của các quốc gia/vùng lãnh thổ phổ biến:
 
-| Quốc gia/Vùng lãnh thổ          | Mã hóa ngôn ngữ | Quốc gia/Vùng lãnh thổ             | Mã hóa ngôn ngữ |     |     |     |
-| ------------------------------- | --------------- | ---------------------------------- | --------------- | --- | --- | --- |
+| Quốc gia/Vùng lãnh thổ          | Mã ngôn ngữ | Quốc gia/Vùng lãnh thổ             | Mã ngôn ngữ |
+| ------------------------------- | --------------- | ---------------------------------- | --------------- |
 | Tiếng việt | vi-vn |||
-| Tiếng Anh (Mỹ)                  | en-us           | Tiếng Anh (Anh)                    | en-gb           |     |     |     |
-| Tiếng Anh (Toàn cầu)            | en-ww           | Tiếng Anh (Canada)                 | en-ca           |     |     |     |
-| Tiếng Anh (Úc)                  | en-au           | Tiếng Anh (Ireland)                | en-ie           |     |     |     |
-| Tiếng Anh (Phần Lan)            | en-fi           | Tiếng Đan Mạch (Đan Mạch)          | da-dk           |     |     |     |
-| Tiếng Anh (Israel)              | en-il           | Tiếng Hebrew (Israel)              | he-il           |     |     |     |
-| Tiếng Anh (Nam Phi)             | en-za           | Tiếng Anh (Ấn Độ)                  | en-in           |     |     |     |
-| Tiếng Anh (Na Uy)               | en-no           | Tiếng Anh (Singapore)              | en-sg           |     |     |     |
-| Tiếng Anh (New Zealand)         | en-nz           | Tiếng Anh (Indonesia)              | en-id           |     |     |     |
-| Tiếng Anh (Philippines)         | en-ph           | Tiếng Anh (Thái Lan)               | en-th           |     |     |     |
-| Tiếng Anh (Malaysia)            | en-my           | Tiếng Anh (Ả Rập)                  | en-xa           |     |     |     |
-| Tiếng Hàn (Hàn Quốc)            | ko-kr           | Tiếng Nhật (Nhật Bản)              | ja-jp           |     |     |     |
-| Tiếng Hà Lan (Hà Lan)           | nl-nl           | Tiếng Hà Lan (Bỉ)                  | nl-be           |     |     |     |
-| Tiếng Bồ Đào Nha (Bồ Đào Nha)   | pt-pt           | Tiếng Bồ Đào Nha (Brazil)          | pt-br           |     |     |     |
-| Tiếng Pháp (Pháp)               | fr-fr           | Tiếng Pháp (Luxembourg)            | fr-lu           |     |     |     |
-| Tiếng Pháp (Thụy Sĩ)            | fr-ch           | Tiếng Pháp (Bỉ)                    | fr-be           |     |     |     |
-| Tiếng Pháp (Canada)             | fr-ca           | Tiếng Tây Ban Nha (Châu Mỹ Latinh) | es-la           |     |     |     |
-| Tiếng Tây Ban Nha (Tây Ban Nha) | es-es           | Tiếng Tây Ban Nha (Argentina)      | es-ar           |     |     |     |
-| Tiếng Tây Ban Nha (Mỹ)          | es-us           | Tiếng Tây Ban Nha (Mexico)         | es-mx           |     |     |     |
-| Tiếng Tây Ban Nha (Colombia)    | es-co           | Tiếng Tây Ban Nha (Puerto Rico)    | es-pr           |     |     |     |
-| Tiếng Đức (Đức)                 | de-de           | Tiếng Đức (Áo)                     | de-at           |     |     |     |
-| Tiếng Đức (Thụy Sĩ)             | de-ch           | Tiếng Nga (Nga)                    | ru-ru           |     |     |     |
-| Tiếng Ý (Ý)                     | it-it           | Tiếng Hy Lạp (Hy Lạp)              | el-gr           |     |     |     |
-| Tiếng Na Uy (Na Uy)             | no-no           | Tiếng Hungary (Hungary)            | hu-hu           |     |     |     |
-| Tiếng Thổ Nhĩ Kỳ (Thổ Nhĩ Kỳ)   | tr-tr           | Tiếng Séc (Cộng hòa Séc)           | cs-cz           |     |     |     |
-| Tiếng Slovenia                  | sl-sl           | Tiếng Ba Lan (Ba Lan)              | pl-pl           |     |     |     |
-| Tiếng Thụy Điển (Thụy Điển)     | sv-se           |                                    |                 |     |     |     |
-| Tiếng Trung (Trung Quốc)        | zh-cn           | Tiếng Trung (Đài Loan)             | zh-tw           |     |     |     |
-| Tiếng Trung (Hồng Kông)         | zh-hk           | Tiếng Anh (Hồng Kông)              | en-hk           |     |     |     |
+| Tiếng Anh (Mỹ)                  | en-us           | Tiếng Anh (Anh)                    | en-gb           |
+| Tiếng Anh (Toàn cầu)            | en-ww           | Tiếng Anh (Canada)                 | en-ca           |
+| Tiếng Anh (Úc)                  | en-au           | Tiếng Anh (Ireland)                | en-ie           |
+| Tiếng Anh (Phần Lan)            | en-fi           | Tiếng Đan Mạch (Đan Mạch)          | da-dk           |
+| Tiếng Anh (Israel)              | en-il           | Tiếng Hebrew (Israel)              | he-il           |
+| Tiếng Anh (Nam Phi)             | en-za           | Tiếng Anh (Ấn Độ)                  | en-in           |
+| Tiếng Anh (Na Uy)               | en-no           | Tiếng Anh (Singapore)              | en-sg           |
+| Tiếng Anh (New Zealand)         | en-nz           | Tiếng Anh (Indonesia)              | en-id           |
+| Tiếng Anh (Philippines)         | en-ph           | Tiếng Anh (Thái Lan)               | en-th           |
+| Tiếng Anh (Malaysia)            | en-my           | Tiếng Anh (Ả Rập)                  | en-xa           |
+| Tiếng Hàn (Hàn Quốc)            | ko-kr           | Tiếng Nhật (Nhật Bản)              | ja-jp           |
+| Tiếng Hà Lan (Hà Lan)           | nl-nl           | Tiếng Hà Lan (Bỉ)                  | nl-be           |
+| Tiếng Bồ Đào Nha (Bồ Đào Nha)   | pt-pt           | Tiếng Bồ Đào Nha (Brazil)          | pt-br           |
+| Tiếng Pháp (Pháp)               | fr-fr           | Tiếng Pháp (Luxembourg)            | fr-lu           |
+| Tiếng Pháp (Thụy Sĩ)            | fr-ch           | Tiếng Pháp (Bỉ)                    | fr-be           |
+| Tiếng Pháp (Canada)             | fr-ca           | Tiếng Tây Ban Nha (Châu Mỹ Latinh) | es-la           |
+| Tiếng Tây Ban Nha (Tây Ban Nha) | es-es           | Tiếng Tây Ban Nha (Argentina)      | es-ar           |
+| Tiếng Tây Ban Nha (Mỹ)          | es-us           | Tiếng Tây Ban Nha (Mexico)         | es-mx           |
+| Tiếng Tây Ban Nha (Colombia)    | es-co           | Tiếng Tây Ban Nha (Puerto Rico)    | es-pr           |
+| Tiếng Đức (Đức)                 | de-de           | Tiếng Đức (Áo)                     | de-at           |
+| Tiếng Đức (Thụy Sĩ)             | de-ch           | Tiếng Nga (Nga)                    | ru-ru           |
+| Tiếng Ý (Ý)                     | it-it           | Tiếng Hy Lạp (Hy Lạp)              | el-gr           |
+| Tiếng Na Uy (Na Uy)             | no-no           | Tiếng Hungary (Hungary)            | hu-hu           |
+| Tiếng Thổ Nhĩ Kỳ (Thổ Nhĩ Kỳ)   | tr-tr           | Tiếng Séc (Cộng hòa Séc)           | cs-cz           |
+| Tiếng Slovenia                  | sl-sl           | Tiếng Ba Lan (Ba Lan)              | pl-pl           |
+| Tiếng Thụy Điển (Thụy Điển)     | sv-se           |                                    |                 |
+| Tiếng Trung (Trung Quốc)        | zh-cn           | Tiếng Trung (Đài Loan)             | zh-tw           |
+| Tiếng Trung (Hồng Kông)         | zh-hk           | Tiếng Anh (Hồng Kông)              | en-hk           |
 
 **Chú ý: Bảng trên cho thấy mã hóa ngôn ngữ và quốc gia/vùng lãnh thổ thường là viết tắt của từ tiếng Anh.**
 
