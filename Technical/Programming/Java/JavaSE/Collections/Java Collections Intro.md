@@ -1,6 +1,6 @@
 ---
 title: Java Container Intro
-tags: [java, javase]
+tags: [java, javase, collection]
 categories: [java, javase]
 date created: 2023-07-14
 date modified: 2023-07-14
