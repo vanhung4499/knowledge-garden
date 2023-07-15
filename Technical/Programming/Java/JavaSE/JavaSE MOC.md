@@ -32,15 +32,17 @@ date modified: 2023-07-15
 
 ## Java Container
 
-- [[Java Collection Intro]]
+- [[Java Collections Intro]]
 - [[Java Collections List]]
 - [[Java Collections Map]]
 - [[Java Collections Set]]
 - [[Java Collections Queue]]
-- [[Java Collection Stream]]
+- [[Java Collections Stream]]
 
 ## Java IO
 
+- [[Java IO Model]]
+- [[Java NIO]]
 - [[Java Serialization]]
 
 ## Java Concurency
