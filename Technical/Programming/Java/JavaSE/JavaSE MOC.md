@@ -30,7 +30,7 @@ date modified: 2023-07-15
 - [[JDK8 New Features]]
 - [[Java SPI In Depth]]
 
-## Java Container
+## Container
 
 - [[Java Collections Intro]]
 - [[Java Collections List]]
@@ -39,12 +39,14 @@ date modified: 2023-07-15
 - [[Java Collections Queue]]
 - [[Java Collections Stream]]
 
-## Java IO
+## IO
 
 - [[Java IO Model]]
 - [[Java NIO]]
 - [[Java Serialization]]
+- [[Java Network Development]]
+- [[JavaIO Utility Classes]]
 
-## Java Concurency
+## Concurency
 
 ## JVM
