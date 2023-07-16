@@ -3,7 +3,7 @@ tags: [java, javase]
 categories: [java, javase]
 title: JavaSE MOC
 date created: 2023-07-09
-date modified: 2023-07-15
+date modified: 2023-07-17
 ---
 
 ## Basic
@@ -50,7 +50,8 @@ date modified: 2023-07-15
 ## Concurency
 
 - [[Java Concurrency Intro]]
-- [[Java Concurrent Basic Mechanism]]
 - [[Java Thread Basic]]
+- [[Java Concurrent Basic Mechanism]]
+- [[Java Lock]]
 
 ## JVM

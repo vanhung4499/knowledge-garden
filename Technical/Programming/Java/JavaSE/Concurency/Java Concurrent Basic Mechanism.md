@@ -740,7 +740,7 @@ Các tình huống ứng dụng điển hình của CAS là:
 
 Hãy xem một đoạn mã thông thường.
 
-```Java
+```java
 if(a==b) {
     a++;
 }
@@ -750,7 +750,7 @@ Nếu giá trị của `a` bị thay đổi trước khi thực hiện `a++`, th
 
 Giải quyết vấn đề này theo cách cổ điển nhất là sử dụng phương thức `incrementAndGet` của lớp nguyên tử.
 
-```Java
+```java
 public class AtomicIntegerDemo {
 
     public static void main(String[] args) throws InterruptedException {

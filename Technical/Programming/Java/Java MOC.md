@@ -54,8 +54,9 @@ tags: [moc, java]
 ### Concurrency
 
 - [[Java Concurrency Intro]]
-- [[Java Concurrent Basic Mechanism]]
 - [[Java Thread Basic]]
+- [[Java Concurrent Basic Mechanism]]
+- [[Java Lock]]
 
 ### JVM
 
