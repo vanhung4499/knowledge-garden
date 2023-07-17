@@ -51,7 +51,8 @@ date modified: 2023-07-17
 
 - [[Java Concurrency Intro]]
 - [[Java Thread Basic]]
-- [[Java Concurrent Basic Mechanism]]
+- [[Java Concurrency Core Mechanism]]
 - [[Java Lock]]
+- [[Java Atomic Class]]
 
 ## JVM

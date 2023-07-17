@@ -157,7 +157,7 @@ Trước Java 1.5, cơ chế duy nhất để điều phối quyền truy cập 
 
 Sau Java 1.5, đã thêm cơ chế mới: `ReentrantLock`, `ReentrantReadWriteLock`, những loại khóa này có thể yêu cầu và giải phóng khóa theo ý muốn của chương trình, do đó thường được gọi là khóa hiển thị.
 
-> 💡 Cách sử dụng và nguyên lý của `synchronized` có thể tham khảo tại: [[Java Concurrent Basic Mechanism]].
+> 💡 Cách sử dụng và nguyên lý của `synchronized` có thể tham khảo tại: [[Java Concurrency Core Mechanism]].
 >
 > 🔔 Lưu ý: Nếu không cần các tính năng đồng bộ cao cấp mà `ReentrantLock`, `ReentrantReadWriteLock` cung cấp, **nên ưu tiên sử dụng `synchronized`**. Lý do như sau:
 >

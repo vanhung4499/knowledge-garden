@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "6725dec89fbf6fc0",
+        "id": "c5022ed8a937d194",
         "type": "tabs",
         "children": [
           {
-            "id": "fa973614e6318630",
+            "id": "62a6ed73a92a575b",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,7 +162,7 @@
             }
           },
           {
-            "id": "6f79baf855a3b575",
+            "id": "c655920dd15984d7",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +170,7 @@
             }
           },
           {
-            "id": "7c456f5bc21269e1",
+            "id": "67cf7c33ded9cbb4",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -178,7 +178,7 @@
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -204,16 +204,18 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "fa973614e6318630",
+  "active": "62a6ed73a92a575b",
   "lastOpenFiles": [
+    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+    "Technical/Programming/Java/JavaSE/Concurency/Java Atomic Class.md",
+    "Technical/Programming/Java/JavaSE/Concurency/Java Concurrency Core Mechanism.md",
+    "Technical/Programming/Java/JavaSE/Concurency/Java Concurrency Intro.md",
+    "Technical/Programming/Java/JavaSE/Concurency/Java Lock.md",
+    "Home.md",
     "Technical/Databases/MongoDB/MongoDB MOC.md",
     "Technical/Programming/Java/Java MOC.md",
-    "Technical/Programming/Java/JavaSE/Concurency/Java Lock.md",
-    "Technical/Programming/Java/JavaSE/Concurency/Java Concurrent Basic Mechanism.md",
     "Technical/Programming/Java/JavaSE/Concurency/Java Thread Basic.md",
-    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
     "Extras/Draws/Drawing 2023-07-16 11.47.05.excalidraw.md",
-    "Technical/Programming/Java/JavaSE/Concurency/Java Concurrency Intro.md",
     "Extras/Draws/Drawing 2023-07-16 14.20.26.excalidraw.md",
     "Extras/Draws/Drawing 2023-07-16 14.20.26.excalidraw.svg",
     "Extras/Draws/Drawing 2023-07-16 14.20.26.excalidraw.png",
@@ -224,7 +226,6 @@
     "Extras/Draws/Drawing 2023-07-16 13.17.00.excalidraw.md",
     "Extras/Draws/Drawing 2023-07-16 13.17.00.excalidraw.png",
     "Extras/Draws/Drawing 2023-07-16 11.47.05.excalidraw.png",
-    "Home.md",
     "Extras/Draws/Drawing 2023-07-16 11.47.05.excalidraw.svg",
     "Extras/Draws/Drawing 2023-07-16 11.39.08.excalidraw.md",
     "Technical/Programming/Java/JavaSE/IO/JavaIO Utility Classes.md",
@@ -238,7 +239,6 @@
     "Technical/Programming/Java/JavaSE/Collections/Java Collections Map.md",
     "Technical/Programming/Java/JavaSE/Collections/Java Collections Queue.md",
     "Technical/Programming/Java/JavaSE/Collections/Java Collections Intro.md",
-    "Technical/Programming/Java/JavaSE/Collections/Java Collection MOC.md",
     "Technical/Programming/Java/JavaSE/Advanced",
     "Calendar/Untitled",
     "Calendar/Weekly notes",

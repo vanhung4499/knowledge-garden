@@ -55,8 +55,9 @@ tags: [moc, java]
 
 - [[Java Concurrency Intro]]
 - [[Java Thread Basic]]
-- [[Java Concurrent Basic Mechanism]]
+- [[Java Concurrency Core Mechanism]]
 - [[Java Lock]]
+- [[Java Atomic Class]]
 
 ### JVM
 
