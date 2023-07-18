@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md",
+                "file": "Technical/Programming/Java/Java MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md"
+                "file": "Technical/Programming/Java/Java MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md",
+                "file": "Technical/Programming/Java/Java MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md",
+                "file": "Technical/Programming/Java/Java MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,9 +206,13 @@
   },
   "active": "5b71e33ae1584e58",
   "lastOpenFiles": [
+    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
+    "Technical/Programming/Java/Java MOC.md",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Technical MOC.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md",
     "Home.md",
     "Technical/Programming/Java/JavaSE/JVM/JVM Memory Managment.md",
-    "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.md",
     "Extras/Draws/jvm-process-6.png",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png",
@@ -218,8 +222,6 @@
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.svg",
     "Technical/Programming/Java/JavaSE/JVM/JVM Architecture.md",
     "Extras/Draws/JVM Process 3.png",
-    "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
-    "Technical/Programming/Java/Java MOC.md",
     "Technical/Programming/Java/JavaSE/Concurency/Java ForkJoin.md",
     "Technical/Programming/Java/JavaSE/Concurency/Java Memory Model.md",
     "Technical/Programming/Java/JavaSE/Concurency/Java Synchronized.md",
@@ -240,8 +242,6 @@
     "Extras/Draws/Drawing 2023-07-16 13.53.50.excalidraw.md",
     "Extras/Draws/Drawing 2023-07-16 13.53.50.excalidraw.png",
     "Extras/Draws/Drawing 2023-07-16 13.32.35.excalidraw.md",
-    "Extras/Draws/Drawing 2023-07-16 13.17.00.excalidraw.md",
-    "Extras/Draws/Drawing 2023-07-16 11.39.08.excalidraw.md",
     "Technical/Programming/Java/JavaSE/Advanced",
     "Calendar/Untitled",
     "Calendar/Weekly notes",
