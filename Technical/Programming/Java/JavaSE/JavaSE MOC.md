@@ -61,3 +61,9 @@ date modified: 2023-07-18
 - [[Java ForkJoin]]
 
 ## JVM
+
+- [[JVM Architecture]]
+- [[JVM Memory Managment]]
+- [[JVM Garbage Collection]]
+- [[JVM Class Loader]]
+- [[Java Bytecode]]
