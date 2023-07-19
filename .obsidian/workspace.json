@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "3cc69fdf952dbe0e",
+        "id": "b6028e69dc86c72b",
         "type": "tabs",
         "children": [
           {
-            "id": "5b71e33ae1584e58",
+            "id": "a95f3622c670df8f",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -162,7 +162,7 @@
             }
           },
           {
-            "id": "c9e544ccc2e90cd3",
+            "id": "5d683b9d0ec8677c",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +170,7 @@
             }
           },
           {
-            "id": "49828569104a4480",
+            "id": "a3a53bb3d2596de8",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -204,15 +204,21 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "5b71e33ae1584e58",
+  "active": "a95f3622c670df8f",
   "lastOpenFiles": [
     "Technical/Programming/Java/JavaSE/JavaSE MOC.md",
     "Technical/Programming/Java/Java MOC.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM In Action.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM GUI Tools.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM Command Line Tools.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM Class Loader.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM Memory Managment.md",
+    "Technical/Programming/Java/JavaSE/JVM/JVM Architecture.md",
+    "Technical/Programming/Java/JavaSE/JVM/Java Bytecode.md",
+    "Home.md",
     "Technical/Programming/Programming MOC.md",
     "Technical/Technical MOC.md",
-    "Technical/Programming/Java/JavaSE/JVM/JVM Garbage Collection.md",
-    "Home.md",
-    "Technical/Programming/Java/JavaSE/JVM/JVM Memory Managment.md",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.md",
     "Extras/Draws/jvm-process-6.png",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png",
@@ -220,7 +226,6 @@
     "Extras/Draws/jvm-process-4.png",
     "Extras/Draws/jvm-process-3.svg",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.svg",
-    "Technical/Programming/Java/JavaSE/JVM/JVM Architecture.md",
     "Extras/Draws/JVM Process 3.png",
     "Technical/Programming/Java/JavaSE/Concurency/Java ForkJoin.md",
     "Technical/Programming/Java/JavaSE/Concurency/Java Memory Model.md",
@@ -234,14 +239,9 @@
     "Technical/Programming/Java/JavaSE/Concurency/Java Concurrency Core Mechanism.md",
     "Technical/Programming/Java/JavaSE/Concurency/Java Concurrency Intro.md",
     "Technical/Computer Science/Database/Transaction Isolation Level.md",
-    "Technical/Databases/MongoDB/MongoDB MOC.md",
-    "Extras/Draws/Drawing 2023-07-16 11.47.05.excalidraw.md",
-    "Extras/Draws/Drawing 2023-07-16 14.20.26.excalidraw.md",
     "Extras/Draws/Drawing 2023-07-16 14.20.26.excalidraw.svg",
     "Extras/Draws/Drawing 2023-07-16 14.20.26.excalidraw.png",
-    "Extras/Draws/Drawing 2023-07-16 13.53.50.excalidraw.md",
     "Extras/Draws/Drawing 2023-07-16 13.53.50.excalidraw.png",
-    "Extras/Draws/Drawing 2023-07-16 13.32.35.excalidraw.md",
     "Technical/Programming/Java/JavaSE/Advanced",
     "Calendar/Untitled",
     "Calendar/Weekly notes",

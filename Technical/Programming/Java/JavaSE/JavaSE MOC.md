@@ -3,7 +3,7 @@ tags: [java, javase]
 categories: [java, javase]
 title: JavaSE MOC
 date created: 2023-07-09
-date modified: 2023-07-18
+date modified: 2023-07-19
 ---
 
 ## Basic
@@ -67,3 +67,6 @@ date modified: 2023-07-18
 - [[JVM Garbage Collection]]
 - [[JVM Class Loader]]
 - [[Java Bytecode]]
+- [[JVM Command Line Tools]]
+- [[JVM GUI Tools]]
+- [[JVM In Action]]

@@ -1,7 +1,7 @@
 ---
 title: Java MOC
 date created: 2023-07-04
-date modified: 2023-07-18
+date modified: 2023-07-19
 categories: [java, moc]
 tags: [moc, java]
 ---
@@ -71,5 +71,8 @@ tags: [moc, java]
 - [[JVM Garbage Collection]]
 - [[JVM Class Loader]]
 - [[Java Bytecode]]
+- [[JVM Command Line Tools]]
+- [[JVM GUI Tools]]
+- [[JVM In Action]]
 
 ## JavaEE

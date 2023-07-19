@@ -1,6 +1,6 @@
 ---
 title: JVM Garbage Collection
-tags: [java, javase, jvm]
+tags: [java, javase, jvm, gc]
 categories: [java, javase, jvm]
 date created: 2023-07-18
 date modified: 2023-07-18
