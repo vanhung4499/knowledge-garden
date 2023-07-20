@@ -2,7 +2,7 @@
 categories: [network, computer-science]
 title: Cookie vs Session
 date created: 2023-05-28
-date modified: 2023-07-10
+date modified: 2023-07-20
 tags: [network, computer-science]
 ---
 
@@ -23,7 +23,7 @@ Tài nguyên bị lãng phí nếu máy chủ giữ một số lượng lớn m�
 - Sau đó, mỗi khi khách hàng gửi yêu cầu, cookie được lưu trữ sẽ được đưa vào cookie của request header và được gửi đi.
 - Máy chủ xác định ứng dụng khách của request dựa trên thông tin trong cookie.
 
-## Nhược điểm của Cookie
+### Nhược điểm của Cookie
 
 - Dễ bị tổn thương về bảo mật  
 	- Vì giá trị của cookie có thể được kiểm tra trong trình duyệt nên có nguy cơ bị rò rỉ và thao túng
@@ -43,7 +43,7 @@ Session được giới thiệu để giải quyết vấn đề này.
 - Máy chủ xác định máy khách bằng cách xác định tính hợp lệ của session id.  
 - Thông tin session id bị xóa khi người dùng đóng trình duyệt.
 
-## Ưu và nhược điểm
+### Ưu và nhược điểm
 
 - Ngay cả khi request bao gồm cookie được hiển thị ra bên ngoài, bản thân session ID không chứa thông tin cá nhân có ý nghĩa.  
 	- Tuy nhiên, nếu hacker truy cập máy chủ bằng session ID, thông tin của người dùng có thể dễ dàng truy cập.  

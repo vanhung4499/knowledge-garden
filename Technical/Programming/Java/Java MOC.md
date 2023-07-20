@@ -98,3 +98,114 @@ tags: [moc, java]
 #### Jetty
 
 - [[Jetty Quick Start]]
+
+## Java Softwares
+
+### Build
+
+### IDE
+
+- [[IntelliJ Idea]]
+
+### Monitoring
+
+- [[Java Monitoring Tools Compare]]
+- [[CAT]]
+- [[Zipkin]]
+- [[SkyWalking]]
+- [[Arthas]]
+
+## Java Tool
+
+### Java IO
+
+- [[JSON Serialization]]
+	- [fastjson](https://github.com/alibaba/fastjson)
+	- [Jackson](https://github.com/FasterXML/jackson)
+	- [Gson](https://github.com/google/gson)
+- [[Binary Serialization]]
+	- [Protobuf](https://developers.google.com/protocol-buffers)
+	- [Thrift](https://thrift.apache.org/)
+	- [Hessian](http://hessian.caucho.com/)
+	- [Kryo](https://github.com/EsotericSoftware/kryo)
+	- [FST](https://github.com/RuedigerMoeller/fast-serialization)
+
+### Java Bean Tools
+
+- [[Lombok]]
+- [[Dozer]]
+
+### Java Template Engine
+
+- [[Freemark]]
+- [[Velocity]]
+- [[Thymeleaf]]
+
+### Java Testing Tool
+
+- [[JUnit]]
+- [[Mockito]]
+- [[Jmeter]]
+- [[JMH]]
+
+### Other
+
+- [[Java Log]]
+- [[Java Toolkit]]
+- [[Reflections Quick Start]]
+- [[Java Mail Quick Start]]
+- [[Jsoup Quick Start]]
+- [[Thumbnailator Quick Start]]
+- [[Zxing Quick Start]]
+
+## Java Framework
+
+### ORM
+
+- [[Mybatis Quick Start]]
+- [[Mybatis Principle]]
+
+### Spring
+
+- 📚 [[Spring MOC]]
+
+### Spring Boot
+
+- 📚 [[SpringBoot MOC]]
+
+### Security
+
+- [[Shiro]]
+- [[SpringSecurity]]
+
+### IO
+
+### Microservices
+
+- [[Dubbo]]
+
+## Java Middleware
+
+### MQ
+
+- [[Message Queue Fundamentals]]
+- [[RocketMQ]]
+- [[ActiveMQ]]
+- [[Message Queue Interview]]
+
+### Cache
+
+- [[Java Caching Middleware]]
+- [[Memcached Quick Start]]
+- [[Ehcache Quick Start]]
+- [[Java In-Process Caching]]
+- [[HTTP Caching]]
+- [[Cache Interview]]
+
+### Flow Control
+
+## References
+
+### Books
+
+### Guides

@@ -2,7 +2,7 @@
 categories: [db, sql]
 title: How SQL DB works?
 date created: 2023-06-04
-date modified: 2023-07-10
+date modified: 2023-07-20
 tags: [db, sql]
 ---
 
@@ -12,7 +12,7 @@ tags: [db, sql]
 
 > Đối với cơ sở dữ liệu, điều quan trọng không phải là khối lượng dữ liệu, mà là làm thế nào các hoạt động tăng lên khi khối lượng dữ liệu tăng lên.
 
-Độ phức tạp thuật toán kéo theo độ phức tạp thời gian (time complexity) và độ phức tạp không gian (space complexity). Vui lòng đọc [[Big-O Notation]]
+Độ phức tạp thuật toán kéo theo độ phức tạp thời gian (time complexity) và độ phức tạp không gian (space complexity). Vui lòng đọc [[Complexity Analysis]]
 
 ### [[Merge Sort]]
 
@@ -850,19 +850,19 @@ Ngoại trừ khi hai giao dịch viết cùng một dữ liệu, kiểm soát p
 
 Như chúng ta đã biết, để cải thiện hiệu suất, cơ sở dữ liệu lưu dữ liệu trong bộ đệm bộ nhớ. Nhưng nếu máy chủ sụp đổ khi giao dịch được cam kết, dữ liệu vẫn còn trong bộ nhớ bị mất, làm suy yếu tính bền vững (durability) của giao dịch. Bạn có thể ghi tất cả dữ liệu trên disk, nhưng nếu máy chủ sụp đổ, dữ liệu cuối cùng có thể chỉ được ghi một phần vào disk, làm hỏng tính nguyên tử (atomicity) của giao dịch.
 
-**Bất kỳ sửa đổi nào được thực hiện bởi giao dịch phải được hủy bỏ hoặc hoàn thành**.
+**Bất kỳ sửa đổi nào được thực hiện bởi giao dịch phải bị hủy bỏ hoặc hoàn thành**.
 
 Có 2 cách để giải quyết vấn đề này:
 
-- **Shadow copies/pages:** Mỗi giao dịch tạo bản sao cơ sở dữ liệu của riêng mình (hoặc một phần của cơ sở dữ liệu) và làm việc dựa trên bản sao này. Một khi có lỗi, bản sao này sẽ bị xóa; Một khi thành công, cơ sở dữ liệu ngay lập tức sử dụng một thủ thuật của hệ thống tập tin, thay thế bản sao bằng dữ liệu, và sau đó xóa dữ liệu cũ.
+- **Bản sao/Trang bóng (Shadow copies/pages)**:  Mỗi giao dịch tạo ra một bản sao của cơ sở dữ liệu của riêng nó (hoặc một phần của cơ sở dữ liệu), và làm việc trên bản sao này. Khi xảy ra lỗi, bản sao này sẽ được loại bỏ; khi thành công, cơ sở dữ liệu ngay lập tức sử dụng một thủ thuật từ hệ thống tệp tin để thay thế bản sao vào trong dữ liệu, sau đó xóa đi các "dữ liệu cũ".
     
-- **Transaction log:** Nhật ký giao dịch là một không gian lưu trữ, trước mỗi disk, cơ sở dữ liệu ghi một số thông tin vào nhật ký giao dịch để khi giao dịch sụp đổ hoặc rollback, cơ sở dữ liệu biết làm thế nào để loại bỏ hoặc hoàn thành các giao dịch chưa hoàn thành.
+- **Nhật ký giao dịch (Transaction log)**: Nhật ký giao dịch là một không gian lưu trữ, trước khi ghi vào đĩa mỗi lần, cơ sở dữ liệu sẽ viết thông tin vào nhật ký giao dịch. Điều này giúp cơ sở dữ liệu biết cách loại bỏ hoặc hoàn thành các giao dịch chưa hoàn thành khi xảy ra sự cố hoặc rollback của giao dịch.
 
 #### WAL (Write-Ahead Logging)
 
 > Shadow copies/pages tạo ra rất nhiều chi phí disk khi chạy một cơ sở dữ liệu lớn với nhiều giao dịch hơn, vì vậy cơ sở dữ liệu hiện đại sử dụng **transaction log**. Nhật ký giao dịch phải được **lưu trữ ổn định** và tôi sẽ không đào sâu vào công nghệ lưu trữ, nhưng ít nhất Disk RAID là bắt buộc trong trường hợp disk lỗi.
 
-Hầu hết các cơ sở dữ liệu (ít nhất là Oracle, SQL Server, DB2, PostgreSQL, MySQL và SQLite) xử lý nhật ký giao dịch bằng cách sử dụng giao thức nhật ký ghi sẵn (Write-Ahead Logging protocol, WAL). Giao thức WAL có 3 quy tắc:
+Hầu hết các cơ sở dữ liệu (ít nhất là Oracle, SQL Server, DB2, PostgreSQL, MySQL và SQLite) xử lý nhật ký giao dịch bằng cách sử dụng giao thức nhật ký ghi trước (Write-Ahead Logging protocol, WAL). Giao thức WAL có 3 quy tắc:
 
 - Mỗi sửa đổi cơ sở dữ liệu tạo ra một bản ghi nhật ký, và trước khi dữ liệu được ghi vào disk, bản ghi nhật ký phải được ghi vào nhật ký giao dịch.
 - Ghi nhật ký phải được viết theo thứ tự; Bản ghi A xảy ra trước khi bản ghi B thì A phải được viết trước B.

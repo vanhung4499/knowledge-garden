@@ -2,11 +2,13 @@
 categories: [golang, quick-golang, moc]
 title: Quick Golang MOC
 date created: 2023-07-04
-date modified: 2023-07-11
+date modified: 2023-07-20
 tags: [golang, quick-golang, moc]
 ---
 
-## Table of Contents
+# Golang Quick Start
+
+Khởi động nhanh với golang, tìm hiểu cơ bản về ngôn ngữ GO!
 
 - [[Variables and declaration]]
 - [[Basic Data Types]]

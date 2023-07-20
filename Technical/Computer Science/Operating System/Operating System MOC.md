@@ -1,12 +1,12 @@
 ---
 categories: [os, moc]
-title: README
+title: Operating System MOC
 date created: 2023-07-04
-date modified: 2023-07-11
+date modified: 2023-07-20
 tags: [os, moc]
 ---
 
-## Table of Contents
+# Operating System MOC
 
 - [[OS and Computer]]
 - [[Memory Hierachy]]

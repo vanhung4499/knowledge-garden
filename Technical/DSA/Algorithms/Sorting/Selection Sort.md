@@ -1,6 +1,7 @@
 ---
+tags: [dsa, algorithm]
+categories: [dsa, algorithm]
 title: Selection Sort
 date created: 2023-05-29
-date modified: 2023-06-25
-dg-publish: true
+date modified: 2023-07-20
 ---

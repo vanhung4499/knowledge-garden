@@ -1,8 +1,9 @@
 ---
-title: ∑ Sorting
+tags: [dsa, algorithm, sort]
+categories: [dsa, algorithm, sort]
+title: Sorting MOC
 date created: 2023-05-29
-date modified: 2023-07-08
-dg-publish: true
+date modified: 2023-07-20
 ---
 
 # Sorting MOC

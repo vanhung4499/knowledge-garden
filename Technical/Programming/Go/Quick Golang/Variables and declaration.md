@@ -1,8 +1,8 @@
 ---
 categories: [golang, quick-golang]
 date created: 2023-03-28
-date modified: 2023-07-10
-title: 01.Variables and declaration
+date modified: 2023-07-20
+title: Variables and declaration
 tags: [golang, quick-golang]
 ---
 
@@ -12,7 +12,7 @@ tags: [golang, quick-golang]
 
 Nó phải bắt đầu bằng một chữ cái hoặc dấu gạch dưới và chữ cái đầu tiên là chữ hoa hay chữ thường đều có ý nghĩa đặc biệt. Chữ in hoa có thể trích dẫn bên ngoài package, chữ thường chỉ sử dụng bên trong package, điều này sẽ tiếp tục được chia sẻ trong các bài viết sau.
 
-### [[Statement]]
+### Statement
 
 Đầu tiên sử dụng từ khóa `var` để khai báo các biến:
 

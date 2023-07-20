@@ -3,18 +3,19 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-07-11
+date modified: 2023-07-20
 ---
 
+# Data Structure and Algorithms MOC
 
-# Data Structure and Algorithms
+## Overview
 
-![image.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20230708023808.png)
-
+- [[DSA Quick Start]]
+- [[Complexity Analysis]]
 
 ## Algorithms
 
-- [[∑ Sorting]]
+- [[Sorting MOC]]
 - [[Backtracking]]
 - [[Devide and Conquer]]
 - [[∑ Searching]]
@@ -40,4 +41,4 @@ date modified: 2023-07-11
 - [[Fenwick Tree]]
 - [[DSU]]
 
-## Leetcode Problem
+## Leetcode Problems

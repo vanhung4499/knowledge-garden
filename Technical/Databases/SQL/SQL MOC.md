@@ -2,14 +2,13 @@
 tags: [db, sql]
 categories: [db, sql]
 date created: 2023-07-04
-date modified: 2023-07-10
+date modified: 2023-07-21
 title: SQL MOC
 ---
 
-up::[[Spaces/2-Area/Techinal/Databases/∑ Databases|∑ Databases]]
+# SQL MOC
 
-Các bài viết về cơ sở SQL
-
-## Table of Contents
-
-- [[Spaces/2-Area/Techinal/Databases/SQL/How SQL DB works?|How SQL DB works?]]
+- [[How SQL DB works?]]
+- [[SQL DB Theory]]
+- [[SQL DB Theory Concept]]
+- [[SQL DB Design Process]]
