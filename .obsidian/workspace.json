@@ -4,16 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "66325d95875bb896",
+        "id": "73062a5e11d2b3bf",
         "type": "tabs",
         "children": [
           {
-            "id": "9449b056558ec142",
+            "id": "c2aa810ae24ee335",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/SQL/SQL MOC.md",
+                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "24ab2becc94b9841",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/SQL/SQL DB Theory.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Databases/SQL/SQL MOC.md"
+                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md"
               }
             }
           }
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Databases/SQL/SQL MOC.md",
+                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Databases/SQL/SQL MOC.md",
+                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +174,7 @@
             }
           },
           {
-            "id": "d7e217a0a22c4e27",
+            "id": "a3f72ae701c2b2d4",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +182,7 @@
             }
           },
           {
-            "id": "57588d38650089e6",
+            "id": "6961f378f899abc7",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -204,51 +216,24 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "floating": {
-    "id": "71746d3ae46f47b0",
-    "type": "floating",
-    "children": [
-      {
-        "id": "11d3b6278a0ebeba",
-        "type": "window",
-        "children": [
-          {
-            "id": "6b6f4f3cf43acae7",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "c88ea0925703bf17",
-                "type": "leaf",
-                "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.md"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 2594,
-        "y": -65,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "9449b056558ec142",
+  "active": "c2aa810ae24ee335",
   "lastOpenFiles": [
-    "Technical/Databases/SQL/SQL DB Theory Concept.md",
+    "Technical/Databases/SQL/SQL DB Concept.md",
+    "Technical/Databases/SQL/SQL DB Design Process.md",
+    "Technical/Databases/SQL/SQL MOC.md",
+    "Technical/Databases/SQL/Extend SQL.md",
+    "Technical/Databases/SQL/How SQL DB works.md",
     "Technical/Databases/SQL/SQL DB Theory.md",
-    "Technical/Databases/SQL/How SQL DB works?.md",
+    "Technical/Databases/SQL/SQL Syntax Foudation Features.md",
+    "Technical/Databases/MySQL/MySQL MOC.md",
+    "Technical/Databases/SQL/SQL Cheat Sheet.md",
+    "Technical/Databases/Databases MOC.md",
+    "Technical/Databases/Basic/Basic Database MOC.md",
+    "Technical/Databases/SQL/SQL DB Interview.md",
+    "Home.md",
     "Extras/Draws/acid.png",
     "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.png",
     "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.md",
-    "Technical/Databases/Databases MOC.md",
-    "Technical/Databases/SQL/SQL MOC.md",
     "Technical/Interview/Database Interview.md",
     "Technical/Backend/NodeJS/NodeJS MOC.md",
     "Technical/Backend/Spring/Spring MOC.md",
@@ -262,16 +247,9 @@
     "Technical/Interview/Interview MOC.md",
     "Technical/Backend/SpringBoot",
     "Technical/Programming/Java/Java MOC.md",
-    "Technical/Cloud/Cloud MOC.md",
-    "Technical/Computer Science/Computer Science MOC.md",
     "Technical/Cloud/Azure",
     "Technical/Cloud/GCP",
     "Technical/Cloud/AWS",
-    "Technical/Computer Science/Software Engineering/Software Engineeering MOC.md",
-    "Technical/Computer Science/Operating System/Operating System MOC.md",
-    "Technical/Computer Science/Operating System/Paging - Smaller Table.md",
-    "Technical/Computer Science/Operating System/Paging.md",
-    "Technical/Computer Science/Operating System/OS and Computer.md",
     "Technical/DSA/Algorithms/Searching",
     "Technical/DSA/Overview",
     "Technical/DevOps/Linux",

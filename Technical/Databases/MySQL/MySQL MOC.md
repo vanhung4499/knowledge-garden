@@ -1,7 +1,7 @@
 ---
-tags: 
-categories: 
-title: ∑ MySQL
-date created: Tuesday, July 4th 2023, 5:08:45 pm
-date modified: Monday, July 10th 2023, 7:08:38 pm
+tags: [db, mysql]
+categories: [db, mysql]
+title: MySQL MOC
+date created: 2023-07-04
+date modified: 2023-07-22
 ---

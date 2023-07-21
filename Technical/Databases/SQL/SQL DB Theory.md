@@ -65,7 +65,7 @@ Hai giao dịch T1 và T2 đều sửa đổi cùng một dữ liệu, T1 sửa 
 
 ![image.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20230721002023.png)
 
-### Đọc dữ liệu không đúng (Dirty Read)
+### Đọc dữ liệu bẩn (Dirty Read)
 
 T1 sửa đổi một dữ liệu, T2 đọc dữ liệu đó ngay sau đó. Nếu T1 hoàn tác sửa đổi này, thì dữ liệu mà T2 đọc là dữ liệu không đúng.
 
