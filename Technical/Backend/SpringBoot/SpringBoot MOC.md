@@ -3,17 +3,17 @@ title: SpringBoot MOC
 tags: [springboot, backend, java, moc]
 categories: [springboot, backend, java, moc]
 date created: 2023-07-20
-date modified: 2023-07-20
+date modified: 2023-07-22
 ---
 
 # Spring Boot MOC
 
-## Get Ready
+## 📖 Contents
+
+### Get Ready
 
 - [[Java MOC]]
 - [[Spring MOC]]
-
-## Documents
 
 ### Overview
 
@@ -51,7 +51,7 @@ date modified: 2023-07-20
 
 - [[SpringBoot Banner]]
 
-## In Action
+## 💼 In Action
 
 ### Foudation
 

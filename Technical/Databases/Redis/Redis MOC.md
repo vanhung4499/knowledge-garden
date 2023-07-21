@@ -1,7 +1,13 @@
 ---
-tags: 
-categories: 
-title: ∑ Redis
-date created: Tuesday, July 4th 2023, 5:08:45 pm
-date modified: Monday, July 10th 2023, 7:08:57 pm
+tags: [db, redis, moc, nosql]
+categories: [db, redis, moc, nosql]
+title: Redis MOC
+date created: 2023-07-04
+date modified: 2023-07-22
 ---
+
+# Redis MOC
+
+## 📖 Contents
+
+## 📚 Resources

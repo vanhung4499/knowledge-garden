@@ -1,7 +1,7 @@
 ---
 title: Java MOC
 date created: 2023-07-04
-date modified: 2023-07-20
+date modified: 2023-07-22
 categories: [java, moc]
 tags: [moc, java]
 ---
@@ -206,6 +206,5 @@ tags: [moc, java]
 
 ## References
 
-### Books
-
-### Guides
+- **Books**
+- **Guides**

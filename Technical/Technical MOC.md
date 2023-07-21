@@ -1,19 +1,57 @@
 ---
-categories: [moc]
+categories: [moc, tech]
 date created: 2023-07-04
-date modified: 2023-07-11
-tags: [moc]
+date modified: 2023-07-22
+tags: [moc, tech]
 title: Technical MOC
 ---
 
 # Technical MOC
 
-- [[Computer Science MOC]]
+## Programming
+
 - [[Programming MOC]]
-- [[Backend MOC]]  
-- [[FrontEnd MOC]]  
-- [[Databases MOC]]  
-- [[DevOps MOC]]  
+
+## Computer Science
+
+- [[Computer Science MOC]]
+
+## Data Structures and Algorithms
+
 - [[DSA MOC]]
-- [[Programming MOC]]  
+
+## Backend
+
+- [[Backend MOC]]  
+
+## Databases
+
+- [[Databases MOC]]
+
+## Frontend
+
+- [[FrontEnd MOC]]  
+
+## DevOps
+
+- [[DevOps MOC]]  
+
+## Design and Architecture
+
+- [[Design Arch MOC]]
+
+## Big Data
+
+- [[Big Data MOC]]
+
+## AI
+
+- [[AI MOC]]
+
+## Blockchain
+
+- [[Blockchain MOC]]
+
+## Interview
+
 - [[Interview MOC]]

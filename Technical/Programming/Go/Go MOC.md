@@ -6,7 +6,7 @@ date created: 2023-07-04
 date modified: 2023-07-20
 ---
 
-## Golang MOC
+# Golang MOC
 
 Tổng hợp về Golang, tôi yêu thích ngôn ngữ này!
 

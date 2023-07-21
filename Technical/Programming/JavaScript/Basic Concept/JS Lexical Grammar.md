@@ -1,8 +1,9 @@
 ---
 title: JS Lexical Grammar
 date created: 2023-07-04
-date modified: 2023-07-04
-tags: [javascript, js]
+date modified: 2023-07-22
+tags: [js, programming]
+categories: [js, programming]
 ---
 
 ECMAScript mã nguồn được quét từ trái sang phải và được chuyển đổi thành một chuỗi các phần tử đầu vào, bao gồm các từ khóa, các ký tự điều khiển, ký tự kết thúc dòng, chú thích và khoảng trắng.

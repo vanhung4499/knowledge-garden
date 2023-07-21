@@ -20,7 +20,7 @@ tags: [db, moc]
 
 ### PostgreSQL
 
-- [[Postgres MOC]]
+- [[PostgreSQL MOC]]
 
 ## NoSQL
 

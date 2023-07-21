@@ -3,10 +3,10 @@ categories: [js, moc]
 tags: [js, moc]
 title: JavaScript MOC
 date created: 2023-07-02
-date modified: 2023-07-20
+date modified: 2023-07-22
 ---
 
-## JavaScript MOC
+# JavaScript MOC
 
 Tổng hợp các bài viết về JavaScript, chỉ bàn về ngôn ngữ không đề cập đến library, framework!
 
@@ -74,6 +74,5 @@ Tổng hợp các bài viết về JavaScript, chỉ bàn về ngôn ngữ khôn
 
 - [[BOM Global Objects]]
 - [[BOM Global API]]
-- 
 
 ## DOM

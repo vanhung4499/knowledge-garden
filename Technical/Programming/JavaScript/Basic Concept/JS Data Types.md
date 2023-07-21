@@ -1,8 +1,9 @@
 ---
 title: JS Data Types
 date created: 2023-07-04
-date modified: 2023-07-04
-tags: [javascript, js]
+date modified: 2023-07-22
+tags: [js, programming]
+categories: [js, programming]
 ---
 
 JavaScript là một ngôn ngữ **weakly typed** hoặc còn được gọi là ngôn ngữ **động**. Điều này có nghĩa là bạn không cần khai báo kiểu dữ liệu của biến trước, kiểu dữ liệu sẽ được xác định tự động trong quá trình chạy chương trình.

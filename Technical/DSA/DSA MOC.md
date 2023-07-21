@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-07-20
+date modified: 2023-07-22
 ---
 
 # Data Structure and Algorithms MOC
@@ -18,11 +18,11 @@ date modified: 2023-07-20
 - [[Sorting MOC]]
 - [[Backtracking]]
 - [[Devide and Conquer]]
-- [[∑ Searching]]
+- [[Searching MOC]]
 - [[Greedy]]
 - [[Graph Alogrithms MOC]]
-- [[∑ String]]
-- [[∑ Dynamic Programming]]
+- [[String MOC]]
+- [[Dynamic Programming MOC]]
 
 ## Data Structures
 
@@ -42,3 +42,5 @@ date modified: 2023-07-20
 - [[DSU]]
 
 ## Leetcode Problems
+
+- [[Leetcode MOC]]

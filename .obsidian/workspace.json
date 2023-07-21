@@ -13,7 +13,43 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md",
+                "file": "Technical/Databases/Databases MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6e074a6dad78c6f6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Technical MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e1ac67248008f7dc",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/Databases MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ccc022bc58c269df",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Backend/Spring/Spring MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,7 +67,8 @@
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -102,7 +139,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md"
+                "file": "Technical/Technical MOC.md"
               }
             }
           }
@@ -134,7 +171,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md",
+                "file": "Technical/Technical MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +188,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Databases/SQL/SQL Cheat Sheet.md",
+                "file": "Technical/Technical MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -216,46 +253,46 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c2aa810ae24ee335",
+  "active": "6e074a6dad78c6f6",
   "lastOpenFiles": [
-    "Technical/Databases/SQL/SQL DB Concept.md",
-    "Technical/Databases/SQL/SQL DB Design Process.md",
-    "Technical/Databases/SQL/SQL MOC.md",
-    "Technical/Databases/SQL/Extend SQL.md",
-    "Technical/Databases/SQL/How SQL DB works.md",
-    "Technical/Databases/SQL/SQL DB Theory.md",
-    "Technical/Databases/SQL/SQL Syntax Foudation Features.md",
-    "Technical/Databases/MySQL/MySQL MOC.md",
-    "Technical/Databases/SQL/SQL Cheat Sheet.md",
+    "Technical/Blockchain/Blockchain MOC.md",
+    "Technical/DevOps/DevOps MOC.md",
+    "Technical/Blockchain",
+    "Technical/Technical MOC.md",
+    "Technical/Design Arch/Design Arch MOC.md",
+    "Technical/DevOps/Nginx",
+    "Technical/DevOps/Git-VCS",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Programming/TypeScript/TypeScript MOC.md",
+    "Technical/Programming/Python/Python MOC.md",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Data Structures/Data Structures MOC.md",
+    "Technical/DSA/Leetcode/Leetcode MOC.md",
+    "Technical/DSA/Algorithms/Algorithms MOC.md",
+    "Technical/Computer Science/Computer Science MOC.md",
+    "Technical/Computer Science/Computer Architecture/Computer Architecture MOC.md",
+    "Technical/Databases/Redis/Redis MOC.md",
+    "Technical/Design",
     "Technical/Databases/Databases MOC.md",
-    "Technical/Databases/Basic/Basic Database MOC.md",
-    "Technical/Databases/SQL/SQL DB Interview.md",
-    "Home.md",
+    "Technical/Databases/PostgreSQL/PostgreSQL MOC.md",
+    "Technical/Databases/MongoDB/MongoDB MOC.md",
+    "Technical/Databases/MySQL/MySQL MOC.md",
+    "Technical/Big Data/Big Data MOC.md",
+    "Technical/DevOps/Linux/Linux MOC.md",
+    "Technical/DevOps/K8s/Kubernates MOC.md",
+    "Technical/DevOps/CI-CD/CI CD MOC.md",
+    "Technical/DevOps/Docker/Docker MOC.md",
+    "Technical/DevOps/Cloud/Cloud MOC.md",
+    "Technical/DevOps/CI-CD",
+    "Technical/DevOps/Untitled.md",
+    "Technical/Backend/SpringBoot/SpringBoot MOC.md",
+    "Technical/Programming/TypeScript",
     "Extras/Draws/acid.png",
     "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.png",
-    "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.md",
-    "Technical/Interview/Database Interview.md",
-    "Technical/Backend/NodeJS/NodeJS MOC.md",
-    "Technical/Backend/Spring/Spring MOC.md",
-    "Technical/Backend/SpringBoot/SpringBoot MOC.md",
-    "Technical/Programming/JavaScript/JavaScript MOC.md",
-    "Technical/Programming/Go/Quick Golang/Quick Golang MOC.md",
-    "Technical/Programming/Go/Quick Golang/Method.md",
-    "Technical/Programming/Go/Quick Golang/Variables and declaration.md",
-    "Technical/Programming/Go/In Depth/Golang In Depth MOC.md",
-    "Technical/Programming/Go/Go MOC.md",
-    "Technical/Interview/Interview MOC.md",
     "Technical/Backend/SpringBoot",
-    "Technical/Programming/Java/Java MOC.md",
-    "Technical/Cloud/Azure",
-    "Technical/Cloud/GCP",
-    "Technical/Cloud/AWS",
-    "Technical/DSA/Algorithms/Searching",
-    "Technical/DSA/Overview",
-    "Technical/DevOps/Linux",
-    "Technical/Programming/Java/JavaEE/Server/Tomcat",
-    "Technical/Programming/Java/JavaEE/Server",
-    "Technical/Programming/Java/JavaEE/JavaWeb",
+    "Technical/DevOps/Cloud/Azure",
+    "Technical/DevOps/Cloud/GCP",
+    "Technical/DevOps/Cloud/AWS",
     "Extras/Draws/jvm-process-6.png",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png",
     "Extras/Draws/jvm-process-5.png",
