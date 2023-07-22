@@ -4,64 +4,30 @@
     "type": "split",
     "children": [
       {
-        "id": "73062a5e11d2b3bf",
+        "id": "7eb3a5fb60a7af30",
         "type": "tabs",
         "children": [
           {
-            "id": "c2aa810ae24ee335",
+            "id": "71b1e41dd0426edc",
             "type": "leaf",
+            "pinned": true,
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/Databases MOC.md",
+                "file": "Home.md",
                 "mode": "source",
                 "source": false
-              }
+              },
+              "pinned": true
             }
           },
           {
-            "id": "6e074a6dad78c6f6",
+            "id": "20f589b77df8f24c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Technical MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e1ac67248008f7dc",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/Databases MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ccc022bc58c269df",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "24ab2becc94b9841",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/SQL/SQL DB Theory.md",
+                "file": "Technical/Databases/MySQL/MySQL Workflow.md",
                 "mode": "source",
                 "source": false
               }
@@ -139,7 +105,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Technical MOC.md"
+                "file": "Technical/Databases/MySQL/MySQL Workflow.md"
               }
             }
           }
@@ -171,7 +137,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Technical MOC.md",
+                "file": "Technical/Databases/MySQL/MySQL Workflow.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -188,7 +154,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Technical MOC.md",
+                "file": "Technical/Databases/MySQL/MySQL Workflow.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -211,7 +177,19 @@
             }
           },
           {
-            "id": "a3f72ae701c2b2d4",
+            "id": "169b02e1fd5955c5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "a825409503be1f77",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -219,7 +197,7 @@
             }
           },
           {
-            "id": "6961f378f899abc7",
+            "id": "56b8d8972ad1ad5b",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -227,7 +205,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 7
       }
     ],
     "direction": "horizontal",
@@ -253,53 +231,87 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "6e074a6dad78c6f6",
+  "floating": {
+    "id": "7b86e35f7c579e05",
+    "type": "floating",
+    "children": [
+      {
+        "id": "6d3b68ae5aef4efe",
+        "type": "window",
+        "children": [
+          {
+            "id": "fd6b3779c03f79e5",
+            "type": "tabs",
+            "children": [
+              {
+                "id": "edaab39387845033",
+                "type": "leaf",
+                "state": {
+                  "type": "excalidraw",
+                  "state": {
+                    "file": "Extras/Draws/mysql-update-query.excalidraw.md"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "direction": "vertical",
+        "x": 1026,
+        "y": 33,
+        "width": 1024,
+        "height": 1407,
+        "maximize": false,
+        "zoom": 0
+      }
+    ]
+  },
+  "active": "20f589b77df8f24c",
   "lastOpenFiles": [
+    "Home.md",
+    "Extras/Draws/mysql-update-query.excalidraw.md",
+    "Extras/Draws/mysql-update-query.excalidraw.png",
+    "Technical/Databases/MySQL/MySQL Workflow.md",
+    "Technical/Databases/MySQL/MySQL Locks.md",
+    "README.md",
+    "Technical/Databases/MySQL/MySQL Performance Optimization.md",
+    "Technical/Databases/MySQL/MySQL Transactions.md",
+    "Technical/Databases/MySQL/MySQL MOC.md",
+    "Technical/Databases/MySQL/MySQL Index.md",
+    "Technical/Databases/MySQL/MySQL Guide.md",
+    "Technical/Databases/SQL/SQL DB Interview.md",
+    "Technical/Databases/SQL/SQL MOC.md",
+    "Technical/Databases/SQL/SQL DB Theory.md",
+    "Technical/Databases/Databases MOC.md",
+    "Technical/Databases/NoSQL/NoSQL MOC.md",
+    "Technical/Databases/NoSQL",
+    "Technical/Databases/Elastic/Elastic MOC.md",
+    "Technical/Databases/Elastic",
+    "Technical/Databases/Redis/Redis MOC.md",
+    "Technical/Computer Science/Computer Science MOC.md",
+    "Technical/Technical MOC.md",
+    "Technical/Interview/Interview MOC.md",
     "Technical/Blockchain/Blockchain MOC.md",
     "Technical/DevOps/DevOps MOC.md",
     "Technical/Blockchain",
-    "Technical/Technical MOC.md",
     "Technical/Design Arch/Design Arch MOC.md",
     "Technical/DevOps/Nginx",
     "Technical/DevOps/Git-VCS",
     "Technical/Programming/Programming MOC.md",
     "Technical/Programming/TypeScript/TypeScript MOC.md",
-    "Technical/Programming/Python/Python MOC.md",
-    "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/Data Structures/Data Structures MOC.md",
-    "Technical/DSA/Leetcode/Leetcode MOC.md",
-    "Technical/DSA/Algorithms/Algorithms MOC.md",
-    "Technical/Computer Science/Computer Science MOC.md",
-    "Technical/Computer Science/Computer Architecture/Computer Architecture MOC.md",
-    "Technical/Databases/Redis/Redis MOC.md",
     "Technical/Design",
-    "Technical/Databases/Databases MOC.md",
-    "Technical/Databases/PostgreSQL/PostgreSQL MOC.md",
-    "Technical/Databases/MongoDB/MongoDB MOC.md",
-    "Technical/Databases/MySQL/MySQL MOC.md",
-    "Technical/Big Data/Big Data MOC.md",
-    "Technical/DevOps/Linux/Linux MOC.md",
-    "Technical/DevOps/K8s/Kubernates MOC.md",
-    "Technical/DevOps/CI-CD/CI CD MOC.md",
-    "Technical/DevOps/Docker/Docker MOC.md",
-    "Technical/DevOps/Cloud/Cloud MOC.md",
     "Technical/DevOps/CI-CD",
-    "Technical/DevOps/Untitled.md",
-    "Technical/Backend/SpringBoot/SpringBoot MOC.md",
     "Technical/Programming/TypeScript",
     "Extras/Draws/acid.png",
     "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.png",
     "Technical/Backend/SpringBoot",
     "Technical/DevOps/Cloud/Azure",
-    "Technical/DevOps/Cloud/GCP",
-    "Technical/DevOps/Cloud/AWS",
     "Extras/Draws/jvm-process-6.png",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png",
     "Extras/Draws/jvm-process-5.png",
     "Extras/Draws/jvm-process-4.png",
     "Extras/Draws/jvm-process-3.svg",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.svg",
-    "Extras/Draws/JVM Process 3.png",
-    "Extras/Draws/Drawing 2023-07-16 14.20.26.excalidraw.svg"
+    "Extras/Draws/JVM Process 3.png"
   ]
 }

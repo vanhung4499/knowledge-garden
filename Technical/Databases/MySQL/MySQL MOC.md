@@ -10,7 +10,7 @@ date modified: 2023-07-22
 
 ## Contents
 
-- [[MySQL DB Guide]]
+- [[MySQL Guide]]
 - [[MySQL Workflow]]
 - [[MySQL Transactions]]
 - [[MySQL Locks]]
