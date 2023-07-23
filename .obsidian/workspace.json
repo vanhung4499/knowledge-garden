@@ -13,31 +13,103 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL MOC.md",
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "4211d1808c4eb0c6",
+            "id": "84d6694461425a65",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Opearation and Maintainance.md",
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "64a40347cd90f6a2",
+            "id": "e28a466c4a3c823d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL MOC.md",
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "0c316b3f443b1e1d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ba364f2c0af71b5b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "190d5cb5bb891ec2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "19b0c1d3ec063598",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "e3cd1654310593be",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "aeef932af2baefdf",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MongoDB/MongoDB Operations.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +121,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Common Issues.md",
+                "file": "Technical/Databases/MySQL/MySQL Guide.md",
                 "mode": "source",
                 "source": false
               }
@@ -66,7 +138,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 8
       }
     ],
     "direction": "vertical"
@@ -137,7 +209,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Common Issues.md"
+                "file": "Technical/Databases/MongoDB/MongoDB Operations.md"
               }
             }
           }
@@ -169,7 +241,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Common Issues.md",
+                "file": "Technical/Databases/MongoDB/MongoDB Operations.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -186,7 +258,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Common Issues.md",
+                "file": "Technical/Databases/MongoDB/MongoDB Operations.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -286,14 +358,28 @@
       }
     ]
   },
-  "active": "9c751d7eeb42f29f",
+  "active": "aeef932af2baefdf",
   "lastOpenFiles": [
+    "Technical/Databases/MongoDB/MongoDB Modeling.md",
+    "Technical/Databases/MongoDB/MongoDB Operations.md",
+    "Technical/Databases/MongoDB/MongoDB MOC.md",
+    "Technical/Databases/MongoDB/MongoDB Transactions.md",
+    "Technical/Databases/MongoDB/MongoDB Sharding.md",
+    "Technical/Databases/MongoDB/MongoDB Replication.md",
+    "Technical/Databases/MongoDB/MongoDB Model Examples.md",
+    "Technical/Databases/MongoDB/MongoDB Index.md",
+    "Technical/Databases/MongoDB/MongoDB Aggreation.md",
+    "Technical/Databases/MongoDB/MongoDB CRUD Operations.md",
+    "Technical/Databases/MongoDB/MongoDB Guide.md",
     "Technical/Databases/MySQL/MySQL MOC.md",
+    "Technical/Databases/MySQL/MySQL Guide.md",
+    "Technical/Databases/MySQL/MySQL Opearation and Maintainance.md",
+    "Technical/Databases/MongoDB/MongoDB Introdution.md",
+    "Technical/Databases/Redis/Redis MOC.md",
+    "Technical/Databases/PostgreSQL/PostgreSQL MOC.md",
     "Technical/Databases/MySQL/MySQL Common Issues.md",
     "Technical/Databases/MySQL/MySQL Configuration.md",
-    "Technical/Databases/MySQL/MySQL Opearation and Maintainance.md",
     "Technical/Databases/MySQL/MySQL Performance Optimization.md",
-    "Technical/Databases/MySQL/MySQL Guide.md",
     "Technical/Databases/MySQL/MySQL Index.md",
     "Technical/Databases/MySQL/MySQL Workflow.md",
     "Technical/Databases/MySQL/MySQL Transactions.md",
@@ -303,23 +389,9 @@
     "Extras/Draws/mysql-mvcc-readview.excalidraw.md",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.svg",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.png",
-    "Home.md",
-    "Extras/Draws/mysql-update-query.excalidraw.md",
     "Extras/Draws/mysql-update-query.excalidraw.png",
-    "README.md",
-    "Technical/Databases/SQL/SQL MOC.md",
-    "Technical/Databases/SQL/SQL DB Theory.md",
-    "Technical/Databases/Databases MOC.md",
-    "Technical/Databases/NoSQL/NoSQL MOC.md",
     "Technical/Databases/NoSQL",
-    "Technical/Databases/Elastic/Elastic MOC.md",
     "Technical/Databases/Elastic",
-    "Technical/Databases/Redis/Redis MOC.md",
-    "Technical/Computer Science/Computer Science MOC.md",
-    "Technical/Technical MOC.md",
-    "Technical/Interview/Interview MOC.md",
-    "Technical/Blockchain/Blockchain MOC.md",
-    "Technical/DevOps/DevOps MOC.md",
     "Technical/Blockchain",
     "Technical/DevOps/Nginx",
     "Technical/DevOps/Git-VCS",

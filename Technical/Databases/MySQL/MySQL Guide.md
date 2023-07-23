@@ -3,16 +3,16 @@ title: MySQL Guide
 tags: [db, mysql, sql]
 categories: [db, mysql, sql]
 date created: 2023-07-22
-date modified: 2023-07-23
+date modified: 2023-07-24
 ---
 
-# Hướng dẫn ứng dụng MySQL
+# Hướng dẫn MySQL
 
 ## Quá trình thực thi SQL
 
 Để học MySQL, tốt nhất là hiểu cách MySQL hoạt động ở mức độ tổng quan.
 
-> Tham khảo: [[MySQL Workflow]]
+Tham khảo: [[MySQL Workflow]]
 
 ## Storage Engine (Bộ lưu trữ)
 
@@ -155,19 +155,19 @@ Trong hầu hết các trường hợp, không cần sử dụng kiểu enum. M�
 
 ## Chỉ mục
 
-> Chi tiết xem: [[MySQL Index]]
+Chi tiết xem: [[MySQL Index]]
 
 ## Khóa
 
-> Chi tiết xem: [[MySQL Locks]]
+Chi tiết xem: [[MySQL Locks]]
 
 ## Giao dịch
 
-> Chi tiết xem: [[MySQL Transactions]]
+Chi tiết xem: [[MySQL Transactions]]
 
 ## Tối ưu hiệu suất
 
-> Chi tiết xem: [[MySQL Performance Optimization]]
+Chi tiết xem: [[MySQL Performance Optimization]]
 
 ## Sao chép
 

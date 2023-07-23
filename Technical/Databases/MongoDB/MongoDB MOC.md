@@ -3,7 +3,7 @@ tags: [db, mongodb, nosql]
 categories: [db, mongodb, nosql]
 title: MongoDB MOC
 date created: 2023-07-04
-date modified: 2023-07-22
+date modified: 2023-07-24
 ---
 
 # MongoDB MOC
@@ -17,7 +17,7 @@ date modified: 2023-07-22
 ## 📖 Contents
 
 - [[MongoDB Guide]]
-- [[MongoDB CRUD]]
+- [[MongoDB CRUD Operations]]
 - [[MongoDB Aggreation]]
 - [[MongoDB Transactions]]
 - [[MongoDB Modeling]]
