@@ -4,37 +4,69 @@
     "type": "split",
     "children": [
       {
-        "id": "7eb3a5fb60a7af30",
+        "id": "571ff32ea635d773",
         "type": "tabs",
         "children": [
           {
-            "id": "71b1e41dd0426edc",
-            "type": "leaf",
-            "pinned": true,
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
-                "mode": "source",
-                "source": false
-              },
-              "pinned": true
-            }
-          },
-          {
-            "id": "20f589b77df8f24c",
+            "id": "820fc5a0a05c0563",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Workflow.md",
+                "file": "Technical/Databases/MySQL/MySQL MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
+          },
+          {
+            "id": "4211d1808c4eb0c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MySQL/MySQL Opearation and Maintainance.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "64a40347cd90f6a2",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MySQL/MySQL MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "9c751d7eeb42f29f",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Databases/MySQL/MySQL Common Issues.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ca9b75ba5149281f",
+            "type": "leaf",
+            "state": {
+              "type": "excalidraw",
+              "state": {
+                "file": "Extras/Draws/mysql-mvcc-readview.excalidraw.md"
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -105,7 +137,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Workflow.md"
+                "file": "Technical/Databases/MySQL/MySQL Common Issues.md"
               }
             }
           }
@@ -137,7 +169,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Workflow.md",
+                "file": "Technical/Databases/MySQL/MySQL Common Issues.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,7 +186,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Databases/MySQL/MySQL Workflow.md",
+                "file": "Technical/Databases/MySQL/MySQL Common Issues.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,19 +209,7 @@
             }
           },
           {
-            "id": "169b02e1fd5955c5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "a825409503be1f77",
+            "id": "907f73b9aa907cbd",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -197,7 +217,7 @@
             }
           },
           {
-            "id": "56b8d8972ad1ad5b",
+            "id": "79b4e76bb2be7217",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -205,7 +225,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -232,24 +252,24 @@
     }
   },
   "floating": {
-    "id": "7b86e35f7c579e05",
+    "id": "780a30d7f1e60c2c",
     "type": "floating",
     "children": [
       {
-        "id": "6d3b68ae5aef4efe",
+        "id": "ec48c2d69ccb238e",
         "type": "window",
         "children": [
           {
-            "id": "fd6b3779c03f79e5",
+            "id": "ff68dce7f6081b35",
             "type": "tabs",
             "children": [
               {
-                "id": "edaab39387845033",
+                "id": "3041fb39ef6f4475",
                 "type": "leaf",
                 "state": {
                   "type": "excalidraw",
                   "state": {
-                    "file": "Extras/Draws/mysql-update-query.excalidraw.md"
+                    "file": "Extras/Draws/mysql-mvcc-readview.excalidraw.md"
                   }
                 }
               }
@@ -257,29 +277,36 @@
           }
         ],
         "direction": "vertical",
-        "x": 1026,
-        "y": 33,
+        "x": 1229,
+        "y": 398,
         "width": 1024,
-        "height": 1407,
+        "height": 800,
         "maximize": false,
         "zoom": 0
       }
     ]
   },
-  "active": "20f589b77df8f24c",
+  "active": "9c751d7eeb42f29f",
   "lastOpenFiles": [
+    "Technical/Databases/MySQL/MySQL MOC.md",
+    "Technical/Databases/MySQL/MySQL Common Issues.md",
+    "Technical/Databases/MySQL/MySQL Configuration.md",
+    "Technical/Databases/MySQL/MySQL Opearation and Maintainance.md",
+    "Technical/Databases/MySQL/MySQL Performance Optimization.md",
+    "Technical/Databases/MySQL/MySQL Guide.md",
+    "Technical/Databases/MySQL/MySQL Index.md",
+    "Technical/Databases/MySQL/MySQL Workflow.md",
+    "Technical/Databases/MySQL/MySQL Transactions.md",
+    "Technical/Databases/MySQL/MySQL Locks.md",
+    "Extras/Draws/mysql-mvcc-readview.png",
+    "Technical/Databases/SQL/SQL DB Interview.md",
+    "Extras/Draws/mysql-mvcc-readview.excalidraw.md",
+    "Extras/Draws/mysql-mvcc-readview.excalidraw.svg",
+    "Extras/Draws/mysql-mvcc-readview.excalidraw.png",
     "Home.md",
     "Extras/Draws/mysql-update-query.excalidraw.md",
     "Extras/Draws/mysql-update-query.excalidraw.png",
-    "Technical/Databases/MySQL/MySQL Workflow.md",
-    "Technical/Databases/MySQL/MySQL Locks.md",
     "README.md",
-    "Technical/Databases/MySQL/MySQL Performance Optimization.md",
-    "Technical/Databases/MySQL/MySQL Transactions.md",
-    "Technical/Databases/MySQL/MySQL MOC.md",
-    "Technical/Databases/MySQL/MySQL Index.md",
-    "Technical/Databases/MySQL/MySQL Guide.md",
-    "Technical/Databases/SQL/SQL DB Interview.md",
     "Technical/Databases/SQL/SQL MOC.md",
     "Technical/Databases/SQL/SQL DB Theory.md",
     "Technical/Databases/Databases MOC.md",
@@ -294,11 +321,8 @@
     "Technical/Blockchain/Blockchain MOC.md",
     "Technical/DevOps/DevOps MOC.md",
     "Technical/Blockchain",
-    "Technical/Design Arch/Design Arch MOC.md",
     "Technical/DevOps/Nginx",
     "Technical/DevOps/Git-VCS",
-    "Technical/Programming/Programming MOC.md",
-    "Technical/Programming/TypeScript/TypeScript MOC.md",
     "Technical/Design",
     "Technical/DevOps/CI-CD",
     "Technical/Programming/TypeScript",
@@ -309,9 +333,6 @@
     "Extras/Draws/jvm-process-6.png",
     "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png",
     "Extras/Draws/jvm-process-5.png",
-    "Extras/Draws/jvm-process-4.png",
-    "Extras/Draws/jvm-process-3.svg",
-    "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.svg",
-    "Extras/Draws/JVM Process 3.png"
+    "Extras/Draws/jvm-process-4.png"
   ]
 }

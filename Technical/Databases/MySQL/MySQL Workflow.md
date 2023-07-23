@@ -1,7 +1,7 @@
 ---
 title: MySQL Workflow
-tags: [db, sql]
-categories: [db, sql]
+tags: [db, mysql, sql]
+categories: [db, mysql, sql]
 date created: 2023-07-22
 date modified: 2023-07-23
 ---
@@ -179,8 +179,8 @@ Việc ghi redo log được chia thành hai giai đoạn: chuẩn bị (prepare
 Vì redo log và binlog là hai phần riêng biệt, nếu không sử dụng "hai giai đoạn cam kết", hoặc là viết redo log trước rồi viết binlog sau, hoặc ngược lại. Hãy xem xét những vấn đề mà hai cách này có thể gây ra.
 
 - Viết redo log trước, sau đó viết binlog. Giả sử redo log đã được viết xong, nhưng binlog chưa được viết xong, tiến trình MySQL bị khởi động lại một cách bất thường. Như đã đề cập trước đó, ngay cả khi hệ thống bị sập sau khi hoàn thành việc ghi redo log, dữ liệu vẫn có thể được khôi phục, vì vậy sau khi khôi phục, giá trị c của hàng này sẽ là 1.  
-    Tuy nhiên, vì binlog chưa được viết xong trước khi gặp sự cố, lúc này binlog không ghi lại câu lệnh này. Do đó, khi sao lưu nhật ký sau đó, binlog lưu trữ không chứa câu lệnh này.  
-    Sau đó, bạn sẽ nhận thấy, nếu bạn cần phục hồi cơ sở dữ liệu tạm thời này bằng binlog, do câu lệnh này bị mất trong binlog, cơ sở dữ liệu tạm thời này sẽ thiếu một lần cập nhật, giá trị c của hàng này sẽ là 0, khác với giá trị của cơ sở dữ liệu gốc.
+	Tuy nhiên, vì binlog chưa được viết xong trước khi gặp sự cố, lúc này binlog không ghi lại câu lệnh này. Do đó, khi sao lưu nhật ký sau đó, binlog lưu trữ không chứa câu lệnh này.  
+	Sau đó, bạn sẽ nhận thấy, nếu bạn cần phục hồi cơ sở dữ liệu tạm thời này bằng binlog, do câu lệnh này bị mất trong binlog, cơ sở dữ liệu tạm thời này sẽ thiếu một lần cập nhật, giá trị c của hàng này sẽ là 0, khác với giá trị của cơ sở dữ liệu gốc.
 - Viết binlog trước, sau đó viết redo log. Nếu tiến trình bị sập sau khi binlog đã được viết xong, nhưng redo log chưa được viết, sau khi khôi phục, giao dịch này sẽ không hợp lệ, vì vậy giá trị c của hàng này sẽ là 0. Tuy nhiên, binlog đã ghi lại câu lệnh "tăng giá trị c từ 0 lên 1". Do đó, khi phục hồi bằng binlog sau đó, sẽ có một giao dịch bổ sung, giá trị c của hàng này sẽ là 1, khác với giá trị của cơ sở dữ liệu gốc.
 
 Có thể thấy, nếu không sử dụng "hai giai đoạn cam kết", trạng thái của cơ sở dữ liệu có thể không khớp với trạng thái của cơ sở dữ liệu được khôi phục bằng nhật ký của nó.

@@ -1,9 +1,9 @@
 ---
 title: MySQL Guide
-tags: [db, mysql]
-categories: [db, mysql]
+tags: [db, mysql, sql]
+categories: [db, mysql, sql]
 date created: 2023-07-22
-date modified: 2023-07-22
+date modified: 2023-07-23
 ---
 
 # Hướng dẫn ứng dụng MySQL
