@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/Redis/Redis Interview.md",
+                "file": "Technical/Databases/Elastic/Elastic MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Databases/Redis/Redis Interview.md"
+                "file": "Technical/Databases/Elastic/Elastic MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Databases/Redis/Redis Interview.md",
+                "file": "Technical/Databases/Elastic/Elastic MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Databases/Redis/Redis Interview.md",
+                "file": "Technical/Databases/Elastic/Elastic MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,7 +182,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 447.5
+    "width": 447.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,16 +205,21 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "183d9e42d5511f43",
+  "active": "c6d173446b8ea23c",
   "lastOpenFiles": [
-    "Technical/Databases/Redis/Redis Sentinel.md",
-    "Technical/Databases/Redis/Redis Interview.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch MOC.md",
+    "Technical/Computer Science/Network/HTTPS.md",
+    "Technical/Databases/Elastic/Elastic MOC.md",
+    "Technical/Technical MOC.md",
+    "Extras/Templates/Technical MOC Template.md",
     "Technical/Databases/Redis/Redis MOC.md",
+    "Technical/Databases/Redis/Redis Cluster.md",
+    "Technical/Databases/Redis/Redis Interview.md",
+    "Technical/Databases/Redis/Redis Sentinel.md",
     "Technical/Databases/Redis/Redis In Action.md",
     "Technical/Databases/Redis/Redis Operations.md",
     "Technical/Databases/Redis/Redis Persistence.md",
     "Technical/Databases/Redis/Redis Guide.md",
-    "Technical/Databases/Redis/Redis Cluster.md",
     "Home.md",
     "Technical/Databases/Redis/Redis Replication.md",
     "Technical/Databases/Redis/Redis Data Types and Applications.md",
@@ -227,11 +233,6 @@
     "Technical/Databases/MongoDB/MongoDB Model Examples.md",
     "Technical/Databases/MongoDB/MongoDB Index.md",
     "Technical/Databases/MongoDB/MongoDB Aggreation.md",
-    "Technical/Databases/MongoDB/MongoDB CRUD Operations.md",
-    "Technical/Databases/MongoDB/MongoDB Guide.md",
-    "Technical/Databases/MySQL/MySQL MOC.md",
-    "Technical/Databases/MySQL/MySQL Guide.md",
-    "Technical/Databases/MySQL/MySQL Opearation and Maintainance.md",
     "Extras/Draws/mysql-mvcc-readview.png",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.svg",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.png",

@@ -40,7 +40,7 @@ tags: [db, moc]
 
 #### Elasticsearch
 
-- [[Elastic Search MOC]]
+- [[Elasticsearch MOC]]
 
 #### Elastic
 
