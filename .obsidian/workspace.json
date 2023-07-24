@@ -4,141 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "571ff32ea635d773",
+        "id": "419e5ac70657ea84",
         "type": "tabs",
         "children": [
           {
-            "id": "820fc5a0a05c0563",
+            "id": "183d9e42d5511f43",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
+                "file": "Technical/Databases/Redis/Redis Interview.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "84d6694461425a65",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e28a466c4a3c823d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "0c316b3f443b1e1d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ba364f2c0af71b5b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "190d5cb5bb891ec2",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "19b0c1d3ec063598",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "e3cd1654310593be",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "aeef932af2baefdf",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB Operations.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "9c751d7eeb42f29f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Databases/MySQL/MySQL Guide.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ca9b75ba5149281f",
-            "type": "leaf",
-            "state": {
-              "type": "excalidraw",
-              "state": {
-                "file": "Extras/Draws/mysql-mvcc-readview.excalidraw.md"
               }
             }
           }
-        ],
-        "currentTab": 8
+        ]
       }
     ],
     "direction": "vertical"
@@ -209,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB Operations.md"
+                "file": "Technical/Databases/Redis/Redis Interview.md"
               }
             }
           }
@@ -241,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB Operations.md",
+                "file": "Technical/Databases/Redis/Redis Interview.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -258,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Databases/MongoDB/MongoDB Operations.md",
+                "file": "Technical/Databases/Redis/Redis Interview.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -273,7 +154,7 @@
             }
           },
           {
-            "id": "93964f8d74eb13d6",
+            "id": "600001a08123a245",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -281,7 +162,7 @@
             }
           },
           {
-            "id": "907f73b9aa907cbd",
+            "id": "58b9254191a92188",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -289,7 +170,7 @@
             }
           },
           {
-            "id": "79b4e76bb2be7217",
+            "id": "9da3669ff1d4a4bd",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -323,43 +204,20 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "floating": {
-    "id": "780a30d7f1e60c2c",
-    "type": "floating",
-    "children": [
-      {
-        "id": "ec48c2d69ccb238e",
-        "type": "window",
-        "children": [
-          {
-            "id": "ff68dce7f6081b35",
-            "type": "tabs",
-            "children": [
-              {
-                "id": "3041fb39ef6f4475",
-                "type": "leaf",
-                "state": {
-                  "type": "excalidraw",
-                  "state": {
-                    "file": "Extras/Draws/mysql-mvcc-readview.excalidraw.md"
-                  }
-                }
-              }
-            ]
-          }
-        ],
-        "direction": "vertical",
-        "x": 1229,
-        "y": 398,
-        "width": 1024,
-        "height": 800,
-        "maximize": false,
-        "zoom": 0
-      }
-    ]
-  },
-  "active": "aeef932af2baefdf",
+  "active": "183d9e42d5511f43",
   "lastOpenFiles": [
+    "Technical/Databases/Redis/Redis Sentinel.md",
+    "Technical/Databases/Redis/Redis Interview.md",
+    "Technical/Databases/Redis/Redis MOC.md",
+    "Technical/Databases/Redis/Redis In Action.md",
+    "Technical/Databases/Redis/Redis Operations.md",
+    "Technical/Databases/Redis/Redis Persistence.md",
+    "Technical/Databases/Redis/Redis Guide.md",
+    "Technical/Databases/Redis/Redis Cluster.md",
+    "Home.md",
+    "Technical/Databases/Redis/Redis Replication.md",
+    "Technical/Databases/Redis/Redis Data Types and Applications.md",
+    "Extras/Draws/mysql-mvcc-readview.excalidraw.md",
     "Technical/Databases/MongoDB/MongoDB Modeling.md",
     "Technical/Databases/MongoDB/MongoDB Operations.md",
     "Technical/Databases/MongoDB/MongoDB MOC.md",
@@ -374,19 +232,7 @@
     "Technical/Databases/MySQL/MySQL MOC.md",
     "Technical/Databases/MySQL/MySQL Guide.md",
     "Technical/Databases/MySQL/MySQL Opearation and Maintainance.md",
-    "Technical/Databases/MongoDB/MongoDB Introdution.md",
-    "Technical/Databases/Redis/Redis MOC.md",
-    "Technical/Databases/PostgreSQL/PostgreSQL MOC.md",
-    "Technical/Databases/MySQL/MySQL Common Issues.md",
-    "Technical/Databases/MySQL/MySQL Configuration.md",
-    "Technical/Databases/MySQL/MySQL Performance Optimization.md",
-    "Technical/Databases/MySQL/MySQL Index.md",
-    "Technical/Databases/MySQL/MySQL Workflow.md",
-    "Technical/Databases/MySQL/MySQL Transactions.md",
-    "Technical/Databases/MySQL/MySQL Locks.md",
     "Extras/Draws/mysql-mvcc-readview.png",
-    "Technical/Databases/SQL/SQL DB Interview.md",
-    "Extras/Draws/mysql-mvcc-readview.excalidraw.md",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.svg",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.png",
     "Extras/Draws/mysql-update-query.excalidraw.png",
