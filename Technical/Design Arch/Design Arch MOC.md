@@ -8,7 +8,6 @@ date modified: 2023-07-22
 
 # Software Design and Architecture
 
-## OOP
 
 ## Design Pattern
 

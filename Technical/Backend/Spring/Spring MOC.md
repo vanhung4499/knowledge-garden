@@ -1,9 +1,9 @@
 ---
-categories: [spring, framework, moc]
-tags: [spring, framework, moc]
+categories: [spring, framework, moc, java]
+tags: [spring, framework, moc, java]
 title: Spring MOC
 date created: 2023-07-04
-date modified: 2023-07-20
+date modified: 2023-07-25
 ---
 
 # Spring Framework MOC
@@ -11,7 +11,7 @@ date modified: 2023-07-20
 ## Overview
 
 - [[Spring Overview]]
-- [[SpringBoot Knowledge MOC]]
+- [[SpringBoot Knowledge Map]]
 - [[SpringBoot Fundamentals]]
 - [[Spring Interview]]
 
