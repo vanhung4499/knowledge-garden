@@ -3,7 +3,7 @@ title: SpringBoot MOC
 tags: [springboot, backend, java, moc]
 categories: [springboot, backend, java, moc]
 date created: 2023-07-20
-date modified: 2023-07-22
+date modified: 2023-07-26
 ---
 
 # Spring Boot MOC
@@ -17,7 +17,7 @@ date modified: 2023-07-22
 
 ### Overview
 
-- [[SpringBoot Knowledge Graph]]
+- [[SpringBoot Knowledge Map]]
 - [[SpringBoot Fundamentals]]
 
 ### Basic

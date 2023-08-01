@@ -3,7 +3,7 @@ categories: [spring, framework, moc, java]
 tags: [spring, framework, moc, java]
 title: Spring MOC
 date created: 2023-07-04
-date modified: 2023-07-25
+date modified: 2023-07-28
 ---
 
 # Spring Framework MOC
@@ -21,17 +21,17 @@ date modified: 2023-07-25
 - [[Spring IoC]]
 - [[Spring Dependency Lookup]]
 - [[Spring Dependency Injection]]
-- [[Spring IoC depend on source]]
+- [[Spring IoC Dependency Sources]]
 - [[Spring Bean Scope]]
 - [[Spring Bean LifeCycle]]
-- [[Spring Configure Metadata]]
-- [[Spring App Context LifeCycle]]
+- [[Spring Config Metadata]]
+- [[Spring Application Context Lifecycle]]
 - [[Spring AOP]]
 - [[Spring Resource Management]]
-- [[Spring Checksum]]
-- [[[Spring Data Binding]]
+- [[Spring Validation]]
+- [[Spring Data Binding]]
 - [[Spring Type Conversion]]
-- [[Spring EL Expressions]]
+- [[Spring EL]]
 - [[Spring Events]]
 - [[Spring Internationalization]]
 - [[Spring Generic Processing]]
@@ -45,6 +45,7 @@ date modified: 2023-07-25
 
 - [[Spring Data Source]]
 - [[Spring JDBC]]
+- [[Spring Transactions]]
 - [[Spring JPA]]
 - [[Spring and Mybatis]]
 - [[Spring Access Redis]]

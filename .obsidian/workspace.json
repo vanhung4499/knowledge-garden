@@ -4,47 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "f3afb6c1ecec121a",
+        "id": "54f6d282c82cfc6c",
         "type": "tabs",
         "children": [
           {
-            "id": "de5626171c0e7ef6",
+            "id": "a6768472a11aa8a6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md",
+                "file": "Technical/Programming/JavaScript/JavaScript MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "6e1d6f57716e66eb",
+            "id": "1801126e4008d191",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c549afa490af5ce7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md",
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -115,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md"
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md"
               }
             }
           }
@@ -147,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md",
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md",
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +175,7 @@
             }
           },
           {
-            "id": "980c874a05ae2b67",
+            "id": "a03f98a0f09ff5db",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -195,7 +183,7 @@
             }
           },
           {
-            "id": "36462f405fd53bc1",
+            "id": "5229e39e230e7c88",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -229,53 +217,53 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c549afa490af5ce7",
+  "active": "1801126e4008d191",
   "lastOpenFiles": [
-    "Technical/Backend/SpringBoot/SpringBoot MOC.md",
-    "Technical/Backend/Spring/Core/Spring Bean.md",
-    "Technical/Backend/Spring/Overview/Spring Overview.md",
-    "Technical/Backend/Spring/Overview/Spring Interview.md",
-    "Technical/Backend/Spring/Spring MOC.md",
-    "Technical/Backend/Spring/Core",
-    "Technical/Backend/Spring/Overview/SpringBoot Knowledge Map.md",
-    "Technical/Backend/Spring/Overview/SpringBoot Fundamentals.md",
-    "Technical/Backend/Spring/Overview",
-    "Home.md",
-    "Technical/Design Arch/Clean Code",
-    "Technical/Design Arch/System Design",
-    "Technical/Design Arch/Design Pattern",
-    "Technical/Databases/Elastic/Elastic MOC.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch MOC.md",
-    "Technical/Computer Science/Network/HTTPS.md",
-    "Technical/Technical MOC.md",
-    "Extras/Templates/Technical MOC Template.md",
-    "Technical/Databases/Redis/Redis MOC.md",
-    "Technical/Databases/Redis/Redis Cluster.md",
-    "Technical/Databases/Redis/Redis Interview.md",
-    "Technical/Databases/Redis/Redis Sentinel.md",
-    "Technical/Databases/Redis/Redis In Action.md",
-    "Technical/Databases/Redis/Redis Operations.md",
-    "Technical/Databases/Redis/Redis Persistence.md",
-    "Technical/Databases/Redis/Redis Guide.md",
-    "Technical/Databases/Redis/Redis Replication.md",
-    "Technical/Databases/Redis/Redis Data Types and Applications.md",
-    "Extras/Draws/mysql-mvcc-readview.excalidraw.md",
-    "Technical/Databases/MongoDB/MongoDB Modeling.md",
-    "Technical/Databases/MongoDB/MongoDB Operations.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Variable Object.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Excution Context Stack.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Scope Chain.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
+    "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
+    "Technical/Programming/JavaScript/JavaScript MOC.md",
+    "Extras/Draws/Excution Context.excalidraw.md",
+    "Extras/Draws/Excution Context.excalidraw.png",
+    "Extras/Draws/JS Excution Context Lifecycle.excalidraw.md",
+    "Extras/Draws/JS Excution Context Lifecycle.excalidraw.png",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Lexical Scope.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Excution Stack 1.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Closures.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Hoisting.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Block Scope.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Compilation.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Function Scope.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts",
+    "Technical/Programming/JavaScript/Built-in",
+    "Technical/Programming/JavaScript/DOM",
+    "Technical/Programming/JavaScript/BOM",
+    "Technical/Programming/JavaScript/OOP",
+    "Technical/Programming/JavaScript/Core",
+    "Technical/Programming/JavaScript/Basic/JS Basic MOC.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS For-Of Statement.md",
+    "Technical/Backend/Backend MOC.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS For-In Statement.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS For Statement.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS While Statement.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS Do While Statement.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS Try Statement.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS Throw Statement.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS Return Statement.md",
+    "Technical/Programming/JavaScript/Basic/Statements/JS Labelled Statements.md",
+    "Technical/Programming/JavaScript/Basic/Statements",
+    "Technical/Programming/JavaScript/Basic/Data Types",
     "Extras/Draws/mysql-mvcc-readview.png",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.svg",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.png",
     "Extras/Draws/mysql-update-query.excalidraw.png",
-    "Technical/Databases/NoSQL",
-    "Technical/Databases/Elastic",
-    "Technical/Blockchain",
-    "Technical/DevOps/Nginx",
-    "Technical/DevOps/Git-VCS",
     "Extras/Draws/acid.png",
     "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.png",
     "Extras/Draws/jvm-process-6.png",
-    "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png",
-    "Extras/Draws/jvm-process-5.png",
-    "Extras/Draws/jvm-process-4.png"
+    "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png"
   ]
 }

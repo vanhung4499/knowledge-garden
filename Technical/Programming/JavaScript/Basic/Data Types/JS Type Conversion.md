@@ -3,8 +3,10 @@ tags: [js, programming]
 categories: [js, programming]
 title: JS Type Conversion
 date created: 2023-07-04
-date modified: 2023-07-22
+date modified: 2023-07-31
 ---
+
+# Chuyển đổi kiểu dữ liệu trong JS
 
 JavaScript là một ngôn ngữ động, không cần khai báo kiểu dữ liệu trước như C/C++. Nó cho phép chuyển đổi kiểu dữ liệu **ngầm định** và chuyển đổi kiểu dữ liệu **tường minh**. Khi khai báo một biến, chúng ta chỉ cần sử dụng `var`, `let`, `const` mà không cần quan tâm đến kiểu dữ liệu.
 

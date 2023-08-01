@@ -3,7 +3,7 @@ categories: [js, moc]
 tags: [js, moc]
 title: JavaScript MOC
 date created: 2023-07-02
-date modified: 2023-07-22
+date modified: 2023-08-01
 ---
 
 # JavaScript MOC
@@ -12,55 +12,11 @@ Tổng hợp các bài viết về JavaScript, chỉ bàn về ngôn ngữ khôn
 
 ## Basic Concept
 
-- [[JS Lexical Grammar]]
-- [[JS Data Types]]
-- [[JS Type Conversion]]
-- [[JS Operators]]
-- [[JS Statements and Declarations]]
+- [[JS Basic MOC]]
 
-## Core Module
+## Core Modules
 
-### Excute and Contexts
-
-#### Compile Time
-
-- [[JS Compilation]]
-- [[JS Lexical Scope]]
-- [[JS Function Scope]]
-- [[JS Block Scope]]
-- [[JS Hoisting]]
-- [[JS Closures]]
-
-#### Excute Time
-
-- [[JS Excution Stack]]
-- [[JS Scope Chain]]
-- [[JS This Keyword]]
-
-#### Memory Management
-
-- [[JS Memory Model]]
-- [[JS Memory Lifecyle]]
-- [[JS Garbage Collection]]
-
-#### Concurency  
-
-- [[JS Concurency Model]]  
-- [[JS Event Loop]]  
-- [[JS Timers Mechanism]]
-
-### Function
-
-- [[JS Function Declarations]]
-- [[JS Function Arguments]]
-- [[JS Function Call]]
-- [[JS Function Internal]]
-
-### Modularization
-
-- [[JS Modularization]]
-- [[JS Module Import]]
-- [[JS Module Export]]
+- [[JS Core Modules MOC]]
 
 ## OOP
 
