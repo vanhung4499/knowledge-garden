@@ -22,7 +22,7 @@ Trong quá trình biên dịch của ngôn ngữ biên dịch truyền thống, 
 
 **Phân tích từ vựng** (Tokenizing / Lexing) là quá trình chia nhỏ một chuỗi các ký tự thành các khối mã có ý nghĩa (đối với ngôn ngữ lập trình), các khối mã này được gọi là **đơn vị từ vựng** (Token).
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 const a = 2;

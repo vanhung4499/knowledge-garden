@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-07-22
+date modified: 2023-08-02
 ---
 
 # Data Structure and Algorithms MOC
@@ -35,7 +35,7 @@ date modified: 2023-07-22
 	- [[BST]]
 	- [[AVL Tree]]
 	- [[Red Black Tree]]
-	- [[B+ Tree]]
+	- [[B-Tree]]
 - [[Trie]]
 - [[Segment Tree]]
 - [[Fenwick Tree]]

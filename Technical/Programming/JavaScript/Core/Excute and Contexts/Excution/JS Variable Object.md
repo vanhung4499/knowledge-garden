@@ -101,7 +101,7 @@ Khi vào ngữ cảnh thực thi, lúc này chưa thực thi mã, quá trình t�
    - Mỗi khi tìm thấy một khai báo biến, tạo một thuộc tính trên đối tượng biến với tên biến và giá trị là `undefined`
    - Nếu tên biến trùng với các tham số hàm hoặc các hàm đã khai báo, khai báo biến sẽ không ảnh hưởng đến các thuộc tính đã tồn tại (có thể hiểu là để tránh việc ghi đè thuộc tính biến cùng tên thành `undefined`, nó sẽ bỏ qua và giữ nguyên giá trị thuộc tính ban đầu)
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo(a) {

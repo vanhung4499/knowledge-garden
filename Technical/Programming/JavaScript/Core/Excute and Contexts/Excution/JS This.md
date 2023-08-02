@@ -49,14 +49,14 @@ Trong quá trình thực thi hàm, vị trí gọi xác định đối tượng 
 Bạn phải xác định vị trí gọi và sau đó áp dụng một trong bốn quy tắc sau. Chúng ta sẽ trình bày từng quy tắc, sau đó giải thích cách xếp hạng ưu tiên khi nhiều quy tắc có thể được áp dụng.
 
 ```js
-(Call Stack) => (Vị trí gọi) => (Quy tắc ràng buộc) => Ưu tiên quy tắc;
+(Call Stack) => (Vị trí gọi) => (Quy tắc ràng buộc) => Mức độ ưu tiên của quy tắc;
 ```
 
 ### Ràng buộc mặc định (Default Binding)
 
 Đầu tiên, chúng ta sẽ giới thiệu quy tắc phổ biến nhất khi gọi hàm: **gọi hàm độc lập**. Bạn có thể coi đây là quy tắc mặc định khi không áp dụng các quy tắc khác.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo() {
@@ -90,7 +90,7 @@ foo();
 // TypeError: this is undefined
 ```
 
-Có một chi tiết tinh tế nhưng rất quan trọng, mặc dù quy tắc ràng buộc `this` hoàn toàn phụ thuộc vào vị trí gọi, nhưng chỉ khi `foo()` chạy trong chế độ không nghiêm ngặt, ràng buộc mặc định mới có thể ràng buộc đến đối tượng toàn cục; khi gọi `foo` trong chế độ nghiêm ngặt, nó không bị ảnh hưởng bởi ràng buộc mặc định.
+Có một chi tiết tinh tế nhưng rất quan trọng, mặc dù quy tắc ràng buộc `this` hoàn toàn phụ thuộc vào vị trí gọi, nhưng chỉ khi `foo()` chạy trong chế độ không nghiêm ngặt, ràng buộc mặc định mới có thể ràng buộc đến đối tượng toàn cục. Khi gọi `foo` trong chế độ nghiêm ngặt, nó không bị ảnh hưởng bởi ràng buộc mặc định.
 
 ```js
 function foo() {
@@ -112,7 +112,7 @@ var a = 2;
 
 Một quy tắc khác cần xem xét là liệu vị trí gọi có **đối tượng ngữ cảnh** hay không, hoặc nói cách khác, liệu nó **được sở hữu hoặc chứa bởi một đối tượng** hay không, tuy nhiên cách diễn đạt này có thể gây hiểu lầm.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo() {
@@ -133,7 +133,7 @@ Tuy nhiên, vị trí gọi sẽ sử dụng ngữ cảnh của đối tượng 
 
 Dù bạn gọi nó bằng cách nào, khi `foo` được gọi, nó sẽ có một tham chiếu đến `container` làm ngữ cảnh. Khi có ngữ cảnh, quy tắc ràng buộc ngầm sẽ ràng buộc `this` trong cuộc gọi hàm đến đối tượng ngữ cảnh này. Vì `foo` được gọi trong ngữ cảnh của `container`, `this.a` và `container.a` là như nhau.
 
-💡 **Chỉ có một cấp trên hoặc cấp cuối trong chuỗi tham chiếu thuộc tính đóng vai trò trong vị trí gọi.**
+💡 **Chỉ có lớp trên cùng hoặc lớp cuối cùng trong chuỗi tham chiếu thuộc tính đối tượng có tác dụng trong vị trí gọi.**
 
 ```js
 function foo() {
@@ -157,7 +157,7 @@ obj1.obj2.foo(); // 42
 
 Một vấn đề ràng buộc `this` phổ biến nhất là **hàm bị mất ràng buộc ngầm và sẽ áp dụng ràng buộc mặc định**, có nghĩa là nó sẽ ràng buộc `this` với đối tượng toàn cục hoặc `undefined` (trong chế độ nghiêm ngặt).
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo() {
@@ -181,9 +181,9 @@ bar();
 
 📍 Mặc dù `bar` là một tham chiếu của `container.foo`, nhưng thực tế, nó tham chiếu đến chính hàm `foo` nên `bar` là một cuộc gọi hàm không có bất kỳ sự thay đổi nào, do đó nó áp dụng ràng buộc mặc định.
 
-Một tình huống tinh tế, phổ biến và đôi khi không được mong đợi xảy ra khi chúng ta truyền một hàm callback.
+Một tình huống tinh tế, phổ biến và đôi khi không được mong đợi xảy ra khi chúng ta truyền hàm callback.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo() {
@@ -244,7 +244,7 @@ JavaScript cung cấp các phương thức `apply`, `call` và `bind` để ràn
 
 Ràng buộc cứng có thể giải quyết vấn đề mất ràng buộc mà chúng ta đã đề cập trước đó.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo() {
@@ -274,7 +274,7 @@ Chúng ta tạo ra hàm `bar` và trong nội bộ của nó, chúng ta gọi `f
 
 #### Hàm tích hợp sẵn
 
-Nhiều hàm của các bên thứ ba trong thư viện, cũng như nhiều hàm tích hợp sẵn mới trong JavaScript và môi trường chủ nhà, cung cấp một tham số tùy chọn thường được gọi là **bối cảnh (context)**, có tác dụng tương tự như `bind`, đảm bảo hàm gọi lại của bạn sử dụng `this` được chỉ định.
+Nhiều hàm của các bên thứ ba trong thư viện, cũng như nhiều hàm tích hợp sẵn mới trong JavaScript và môi trường chủ nhà, cung cấp một tham số tùy chọn thường được gọi là **ngữ cảnh (context)**, có tác dụng tương tự như `bind`, đảm bảo hàm gọi lại của bạn sử dụng `this` được chỉ định.
 
 ```js
 function foo(item) {
@@ -330,16 +330,16 @@ function objectFactory(constructor, ...rest) {
 }
 ```
 
-Sau khi phân tích các hoạt động bên trong, chúng ta có thể kết luận rằng toán tử `new` chỉ là một **đường dẫn ngôn ngữ** để thực hiện quá trình này.
+Sau khi phân tích các hoạt động bên trong, chúng ta có thể kết luận rằng toán tử `new` chỉ là một **đường dẫn cú pháp** để thực hiện quá trình này.
 
-## Ưu tiên
+## Mức độ uu tiên
 
 Trong phần trước, chúng ta đã tìm hiểu về bốn quy tắc ràng buộc `this` trong cuộc gọi hàm và nhiệm vụ của bạn là tìm vị trí cuộc gọi hàm và xác định quy tắc nào được áp dụng. Tuy nhiên, nếu một vị trí cuộc gọi áp dụng nhiều quy tắc, chúng ta phải thiết lập ưu tiên cho các quy tắc đó.
 
 Không có nghi ngờ gì, quy tắc ràng buộc mặc định có ưu tiên thấp nhất trong bốn quy tắc, vì vậy chúng ta sẽ không xem xét nó trước.
 
 ```
-Ràng buộc rõ ràng > Ràng buộc xây dựng > Ràng buộc ngầm;
+Ràng buộc rõ ràng > Ràng buộc hàm tạo > Ràng buộc ngầm
 ```
 
 ### Ràng buộc ngầm và ràng buộc rõ ràng
@@ -465,9 +465,9 @@ Cả hai phương pháp này đều yêu cầu một đối số để ràng bu�
 
 ### Ràng buộc mềm
 
-Ràng buộc cứng có thể buộc `this` vào một đối tượng cụ thể (ngoại trừ khi sử dụng `new`), ngăn chặn việc áp dụng quy tắc ràng buộc mặc định trong cuộc gọi hàm. Tuy nhiên, vấn đề là ràng buộc cứng làm giảm tính linh hoạt của hàm, không thể sử dụng ràng buộc ngụ ý hoặc ràng buộc rõ ràng để thay đổi `this`.
+Ràng buộc cứng có thể buộc `this` vào một đối tượng cụ thể (ngoại trừ khi sử dụng `new`), ngăn chặn việc áp dụng quy tắc ràng buộc mặc định trong cuộc gọi hàm. Tuy nhiên, vấn đề là ràng buộc cứng làm giảm tính linh hoạt của hàm, không thể sử dụng ràng buộc ngầm hoặc ràng buộc rõ ràng để thay đổi `this`.
 
-Nếu có thể chỉ định một đối tượng ràng buộc mặc định khác với `undefined` và giá trị toàn cục, chúng ta có thể đạt được cùng hiệu quả với ràng buộc cứng, đồng thời vẫn giữ được khả năng sử dụng ràng buộc ngụ ý hoặc ràng buộc rõ ràng để thay đổi `this`.
+Nếu có thể chỉ định một đối tượng ràng buộc mặc định khác với `undefined` và giá trị toàn cục, chúng ta có thể đạt được cùng hiệu quả với ràng buộc cứng, đồng thời vẫn giữ được khả năng sử dụng ràng buộc ngầm hoặc ràng buộc rõ ràng để thay đổi `this`.
 
 ```js
 if (!Function.prototype.softBind) {
@@ -498,7 +498,7 @@ Dưới đây là bốn cách để thay đổi đối tượng `this` trong mã
 
 ### Hàm mũi tên
 
-Hàm mũi tên không được định nghĩa bằng từ khóa `function`, mà được định nghĩa bằng toán tử mũi tên ` => `. Hàm mũi tên không sử dụng 4 quy tắc chuẩn của `this`, mà thay vào đó, nó dựa vào phạm vi bên ngoài (hàm hoặc toàn cục) để xác định giá trị của `this`. Hơn nữa, hàm mũi tên có ngữ cảnh tĩnh, nghĩa là sau khi được gán một lần, nó không thể thay đổi.
+Hàm mũi tên không được định nghĩa bằng từ khóa `function`, mà được định nghĩa bằng toán tử mũi tên ` => `. Hàm mũi tên không sử dụng 4 quy tắc chuẩn của `this`, mà thay vào đó, nó dựa vào phạm vi bên ngoài (hàm hoặc toàn cục) để xác định giá trị của `this`. Hơn nữa, hàm mũi tên có ngữ cảnh tĩnh, nghĩa là sau khi được gán lần đầu, nó không thể thay đổi.
 
 Sự cố định của `this` không phải do hàm mũi tên có cơ chế ràng buộc `this`, mà nguyên nhân thực tế là hàm mũi tên không có `this` riêng của nó, dẫn đến việc `this` bên trong là `this` của khối mã bên ngoài. Chính vì nó không có `this`, nên nó cũng không thể được sử dụng như một hàm tạo.
 
@@ -526,10 +526,10 @@ Hàm mũi tên có thể đảm bảo rằng `this` của hàm được ràng bu
 
 Mặc dù `const self = this` và hàm mũi tên có vẻ có thể thay thế `bind`, nhưng về bản chất, chúng đều muốn thay thế cơ chế `this`.
 
-Nếu bạn thường xuyên viết mã theo phong cách `this`, nhưng hầu hết thời gian bạn sẽ sử dụng `const self = this` hoặc hàm mũi tên để phủ nhận cơ chế `this` sai, thì có lẽ bạn nên:
+Nếu bạn thường xuyên viết mã theo phong cách `this`, nhưng hầu hết thời gian lại sử dụng `const self = this` hoặc các hàm mũi tên để tránh cơ chế `this`, có lẽ bạn nên:
 
-- Chỉ sử dụng phạm vi từ vựng và hoàn toàn bỏ qua mã theo phong cách `this` sai
-- Hoàn toàn sử dụng mã theo phong cách `this`, sử dụng `bind` khi cần thiết và tránh sử dụng `const self = this` và hàm mũi tên trong tất cả trường hợp
+- Chỉ sử dụng phạm vi từ vựng và hoàn toàn bỏ qua mã lỗi theo phong cách `this`
+- Hoàn toàn áp dụng kiểu `this`, sử dụng `bind` khi cần thiết, tránh sử dụng `const self = this` và hàm mũi tên trong khả năng có thể
 
 ## Tổng kết các tình huống áp dụng
 

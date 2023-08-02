@@ -25,7 +25,7 @@ Dưới đây là một số đặc điểm của khai báo `var` trong ES5:
 - Có trường hợp biến được khai báo trong hàm được "nâng lên" trước khi khai báo, có thể sử dụng biến trước khi khai báo
 - `var` trong vòng lặp `for` sẽ làm ô nhiễm không gian toàn cục (không chỉ trong vòng lặp)
 
-🌰 **Ví dụ mã: Ưu tiên sử dụng**
+🌰 **Ví dụ: Ưu tiên sử dụng**
 
 ```js
 var foo = 5;
@@ -39,7 +39,7 @@ bar();
 // 3
 ```
 
-🌰 **Ví dụ mã: Nâng lên biến**
+🌰 **Ví dụ: Nâng lên biến**
 
 ```js
 var foo = 5;
@@ -55,7 +55,7 @@ bar();
 // undefined,
 ```
 
-🌰 **Ví dụ mã: Ô nhiễm không gian toàn cục**
+🌰 **Ví dụ: Ô nhiễm không gian toàn cục**
 
 ```js
 for (var i = 0; i < 9; i++) {
@@ -166,7 +166,7 @@ console.log(foo);
 
 Biến được khai báo bằng `let` hoặc `const` sẽ gây ra lỗi nếu truy cập vào biến đó trước khi nó được khai báo và gán giá trị. Ngay cả việc sử dụng `typeof`, mà chúng ta thường coi là an toàn, cũng không còn an toàn nữa.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 // TDZ1
@@ -182,7 +182,7 @@ foo();
 
 Lỗi được báo là `ReferenceError` (Lỗi tham chiếu), trong khi nếu sử dụng `var`, giá trị của `number` sẽ là `undefined`. Khu vực từ dòng đầu tiên của khối đến khai báo biến được gọi là **vùng chết tạm thời** (TDZ). Bất kỳ việc sử dụng biến trong vùng này đều sẽ gây ra lỗi.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 // TDZ2

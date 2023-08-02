@@ -3,7 +3,7 @@ title: JS Core Modules MOC
 tags: [js, programming, moc]
 categories: [js, programming, moc]
 date created: 2023-08-01
-date modified: 2023-08-01
+date modified: 2023-08-03
 ---
 
 # JS Core Modules
@@ -32,7 +32,7 @@ date modified: 2023-08-01
 - [[JS Memory Lifecyle]]
 - [[JS Garbage Collection]]
 
-### Concurency  
+### Concurency
 
 - [[JS Concurency Model]]  
 - [[JS Event Loop]]  

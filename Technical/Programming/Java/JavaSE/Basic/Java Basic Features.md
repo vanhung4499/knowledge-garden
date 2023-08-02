@@ -3,7 +3,7 @@ title: Java Basic Features
 tags: [java, javase]
 categories: [java, javase]
 date created: 2023-07-11
-date modified: 2023-07-13
+date modified: 2023-08-02
 ---
 
 # Cú pháp cơ bản của Java
@@ -34,7 +34,7 @@ public class HelloWorld {
 
 ![Java Basic Data Type](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Basic%2520Data%2520Type.png)
 
-👉 Đọc thêm: [Java Basic Data Type](/Technical/Programming/Java/JavaSE/Basic/Java-Basic-Data-Type)
+👉 Đọc thêm: [[Java Basic Data Type]]
 
 ## Biến (Variable)
 
@@ -71,13 +71,13 @@ So sánh các đặc điểm:
 
 ![Java Array.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%2520Array.svg)
 
-👉 Đọc thêm: [Java Array](/Technical/Programming/Java/JavaSE/Basic/Java-Array)
+👉 Đọc thêm: [[Java Array]]
 
 ## Enum
 
 ![Java Enum](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%20Enum.svg)
 
-👉 Đọc thêm: [Java Enum](/Technical/Programming/Java/JavaSE/Basic/Java-Enum)
+👉 Đọc thêm: [[Java Enum]]
 
 ## Opearator (Toán tử)
 
@@ -89,28 +89,28 @@ Java hỗ trợ các loại toán tử sau:
 
 ![Java%20Method.svg](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Java%20Method.svg)
 
-👉 Đọc thêm: [Java Method](/Technical/Programming/Java/JavaSE/Basic/Java-Method)
+👉 Đọc thêm: [[Java Method]]
 
 ## Control statement (Câu lệnh điều khiển)
 
-👉 Đọc thêm: [Java Control Statements](/Technical/Programming/Java/JavaSE/Basic/Java-Control-Statements)
+👉 Đọc thêm: [[Java Control Statements]]
 
 ## Exception (Ngoại lệ)
 
-👉 Đọc thêm: [Java Exception In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Exception-In-Depth)
+👉 Đọc thêm: [[Java Exception In Depth]]
 
 ## Generic (Kiểu tham số hoá)
 
-👉 Đọc thêm: [Java Generics In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Generics-In-Depth)
+👉 Đọc thêm: [[Java Generics In Depth]]
 
 ## Reflection (Phản chiếu)
 
-👉 Đọc thêm: [Java Reflection](/Technical/Programming/Java/JavaSE/Basic/Java-Reflection)
+👉 Đọc thêm: [[Java Reflection]]
 
 ## Annotation (Chú thích)
 
-👉 Đọc thêm: [Java Annotation In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Annotation-In-Depth)
+👉 Đọc thêm: [[Java Annotation In Depth]]
 
 ## Serialization (Tuần tự hóa)
 
-👉 Đọc thêm: [Java Serialization](/Technical/Programming/Java/JavaSE/JavaIO/Java-Serialization)
+👉 Đọc thêm: [[Java Serialization]]

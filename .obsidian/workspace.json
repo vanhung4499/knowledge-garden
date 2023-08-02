@@ -4,28 +4,28 @@
     "type": "split",
     "children": [
       {
-        "id": "54f6d282c82cfc6c",
+        "id": "2a8fa6aaeed44b0f",
         "type": "tabs",
         "children": [
           {
-            "id": "a6768472a11aa8a6",
+            "id": "8b9eb7096c95ec7b",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/JavaScript/JavaScript MOC.md",
+                "file": "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
           },
           {
-            "id": "1801126e4008d191",
+            "id": "666cb4eb2a9562f7",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
                 "mode": "source",
                 "source": false
               }
@@ -103,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md"
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md"
               }
             }
           }
@@ -135,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
+                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,15 +167,7 @@
             }
           },
           {
-            "id": "600001a08123a245",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "a03f98a0f09ff5db",
+            "id": "51b5e7278298e106",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -183,19 +175,27 @@
             }
           },
           {
-            "id": "5229e39e230e7c88",
+            "id": "3af09cd55f92ec63",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
               "state": {}
             }
+          },
+          {
+            "id": "7c414c46e655c221",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 447.5
+    "width": 412.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,6 +204,7 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
+      "graph:Open graph view": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
@@ -211,32 +212,50 @@
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "obsidian42-brat:BRAT": false,
-      "graph:Open graph view": false,
       "dbfolder:Create a new database table": false,
       "homepage:Open homepage": false,
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "1801126e4008d191",
+  "active": "3af09cd55f92ec63",
   "lastOpenFiles": [
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Variable Object.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Excution Context Stack.md",
+    "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Event Loop.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Concurency Model.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management/JS Garbage Collection.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management/JS Memory Lifecyle.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management/JS Memory Model.md",
+    "Extras/Draws/js-reference-copy.excalidraw.md",
+    "Extras/Draws/js-reference-copy.excalidraw.png",
+    "Extras/Draws/variable-heap.excalidraw.md",
+    "Extras/Draws/js-basic-type-copy.excalidraw.md",
+    "Extras/Draws/js-basic-type-copy.excalidraw.png",
+    "Extras/Draws/variable-heap.png",
+    "Extras/Draws/variable-heap.svg",
+    "Extras/Draws/variable-heap.excalidraw.svg",
+    "Extras/Draws/variable-heap.excalidraw.png",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Overview/DSA Quick Start.md",
+    "Technical/DSA/Overview/Complexity Analysis.md",
+    "Technical/DSA/Leetcode/Leetcode MOC.md",
+    "Home.md",
+    "Technical/DSA/Data Structures/Data Structures MOC.md",
+    "Technical/DSA/Data Structures/Tree/Binary Search Tree.md",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Scope Chain.md",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
-    "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
-    "Technical/Programming/JavaScript/JavaScript MOC.md",
-    "Extras/Draws/Excution Context.excalidraw.md",
-    "Extras/Draws/Excution Context.excalidraw.png",
-    "Extras/Draws/JS Excution Context Lifecycle.excalidraw.md",
-    "Extras/Draws/JS Excution Context Lifecycle.excalidraw.png",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Lexical Scope.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Excution Stack 1.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Closures.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Variable Object.md",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Hoisting.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Block Scope.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Compilation.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Lexical Scope.md",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Function Scope.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Compilation.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Closures.md",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Block Scope.md",
+    "Extras/Draws/Excution Context.excalidraw.png",
+    "Extras/Draws/JS Excution Context Lifecycle.excalidraw.png",
+    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation",
     "Technical/Programming/JavaScript/Core/Excute and Contexts",
     "Technical/Programming/JavaScript/Built-in",
@@ -244,26 +263,7 @@
     "Technical/Programming/JavaScript/BOM",
     "Technical/Programming/JavaScript/OOP",
     "Technical/Programming/JavaScript/Core",
-    "Technical/Programming/JavaScript/Basic/JS Basic MOC.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS For-Of Statement.md",
-    "Technical/Backend/Backend MOC.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS For-In Statement.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS For Statement.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS While Statement.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS Do While Statement.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS Try Statement.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS Throw Statement.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS Return Statement.md",
-    "Technical/Programming/JavaScript/Basic/Statements/JS Labelled Statements.md",
-    "Technical/Programming/JavaScript/Basic/Statements",
-    "Technical/Programming/JavaScript/Basic/Data Types",
     "Extras/Draws/mysql-mvcc-readview.png",
-    "Extras/Draws/mysql-mvcc-readview.excalidraw.svg",
-    "Extras/Draws/mysql-mvcc-readview.excalidraw.png",
-    "Extras/Draws/mysql-update-query.excalidraw.png",
-    "Extras/Draws/acid.png",
-    "Extras/Draws/Drawing 2023-07-21 00.01.52.excalidraw.png",
-    "Extras/Draws/jvm-process-6.png",
-    "Extras/Draws/Drawing 2023-07-18 13.19.43.excalidraw.png"
+    "Extras/Draws/mysql-mvcc-readview.excalidraw.svg"
   ]
 }

@@ -1,7 +1,8 @@
 ---
+categories: 
 title: Golang Type Check
 date created: 2023-06-06
-date modified: 2023-07-08
+date modified: 2023-08-02
 tags: [golang]
 dg-publish: true
 ---
@@ -58,7 +59,7 @@ Kiểm tra kiểu tĩnh và kiểm tra kiểu động không hoàn toàn xung đ
 
 Trình biên dịch ngôn ngữ Go không chỉ sử dụng kiểm tra kiểu tĩnh để giữ an toàn cho kiểu chương trình chạy, mà còn giới thiệu thông tin kiểu trong quá trình lập trình, cho phép các kỹ sư sử dụng reflect để xác định kiểu tham số và biến. Khi chúng tôi muốn chuyển đổi `interface{}` thành một kiểu cụ thể, chúng tôi thực hiện kiểm tra kiểu động và nếu không có chuyển đổi xảy ra, chương trình sụp đổ.
 
-Ở đây chúng tôi sẽ tập trung vào việc kiểm tra kiểu tĩnh trong quá trình biên dịch, và trong [[Spaces/2-Area/Techinal/Programming/Go/In Depth/Prerequisite/Compile/Golang Compile Intro]], chúng tôi đã giới thiệu [`cmd/compile/internal/gc.Main`](https://draveness.me/golang/tree/cmd/compile/internal/gc.Main), một trong số đó là như thế này:
+Ở đây chúng tôi sẽ tập trung vào việc kiểm tra kiểu tĩnh trong quá trình biên dịch, và trong [[Golang Compile Intro]], chúng tôi đã giới thiệu [`cmd/compile/internal/gc.Main`](https://draveness.me/golang/tree/cmd/compile/internal/gc.Main), một trong số đó là như thế này:
 
 ```go
 	for i := 0; i < len(xtop); i++ {
@@ -214,7 +215,7 @@ Hàm này đi qua các nút đang chờ kiểm tra trong hàng đợi `mapqueue
 
 ### Keyword OMAKE 
 
-Cuối cùng, giới thiệu `make` một hàm tích hợp phổ biến trong ngôn ngữ Go, trước giai đoạn kiểm tra kiểu, cho dù đó là slice, hash hoặc channel sử dụng từ khóa `make`, nhưng trong giai đoạn kiểm tra kiểu  `make` sẽ bị thay thay thế bằng một hàm cụ thể dựa trên kiểu được tạo ra và quá trình tạo mã trung gian ([[Spaces/2-Area/Techinal/Programming/Go/In Depth/Prerequisite/Compile/Golang IR SSA]]) sau này sẽ không còn `OMAKE`. Các nút của kiểu `OMAKE` được xử lý dựa trên kiểu phân đoạn được tạo ra:
+Cuối cùng, giới thiệu `make` một hàm tích hợp phổ biến trong ngôn ngữ Go, trước giai đoạn kiểm tra kiểu, cho dù đó là slice, hash hoặc channel sử dụng từ khóa `make`, nhưng trong giai đoạn kiểm tra kiểu  `make` sẽ bị thay thay thế bằng một hàm cụ thể dựa trên kiểu được tạo ra và quá trình tạo mã trung gian ([[Golang IR SSA]]) sau này sẽ không còn `OMAKE`. Các nút của kiểu `OMAKE` được xử lý dựa trên kiểu phân đoạn được tạo ra:
 
 ![Pasted image 20230607005413](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Pasted%20image%2020230607005413.png)
 

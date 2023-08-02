@@ -75,7 +75,7 @@ Có hai cách tạo hàm trong JavaScript:
 - Khai báo hàm
 - Biểu thức hàm
 
-🌰 **Ví dụ mã: Khai báo hàm**
+🌰 **Ví dụ: Khai báo hàm**
 
 ```js
 foo();
@@ -86,7 +86,7 @@ function foo() {
 }
 ```
 
-🌰 **Ví dụ mã: Biểu thức hàm**
+🌰 **Ví dụ: Biểu thức hàm**
 
 ```js
 foo();
@@ -143,7 +143,7 @@ Tóm lại:
 
 Khai báo hàm và khai báo biến đều được nâng lên. Tuy nhiên, **khai báo hàm sẽ ghi đè lên khai báo biến**.
 
-🌰 **Ví dụ mã:**
+🌰 **Ví dụ:**
 
 ```js
 var a;

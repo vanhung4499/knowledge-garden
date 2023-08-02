@@ -1,9 +1,9 @@
 ---
-title: Java Container Intro
+title: Java Collections Intro
 tags: [java, javase, collection]
 categories: [java, javase]
 date created: 2023-07-14
-date modified: 2023-07-14
+date modified: 2023-08-02
 ---
 
 # Giới thiệu về Collections trong Java
@@ -21,7 +21,7 @@ Trong Java, các bộ chứa phổ biến để lưu trữ dữ liệu là array
 	- Array có thể lưu trữ kiểu dữ liệu cơ bản và kiểu dữ liệu tham chiếu;
 	- Collection chỉ có thể lưu trữ kiểu dữ liệu tham chiếu, các biến kiểu dữ liệu cơ bản phải được chuyển đổi thành các lớp bao đóng để đặt trong collection.
 
-> 💡 Nếu bạn không hiểu các khái niệm như kiểu dữ liệu cơ bản, kiểu dữ liệu tham chiếu, lớp bao, bạn có thể tham khảo: [Java Basic Data Type](/Technical/Programming/Java/JavaSE/Basic/Java-Basic-Data-Type)
+> 💡 Nếu bạn không hiểu các khái niệm như kiểu dữ liệu cơ bản, kiểu dữ liệu tham chiếu, lớp bao, bạn có thể tham khảo: [[Java Basic Data Type]]
 
 ### Collections Framework
 
@@ -61,7 +61,7 @@ list.add("123");
 list.add(123);
 ```
 
-> 💡 Để hiểu sâu hơn về cách sử dụng và nguyên lý của kỹ thuật Generics trong Java, bạn có thể tham khảo: [Java Generics In Depth](/Technical/Programming/Java/JavaSE/Basic/Java-Generics-In-Depth)
+> 💡 Để hiểu sâu hơn về cách sử dụng và nguyên lý của kỹ thuật Generics trong Java, bạn có thể tham khảo: [[Java Generics In Depth]]
 
 ### Iterable và Iterator
 

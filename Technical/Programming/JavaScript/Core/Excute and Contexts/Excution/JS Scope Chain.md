@@ -18,7 +18,7 @@ Phạm vi hàm được xác định khi hàm được định nghĩa.
 
 Điều này xảy ra vì hàm có một thuộc tính nội bộ `[[Scopes]]`, khi hàm được tạo, tất cả các đối tượng biến của phạm vi cha sẽ được lưu trữ trong thuộc tính này. Bạn có thể hiểu `[[Scopes]]` là một chuỗi các đối tượng biến của phạm vi cha, nhưng lưu ý rằng `[[Scopes]]` không đại diện cho toàn bộ chuỗi phạm vi.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo() {

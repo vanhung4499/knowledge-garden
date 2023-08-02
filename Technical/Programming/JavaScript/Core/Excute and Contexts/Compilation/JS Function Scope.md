@@ -65,7 +65,7 @@ Bây giờ, `b` và `doSomethingElse` không thể truy cập từ bên ngoài v
 
 Biến và hàm trong phạm vi ẩn có thể tránh được xung đột giữa các định danh có cùng tên nhưng có mục đích khác nhau. Hai định danh có thể có cùng tên nhưng lại có mục đích khác nhau, và điều này có thể gây ra xung đột tên không mong muốn. Xung đột có thể dẫn đến việc giá trị của biến bị ghi đè một cách không mong muốn.
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 function foo() {
@@ -187,7 +187,7 @@ Biểu thức hàm có tên rất mạnh mẽ và hữu ích - sự khác biệt
 
 Biểu thức hàm thực thi ngay lập tức, còn được gọi là **hàm tự thực thi**, được đặt tên là **IIFE** (Immediately Invoked Function Expression).
 
-🌰 **Ví dụ mã**:
+🌰 **Ví dụ**:
 
 ```js
 (function () {

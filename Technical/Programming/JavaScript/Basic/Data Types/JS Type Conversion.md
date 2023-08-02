@@ -3,7 +3,7 @@ tags: [js, programming]
 categories: [js, programming]
 title: JS Type Conversion
 date created: 2023-07-04
-date modified: 2023-07-31
+date modified: 2023-08-02
 ---
 
 # Chuyển đổi kiểu dữ liệu trong JS
@@ -393,7 +393,7 @@ null == null; // true
 
 #### Toán tử so sánh
 
-[Toán tử so sánh](../expressions/comparation-operators): sẽ chuyển đổi các kiểu dữ liệu khác thành kiểu Number trước khi so sánh (ngoại trừ đối tượng kiểu Date).
+Toán tử so sánh ([[JS Comparation Operators]]): sẽ chuyển đổi các kiểu dữ liệu khác thành kiểu Number trước khi so sánh (ngoại trừ đối tượng kiểu Date).
 
 - Nếu cả hai giá trị đều là số, thì sẽ thực hiện so sánh **số**.
 - Nếu cả hai giá trị đều là chuỗi, thì sẽ thực hiện so sánh **giá trị mã ASCII** của chuỗi.
