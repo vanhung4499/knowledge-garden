@@ -3,7 +3,7 @@ title: JS Core Modules MOC
 tags: [js, programming, moc]
 categories: [js, programming, moc]
 date created: 2023-08-01
-date modified: 2023-08-03
+date modified: 2023-08-05
 ---
 
 # JS Core Modules
@@ -40,13 +40,52 @@ date modified: 2023-08-03
 
 ## Function
 
-- [[JS Function Declarations]]
-- [[JS Function Arguments]]
-- [[JS Function Call]]
-- [[JS Function Internal]]
+### Function Declaration
+
+- [[JS Function Definition]]
+- [[JS Arrow Function Definition]]
+- [[JS Async Function Definition]]
+
+### Function Arguments
+
+- [[JS Function Parameters]]
+- [[JS Default Parameters]]
+- [[JS Rest Parameters]]
+
+### Function Call
+
+- [[JS Function Invocation Pattern]]
+- [[JS Method Invocation Pattern]]
+- [[JS Constructor Invocation Pattern]]
+- [[JS Apply Invocation Pattern]]
+
+### Function Internal
+
+- [[JS Function Accessor]]
+- [[JS Function Prototype Object Methods]]
+- [[JS Function Prototype Object Properties]]
+
+### Function Type
+
+- [[JS Structure Function]]
+- [[JS Class Structure Function]]
+- [[JS Lazy Function]]
+- [[JS Cascade Function]]
+- [[JS Callback Function]]
+- [[JS Hight Order Function]]
+- [[JS Function Currying]]
+- [[JS Throttle]]
+- [[JS Debounce]]
+- [[JS Memorize Function]]
+- [[JS Sleep Function]]
+- [[JS Partial Function]]
 
 ## Modularization
 
 - [[JS Modularization]]
-- [[JS Module Import]]
-- [[JS Module Export]]
+- [[JS Import]]
+- [[JS Export]]
+- [[JS Module Compound]]
+- [[JS Module Inheritance]]
+- [[JS Cross Module Constant]]
+- [[JS Dynamic Import]]

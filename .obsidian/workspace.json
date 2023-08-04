@@ -4,11 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "2a8fa6aaeed44b0f",
+        "id": "0b4fd3248a31f88c",
         "type": "tabs",
         "children": [
           {
-            "id": "8b9eb7096c95ec7b",
+            "id": "1e4460fef4f8828e",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -18,21 +18,8 @@
                 "source": false
               }
             }
-          },
-          {
-            "id": "666cb4eb2a9562f7",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
-                "mode": "source",
-                "source": false
-              }
-            }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md"
+                "file": "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md"
               }
             }
           }
@@ -135,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
+                "file": "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
+                "file": "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -167,7 +154,15 @@
             }
           },
           {
-            "id": "51b5e7278298e106",
+            "id": "7c414c46e655c221",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "72a05827597a2c5a",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -175,23 +170,15 @@
             }
           },
           {
-            "id": "3af09cd55f92ec63",
+            "id": "f79e50a6e8f4a74a",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
               "state": {}
             }
-          },
-          {
-            "id": "7c414c46e655c221",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {}
-            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -217,52 +204,52 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "3af09cd55f92ec63",
+  "active": "1e4460fef4f8828e",
   "lastOpenFiles": [
+    "Technical/Programming/JavaScript/JavaScript MOC.md",
     "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Timers Mechanism.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Event Loop.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency/JS Concurency Model.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management/JS Garbage Collection.md",
+    "Technical/Programming/JavaScript/Core/Function/Internal/JS Function Prototype Object Methods.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Debounce.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Memorize Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Partial Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Sleep Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Throttle.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Function Currying.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Class Structure Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Hight Order Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Lazy Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Structure Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Cascade Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Types/JS Callback Function.md",
+    "Technical/Programming/JavaScript/Core/Function/Internal/JS Function Prototype Object Properties.md",
+    "Technical/Programming/JavaScript/Core/Function/Internal/JS Function Accessor.md",
+    "Technical/Programming/JavaScript/Core/Function/Types",
+    "Technical/Programming/JavaScript/Built-in/JS Builtin Objects MOC.md",
+    "Technical/Programming/JavaScript/Basic/JS Lexical Grammar.md",
+    "Technical/Programming/JavaScript/OOP/JS OOP MOC.md",
+    "Technical/Programming/JavaScript/DOM/JS DOM MOC.md",
+    "Technical/Programming/JavaScript/BOM/JS BOM MOC.md",
+    "Technical/Programming/JavaScript/Core/Function/Declarations/JS Function Definition.md",
+    "Technical/Programming/JavaScript/Core/Function/Internal",
+    "Technical/Programming/JavaScript/Core/Function/Calls/JS Method Invocation Pattern.md",
+    "Technical/Programming/JavaScript/Core/Function/Calls/JS Function Invocation Pattern.md",
+    "Technical/Programming/JavaScript/Core/Function/Calls/JS Constructor Invocation Pattern.md",
+    "Technical/Programming/JavaScript/Core/Function/Calls",
+    "Technical/Programming/JavaScript/Core/Function/Arguments",
+    "Technical/Programming/JavaScript/Core/Function/Declarations",
+    "Technical/Programming/JavaScript/Core/Function",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Concurrency",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management/JS Memory Lifecyle.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management/JS Memory Model.md",
-    "Extras/Draws/js-reference-copy.excalidraw.md",
     "Extras/Draws/js-reference-copy.excalidraw.png",
-    "Extras/Draws/variable-heap.excalidraw.md",
-    "Extras/Draws/js-basic-type-copy.excalidraw.md",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",
     "Extras/Draws/variable-heap.svg",
     "Extras/Draws/variable-heap.excalidraw.svg",
     "Extras/Draws/variable-heap.excalidraw.png",
-    "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/Overview/DSA Quick Start.md",
-    "Technical/DSA/Overview/Complexity Analysis.md",
-    "Technical/DSA/Leetcode/Leetcode MOC.md",
-    "Home.md",
-    "Technical/DSA/Data Structures/Data Structures MOC.md",
-    "Technical/DSA/Data Structures/Tree/Binary Search Tree.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Scope Chain.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS This.md",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Memory Management",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution/JS Variable Object.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Hoisting.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Lexical Scope.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Function Scope.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Compilation.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Closures.md",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation/JS Block Scope.md",
     "Extras/Draws/Excution Context.excalidraw.png",
     "Extras/Draws/JS Excution Context Lifecycle.excalidraw.png",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Excution",
     "Technical/Programming/JavaScript/Core/Excute and Contexts/Compilation",
-    "Technical/Programming/JavaScript/Core/Excute and Contexts",
-    "Technical/Programming/JavaScript/Built-in",
-    "Technical/Programming/JavaScript/DOM",
-    "Technical/Programming/JavaScript/BOM",
-    "Technical/Programming/JavaScript/OOP",
-    "Technical/Programming/JavaScript/Core",
     "Extras/Draws/mysql-mvcc-readview.png",
     "Extras/Draws/mysql-mvcc-readview.excalidraw.svg"
   ]

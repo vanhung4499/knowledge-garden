@@ -1,9 +1,9 @@
 ---
-categories: [js, moc]
-tags: [js, moc]
+categories: [js, programming, moc]
+tags: [js, programming, moc]
 title: JavaScript MOC
 date created: 2023-07-02
-date modified: 2023-08-01
+date modified: 2023-08-05
 ---
 
 # JavaScript MOC
@@ -14,21 +14,22 @@ Tổng hợp các bài viết về JavaScript, chỉ bàn về ngôn ngữ khôn
 
 - [[JS Basic MOC]]
 
+## Built-in Objects
+
+- [[JS Builtin Objects MOC]]
+
 ## Core Modules
 
 - [[JS Core Modules MOC]]
 
 ## OOP
 
-- [[JS OOP]]
-- [[JS Object Understand]]
-- [[JS Object Creation]]
-- [[JS Inheritance]]
-- [[JS Class Defination]]
+- [[JS OOP MOC]]
 
 ## BOM
 
-- [[BOM Global Objects]]
-- [[BOM Global API]]
+- [[JS BOM MOC]]
 
 ## DOM
+
+- - [[JS DOM MOC]]
