@@ -6,7 +6,7 @@ date created: 2023-08-05
 date modified: 2023-08-05
 ---
 
-# Hàm tạo
+# Hàm tạo - Constructor
 
 Trong các ngôn ngữ hướng đối tượng (OOP) điển hình như Java, có khái niệm về lớp, lớp là mẫu của đối tượng, và đối tượng là một thể hiện của lớp. Tuy nhiên, trong JavaScript không có khái niệm về lớp, JavaScript không dựa trên lớp, mà thay vào đó sử dụng hàm tạo (constructor) và chuỗi nguyên mẫu (prototype chains) để thực hiện. Tuy nhiên, trong ES6 đã giới thiệu khái niệm lớp (class), là mẫu của đối tượng, cú pháp `class` mới chỉ làm cho cách viết đối tượng nguyên mẫu trở nên rõ ràng hơn, nhưng không tập trung vào điều này.
 
@@ -91,4 +91,3 @@ Khi thêm giá trị trả về thủ công (`return` statement):
 
 1. Nếu giá trị trả về là kiểu dữ liệu cơ bản, thì giá trị trả về thực sự vẫn là thực thể mới được tạo ra.
 2. Nếu giá trị trả về là kiểu dữ liệu phức tạp (đối tượng), thì giá trị trả về thực sự là đối tượng đó.
-

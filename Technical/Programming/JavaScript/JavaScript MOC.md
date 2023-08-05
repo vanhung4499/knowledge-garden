@@ -32,4 +32,4 @@ Tổng hợp các bài viết về JavaScript, chỉ bàn về ngôn ngữ khôn
 
 ## DOM
 
-- - [[JS DOM MOC]]
+- [[JS DOM MOC]]

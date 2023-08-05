@@ -8,7 +8,7 @@ date modified: 2023-08-05
 
 # Hàm lười biếng
 
-**Hàm lười biếng** là một hàm chỉ thực hiện các nhánh của nó khi hàm được gọi lần đầu tiên. Trong quá trình gọi lần đầu tiên, hàm này sẽ được ghi đè bằng một hàm khác được thực thi theo cách thích hợp, điều này đồng nghĩa với việc không cần phải đi qua các nhánh thực thi của hàm gốc khi gọi hàm.
+**Hàm lười biếng (Lazy Function)** là một hàm chỉ thực hiện các nhánh của nó khi hàm được gọi lần đầu tiên. Trong quá trình gọi lần đầu tiên, hàm này sẽ được ghi đè bằng một hàm khác được thực thi theo cách thích hợp, điều này đồng nghĩa với việc không cần phải đi qua các nhánh thực thi của hàm gốc khi gọi hàm.
 
 ## Giải quyết vấn đề
 
