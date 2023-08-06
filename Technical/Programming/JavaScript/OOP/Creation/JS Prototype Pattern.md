@@ -8,7 +8,7 @@ date modified: 2023-08-06
 
 # Mô hình nguyên mẫu - Prototype Pattern
 
-Mỗi hàm mà chúng ta tạo đều có một thuộc tính `prototype` (nguyên mẫu), thuộc tính này là một con trỏ trỏ đến một đối tượng, đối tượng này chứa các thuộc tính và phương thức mà **tất cả các thể hiện của một loại cụ thể có thể chia sẻ**. Nếu hiểu theo nghĩa đen, thì `prototype` là nguyên mẫu đối tượng mà được tạo ra bằng cách gọi hàm tạo. Việc sử dụng đối tượng nguyên mẫu cho phép tất cả các thể hiện của đối tượng chia sẻ các thuộc tính và phương thức của nó. Nói cách khác, không cần định nghĩa thông tin của thể hiện trong hàm tạo, mà có thể thêm thông tin này trực tiếp vào đối tượng nguyên mẫu.
+Mỗi hàm mà chúng ta tạo đều có một thuộc tính `prototype` (nguyên mẫu), thuộc tính này là một con trỏ trỏ đến một đối tượng, đối tượng này chứa các thuộc tính và phương thức mà **tất cả các thể hiện của một loại cụ thể có thể chia sẻ**. Nếu hiểu theo nghĩa đen, thì `prototype` là đối tượng nguyên mẫu mà được tạo ra bằng cách gọi hàm tạo. Việc sử dụng đối tượng nguyên mẫu cho phép tất cả các thể hiện của đối tượng chia sẻ các thuộc tính và phương thức của nó. Nói cách khác, không cần định nghĩa thông tin của thể hiện trong hàm tạo, mà có thể thêm thông tin này trực tiếp vào đối tượng nguyên mẫu.
 
 ```js
 function Person(){}
@@ -74,9 +74,17 @@ Khi thêm một thuộc tính vào một thể hiện, thuộc tính này chỉ 
 
 > Phương thức `Object.getOwnPropertyDescriptor()` của ECMAScript 5 chỉ hoạt động cho thuộc tính của thể hiện, để lấy mô tả thuộc tính của nguyên mẫu, phải gọi trực tiếp phương thức `Object.getOwnPropertyDescriptor()` trên đối tượng nguyên mẫu.
 
+## Kiểm tra thuộc tính của nguyên mẫu và thực thể
+
+Có hai cách sử dụng toán tử `in`: sử dụng độc lập và sử dụng trong vòng lặp `for-in`. Khi sử dụng độc lập, toán tử `in` sẽ trả về `true` khi đối tượng có thể truy cập vào thuộc tính cụ thể, **bất kể thuộc tính đó có tồn tại trong thực thể hay nguyên mẫu**.
+
+Bằng cách sử dụng phương thức `hasOwnProperty()` và toán tử `in` cùng nhau, chúng ta có thể xác định xem thuộc tính đó tồn tại trong đối tượng hay trong nguyên mẫu.
+
+Vì toán tử `in` chỉ cần đối tượng có thể truy cập vào thuộc tính thì trả về `true`, `hasOwnProperty()` chỉ trả về `true` khi thuộc tính tồn tại trong thực thể, do đó chỉ cần toán tử `in` trả về `true` và `hasOwnProperty()` trả về `false`, chúng ta có thể xác định thuộc tính đó là thuộc tính trong nguyên mẫu.
+
 ## Cú pháp nguyên mẫu đơn giản hơn
 
-Trong các ví dụ trước, mỗi khi thêm một thuộc tính hoặc phương thức, chúng ta phải nhập `Person.prototype` một lần. Để giảm sự nhập không cần thiết và để đóng gói chức năng của nguyên mẫu một cách tốt hơn từ mặt hình thức, cách thường thấy hơn là sử dụng một đối tượng chứa tất cả các thuộc tính và phương thức bằng cách ghi đè toàn bộ đối tượng nguyên mẫu.
+Trong ví dụ trước, mỗi khi thêm một thuộc tính hoặc phương thức, chúng ta phải nhập `Person.prototype` một lần. Để giảm sự nhập không cần thiết và để đóng gói chức năng của nguyên mẫu một cách tốt hơn từ mặt hình thức, cách thường thấy hơn là sử dụng một đối tượng chứa tất cả các thuộc tính và phương thức bằng cách ghi đè toàn bộ đối tượng nguyên mẫu.
 
 ```js
 function Person(){}
@@ -145,7 +153,7 @@ friend.sayName();
 
 Việc ghi đè đối tượng nguyên mẫu đã cắt đứt mọi liên kết giữa nguyên mẫu hiện có và bất kỳ thể hiện đối tượng nào đã tồn tại trước đó, và chúng vẫn tham chiếu đến nguyên mẫu ban đầu.
 
-## Nguyên mẫu của nguyên mẫu đối tượng
+## Nguyên mẫu của đối tượng nguyên mẫu
 
 Tầm quan trọng của mô hình nguyên mẫu không chỉ nằm ở việc tạo ra các loại tùy chỉnh, mà còn nằm ở việc tạo ra tất cả các loại tham chiếu nguyên thủy. Tất cả các loại tham chiếu nguyên thủy (Object, Array, String, v.v.) đều được tạo ra bằng cách sử dụng mô hình này. Tất cả các loại tham chiếu nguyên thủy đều định nghĩa các phương thức trên nguyên mẫu của hàm tạo của chúng.
 
@@ -153,11 +161,11 @@ Thông qua nguyên mẫu của đối tượng nguyên thủy, không chỉ có 
 
 Mặc dù có thể làm như vậy, nhưng chúng tôi không khuyến nghị sửa đổi nguyên mẫu của đối tượng nguyên thủy trong các ứng dụng thực tế. Nếu thêm một phương thức vào nguyên mẫu của đối tượng nguyên thủy chỉ vì một triển khai thiếu phương thức, thì khi chạy mã trong một triển khai khác hỗ trợ phương thức đó, có thể dẫn đến xung đột tên. Ngoài ra, điều này cũng có thể ghi đè phương thức nguyên thủy một cách không đáng kể.
 
-## Vấn đề với nguyên mẫu đối tượng
+## Vấn đề với đối tượng nguyên mẫu
 
 Mô hình nguyên mẫu bỏ qua bước truyền tham số khởi tạo cho hàm tạo, kết quả là tất cả các thể hiện mặc định sẽ có cùng giá trị thuộc tính.
 
-Tất cả các thuộc tính trong nguyên mẫu đều được chia sẻ bởi nhiều thể hiện, điều này khá hợp lý đối với các phương thức. Đối với các thuộc tính chứa giá trị nguyên thủy, điều này cũng chấp nhận được, vì bằng cách thêm một thuộc tính cùng tên vào thể hiện, có thể ẩn đi thuộc tính tương ứng trong nguyên mẫu. Tuy nhiên, vấn đề trở nên nổi bật hơn đối với các thuộc tính chứa giá trị tham chiếu.
+Tất cả các thuộc tính trong nguyên mẫu đều được chia sẻ bởi nhiều thể hiện, điều này khá hợp lý đối với các phương thức. Đối với các thuộc tính chứa giá trị nguyên thủy, điều này cũng chấp nhận được, vì bằng cách thêm một thuộc tính cùng tên vào thể hiện, có thể ẩn đi thuộc tính tương ứng trong nguyên mẫu. Tuy nhiên, vấn đề trở nên rõ ràng hơn đối với các thuộc tính chứa giá trị tham chiếu.
 
 ```js
 function Person(){}

@@ -26,7 +26,7 @@ date modified: 2023-08-05
 - [[JS Prototype Pattern]]
 - [[JS Combination Constructor And Prototype Pattern]]
 - [[JS Dynamic Prototype Pattern]]
-- [[JS Carastic Constructor Pattern]]
+- [[JS Parastic Constructor Pattern]]
 - [[JS Durable Constructor Pattern]]
 
 ## Inheritance
