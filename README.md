@@ -3,8 +3,9 @@ tags:
 categories: 
 title: README
 date created: 2023-07-09
-date modified: 2023-07-11
+date modified: 2023-08-08
 ---
+
 ## Welcome
 
 Xin chào 👋. Tôi là **Hùng**, một **software engineer**, **hackintosher** và đang cố gắng để trở thành **cloud engineer**.
@@ -13,7 +14,7 @@ Xin chào 👋. Tôi là **Hùng**, một **software engineer**, **hackintosher*
 
 [Obsidian](https://obsidian.md/) được sử dụng chính để quản lý và chỉnh sửa note trong khu vườn. Đây là một phần mềm tuyệt vời ông mặt trời!
 
-![[Extras/Media/Pasted image 20230627005328.png]]
+![Pasted image 20230627005328](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Pasted%20image%2020230627005328.png)
 
 ## Navigation
 
@@ -42,4 +43,3 @@ Tôi học bằng cách đọc, dịch, hiểu, ghi chú, tổng hợp từ các
 Một phút giới thiệu bản bản: [[AboutMe]]
 
 Tôi cũng đang tìm một công việc phù hợp: [[My CV]]
-

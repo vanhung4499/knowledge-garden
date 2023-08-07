@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md"
+                "file": "README.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,8 +206,9 @@
   },
   "active": "0f934411232b165f",
   "lastOpenFiles": [
-    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp Rule.md",
+    "Home.md",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
+    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp Rule.md",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp exec.md",
     "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
     "Technical/Programming/JavaScript/Built-in/Reflection/JS Proxy.md",
@@ -232,7 +233,6 @@
     "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Boolean.md",
     "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array Detection.md",
     "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array.md",
-    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS WeakSet.md",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
     "Technical/Programming/JavaScript/Built-in/Text Processing",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects",
