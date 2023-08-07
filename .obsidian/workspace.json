@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
+                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md"
+                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
+                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
+                "file": "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -178,7 +178,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
@@ -204,8 +204,12 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c6d173446b8ea23c",
+  "active": "0f934411232b165f",
   "lastOpenFiles": [
+    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp Rule.md",
+    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
+    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp exec.md",
+    "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
     "Technical/Programming/JavaScript/Built-in/Reflection/JS Proxy.md",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Generator Async.md",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Generator.md",
@@ -213,7 +217,6 @@
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Promise Standard.md",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Promise.md",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Iterator.md",
-    "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
     "Technical/Programming/JavaScript/Built-in/Number and Date/JS Math.md",
     "Technical/Programming/JavaScript/Built-in/Structured Data/JS JSON.md",
     "Technical/Programming/JavaScript/Built-in/Reflection",
@@ -230,9 +233,6 @@
     "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array Detection.md",
     "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array.md",
     "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS WeakSet.md",
-    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS WeakMap.md",
-    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS Set.md",
-    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS Map.md",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
     "Technical/Programming/JavaScript/Built-in/Text Processing",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects",

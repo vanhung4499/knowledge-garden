@@ -1,9 +1,9 @@
 ---
 title: JS RegExp test
-tags: [js, programming]
-categories: [js, programming]s
+tags: [js, programming, regex]
+categories: [js, programming, regex]
 date created: 2023-08-07
-date modified: 2023-08-07
+date modified: 2023-08-08
 ---
 
 # RegExp.prototype.test()
