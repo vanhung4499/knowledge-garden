@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "66e232008ac9077f",
+        "id": "d9b063a5d81208e7",
         "type": "tabs",
         "children": [
           {
-            "id": "cc0a897cb04f6e16",
+            "id": "0f934411232b165f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/JavaScript/OOP/Class/JS Class Static Member.md",
+                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "tag:#linux",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/JavaScript/OOP/Class/JS Class Static Member.md"
+                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/JavaScript/OOP/Class/JS Class Static Member.md",
+                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/JavaScript/OOP/Class/JS Class Static Member.md",
+                "file": "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             }
           },
           {
-            "id": "ebb7b50df7d99ed5",
+            "id": "209fe34bae6bd332",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +170,7 @@
             }
           },
           {
-            "id": "48f4bec4bf7b97cd",
+            "id": "1c7aff2116c54142",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -182,7 +182,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 412.5
+    "width": 418.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,44 +204,44 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "cc0a897cb04f6e16",
+  "active": "c6d173446b8ea23c",
   "lastOpenFiles": [
-    "Technical/Programming/JavaScript/OOP/Class/JS Class Private Member.md",
-    "Technical/Programming/JavaScript/OOP/Class/JS Class Static Member.md",
-    "Technical/Programming/JavaScript/OOP/Class/JS Class Extends.md",
-    "Technical/Programming/JavaScript/OOP/Class/JS Class Basic.md",
-    "Technical/Programming/JavaScript/OOP/Inheritance/JS Parasitic Combination Inheritance.md",
-    "Technical/Programming/JavaScript/OOP/Inheritance/JS Combination Inheritance.md",
-    "Technical/Programming/JavaScript/OOP/Inheritance/JS Parasitic Inheritance.md",
-    "Technical/Programming/JavaScript/OOP/Inheritance/JS Prototypal Inheritance.md",
-    "Technical/Programming/JavaScript/OOP/Inheritance/JS Prototype Chain.md",
-    "Technical/Programming/JavaScript/OOP/Inheritance/JS Constructor Stealing.md",
-    "Technical/Programming/JavaScript/OOP/Creation/JS Prototype Pattern.md",
-    "Technical/Programming/JavaScript/OOP/Understand/JS Manipulating Property.md",
-    "Technical/Programming/JavaScript/OOP/Understand/JS Object Type.md",
-    "Technical/Programming/JavaScript/OOP/Understand/JS Object Status.md",
-    "Technical/Programming/JavaScript/OOP/Understand/JS Attributes Object.md",
-    "Technical/Programming/JavaScript/OOP/Creation/JS Constructor Pattern.md",
-    "Technical/Programming/JavaScript/OOP/JS OOP MOC.md",
-    "Technical/Programming/JavaScript/OOP/Class",
-    "Technical/Programming/JavaScript/JavaScript MOC.md",
-    "Technical/Programming/JavaScript/Core/JS Core Modules MOC.md",
-    "Technical/Programming/JavaScript/OOP/Creation/JS Durable Constructor Pattern.md",
-    "Technical/Programming/JavaScript/OOP/Inheritance",
-    "Technical/Programming/JavaScript/OOP/Creation/JS Parastic Constructor Pattern.md",
-    "Technical/Programming/JavaScript/OOP/Creation/JS Dynamic Prototype Pattern.md",
-    "Technical/Programming/JavaScript/OOP/Creation/JS Combination Constructor And Prototype Pattern.md",
-    "Home.md",
-    "Technical/Programming/JavaScript/OOP/Creation/JS Factory Pattern.md",
-    "Technical/Programming/JavaScript/Core/Modularization/JS Module Inheritance.md",
-    "Technical/Programming/JavaScript/OOP/Creation",
-    "Technical/Programming/JavaScript/OOP/Understand",
-    "Technical/Programming/JavaScript/Core/Modularization",
-    "Technical/Programming/JavaScript/Core/Function/Types",
-    "Technical/Programming/JavaScript/Core/Function/Internal",
-    "Technical/Programming/JavaScript/Core/Function/Calls",
-    "Technical/Programming/JavaScript/Core/Function/Arguments",
-    "Technical/Programming/JavaScript/Core/Function/Declarations",
+    "Technical/Programming/JavaScript/Built-in/Reflection/JS Proxy.md",
+    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Generator Async.md",
+    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Generator.md",
+    "Technical/Programming/JavaScript/Built-in/JS Standard Built-in Objects MOC.md",
+    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Promise Standard.md",
+    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Promise.md",
+    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Iterator.md",
+    "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
+    "Technical/Programming/JavaScript/Built-in/Number and Date/JS Math.md",
+    "Technical/Programming/JavaScript/Built-in/Structured Data/JS JSON.md",
+    "Technical/Programming/JavaScript/Built-in/Reflection",
+    "Technical/Programming/JavaScript/Built-in/Structured Data/JS JSON stringify.md",
+    "Technical/Programming/JavaScript/Built-in/Structured Data/JS JSON parse.md",
+    "Technical/Programming/JavaScript/Built-in/Structured Data/JS ArrayBuffer.md",
+    "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Typed Array.md",
+    "Technical/Programming/JavaScript/Built-in/Function Properties/JS decodeURI.md",
+    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/Function/JS Function.md",
+    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Symbol.md",
+    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Object.md",
+    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Error.md",
+    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Boolean.md",
+    "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array Detection.md",
+    "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array.md",
+    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS WeakSet.md",
+    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS WeakMap.md",
+    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS Set.md",
+    "Technical/Programming/JavaScript/Built-in/Keyed Collections/JS Map.md",
+    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
+    "Technical/Programming/JavaScript/Built-in/Text Processing",
+    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects",
+    "Technical/Programming/JavaScript/Built-in/Structured Data",
+    "Technical/Programming/JavaScript/Built-in/Keyed Collections",
+    "Technical/Programming/JavaScript/Built-in/Indexed Collections",
+    "Technical/Programming/JavaScript/Built-in/Number and Date",
+    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/Function",
+    "Technical/Programming/JavaScript/Built-in/Fundamental Objects",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",

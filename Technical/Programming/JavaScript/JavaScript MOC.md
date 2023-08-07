@@ -16,7 +16,7 @@ Tổng hợp các bài viết về JavaScript, chỉ bàn về ngôn ngữ khôn
 
 ## Built-in Objects
 
-- [[JS Builtin Objects MOC]]
+- [[JS Standard Built-in Objects MOC]]
 
 ## Core Modules
 
