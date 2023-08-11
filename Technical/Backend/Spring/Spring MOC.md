@@ -3,7 +3,7 @@ categories: [spring, framework, moc, java]
 tags: [spring, framework, moc, java]
 title: Spring MOC
 date created: 2023-07-04
-date modified: 2023-07-28
+date modified: 2023-08-11
 ---
 
 # Spring Framework MOC
@@ -47,9 +47,11 @@ date modified: 2023-07-28
 - [[Spring JDBC]]
 - [[Spring Transactions]]
 - [[Spring JPA]]
-- [[Spring and Mybatis]]
+- [[Spring integrates Mybatis]]
+- [[Spring Data Integration]]
 - [[Spring Access Redis]]
 - [[Spring Access MongoDB]]
+- [[Spring Access ElasticSearch]]
 
 ## Spring Web
 

@@ -3,7 +3,7 @@ title: Spring Transactions
 tags: [spring, java, db, backend]
 categories: [spring, java, db, backend]
 date created: 2023-07-28
-date modified: 2023-07-28
+date modified: 2023-08-11
 ---
 
 # Spring và giao dịch
@@ -456,3 +456,688 @@ Một trong các đặc điểm của giao dịch là nó có phải là giao d�
 #### Rollback Rules (Quy tắc hoàn tác)
 
 Một trong những khía cạnh cuối cùng của ngũ giác giao dịch là một tập hợp các quy tắc, xác định những ngoại lệ nào sẽ gây ra việc hoàn tác giao dịch và những ngoại lệ nào không. Mặc định, giao dịch chỉ hoàn tác khi gặp phải ngoại lệ thời gian chạy, trong khi không hoàn tác khi gặp phải ngoại lệ kiểu kiểm tra (hành vi này tương tự với hành vi hoàn tác của EJB). Tuy nhiên, bạn có thể khai báo giao dịch sẽ hoàn tác khi gặp phải các ngoại lệ kiểu kiểm tra cụ thể như khi gặp phải ngoại lệ thời gian chạy. Tương tự, bạn cũng có thể khai báo giao dịch sẽ không hoàn tác khi gặp phải các ngoại lệ cụ thể, ngay cả khi chúng là ngoại lệ thời gian chạy.
+
+### TransactionStatus
+
+Giao diện `TransactionStatus` cung cấp một cách đơn giản để điều khiển việc thực thi giao dịch và truy vấn trạng thái giao dịch cho mã giao dịch. Các khái niệm này nên quen thuộc vì chúng là chung cho tất cả các API giao dịch. Dưới đây là một ví dụ về giao diện `TransactionStatus`:
+
+```java
+public interface TransactionStatus extends TransactionExecution, SavepointManager, Flushable {
+
+    @Override
+    boolean isNewTransaction();
+
+    boolean hasSavepoint();
+
+    @Override
+    void setRollbackOnly();
+
+    @Override
+    boolean isRollbackOnly();
+
+    void flush();
+
+    @Override
+    boolean isCompleted();
+}
+```
+
+Có thể thấy rằng giao diện này mô tả các phương thức để điều khiển việc thực thi giao dịch và truy vấn trạng thái giao dịch một cách đơn giản, và cần áp dụng trạng thái giao dịch tương ứng khi rollback hoặc commit.
+
+### TransactionTemplate
+
+Spring cung cấp hỗ trợ cho giao dịch theo cách lập trình và theo cách khai báo. Giao dịch theo cách lập trình cho phép người dùng xác định rõ ranh giới của giao dịch trong mã nguồn, trong khi giao dịch theo cách khai báo (dựa trên AOP) giúp người dùng tách biệt các hoạt động khỏi quy tắc giao dịch. `TransactionTemplate` là API cốt lõi được sử dụng để hỗ trợ giao dịch theo cách lập trình.
+
+Việc sử dụng `TransactionTemplate` tương tự như việc sử dụng các template Spring khác như JdbcTemplate và HibernateTemplate. Nó sử dụng phương thức gọi lại (callback) để giải phóng ứng dụng khỏi việc xử lý lấy và giải phóng tài nguyên. Giống như các template khác, `TransactionTemplate` là luồng an toàn. Đoạn mã sau đây là một ví dụ về việc sử dụng `TransactionTemplate`:
+
+```java
+    TransactionTemplate tt = new TransactionTemplate(); // Tạo một TransactionTemplate mới
+    Object result = tt.execute(
+        new TransactionCallback(){
+            public Object doTransaction(TransactionStatus status){
+                updateOperation();
+                return resultOfUpdateOperation();
+            }
+    }); // Thực thi phương thức execute để quản lý giao dịch
+```
+
+`TransactionCallback()` có thể trả về một giá trị. Nếu sử dụng `TransactionCallbackWithoutResult`, thì không có giá trị trả về.
+
+## Quản lý giao dịch theo cách khai báo
+
+> Hầu hết người dùng Spring đều chọn quản lý giao dịch theo cách khai báo. Tùy chọn này ảnh hưởng ít nhất đến mã ứng dụng, do đó phù hợp nhất với lý tưởng của một container nhẹ không xâm nhập.
+
+Quản lý giao dịch theo cách khai báo trong Spring Framework được thực hiện thông qua Spring AOP. Tuy nhiên, vì mã liên quan đến giao dịch được cung cấp cùng với bản phân phối Spring và có thể được sử dụng theo cách mẫu, nên thường không cần hiểu rõ về khái niệm AOP để sử dụng mã này một cách hiệu quả.
+
+Quản lý giao dịch theo cách khai báo trong Spring Framework tương tự như EJB CMT, vì bạn có thể chỉ định hành vi giao dịch (hoặc thiếu nó) cho từng phương thức cụ thể. Nếu cần thiết, bạn có thể gọi `setRollbackOnly()` trong ngữ cảnh giao dịch. Sự khác biệt giữa hai loại quản lý giao dịch là:
+
+- Khác với EJB CMT được liên kết với JTA, quản lý giao dịch theo cách khai báo trong Spring Framework phù hợp với môi trường bất kỳ. Bằng cách điều chỉnh tệp cấu hình, nó có thể sử dụng giao dịch JTA hoặc giao dịch cục bộ bằng JDBC, JPA hoặc Hibernate.
+- Bạn có thể áp dụng quản lý giao dịch theo cách khai báo của Spring cho bất kỳ lớp nào, không chỉ là các lớp đặc biệt như EJB.
+- Spring cung cấp quy tắc rollback theo cách khai báo, đây là một tính năng không có trong EJB tương đương. Nó cung cấp hỗ trợ cho quy tắc rollback cả trong việc lập trình và khai báo.
+- Spring cho phép bạn tùy chỉnh hành vi giao dịch bằng AOP. Ví dụ, bạn có thể chèn hành vi tùy chỉnh trong trường hợp giao dịch bị rollback. Bạn cũng có thể thêm bất kỳ advice nào, bao gồm advice về giao dịch. Trong EJB CMT, bạn không thể ảnh hưởng đến quản lý giao dịch của container trừ khi sử dụng `setRollbackOnly()`.
+- Spring không hỗ trợ việc truyền ngữ cảnh giao dịch qua các cuộc gọi từ xa như các máy chủ ứng dụng cao cấp. Nếu bạn cần tính năng này, chúng tôi khuyến nghị sử dụng EJB. Tuy nhiên, hãy cân nhắc kỹ trước khi sử dụng tính năng này, vì thường không muốn giao dịch trải dài qua các cuộc gọi từ xa.
+
+Khái niệm về quy tắc rollback là quan trọng. Chúng cho phép bạn chỉ định những ngoại lệ (và throwable) nào sẽ tự động gây ra việc rollback. Bạn có thể chỉ định nó theo cách khai báo trong tệp cấu hình, thay vì trong mã Java. Do đó, mặc dù bạn vẫn có thể gọi `setRollbackOnly()` trên đối tượng TransactionStatus để rollback giao dịch hiện tại, nhưng thường bạn có thể chỉ định quy tắc rằng MyApplicationException luôn phải gây ra rollback. Lợi ích đáng kể của tùy chọn này là đối tượng kinh doanh không phụ thuộc vào cơ sở hạ tầng giao dịch. Ví dụ, chúng thường không cần nhập các API giao dịch Spring hoặc API Spring khác.
+
+Mặc dù hành vi mặc định của EJB container là tự động rollback giao dịch trên ngoại lệ hệ thống (thường là ngoại lệ chạy thời gian), nhưng EJB CMT không tự động rollback giao dịch trên ngoại lệ ứng dụng (nghĩa là ngoại lệ kiểm tra ngoại lệ khác RemoteException). Mặc dù hành vi mặc định của quản lý giao dịch theo cách khai báo trong Spring tuân theo quy ước EJB (rollback chỉ tự động trên ngoại lệ không kiểm tra), nhưng thường hữu ích để tùy chỉnh hành vi này.
+
+### Triển khai quản lý giao dịch theo cách khai báo của Spring
+
+Về hỗ trợ quản lý giao dịch theo cách khai báo trong Spring Framework, khái niệm quan trọng nhất là hỗ trợ này được kích hoạt thông qua AOP proxy và advice giao dịch được điều khiển bằng siêu dữ liệu (hiện tại là dựa trên XML hoặc dựa trên chú thích). Sự kết hợp giữa AOP và siêu dữ liệu giao dịch tạo ra một proxy AOP, sử dụng `TransactionInterceptor` và các implement của `TransactionManager` thích hợp để điều khiển giao dịch xung quanh cuộc gọi phương thức.
+
+`TransactionInterceptor` của Spring cung cấp quản lý giao dịch cho cả mô hình lập trình lệnh và mô hình lập trình phản ứng. Interceptor phát hiện kiểu quản lý giao dịch yêu cầu bằng cách kiểm tra kiểu trả về của phương thức. Phương thức trả về kiểu phản ứng, chẳng hạn như Publisher hoặc Kotlin Flow (hoặc các loại con của chúng), đủ điều kiện để quản lý giao dịch phản ứng. Tất cả các loại trả về khác, bao gồm void, sử dụng quản lý giao dịch lệnh.
+
+Kiểu quản lý giao dịch ảnh hưởng đến loại quản lý giao dịch cần thiết. Quản lý giao dịch lệnh yêu cầu `PlatformTransactionManager`, trong khi quản lý giao dịch phản ứng sử dụng `ReactiveTransactionManager`.
+
+> `@Transactional` thường được sử dụng cùng với giao dịch được ràng buộc với luồng được quản lý bởi `PlatformTransactionManager`, làm cho giao dịch có sẵn cho tất cả các hoạt động truy cập dữ liệu trong luồng thực thi hiện tại. Lưu ý: Điều này không được truyền cho các luồng mới được khởi động trong phương thức.
+>
+> Giao dịch phản ứng được quản lý bởi `ReactiveTransactionManager` sử dụng ngữ cảnh Reactor thay vì thuộc tính cục bộ của luồng. Do đó, tất cả các hoạt động truy cập dữ liệu tham gia đều cần được thực hiện trong cùng một luồng Reactor trong cùng một ngữ cảnh Reactor.
+
+### Ví dụ về quản lý giao dịch theo cách khai báo
+
+Xem xét giao diện và lớp cài đặt đi kèm sau đây. Ví dụ này sử dụng lớp Foo và Bar như các đối tượng giả để bạn có thể tập trung vào việc sử dụng giao dịch mà không cần quan tâm đến mô hình miền cụ thể. Trong trường hợp này, việc lớp DefaultFooService ném một instance UnsupportedOperationException trong thân của mỗi phương thức đã được triển khai là tốt. Hành vi này cho phép bạn xem giao dịch đang được tạo và sau đó rollback để phản hồi UnsupportedOperationException.
+
+Dưới đây là một ví dụ về giao diện FooService:
+
+```java
+// giao diện dịch vụ mà chúng ta muốn quản lý giao dịch
+package x.y.service;
+
+public interface FooService {
+
+    Foo getFoo(String fooName);
+
+    Foo getFoo(String fooName, String barName);
+
+    void insertFoo(Foo foo);
+
+    void updateFoo(Foo foo);
+
+}
+```
+
+Dưới đây là một ví dụ về lớp cài đặt cho giao diện trên:
+
+```java
+package x.y.service;
+
+public class DefaultFooService implements FooService {
+
+    @Override
+    public Foo getFoo(String fooName) {
+        // ...
+    }
+
+    @Override
+    public Foo getFoo(String fooName, String barName) {
+        // ...
+    }
+
+    @Override
+    public void insertFoo(Foo foo) {
+        // ...
+    }
+
+    @Override
+    public void updateFoo(Foo foo) {
+        // ...
+    }
+}
+```
+
+Giả sử hai phương thức đầu tiên của giao diện FooService, getFoo(String) và getFoo(String, String), phải chạy trong ngữ cảnh giao dịch chỉ đọc, trong khi các phương thức khác insertFoo(Foo) và updateFoo(Foo) phải chạy trong ngữ cảnh giao dịch đọc/ghi. Cấu hình dưới đây sẽ được giải thích chi tiết trong các phần tiếp theo:
+
+```xml
+<!-- from the file 'context.xml' -->
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- this is the service object that we want to make transactional -->
+    <bean id="fooService" class="x.y.service.DefaultFooService"/>
+
+    <!-- the transactional advice (what 'happens'; see the <aop:advisor/> bean below) -->
+    <tx:advice id="txAdvice" transaction-manager="txManager">
+        <!-- the transactional semantics... -->
+        <tx:attributes>
+            <!-- all methods starting with 'get' are read-only -->
+            <tx:method name="get*" read-only="true"/>
+            <!-- other methods use the default transaction settings (see below) -->
+            <tx:method name="*"/>
+        </tx:attributes>
+    </tx:advice>
+
+    <!-- ensure that the above transactional advice runs for any execution
+        of an operation defined by the FooService interface -->
+    <aop:config>
+        <aop:pointcut id="fooServiceOperation" expression="execution(* x.y.service.FooService.*(..))"/>
+        <aop:advisor advice-ref="txAdvice" pointcut-ref="fooServiceOperation"/>
+    </aop:config>
+
+    <!-- don't forget the DataSource -->
+    <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+        <property name="driverClassName" value="oracle.jdbc.driver.OracleDriver"/>
+        <property name="url" value="jdbc:oracle:thin:@rj-t42:1521:elvis"/>
+        <property name="username" value="scott"/>
+        <property name="password" value="tiger"/>
+    </bean>
+
+    <!-- similarly, don't forget the TransactionManager -->
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- other <bean/> definitions here -->
+
+</beans>
+```
+
+Hãy xem xét cấu hình trên. Nó giả định rằng bạn muốn làm cho đối tượng dịch vụ fooService bean có tính chất giao dịch. Các ngữ nghĩa giao dịch cần áp dụng được đóng gói trong `<tx:advice/>` định nghĩa. `<tx:advice/>` định nghĩa được đọc là "tất cả các phương thức bắt đầu bằng 'get' sẽ chạy trong ngữ cảnh giao dịch chỉ đọc, tất cả các phương thức khác sẽ chạy với ngữ cảnh giao dịch mặc định". Thuộc tính `transaction-manager` của thẻ `<tx:advice/>` được đặt thành tên của bean TransactionManager sẽ điều khiển giao dịch (trong trường hợp này là bean txManager).
+
+> Nếu tên bean của TransactionManager mà bạn muốn kết nối có tên là transactionManager, bạn có thể bỏ qua thuộc tính transaction-manager trong advice giao dịch (tx:advice/). Nếu tên bean của TransactionManager cần kết nối có bất kỳ tên nào khác, bạn phải sử dụng thuộc tính transaction-manager một cách rõ ràng, như trong ví dụ trước.
+
+`<aop:config/>` đảm bảo rằng lời khuyên giao dịch được định nghĩa bởi `txAdvice` bean sẽ chạy ở vị trí thích hợp trong chương trình. Đầu tiên, bạn định nghĩa một điểm cắt (pointcut) tương ứng với việc thực hiện bất kỳ hoạt động nào được xác định bởi `FooService` interface (fooServiceOperation). Sau đó, bạn sử dụng một advisor để liên kết điểm cắt với `txAdvice`. Kết quả là khi thực hiện fooServiceOperation, lời khuyên được định nghĩa bởi `txAdvice` sẽ chạy.
+
+Một yêu cầu phổ biến là làm cho toàn bộ tầng dịch vụ có tính chất giao dịch. Cách tốt nhất là thay đổi biểu thức điểm cắt để phù hợp với bất kỳ hoạt động nào trong tầng dịch vụ. Ví dụ sau cho thấy cách thực hiện điều này:
+
+```xml
+<aop:config>
+    <aop:pointcut id="fooServiceMethods" expression="execution(* x.y.service.*.*(..))"/>
+    <aop:advisor advice-ref="txAdvice" pointcut-ref="fooServiceMethods"/>
+</aop:config>
+```
+
+Cấu hình trên được sử dụng để tạo ra một proxy giao dịch xung quanh đối tượng được xác định bởi bean fooService. Proxy được cấu hình với lời khuyên giao dịch để khởi động, tạm dừng, đánh dấu chỉ đọc và các giao dịch khác tùy thuộc vào cấu hình giao dịch liên kết với phương thức đó. Xem xét chương trình kiểm tra được thúc đẩy bởi cấu hình trước đó:
+
+```java
+public final class Boot {
+
+    public static void main(final String[] args) throws Exception {
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("context.xml");
+        FooService fooService = ctx.getBean(FooService.class);
+        fooService.insertFoo(new Foo());
+    }
+}
+```
+
+### Rollback trong một giao dịch khai báo
+
+Trong Spring Framework, cách khuyến nghị để kích hoạt việc rollback giao dịch là ném một ngoại lệ trong ngữ cảnh giao dịch. Spring Transaction Framework sẽ bắt các ngoại lệ chưa được xử lý và xác định xem liệu có đánh dấu giao dịch để rollback hay không.
+
+Trong cấu hình mặc định của nó, Spring Transaction Framework chỉ đánh dấu giao dịch để rollback khi có ngoại lệ chạy thời gian chưa được kiểm tra. Điều này có nghĩa là khi ngoại lệ được ném là một instance của RuntimeException hoặc lớp con của nó. (Mặc định, các instance của Error cũng sẽ dẫn đến việc rollback). Các ngoại lệ kiểm tra được ném từ phương thức giao dịch không gây rollback trong cấu hình mặc định.
+
+Bạn có thể xác định các quy tắc rollback cụ thể bằng cách chỉ định các loại ngoại lệ sẽ dẫn đến việc rollback giao dịch.
+
+> Quy tắc rollback được định nghĩa bằng cách chỉ định mẫu cho các ngoại lệ sẽ dẫn đến việc rollback khi chúng được ném.
+>
+> Quy tắc rollback có thể được cấu hình trong XML bằng cách sử dụng thuộc tính `rollback-for` và `no-rollback-for`, cho phép chỉ định mẫu dưới dạng chuỗi. Khi sử dụng `@Transactional`, bạn có thể cấu hình quy tắc rollback bằng cách sử dụng các thuộc tính `rollbackFor` / `noRollbackFor` và `rollbackForClassName` / `noRollbackForClassName`, cho phép chỉ định mẫu dưới dạng tham chiếu lớp hoặc chuỗi. Khi loại ngoại lệ được chỉ định là tham chiếu lớp, tên đầy đủ của nó sẽ được sử dụng làm mẫu. Vì vậy, `@Transactional(rollbackFor = example.CustomException.class)` tương đương với `@Transactional(rollbackForClassName = 'example.CustomException')`.
+
+Dưới đây là một đoạn mã XML mô tả cách cấu hình mẫu ngoại lệ để chỉ định rollback cho một số loại Exception đã được kiểm tra:
+
+```xml
+<tx:advice id="txAdvice" transaction-manager="txManager">
+    <tx:attributes>
+        <tx:method name="get*" read-only="true" rollback-for="NoProductInStockException"/>
+        <tx:method name="*"/>
+    </tx:attributes>
+</tx:advice>
+```
+
+Nếu bạn không muốn rollback giao dịch khi ngoại lệ được ném, bạn cũng có thể chỉ định quy tắc "không rollback". Ví dụ dưới đây cho biết rằng, ngay cả khi có một InstrumentNotFoundException chưa được xử lý, giao dịch phụ trợ vẫn sẽ được commit.
+
+```xml
+<tx:advice id="txAdvice">
+    <tx:attributes>
+        <tx:method name="updateStock" no-rollback-for="InstrumentNotFoundException"/>
+        <tx:method name="*"/>
+    </tx:attributes>
+</tx:advice>
+```
+
+Khi Spring Transaction Framework bắt được ngoại lệ và kiểm tra các quy tắc rollback đã được cấu hình để xác định xem có đánh dấu giao dịch để rollback hay không, quy tắc khớp tốt nhất sẽ quyết định. Vì vậy, trong cấu hình sau, bất kỳ ngoại lệ nào ngoại trừ `InstrumentNotFoundException` đều sẽ dẫn đến việc rollback giao dịch.
+
+```xml
+<tx:advice id="txAdvice">
+    <tx:attributes>
+        <tx:method name="*" rollback-for="Throwable" no-rollback-for="InstrumentNotFoundException"/>
+    </tx:attributes>
+</tx:advice>
+```
+
+Bạn cũng có thể chỉ định rollback theo cách thủ công nếu bạn muốn. Mặc dù đơn giản, quá trình này rất xâm nhập và làm cho mã của bạn phụ thuộc chặt chẽ vào cơ sở hạ tầng giao dịch của Spring Framework. Ví dụ dưới đây cho thấy cách thủ công rollback.
+
+```java
+public void resolvePosition() {
+    try {
+        // một số logic kinh doanh...
+    } catch (NoProductInStockException ex) {
+        // kích hoạt rollback theo cách thủ công
+        TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+    }
+}
+```
+
+Nếu có thể, chúng tôi khuyến nghị sử dụng rollback theo cách khai báo. Nếu tuyệt đối cần thiết, bạn có thể sử dụng rollback theo cách thủ công, nhưng việc sử dụng nó làm mất tính sạch của kiến trúc dựa trên POJO.
+
+### Cấu hình ngữ cảnh giao dịch khác nhau cho các Bean khác nhau
+
+Giả sử bạn có một tình huống trong đó bạn có nhiều đối tượng dịch vụ và bạn muốn áp dụng cấu hình giao dịch hoàn toàn khác nhau cho mỗi đối tượng. Bạn có thể làm điều này bằng cách định nghĩa các điểm cắt (pointcut) khác nhau với các giá trị `advice-ref` khác nhau trong các phần tử `<aop:advisor/>`.
+
+Ví dụ, giả sử tất cả các lớp dịch vụ của bạn được định nghĩa trong gói gốc `x.y.service`. Để áp dụng cấu hình giao dịch mặc định cho tất cả các bean có tên kết thúc bằng "Service" trong gói này (hoặc các gói con), bạn có thể viết như sau:
+
+```xml
+<aop:config>
+    <aop:pointcut id="serviceOperation" expression="execution(* x.y.service..*Service.*(..))"/>
+    <aop:advisor pointcut-ref="serviceOperation" advice-ref="txAdvice"/>
+</aop:config>
+```
+
+Trong ví dụ trên, tất cả các bean có tên kết thúc bằng "Service" trong gói `x.y.service` (và các gói con) sẽ có cấu hình giao dịch mặc định. Bạn cũng có thể định nghĩa các điểm cắt khác và liên kết chúng với các `advice` khác nhau để áp dụng cấu hình giao dịch khác nhau cho các bean khác nhau.
+
+Dưới đây là một ví dụ về cách cấu hình hai bean khác nhau với cấu hình giao dịch hoàn toàn khác nhau:
+
+```xml
+<aop:config>
+    <aop:pointcut id="defaultServiceOperation" expression="execution(* x.y.service.*Service.*(..))"/>
+    <aop:pointcut id="noTxServiceOperation" expression="execution(* x.y.service.ddl.DefaultDdlManager.*(..))"/>
+
+    <aop:advisor pointcut-ref="defaultServiceOperation" advice-ref="defaultTxAdvice"/>
+    <aop:advisor pointcut-ref="noTxServiceOperation" advice-ref="noTxAdvice"/>
+</aop:config>
+
+<!-- bean này sẽ có giao dịch (xem điểm cắt 'defaultServiceOperation') -->
+<bean id="fooService" class="x.y.service.DefaultFooService"/>
+
+<!-- bean này cũng sẽ có giao dịch, nhưng với cấu hình giao dịch hoàn toàn khác nhau -->
+<bean id="anotherFooService" class="x.y.service.ddl.DefaultDdlManager"/>
+
+<tx:advice id="defaultTxAdvice">
+    <tx:attributes>
+        <tx:method name="get*" read-only="true"/>
+        <tx:method name="*"/>
+    </tx:attributes>
+</tx:advice>
+
+<tx:advice id="noTxAdvice">
+    <tx:attributes>
+        <tx:method name="*" propagation="NEVER"/>
+    </tx:attributes>
+</tx:advice>
+```
+
+Trong ví dụ trên, bean `fooService` sẽ có cấu hình giao dịch mặc định, trong khi bean `anotherFooService` sẽ có cấu hình giao dịch hoàn toàn khác nhau.
+
+### Cấu hình `<tx:advice/>`
+
+Cấu hình mặc định của `<tx:advice/>` là:
+
+- Propagation được đặt là `REQUIRED`
+- Isolation level là `DEFAULT`
+- Transaction là read-write
+- Transaction timeout mặc định là timeout mặc định của hệ thống giao dịch cơ sở, nếu không hỗ trợ timeout thì là không có timeout.
+- Bất kỳ `RuntimeException` nào sẽ gây ra rollback, trong khi bất kỳ `Exception` đã được kiểm tra nào sẽ không gây ra rollback.
+
+Thuộc tính cấu hình của `<tx:advice/>`
+
+| Thuộc tính        | Bắt buộc | Giá trị mặc định | Mô tả                                                                                                           |
+|:----------------- |:-------- |:---------------- |:--------------------------------------------------------------------------------------------------------------- |
+| `name`            | Có       |                  | Tên phương thức liên quan đến thuộc tính giao dịch. Hỗ trợ ký tự đại diện như `get*`, `handle*`, `on*Event`.    |
+| `propagation`     | Không    | `REQUIRED`       | Hành vi truyền giao dịch                                                                                        |
+| `isolation`       | Không    | `DEFAULT`        | Mức độ cô lập giao dịch. Chỉ áp dụng cho propagation setting `REQUIRED` hoặc `REQUIRES_NEW`.                    |
+| `timeout`         | Không    | -1               | Thời gian timeout giao dịch (đơn vị: giây). Chỉ áp dụng cho propagation setting `REQUIRED` hoặc `REQUIRES_NEW`. |
+| `read-only`       | Không    | false            | Giao dịch read-write hoặc read-only.                                                                            |
+| `rollback-for`    | Không    |                  | Danh sách các instance `Exception` gây ra rollback (phân cách bằng dấu phẩy).                                   |
+| `no-rollback-for` | Không    |                  | Danh sách các instance `Exception` không gây ra rollback (phân cách bằng dấu phẩy).                             |
+|                   |          |                  |                                                                                                                 |
+
+### Sử dụng chú thích `@Transactional`
+
+Ngoài phương pháp cấu hình giao dịch dựa trên XML, bạn cũng có thể sử dụng phương pháp dựa trên chú thích.
+
+Dưới đây là một ví dụ về việc sử dụng chú thích `@Transactional`:
+
+```java
+@Transactional
+public class DefaultFooService implements FooService {
+
+    @Override
+    public Foo getFoo(String fooName) {
+        // ...
+    }
+
+    @Override
+    public Foo getFoo(String fooName, String barName) {
+        // ...
+    }
+
+    @Override
+    public void insertFoo(Foo foo) {
+        // ...
+    }
+
+    @Override
+    public void updateFoo(Foo foo) {
+        // ...
+    }
+}
+```
+
+Như đã đề cập ở trên, khi sử dụng ở mức lớp, chú thích `@Transactional` cho biết tất cả các phương thức của lớp (và các lớp con của nó) sẽ sử dụng cấu hình giao dịch mặc định. Hoặc, bạn có thể chỉ định chú thích cho từng phương thức riêng lẻ. Lưu ý rằng chú thích ở mức lớp không áp dụng cho các lớp tổ tiên trong cấu trúc lớp; trong trường hợp này, các phương thức kế thừa cần được khai báo lại cục bộ để tham gia chú thích ở mức lớp con.
+
+Khi lớp POJO trên được xác định là bean trong ngữ cảnh Spring, bạn có thể sử dụng chú thích `@EnableTransactionManagement` trong lớp `@Configuration` để các phiên bản bean có tính giao dịch.
+
+Trong cấu hình XML, thẻ `<tx:annotation-driven/>` cung cấp tiện ích tương tự:
+
+```xml
+<!-- from the file 'context.xml' -->
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xmlns:tx="http://www.springframework.org/schema/tx"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/tx
+        https://www.springframework.org/schema/tx/spring-tx.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <!-- this is the service object that we want to make transactional -->
+    <bean id="fooService" class="x.y.service.DefaultFooService"/>
+
+    <!-- enable the configuration of transactional behavior based on annotations -->
+    <!-- a TransactionManager is still required -->
+    <tx:annotation-driven transaction-manager="txManager"/>
+
+    <bean id="txManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        <!-- (this dependency is defined somewhere else) -->
+        <property name="dataSource" ref="dataSource"/>
+    </bean>
+
+    <!-- other <bean/> definitions here -->
+
+</beans>
+```
+
+#### Cấu hình `@Transactional`
+
+| Thuộc tính                                                                                                                             | Kiểu dữ liệu                                                                  | Mô tả                                                                                                                         |
+| :------------------------------------------------------------------------------------------------------------------------------------- | :---------------------------------------------------------------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| [value](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#tx-multiple-tx-mgrs-with-attransactional) | `String`                                                                      | Bộ xác định tùy chọn chỉ định transaction manager sẽ được sử dụng.                                                             |
+| `transactionManager`                                                                                                                   | `String`                                                                      | Bí danh cho `value`.                                                                                                          |
+| `label`                                                                                                                                | Mảng các chuỗi `String` để thêm mô tả biểu đạt cho giao dịch.                                                                      | Nhãn có thể được đánh giá bởi transaction manager để liên kết hành vi cụ thể với giao dịch thực tế.                           |
+| [propagation](https://docs.spring.io/spring-framework/docs/current/reference/html/data-access.html#tx-propagation)                     | `enum`: `Propagation`                                                         | Cài đặt truyền giao dịch tùy chọn.                                                                                           |
+| `isolation`                                                                                                                            | `enum`: `Isolation`                                                           | Mức độ cô lập tùy chọn. Chỉ áp dụng cho các giá trị propagation là `REQUIRED` hoặc `REQUIRES_NEW`.                            |
+| `timeout`                                                                                                                              | `int` (theo đơn vị giây)                                             | Thời gian timeout giao dịch tùy chọn. Chỉ áp dụng cho các giá trị propagation là `REQUIRED` hoặc `REQUIRES_NEW`.                |
+| `timeoutString`                                                                                                                        | `String` (theo đơn vị giây)                                          | Tùy chọn khác để chỉ định `timeout` dưới dạng chuỗi `String` - ví dụ: như một placeholder.                                   |
+| `readOnly`                                                                                                                             | `boolean`                                                                     | Giao dịch read-write hoặc read-only. Chỉ áp dụng cho các giá trị propagation là `REQUIRED` hoặc `REQUIRES_NEW`.               |
+| `rollbackFor`                                                                                                                          | Mảng các đối tượng `Class`, phải là lớp con của `Throwable`.             | Mảng tùy chọn các loại ngoại lệ phải gây ra rollback.                                                                         |
+| `rollbackForClassName`                                                                                                                 | Mảng các mẫu tên ngoại lệ.                                             | Mảng tùy chọn các mẫu tên ngoại lệ phải gây ra rollback.                                                                       |
+| `noRollbackFor`                                                                                                                        | Mảng các đối tượng `Class`, phải là lớp con của `Throwable`.             | Mảng tùy chọn các loại ngoại lệ không được gây ra rollback.                                                                   |
+| `noRollbackForClassName`                                                                                                               | Mảng các mẫu tên ngoại lệ.                                             | Mảng tùy chọn các mẫu tên ngoại lệ không được gây ra rollback.                                                                 |
+
+#### Sử dụng `@Transactional` trong trường hợp nhiều Transaction Manager
+
+Trong một số trường hợp, ứng dụng có thể cần kết nối với nhiều nguồn dữ liệu và tương ứng, cần nhiều Transaction Manager độc lập. Người dùng có thể sử dụng thuộc tính `value` hoặc `transactionManager` của chú thích `@Transactional` để chỉ định một cách có chọn lọc Transaction Manager được sử dụng. Điều này có thể là tên bean hoặc giá trị định danh của Transaction Manager bean.
+
+```java
+public class TransactionalService {
+
+    @Transactional("order")
+    public void setSomething(String name) { ... }
+
+    @Transactional("account")
+    public void doSomething() { ... }
+
+    @Transactional("reactive-account")
+    public Mono<Void> doSomethingReactive() { ... }
+}
+```
+
+Dưới đây là cách định nghĩa Transaction Manager:
+
+```xml
+<tx:annotation-driven/>
+
+    <bean id="transactionManager1" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        ...
+        <qualifier value="order"/>
+    </bean>
+
+    <bean id="transactionManager2" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+        ...
+        <qualifier value="account"/>
+    </bean>
+
+    <bean id="transactionManager3" class="org.springframework.data.r2dbc.connectionfactory.R2dbcTransactionManager">
+        ...
+        <qualifier value="reactive-account"/>
+    </bean>
+```
+
+Trong trường hợp này, các phương thức trên `TransactionalService` sẽ chạy trong các Transaction Manager riêng biệt, được phân biệt bởi các định danh order, account và reactive-account. Nếu không tìm thấy Transaction Manager bean được chỉ định một cách rõ ràng, vẫn sẽ sử dụng tên bean mục tiêu mặc định của `<tx:annotation-driven>`.
+
+#### Tạo chú thích kết hợp tùy chỉnh
+
+Nếu bạn thấy mình đang lặp lại các thuộc tính `@Transactional` giống nhau trên nhiều phương thức khác nhau, bạn có thể sử dụng meta-annotation của Spring để tạo chú thích kết hợp tùy chỉnh.
+
+```java
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Transactional(transactionManager = "order", label = "causal-consistency")
+public @interface OrderTx {
+}
+
+@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Transactional(transactionManager = "account", label = "retryable")
+public @interface AccountTx {
+}
+```
+
+Ví dụ sử dụng:
+
+```java
+public class TransactionalService {
+
+    @OrderTx
+    public void setSomething(String name) {
+        // ...
+    }
+
+    @AccountTx
+    public void doSomething() {
+        // ...
+    }
+}
+```
+
+Trong ví dụ trên, chúng ta sử dụng cú pháp để định nghĩa định danh transaction manager và nhãn giao dịch, nhưng chúng ta cũng có thể bao gồm hành vi truyền giao dịch, quy tắc rollback, timeout và các tính năng khác.
+
+#### Truyền giao dịch
+
+Trong giao dịch được quản lý bởi Spring, hãy lưu ý sự khác biệt giữa giao dịch vật lý và giao dịch logic, cũng như cách cài đặt truyền được áp dụng cho sự khác biệt này.
+
+![](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20220928114544.png)
+
+`PROPAGATION_REQUIRED` buộc thực hiện giao dịch vật lý, nếu không có giao dịch tồn tại, nó sẽ thực hiện trong phạm vi cục bộ của phạm vi hiện tại hoặc tham gia vào giao dịch "bên ngoài" đã được xác định bởi phạm vi lớn hơn. Đây là một cài đặt mặc định tốt trong các lịch trình gọi phổ biến trong cùng một luồng (ví dụ: một facade dịch vụ gọi nhiều phương thức repository, trong đó tất cả các nguồn tài nguyên cần tham gia vào giao dịch cấp dịch vụ).
+
+Khi propagation được đặt là PROPAGATION_REQUIRED, một phạm vi giao dịch logic sẽ được tạo ra cho mỗi phương thức áp dụng cài đặt này. Mỗi phạm vi giao dịch logic này có thể xác định riêng biệt trạng thái rollback duy nhất, phạm vi giao dịch bên ngoài không phụ thuộc vào phạm vi giao dịch bên trong. Trong trường hợp hành vi PROPAGATION_REQUIRED tiêu chuẩn, tất cả các phạm vi này được ánh xạ vào cùng một giao dịch vật lý. Do đó, chỉ đánh dấu rollback được đặt trong phạm vi giao dịch bên trong thực sự ảnh hưởng đến cơ hội giao dịch bên ngoài thực sự được gửi đi.
+
+Tuy nhiên, trong trường hợp chỉ định rollback được đặt trong phạm vi giao dịch bên trong và phạm vi giao dịch bên ngoài chưa quyết định về việc rollback chính nó, việc rollback (do phạm vi giao dịch bên trong gây ra một cách im lặng) là không mong muốn. Trong trường hợp này, một `UnexpectedRollbackException` tương ứng sẽ được ném ra. Điều này là hành vi mong đợi, vì vậy người gọi giao dịch không bao giờ bị đánh lừa rằng việc thực hiện commit đã xảy ra khi thực tế không có. Vì vậy, nếu một phạm vi giao dịch bên trong (không được biết đến bên ngoài) tắt giao dịch chỉ định rollback, người gọi bên ngoài vẫn gọi commit. Người gọi bên ngoài cần nhận `UnexpectedRollbackException` để chỉ rõ rằng rollback đã xảy ra.
+
+![](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20220928115243.png)
+
+PROPAGATION_REQUIRES_NEW luôn sử dụng một giao dịch vật lý riêng cho mỗi phạm vi giao dịch ảnh hưởng, không bao giờ tham gia vào giao dịch hiện có của phạm vi bên ngoài. Trong sắp xếp này, giao dịch tài nguyên cơ sở được xem là khác nhau, do đó có thể được gửi riêng lẻ hoặc rollback, giao dịch bên ngoài không bị ảnh hưởng bởi trạng thái rollback của giao dịch bên trong, khóa giao dịch bên trong được giải phóng ngay sau khi hoàn thành. Một giao dịch nội bộ độc lập cũng có thể khai báo cấp độ cô lập, timeout và chỉ đọc riêng của nó, thay vì kế thừa các tính năng của giao dịch bên ngoài.
+
+## Trừu tượng hóa ngoại lệ JDBC
+
+Spring sẽ chuyển đổi các ngoại lệ liên quan đến thao tác dữ liệu thành `DataAccessException`.
+
+Spring nhận biết các mã lỗi như thế nào?
+
+Spring sử dụng `SQLErrorCodeSQLExceptionTranslator` để phân tích mã lỗi.
+
+Định nghĩa ErrorCode (trong tệp sql-error-codes.xml)
+
+## Thực hành tốt nhất về giao dịch trong Spring
+
+### Transactional không hoạt động trong Spring
+
+Một vấn đề dễ bị bỏ qua khi sử dụng chú thích `@Transactional` để bật giao dịch khai báo là giao dịch có thể không hoạt động.
+
+Nguyên tắc hoạt động của `@Transactional`:
+
+#### Phương thức `@Transactional` phải là public
+
+Nguyên tắc thứ nhất: Trừ khi được cấu hình đặc biệt (ví dụ: sử dụng AspectJ để tĩnh hóa AOP), **chỉ có `@Transactional` được định nghĩa trên phương thức `public` mới có thể hoạt động**. Lý do là Spring mặc định sử dụng cách thức tăng cường động để thực hiện AOP, tăng cường các phương thức mục tiêu, và phương thức `private` không thể được tăng cường. Do đó, Spring không thể tăng cường logic xử lý giao dịch động.
+
+【Ví dụ】Lỗi sử dụng `@Transactional` - Trường hợp 1
+
+```java
+	@Transactional
+	void createUserPrivate(UserEntity entity) {
+		userRepository.save(entity);
+		if (entity.getName().contains("test")) { throw new RuntimeException("invalid username!"); }
+	}
+
+	//Phương thức private
+	public int createUserWrong1(String name) {
+		try {
+			this.createUserPrivate(new UserEntity(name));
+		} catch (Exception ex) {
+			log.error("create user failed because {}", ex.getMessage());
+		}
+		return userRepository.findByName(name).size();
+	}
+```
+
+Khi truyền vào một thực thể người dùng có tên là "test", một ngoại lệ sẽ được ném ra, nhưng `@Transactional` không hoạt động và không gây ra rollback.
+
+#### Phải gọi thông qua Bean được Spring tiêm vào
+
+Nguyên tắc thứ hai: **Phải gọi phương thức mục tiêu thông qua lớp được tạo ra bởi proxy từ bên ngoài để nó có thể hoạt động**.
+
+【Ví dụ】Lỗi sử dụng `@Transactional` - Trường hợp 2
+
+```java
+	//Tự gọi
+	public int createUserWrong2(String name) {
+		try {
+			this.createUserPublic(new UserEntity(name));
+		} catch (Exception ex) {
+			log.error("create user failed because {}", ex.getMessage());
+		}
+		return userRepository.findByName(name).size();
+	}
+
+	//Có thể lan truyền ngoại lệ
+	@Transactional
+	public void createUserPublic(UserEntity entity) {
+		userRepository.save(entity);
+		if (entity.getName().contains("test")) { throw new RuntimeException("invalid username!"); }
+	}
+```
+
+Khi truyền vào một thực thể người dùng có tên là "test", một ngoại lệ sẽ được ném ra, nhưng `@Transactional` không hoạt động và không gây ra rollback.
+
+Giải thích: Spring sử dụng công nghệ AOP để tăng cường bytecode của phương thức, và để gọi phương thức đã được tăng cường, bạn phải gọi từ đối tượng proxy.
+
+### Giao dịch được áp dụng nhưng không được hoàn tác
+
+Việc thực hiện xử lý giao dịch bằng AOP có thể hiểu là sử dụng `try…catch…` để bao bọc các phương thức được đánh dấu bằng chú thích `@Transactional`. Khi phương thức gặp phải ngoại lệ và thỏa mãn **một số điều kiện**, chúng ta có thể đặt lại giao dịch trong khối `catch`, nếu không có ngoại lệ, giao dịch sẽ được gửi đi.
+
+"một số điều kiện" chủ yếu bao gồm hai điểm:
+
+Thứ nhất, chỉ khi ngoại lệ được truyền ra khỏi phương thức được đánh dấu bằng chú thích @Transactional, giao dịch mới được hoàn tác. Trong lớp TransactionAspectSupport của Spring có một phương thức invokeWithinTransaction, nơi xử lý logic giao dịch.
+
+Thứ hai, theo mặc định, **chỉ khi có RuntimeException (ngoại lệ không kiểm tra) hoặc Error xảy ra, Spring mới hoàn tác giao dịch**.
+
+```java
+@Service
+@Slf4j
+public class UserService {
+
+	@Autowired
+	private UserRepository userRepository;
+
+	// Ngoại lệ không thể truyền ra khỏi phương thức, dẫn đến không hoàn tác giao dịch
+	@Transactional
+	public void createUserWrong1(String name) {
+		try {
+			userRepository.save(new UserEntity(name));
+			throw new RuntimeException("error");
+		} catch (Exception ex) {
+			log.error("create user failed", ex);
+		}
+	}
+
+	// Ngay cả khi có ngoại lệ kiểm tra, giao dịch cũng không thể hoàn tác
+	@Transactional
+	public void createUserWrong2(String name) throws IOException {
+		userRepository.save(new UserEntity(name));
+		otherTask();
+	}
+
+	// Vì tệp không tồn tại, sẽ luôn ném ra một IOException
+	private void otherTask() throws IOException {
+		Files.readAllLines(Paths.get("file-that-not-exist"));
+	}
+
+}
+```
+
+Trong phương thức createUserWrong1, một RuntimeException sẽ được ném ra, nhưng vì phương thức đã bắt tất cả các ngoại lệ trong khối catch, ngoại lệ không thể truyền ra khỏi phương thức, do đó giao dịch không thể hoàn tác.
+
+Trong phương thức createUserWrong2, trong quá trình đăng ký người dùng, cũng có một hoạt động đọc tệp, nếu hoạt động đọc tệp thất bại, chúng ta muốn hoạt động ghi cơ sở dữ liệu của người dùng bị hoàn tác. Mặc dù không bắt ngoại lệ ở đây, nhưng vì phương thức otherTask ném ra một ngoại lệ kiểm tra, createUserWrong2 truyền ra một ngoại lệ kiểm tra, do đó giao dịch cũng không được hoàn tác.
+
+【Giải pháp 1】Nếu bạn muốn tự bắt ngoại lệ và xử lý, không có vấn đề gì, **bạn có thể thiết lập lại `TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();` để đặt giao dịch hiện tại vào trạng thái hoàn tác**:
+
+```java
+@Transactional
+public void createUserRight1(String name) {
+   try {
+      userRepository.save(new UserEntity(name));
+      throw new RuntimeException("error");
+   } catch (Exception ex) {
+      log.error("create user failed", ex);
+      TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
+   }
+}
+```
+
+【Giải pháp 2】Trong chú thích, khai báo `@Transactional(rollbackFor = Exception.class)`, mong muốn gặp tất cả các Exception đều hoàn tác giao dịch (để vượt qua giới hạn mặc định không hoàn tác ngoại lệ kiểm tra):
+
+```java
+@Transactional(rollbackFor = Exception.class)
+public void createUserRight2(String name) throws IOException {
+   userRepository.save(new UserEntity(name));
+   otherTask();
+}
+```
+
+### Tinh chỉnh cách truyền giao dịch
+
+Nếu phương thức liên quan đến nhiều hoạt động cơ sở dữ liệu và bạn muốn thực hiện chúng như các giao dịch độc lập để gửi hoặc hoàn tác, thì chúng ta cần xem xét việc tinh chỉnh cách truyền giao dịch bằng cách sử dụng thuộc tính `Propagation` của chú thích `@Transactional`.
+
+```java
+/**
+ * {@link Propagation#REQUIRES_NEW} đại diện cho việc thực hiện một giao dịch mới và tạm ngừng giao dịch hiện tại khi đến phương thức này
+ */
+@Transactional(propagation = Propagation.REQUIRES_NEW)
+public void createSubUserWithExceptionRight(UserEntity entity) {
+   log.info("createSubUserWithExceptionRight start");
+   userRepository.save(entity);
+   throw new RuntimeException("invalid status");
+}
+```

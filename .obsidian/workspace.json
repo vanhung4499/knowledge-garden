@@ -4,22 +4,47 @@
     "type": "split",
     "children": [
       {
-        "id": "d9b063a5d81208e7",
+        "id": "7f3671bd3858b6d0",
         "type": "tabs",
         "children": [
           {
-            "id": "0f934411232b165f",
+            "id": "8f3895b6e907f62c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Backend/Spring/Spring MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8ca50f0a660bf1d6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Programming/Programming MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b392d7d087ad447e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Programming/Python/Python MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -90,7 +115,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Technical/Programming/Python/Python MOC.md"
               }
             }
           }
@@ -122,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Programming/Python/Python MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +164,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Programming/Python/Python MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +187,7 @@
             }
           },
           {
-            "id": "209fe34bae6bd332",
+            "id": "1eb65b2f91afaefa",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +195,7 @@
             }
           },
           {
-            "id": "1c7aff2116c54142",
+            "id": "4f62c7913d9445d6",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -178,7 +203,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -204,35 +229,37 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "0f934411232b165f",
+  "active": "b392d7d087ad447e",
   "lastOpenFiles": [
-    "Home.md",
-    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp test.md",
-    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp Rule.md",
-    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp/JS RegExp exec.md",
-    "Technical/Programming/JavaScript/Built-in/Reflection/JS Reflect.md",
-    "Technical/Programming/JavaScript/Built-in/Reflection/JS Proxy.md",
-    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Generator Async.md",
-    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Generator.md",
-    "Technical/Programming/JavaScript/Built-in/JS Standard Built-in Objects MOC.md",
-    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Promise Standard.md",
-    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Promise.md",
-    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects/JS Iterator.md",
-    "Technical/Programming/JavaScript/Built-in/Number and Date/JS Math.md",
-    "Technical/Programming/JavaScript/Built-in/Structured Data/JS JSON.md",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Programming/Python/Quick Python.md",
+    "Technical/Programming/Python/Python MOC.md",
+    "Technical/Backend/Spring/Intergration/Spring Intergate Dubbo.md",
+    "Technical/Backend/Spring/Intergration/Spring Intergate Scheduler.md",
+    "Technical/Backend/Spring/Intergration/Spring Intergate Caching.md",
+    "Technical/Backend/Spring/Spring MOC.md",
+    "Technical/Backend/Spring/Intergration",
+    "Technical/Backend/Spring/IO/SpringBoot Sending Email.md",
+    "Technical/Backend/Spring/IO/SpringBoot Async.md",
+    "Technical/Backend/Spring/IO/SpringBoot JSON.md",
+    "Technical/Backend/Spring/Overview/Spring Overview.md",
+    "Technical/Backend/Spring/Overview/SpringBoot Fundamentals.md",
+    "Technical/Backend/Spring/Overview/Spring Interview.md",
+    "Technical/Backend/Spring/Data/Spring Access Redis.md",
+    "Technical/Backend/SpringBoot/SpringBoot MOC.md",
+    "Technical/Backend/Spring/IO",
+    "Technical/Backend/Spring/Data/Spring Data Integration.md",
+    "Technical/Backend/Spring/Data/Spring Data Source.md",
+    "Technical/Backend/Spring/Data/Spring integrates Mybatis.md",
+    "Technical/Backend/Spring/Data/Spring Access ElasticSearch.md",
+    "Technical/Backend/Spring/Data/Spring Transactions.md",
+    "Technical/Backend/Spring/Data/Spring Access MongoDB.md",
+    "Technical/Backend/Spring/Data/Spring JPA.md",
+    "Technical/Backend/Spring/Data/Spring JDBC.md",
+    "Technical/Backend/Backend MOC.md",
+    "Technical/Backend/Spring/Core/Spring IoC Dependency Sources.md",
+    "Technical/Computer Science/Database/DB Key.md",
     "Technical/Programming/JavaScript/Built-in/Reflection",
-    "Technical/Programming/JavaScript/Built-in/Structured Data/JS JSON stringify.md",
-    "Technical/Programming/JavaScript/Built-in/Structured Data/JS JSON parse.md",
-    "Technical/Programming/JavaScript/Built-in/Structured Data/JS ArrayBuffer.md",
-    "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Typed Array.md",
-    "Technical/Programming/JavaScript/Built-in/Function Properties/JS decodeURI.md",
-    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/Function/JS Function.md",
-    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Symbol.md",
-    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Object.md",
-    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Error.md",
-    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/JS Boolean.md",
-    "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array Detection.md",
-    "Technical/Programming/JavaScript/Built-in/Indexed Collections/JS Array.md",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
     "Technical/Programming/JavaScript/Built-in/Text Processing",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects",
@@ -240,8 +267,6 @@
     "Technical/Programming/JavaScript/Built-in/Keyed Collections",
     "Technical/Programming/JavaScript/Built-in/Indexed Collections",
     "Technical/Programming/JavaScript/Built-in/Number and Date",
-    "Technical/Programming/JavaScript/Built-in/Fundamental Objects/Function",
-    "Technical/Programming/JavaScript/Built-in/Fundamental Objects",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",
