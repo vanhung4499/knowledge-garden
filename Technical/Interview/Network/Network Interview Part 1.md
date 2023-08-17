@@ -1,8 +1,9 @@
 ---
-title: Network Interview
+categories: [network, interview]
+title: Network Interview Part 1
 date created: 2023-05-29
-date modified: 2023-05-29
-tags: [interview]
+date modified: 2023-08-18
+tags: [network, interview]
 ---
 
 ## Bandwidth

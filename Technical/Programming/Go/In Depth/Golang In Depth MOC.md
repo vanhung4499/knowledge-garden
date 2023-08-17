@@ -8,7 +8,7 @@ date modified: 2023-07-20
 
 # Golang In Depth MOC
 
- Tìm hiểu chuyên sâu về Golang, đào sâu vào mã nguồn để hiểu rõ cách hoạt động của ngôn ngữ!
+ Tìm hiểu sâu về Golang, đào sâu vào mã nguồn để hiểu rõ cách hoạt động của ngôn ngữ!
 
 ## Prerequisite
 

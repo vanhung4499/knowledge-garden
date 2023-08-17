@@ -15,7 +15,7 @@ tags: [moc, interview]
 
 ## Computer Science
 
-- [[Network Interview]]
+- [[Network Interview Part 1]]
 - [[OS Interview]]
 
 ## Programming

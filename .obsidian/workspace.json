@@ -4,47 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "7f3671bd3858b6d0",
+        "id": "7c0d08f30bed7f73",
         "type": "tabs",
         "children": [
           {
-            "id": "8f3895b6e907f62c",
+            "id": "3aaf4f144d16949a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Backend/Spring/Spring MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8ca50f0a660bf1d6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Programming MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b392d7d087ad447e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Python/Python MOC.md",
+                "file": "Technical/Interview/Network/Network Interview Part 1.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Python/Python MOC.md"
+                "file": "Technical/Interview/Network/Network Interview Part 1.md"
               }
             }
           }
@@ -147,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Python/Python MOC.md",
+                "file": "Technical/Interview/Network/Network Interview Part 1.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Python/Python MOC.md",
+                "file": "Technical/Interview/Network/Network Interview Part 1.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,23 +162,23 @@
             }
           },
           {
-            "id": "1eb65b2f91afaefa",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "4f62c7913d9445d6",
+            "id": "e73d6da59285c804",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
               "state": {}
             }
+          },
+          {
+            "id": "c4abd8ec59923ace",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -229,11 +204,18 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "b392d7d087ad447e",
+  "active": "c6d173446b8ea23c",
   "lastOpenFiles": [
+    "Technical/Interview/OS/OS Interview.md",
+    "Home.md",
+    "Technical/Interview/Network/Network Interview Part 1.md",
+    "Technical/Interview/Network",
+    "Technical/Programming/TypeScript/TypeScript MOC.md",
+    "Technical/Interview/OS",
+    "Technical/Programming/Go/Go MOC.md",
+    "Technical/Programming/Python/Python MOC.md",
     "Technical/Programming/Programming MOC.md",
     "Technical/Programming/Python/Quick Python.md",
-    "Technical/Programming/Python/Python MOC.md",
     "Technical/Backend/Spring/Intergration/Spring Intergate Dubbo.md",
     "Technical/Backend/Spring/Intergration/Spring Intergate Scheduler.md",
     "Technical/Backend/Spring/Intergration/Spring Intergate Caching.md",
@@ -254,19 +236,12 @@
     "Technical/Backend/Spring/Data/Spring Access ElasticSearch.md",
     "Technical/Backend/Spring/Data/Spring Transactions.md",
     "Technical/Backend/Spring/Data/Spring Access MongoDB.md",
-    "Technical/Backend/Spring/Data/Spring JPA.md",
-    "Technical/Backend/Spring/Data/Spring JDBC.md",
-    "Technical/Backend/Backend MOC.md",
-    "Technical/Backend/Spring/Core/Spring IoC Dependency Sources.md",
-    "Technical/Computer Science/Database/DB Key.md",
     "Technical/Programming/JavaScript/Built-in/Reflection",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
     "Technical/Programming/JavaScript/Built-in/Text Processing",
     "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects",
     "Technical/Programming/JavaScript/Built-in/Structured Data",
     "Technical/Programming/JavaScript/Built-in/Keyed Collections",
-    "Technical/Programming/JavaScript/Built-in/Indexed Collections",
-    "Technical/Programming/JavaScript/Built-in/Number and Date",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",
