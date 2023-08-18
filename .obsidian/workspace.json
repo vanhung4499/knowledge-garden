@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7c0d08f30bed7f73",
+        "id": "c0fa1f79d6f8ccae",
         "type": "tabs",
         "children": [
           {
-            "id": "3aaf4f144d16949a",
+            "id": "9353c641f2d7c2bc",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Interview/Network/Network Interview Part 1.md",
+                "file": "Technical/Interview/Interview MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Interview/Network/Network Interview Part 1.md"
+                "file": "Technical/Interview/Interview MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Interview/Network/Network Interview Part 1.md",
+                "file": "Technical/Interview/Interview MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Interview/Network/Network Interview Part 1.md",
+                "file": "Technical/Interview/Interview MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,23 +162,23 @@
             }
           },
           {
-            "id": "e73d6da59285c804",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "c4abd8ec59923ace",
+            "id": "4986837dbde481fe",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
               "state": {}
             }
+          },
+          {
+            "id": "aec469e61b135253",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -204,11 +204,21 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c6d173446b8ea23c",
+  "active": "9353c641f2d7c2bc",
   "lastOpenFiles": [
-    "Technical/Interview/OS/OS Interview.md",
-    "Home.md",
+    "Technical/Interview/Database/MySQL Interview Part 2.md",
+    "Technical/Interview/Database/MySQL Interview Part 1.md",
+    "Technical/Interview/Interview MOC.md",
+    "Technical/Interview/Network/Network Interview Part 5.md",
+    "Technical/Interview/JS",
+    "Technical/Interview/Java",
+    "Technical/Interview/Database",
+    "Technical/Interview/Network/Network Interview Part 4.md",
+    "Technical/Interview/Network/Network Interview Part 3.md",
+    "Technical/Interview/Network/Network Interview Part 2.md",
     "Technical/Interview/Network/Network Interview Part 1.md",
+    "Home.md",
+    "Technical/Interview/OS/OS Interview.md",
     "Technical/Interview/Network",
     "Technical/Programming/TypeScript/TypeScript MOC.md",
     "Technical/Interview/OS",
@@ -228,20 +238,10 @@
     "Technical/Backend/Spring/Overview/SpringBoot Fundamentals.md",
     "Technical/Backend/Spring/Overview/Spring Interview.md",
     "Technical/Backend/Spring/Data/Spring Access Redis.md",
-    "Technical/Backend/SpringBoot/SpringBoot MOC.md",
     "Technical/Backend/Spring/IO",
-    "Technical/Backend/Spring/Data/Spring Data Integration.md",
-    "Technical/Backend/Spring/Data/Spring Data Source.md",
-    "Technical/Backend/Spring/Data/Spring integrates Mybatis.md",
-    "Technical/Backend/Spring/Data/Spring Access ElasticSearch.md",
-    "Technical/Backend/Spring/Data/Spring Transactions.md",
-    "Technical/Backend/Spring/Data/Spring Access MongoDB.md",
     "Technical/Programming/JavaScript/Built-in/Reflection",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
     "Technical/Programming/JavaScript/Built-in/Text Processing",
-    "Technical/Programming/JavaScript/Built-in/Control Abstraction Objects",
-    "Technical/Programming/JavaScript/Built-in/Structured Data",
-    "Technical/Programming/JavaScript/Built-in/Keyed Collections",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",

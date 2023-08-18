@@ -2,21 +2,34 @@
 categories: [moc, interview]
 title: Interview MOC
 date created: 2023-07-04
-date modified: 2023-07-20
+date modified: 2023-08-19
 tags: [moc, interview]
 ---
 
-## Interview
+# Interview MOC
 
-## Algorithm and DataStructure
-
-- [[Algorithm Interview]]
-- [[Data Structure Interview]]
-
-## Computer Science
+## Network
 
 - [[Network Interview Part 1]]
+- [[Network Interview Part 2]]
+- [[Network Interview Part 3]]
+- [[Network Interview Part 4]]
+- [[Network Interview Part 5]]
+
+## Operating System
+
 - [[OS Interview]]
+
+## Database
+
+- [[Database Interview]]
+
+### MySQL
+
+- [[MySQL Interview Part 1]]
+- [[MySQL Interview Part 2]]
+
+### Redis
 
 ## Programming
 
@@ -24,30 +37,4 @@ tags: [moc, interview]
 - [[Java Interview]]
 - [[Javascript Interview]]
 
-## Backend
-
-- [[Golang Interview]]
-- [[NodeJS Interview]]
-- [[Spring Interview]]
-
-## Database
-
-- [[Database Interview]]
-
-## FrontEnd
-
-- [[HTML Interview]]
-- [[CSS Interview]]
-- [[React Interview]]
-- [[Angular Interview]]
-- [[Vue Interview]]
-
-## DevOps
-
-- [[Docker Interview]]
-
-## Cloud
-
-- [[AWS Interview]]
-- [[GCP Interview]]
-- [[Azure Interview]]
+## Intelligence
