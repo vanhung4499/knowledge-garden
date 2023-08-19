@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "c0fa1f79d6f8ccae",
+        "id": "1ea57b13c7c0b406",
         "type": "tabs",
         "children": [
           {
-            "id": "9353c641f2d7c2bc",
+            "id": "d66255f454e02bf4",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md",
+                "file": "Technical/Interview/Database/Redis Interview Part 2.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md"
+                "file": "Technical/Interview/Database/Redis Interview Part 2.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md",
+                "file": "Technical/Interview/Database/Redis Interview Part 2.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md",
+                "file": "Technical/Interview/Database/Redis Interview Part 2.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             }
           },
           {
-            "id": "4986837dbde481fe",
+            "id": "fa56636de0a83331",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +170,7 @@
             }
           },
           {
-            "id": "aec469e61b135253",
+            "id": "add0c5e8a922d8ab",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -204,8 +204,11 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "9353c641f2d7c2bc",
+  "active": "d66255f454e02bf4",
   "lastOpenFiles": [
+    "Technical/Interview/Database/Redis Interview Part 1.md",
+    "Technical/Interview/Database/Redis Interview Part 2.md",
+    "Home.md",
     "Technical/Interview/Database/MySQL Interview Part 2.md",
     "Technical/Interview/Database/MySQL Interview Part 1.md",
     "Technical/Interview/Interview MOC.md",
@@ -217,7 +220,6 @@
     "Technical/Interview/Network/Network Interview Part 3.md",
     "Technical/Interview/Network/Network Interview Part 2.md",
     "Technical/Interview/Network/Network Interview Part 1.md",
-    "Home.md",
     "Technical/Interview/OS/OS Interview.md",
     "Technical/Interview/Network",
     "Technical/Programming/TypeScript/TypeScript MOC.md",
@@ -236,8 +238,6 @@
     "Technical/Backend/Spring/IO/SpringBoot JSON.md",
     "Technical/Backend/Spring/Overview/Spring Overview.md",
     "Technical/Backend/Spring/Overview/SpringBoot Fundamentals.md",
-    "Technical/Backend/Spring/Overview/Spring Interview.md",
-    "Technical/Backend/Spring/Data/Spring Access Redis.md",
     "Technical/Backend/Spring/IO",
     "Technical/Programming/JavaScript/Built-in/Reflection",
     "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
