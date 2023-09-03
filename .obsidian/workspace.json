@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "1ea57b13c7c0b406",
+        "id": "633c640c34a929f3",
         "type": "tabs",
         "children": [
           {
-            "id": "d66255f454e02bf4",
+            "id": "6b5a89b36ae53bb0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Interview/Database/Redis Interview Part 2.md",
+                "file": "Technical/DevOps/Linux/Linux MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "df27bc2f61e158ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/DevOps/Linux/Operations/iptables.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Interview/Database/Redis Interview Part 2.md"
+                "file": "Technical/DevOps/Linux/Operations/iptables.md"
               }
             }
           }
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Interview/Database/Redis Interview Part 2.md",
+                "file": "Technical/DevOps/Linux/Operations/iptables.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Interview/Database/Redis Interview Part 2.md",
+                "file": "Technical/DevOps/Linux/Operations/iptables.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,15 +167,7 @@
             }
           },
           {
-            "id": "7c414c46e655c221",
-            "type": "leaf",
-            "state": {
-              "type": "mermaid-toolbar-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "fa56636de0a83331",
+            "id": "088ac5960b517e38",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +175,7 @@
             }
           },
           {
-            "id": "add0c5e8a922d8ab",
+            "id": "f76418b0831948f2",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -178,7 +183,7 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
@@ -186,6 +191,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "table-editor-obsidian:Advanced Tables Toolbar": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -194,54 +200,53 @@
       "graph:Open graph view": false,
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "templater-obsidian:Templater": false,
-      "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "omnisearch:Omnisearch": false,
       "obsidian-textgenerator-plugin:Generate Text!": false,
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false,
       "obsidian42-brat:BRAT": false,
       "dbfolder:Create a new database table": false,
       "homepage:Open homepage": false,
+      "omnisearch:Omnisearch": false,
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "d66255f454e02bf4",
+  "active": "c6d173446b8ea23c",
   "lastOpenFiles": [
-    "Technical/Interview/Database/Redis Interview Part 1.md",
-    "Technical/Interview/Database/Redis Interview Part 2.md",
+    "Technical/DevOps/Linux/Linux MOC.md",
+    "Technical/DevOps/DevOps MOC.md",
+    "Technical/DevOps/Linux/Operations/Vim.md",
+    "Technical/DevOps/Linux/Operations/Crontab.md",
+    "Technical/DevOps/Linux/Operations/Firewalld.md",
+    "Technical/DevOps/Linux/Operations/Linux Operations.md",
+    "Technical/DevOps/Linux/Operations/NTP.md",
+    "Technical/DevOps/Linux/Operations/Samba.md",
+    "Technical/DevOps/Linux/Operations/Systemd.md",
+    "Technical/DevOps/Linux/Operations/iptables.md",
+    "docs/linux/ops",
+    "docs/linux",
+    "docs",
+    "Technical/Databases/Redis/Redis Operations.md",
+    "Technical/DevOps/Linux/Operations",
+    "Technical/DevOps/Linux/CLI/Linux CLI Software.md",
+    "Technical/DevOps/Linux/CLI/Linux CLI Net.md",
+    "Technical/DevOps/Linux/CLI/Linux CLI Hardware.md",
+    "Technical/DevOps/Linux/CLI/Linux CLI System.md",
+    "Technical/DevOps/Linux/CLI/Linux CLI User.md",
+    "Technical/DevOps/Linux/CLI/Linux CLI Help.md",
+    "Technical/DevOps/Linux/CLI/Linux CLI File Compress.md",
+    "Technical/DevOps/Linux/CLI/Linux CLI File.md",
+    "docs/linux/cli/linux-cli-user.md",
+    "docs/linux/cli",
+    "Technical/DevOps/Linux/CLI/Linux CLI Dir.md",
     "Home.md",
-    "Technical/Interview/Database/MySQL Interview Part 2.md",
-    "Technical/Interview/Database/MySQL Interview Part 1.md",
-    "Technical/Interview/Interview MOC.md",
-    "Technical/Interview/Network/Network Interview Part 5.md",
+    "docs/linux/cli/linux-cli-file-compress.md",
+    "Technical/DevOps/Linux/CLI",
+    "Technical/Databases/MySQL/MySQL MOC.md",
+    "Technical/Computer Science/Database/Database MOC.md",
+    "Technical/Computer Science/Computer Architecture/Computer Architecture MOC.md",
     "Technical/Interview/JS",
     "Technical/Interview/Java",
     "Technical/Interview/Database",
-    "Technical/Interview/Network/Network Interview Part 4.md",
-    "Technical/Interview/Network/Network Interview Part 3.md",
-    "Technical/Interview/Network/Network Interview Part 2.md",
-    "Technical/Interview/Network/Network Interview Part 1.md",
-    "Technical/Interview/OS/OS Interview.md",
     "Technical/Interview/Network",
-    "Technical/Programming/TypeScript/TypeScript MOC.md",
-    "Technical/Interview/OS",
-    "Technical/Programming/Go/Go MOC.md",
-    "Technical/Programming/Python/Python MOC.md",
-    "Technical/Programming/Programming MOC.md",
-    "Technical/Programming/Python/Quick Python.md",
-    "Technical/Backend/Spring/Intergration/Spring Intergate Dubbo.md",
-    "Technical/Backend/Spring/Intergration/Spring Intergate Scheduler.md",
-    "Technical/Backend/Spring/Intergration/Spring Intergate Caching.md",
-    "Technical/Backend/Spring/Spring MOC.md",
-    "Technical/Backend/Spring/Intergration",
-    "Technical/Backend/Spring/IO/SpringBoot Sending Email.md",
-    "Technical/Backend/Spring/IO/SpringBoot Async.md",
-    "Technical/Backend/Spring/IO/SpringBoot JSON.md",
-    "Technical/Backend/Spring/Overview/Spring Overview.md",
-    "Technical/Backend/Spring/Overview/SpringBoot Fundamentals.md",
-    "Technical/Backend/Spring/IO",
-    "Technical/Programming/JavaScript/Built-in/Reflection",
-    "Technical/Programming/JavaScript/Built-in/Text Processing/RegExp",
-    "Technical/Programming/JavaScript/Built-in/Text Processing",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",

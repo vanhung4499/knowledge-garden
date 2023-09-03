@@ -3,7 +3,7 @@ title: DevOps MOC
 tags: [devops, moc]
 categories: [devops, moc]
 date created: 2023-07-20
-date modified: 2023-07-22
+date modified: 2023-09-02
 ---
 
 # DevOps MOC
@@ -23,10 +23,6 @@ date modified: 2023-07-22
 ## Linux
 
 - [[Linux MOC]]
-
-## Ansible
-
-- [[Ansible MOC]]
 
 ## Monitoring
 
