@@ -39,10 +39,6 @@ date modified: 2023-09-03
 
 ### Software Administration
 
-> Software administration deployed on Linux systems.
->
-> Installation scripts: ⌨ [Software Administration Configuration Scripts](https://github.com/dunwu/linux-tutorial/tree/master/codes/linux/soft)
-
 - Development Environment
   - [[JDK Installation]]
   - [[Maven Installation]]
@@ -63,5 +59,5 @@ date modified: 2023-09-03
   - [[Nginx Tutorial]] 📚
   - [[Tomcat Operations]]
 - [[Databases MOC|Databases]] 📚
-  - [[Mysql Operations]]
+  - [[MySQL Opearation and Maintainance|Mysql Operations]]
   - [[Redis Operations]]

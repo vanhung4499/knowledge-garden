@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "6b5a89b36ae53bb0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/DevOps/Linux/Linux MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "df27bc2f61e158ed",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DevOps/Linux/Operations/iptables.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DevOps/Linux/Operations/iptables.md"
+                "file": "README.md"
               }
             }
           }
@@ -135,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DevOps/Linux/Operations/iptables.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DevOps/Linux/Operations/iptables.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -187,7 +174,8 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 418.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,9 +197,14 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c6d173446b8ea23c",
+  "active": "df27bc2f61e158ed",
   "lastOpenFiles": [
+    "Technical/Interview/Interview MOC.md",
+    "Technical/Interview/OS/OS Interview.md",
+    "README.md",
+    "Technical/Design Arch/Design Arch MOC.md",
     "Technical/DevOps/Linux/Linux MOC.md",
+    "Technical/DevOps/Linux/Operations/iptables.md",
     "Technical/DevOps/DevOps MOC.md",
     "Technical/DevOps/Linux/Operations/Vim.md",
     "Technical/DevOps/Linux/Operations/Crontab.md",
@@ -220,7 +213,6 @@
     "Technical/DevOps/Linux/Operations/NTP.md",
     "Technical/DevOps/Linux/Operations/Samba.md",
     "Technical/DevOps/Linux/Operations/Systemd.md",
-    "Technical/DevOps/Linux/Operations/iptables.md",
     "docs/linux/ops",
     "docs/linux",
     "docs",
@@ -238,11 +230,7 @@
     "docs/linux/cli",
     "Technical/DevOps/Linux/CLI/Linux CLI Dir.md",
     "Home.md",
-    "docs/linux/cli/linux-cli-file-compress.md",
     "Technical/DevOps/Linux/CLI",
-    "Technical/Databases/MySQL/MySQL MOC.md",
-    "Technical/Computer Science/Database/Database MOC.md",
-    "Technical/Computer Science/Computer Architecture/Computer Architecture MOC.md",
     "Technical/Interview/JS",
     "Technical/Interview/Java",
     "Technical/Interview/Database",

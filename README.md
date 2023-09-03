@@ -3,40 +3,50 @@ tags:
 categories: 
 title: README
 date created: 2023-07-09
-date modified: 2023-08-08
+date modified: 2023-09-03
 ---
 
-## Welcome
+# Hung Nguyen's Knowledge Garden
+
+## Giới thiệu
 
 Xin chào 👋. Tôi là **Hùng**, một **software engineer**, **hackintosher** và đang cố gắng để trở thành **cloud engineer**.
 
-[`knowledge-garden`](https://github.com/vanhung4499/knowledge-garden) = `second braind + digital garden`.
+Trang web này phục vụ như một kho lưu trữ kiến thức và ghi chú học tập của tôi, sử dụng Obsidian để chỉnh sửa và quản lý!
 
-[Obsidian](https://obsidian.md/) được sử dụng chính để quản lý và chỉnh sửa note trong khu vườn. Đây là một phần mềm tuyệt vời ông mặt trời!
+[`knowledge-garden`](https://github.com/vanhung4499/knowledge-garden) = `second braind + digital garden`.
 
 ![Pasted image 20230627005328](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Pasted%20image%2020230627005328.png)
 
-## Navigation
+## Nội dung chính
 
-Bố cục của trang web rất đơn giản, giống như mong muốn của tôi (love simple)!
+Các bài viết chủ yếu về technical xoay quanh **Computer Science**, **Problem Solving**, **Development**, **Architecture**, … Tôi hứng thú tìm hiểu những kiến thức mới nên web sẽ còn được cập nhật liên tục! Ngoài ra tôi cũng hay vọc vạch và cố tự động hoá các công việc nhàm chán, điều đó khiến tôi được lười thêm!
 
-Nên có một số cách để di chuyển trong khu vườn:
-
-1. Sử dụng công cụ tìm kiếm trên góc phải, hoặc `cmd + k` (`ctrl + k` trong windows)
-2. Truy cập vào các link note, có hỗ trợ các backlink để quay lại ở phía dưới
-3. Tương tác với bản đồ ở phía dưới trang web
-4. Truy cập [hashtags](/tags) để tìm kiếm theo chủ đề
-
-## Map of Contents
-
-Các bài viết chủ yếu về technical xoay quanh **Computer Science**, **Problem Solving**, **Development**, **Architecture**, … Tôi hứng thú tìm hiểu những kiến thức mới!
-
-- [[Technical MOC]]
-- [[Productivity MOC]]
-- [[Personal MOC]]
+- [[Technical MOC|Technical]]
+	- [[Programming MOC|Programming Languages]]
+		- [[Java MOC|Java]]
+		- [[Go MOC|Golang]]
+		- [[JavaScript MOC|JavaScript]]
+		- [[Python MOC|Python]]
+	- [[Computer Science MOC|Computer Science]]
+	- [[DSA MOC|Data Structures & Algorithms]]
+	- [[Backend MOC|Backend]]
+		- [[Spring MOC|Spring]]
+	- [[Databases MOC|Databases]]
+		- [[MySQL MOC|MySQL]]
+		- [[MongoDB MOC|MongoDB]]
+		- [[Redis MOC|Redis]]
+	- [[DevOps MOC|DevOps]]
+		- [[Docker MOC|Docker]]
+		- [[Kubernates MOC|Kubernate]]
+		- [[Linux MOC|Linux]]
+	- [[Cloud MOC|Cloud]]
+	- [[Interview MOC|Technical Interview]]
+- [[Productivity MOC|Productivity]]
+- [[Personal MOC|Personal]]
 - [Hackintosh](https://vnohackintosh.com)
 
-Tôi học bằng cách đọc, dịch, hiểu, ghi chú, tổng hợp từ các nguồn (tất cả đều được viết bằng markdown)!
+Tôi học bằng cách đọc, hiểu, ghi chú, tổng hợp từ các nguồn (tất cả đều được viết bằng markdown)!
 
 ## About Me
 
