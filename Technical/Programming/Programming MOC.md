@@ -1,7 +1,7 @@
 ---
 title: Programming MOC
 date created: 2023-07-04
-date modified: 2023-08-11
+date modified: 2023-09-04
 tags: [moc, programming, language]
 categories: [moc, programming, language]
 ---
@@ -12,13 +12,13 @@ Các bài viết xoay quanh các ngôn ngữ lập trình. Bao gồm hướng d�
 
 ## 📖 Contents
 
-### Golang
-
-- [[Go MOC]]
-
 ### Java
 
 - [[Java MOC]]
+
+### Golang
+
+- [[Go MOC]]
 
 ### Javascript
 
@@ -31,6 +31,10 @@ Các bài viết xoay quanh các ngôn ngữ lập trình. Bao gồm hướng d�
 ### Python
 
 - [[Python MOC]]
+
+### Shell
+
+- [[Shell AIO]]
 
 ### Rust
 

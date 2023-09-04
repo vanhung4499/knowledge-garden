@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "633c640c34a929f3",
+        "id": "77c14030924d26ad",
         "type": "tabs",
         "children": [
           {
-            "id": "df27bc2f61e158ed",
+            "id": "6182e8c3df908cf5",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Programming/Programming MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -49,7 +49,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "tag:#linux",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Technical/Programming/Programming MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Programming/Programming MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Programming/Programming MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             }
           },
           {
-            "id": "088ac5960b517e38",
+            "id": "ab8f0212340ca634",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -162,7 +162,7 @@
             }
           },
           {
-            "id": "f76418b0831948f2",
+            "id": "8587e67d8c11cb51",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -174,8 +174,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5,
-    "collapsed": true
+    "width": 418.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -197,8 +196,12 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "df27bc2f61e158ed",
+  "active": "6182e8c3df908cf5",
   "lastOpenFiles": [
+    "Technical/Programming/Shell/Shell AIO.md",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Programming/Shell",
+    "Home.md",
     "Technical/Interview/Interview MOC.md",
     "Technical/Interview/OS/OS Interview.md",
     "README.md",
@@ -226,15 +229,11 @@
     "Technical/DevOps/Linux/CLI/Linux CLI Help.md",
     "Technical/DevOps/Linux/CLI/Linux CLI File Compress.md",
     "Technical/DevOps/Linux/CLI/Linux CLI File.md",
-    "docs/linux/cli/linux-cli-user.md",
     "docs/linux/cli",
-    "Technical/DevOps/Linux/CLI/Linux CLI Dir.md",
-    "Home.md",
     "Technical/DevOps/Linux/CLI",
     "Technical/Interview/JS",
     "Technical/Interview/Java",
     "Technical/Interview/Database",
-    "Technical/Interview/Network",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",
