@@ -1,11 +1,16 @@
 ---
-categories: [network, computer-science]
+categories:
+  - network
+  - computer-science
 title: HTTPS
 date created: 2023-05-27
-date modified: 2023-07-10
-tags: [network, computer-science]
-dg-publish: "truedg-publish: true"
+date modified: 2023-09-17
+tags:
+  - network
+  - computer-science
 ---
+
+# HTTPS
 
 Chúng ta có thể làm nhiều thứ với web. Trong số đó, bạn có thể có trải nghiệm mua hàng bằng thẻ tín dụng trên một trang web.
 
@@ -27,18 +32,18 @@ Port mặc định của HTTPS là 443, còn HTTP là 80
 
 ### ✔️ Bảo mật kết nối TCP: TLS
 
-Giao thức [[SSL]] và giao thức [[TLS]] có thể bị nhầm lẫn.
+Giao thức SSL và giao thức TLS có thể bị nhầm lẫn.
 
-Giao thức [[SSL]] ban đầu được phát minh bởi Netscape. Tuy nhiên, khi Netscape chuyển giao quyền kiểm soát SSL cho IETF [RFC 4346], nó đã được chuẩn hóa thành [[TLS]].
+Giao thức SSL ban đầu được phát minh bởi Netscape. Tuy nhiên, khi Netscape chuyển giao quyền kiểm soát SSL cho IETF [RFC 4346], nó đã được chuẩn hóa thành TLS.
 
-Giao thức [[TLS]] nên được hiểu là một sự phát triển của giao thức [[SSL]].
+Giao thức TLS nên được hiểu là một sự phát triển của giao thức SSL.
 
 #### Ví dụ về sự cần thiết: Thương mại trực tuyến
 
 Để minh họa nhu cầu, hãy xem xét một ví dụ về việc mua một sản phẩm trên Internet.
 
 ```
-Bob lướt Shopee trên Internet để mua một món quà cho Alice.
+Bob lướt ShopeeFood trên Internet để mua một món ăn cho Alice.
 
 🐰 Bob: Hả? Một cửa hàng bánh ngọt ưa thích? Không sao, tôi sẽ mua nó ở đây! Bấm vào nút đặt hàng!
 

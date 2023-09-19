@@ -1,5 +1,5 @@
-/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230704] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
-/*Blue Topaz for Obsidian v1.2.8, uid [20230704] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
+/*蓝色托帕石，适合Obsidian v1.2.8。uid [20230802] flying fly flies制作。如果喜欢，可以在Github里给我星星 https://github.com/whyt-byte */
+/*Blue Topaz for Obsidian v1.2.8, uid [20230802] created by flying fly flies. Feel free to use, share and modify. If you like the theme, please star me on GitHub https://github.com/whyt-byte */
 
 /* 致谢 Credits：
 thanks pkmer.cn
@@ -10,14 +10,6 @@ Many thanks to @Cuman
 name: 🥑Blue Topaz Theme
 id: blue-topaz-theme
 settings:
-  -
-    id: transparent-setting-panel
-    title: Translucent Setting Panel
-    title.zh: 透明窗口
-    description: Make this panel transparent
-    description.zh: 使本窗口透明，便于设置
-    type: class-toggle
-    default: false
   -
     id: background-settings
     title: 1. General Settings
@@ -143,6 +135,7 @@ settings:
     title.zh: 开启背景
     type: class-toggle
     default: false
+    addCommand: true
   -
     id: background-settings-workplace-theme-light
     title: Light mode
@@ -286,10 +279,11 @@ settings:
     collapsed: true
   -
     id: background-image-settings-switch
-    title: Toggle Background Images
+    title: Toggle Note Background Images
     title.zh: 开启笔记背景
     type: class-toggle
     default: false
+    addCommand: true
   -
     id: toggle-nonoverlapping-bg
     title: Activate nonoverlapping note background when toggling workplace background
@@ -1446,7 +1440,7 @@ settings:
     title: Inline Code
     title.zh: 行内代码字体
     type: variable-text
-    default: var(--font-monospace-theme)
+    default: var(--font-monospace-override), var(--font-monospace-theme)
   -
     id: font-family-tag
     title: Tag
@@ -1510,6 +1504,12 @@ settings:
     title.zh: 左侧边栏文件字体大小
     type: variable-text
     default: 0.85em
+  -
+    id: font-size-outline
+    title: outline font size
+    title.zh: 大纲字体大小
+    type: variable-text
+    default: 13px
   -
     id: font-size-code
     title: Codeblock
@@ -2024,6 +2024,7 @@ settings:
     description: Enable global effect, local effect only need to  declare "cssclass：indent" in the YAML area. Contextual Typography plugin needs to be installed in Reading mode.
     type: class-toggle
     default: false
+    addCommand: true
   -
     id: justify-align
     title: Alignment of both ends(justify align)
@@ -2032,6 +2033,7 @@ settings:
     description: Enable global effect, local effect only need to  declare "cssclass：justify" in the YAML area. Contextual Typography plugin needs to be installed in Reading mode.
     type: class-toggle
     default: false
+    addCommand: true
   -
     id: reduce-bottom-padding
     title: To Reduce Padding Bottom of Pages
@@ -3864,6 +3866,7 @@ settings:
     description.zh: 需要先在设置中开启显示front-matter，笔记cssclass中声明show-full-metadata 可单独控制是否显示yaml
     type: class-toggle
     default: false
+    addCommand: true
   -
     id: canvas-styles
     title: 2.3.25 Canvas
@@ -3879,6 +3882,7 @@ settings:
     description.zh: 开启后 点击卡片会突出显示画布上所有相同颜色的卡片和线条
     type: class-toggle
     default: false
+    addCommand: true
   -
     id: canvas-card-text-middle
     title: canvas card text center align
@@ -4590,6 +4594,7 @@ settings:
     title.zh: 代码换行 （阅读模式）
     type: class-toggle
     default: true
+    addCommand: true
   -
     id: remove-language-type
     title: Toggle showing types of code languages
@@ -4602,6 +4607,7 @@ settings:
     title.zh: 代码不换行 （Live Preview）
     type: class-toggle
     default: false
+    addCommand: true
   -
     id: letter-space-code
     title: Letter Spacing for Code
@@ -4890,6 +4896,7 @@ body {
   --font-size-list: 1em;
   --font-size-preview-blockquote: 1em;
   --font-size-edit-blockquote: 1em;
+  --font-size-outline:var(--nav-item-size);
   --font-size-code: 1em;
   --font-size-latex: 1.25em;
   --font-size-cloze: 0.9375em;
@@ -4913,7 +4920,7 @@ body {
   --font-family-title: ;/*文件抬头标题*/
   --font-family-folder-file-title: Arlrdbd, "Source Han Sans", "Noto Sans CJK", "Source Sans Pro", "Segoe UI Emoji", sans-serif;/*左侧边栏文件、文件夹字体*/
   --font-monospace-theme: 'JetBrains Mono',Consolas, Monaco, "等距更纱黑体 SC", "Source Han Mono", "Microsoft Yahei Mono", "Segoe UI Emoji", "Microsoft YaHei", "Source Code Pro", monospace;
-  --font-family-inline-code: var(--font-monospace-theme);
+  --font-family-inline-code: var(--font-monospace-override), var(--font-monospace-theme);
   --font-family-tag: Bookerly,'Inter', "Segoe UI", "Microsoft YaHei", STzhongsong, STSong, "Segoe UI Emoji", Serif;
   --font-family-vault: "Lucida Handwriting", "Segoe UI Emoji";/*左侧库名字体*/
   --font-family-special-tag: "Lucida Handwriting", "Segoe UI Emoji";
@@ -9594,13 +9601,13 @@ body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered
 body.font-family-change-to-default *:not(font)>em>strong,
 body.font-family-change-to-default *:not(font)>strong>em,
 body.font-family-change-to-default .cm-strong.cm-em {
-  font-family: unset !important;
+  font-family: var(--font-text)!important;
 }
 
 body.font-family-change-to-default .cm-s-obsidian .cm-hmd-frontmatter,
 body.font-family-change-to-default .markdown-rendered code,
 body.font-family-change-to-default :is(.markdown-preview-view,.markdown-rendered) code{
-  font-family: 'Source Code Pro', monospace !important;
+  font-family: var(--font-monospace);
 }
 
 body.reduce-bottom-padding .workspace-leaf-content[data-type="markdown"] :is(.markdown-preview-view,.markdown-rendered) .markdown-preview-sizer,
@@ -9928,6 +9935,16 @@ body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-highligh
   color: var(--text-normal) !important;
   transition: all 400ms ease-in-out;
 }
+
+
+body:not(.remove-cloze-style)  .markdown-rendered mark:has(> del) {
+  background-color: transparent!important;
+}
+
+body:not(.remove-cloze-style) .markdown-rendered mark:empty {
+  background-color: initial !important;
+}
+
 
 .markdown-source-view.is-live-preview.cloze .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]),
 body:not(.remove-cloze-style) .markdown-source-view.is-live-preview .cm-em.cm-highlight.cm-strikethrough:not([class*="formatting"]) {
@@ -10359,8 +10376,8 @@ body:not(.tag-default) .tag:not(.token):hover {
   background-color: var(--theme-color) !important;
 }
 
-body:not(.tag-default) .cm-s-obsidian span.cm-hashtag {
-  font-family: var(--font-family-tag) !important;
+body:is(:not(.tag-default),:not(.font-family-change-to-default)) .cm-s-obsidian span.cm-hashtag {
+  font-family: var(--font-family-tag);
   font-size: var(--font-size-tag) !important;
   text-decoration: none;
 }
@@ -10962,6 +10979,8 @@ body:not(.remove-cloze-style) :is(.markdown-preview-view,.markdown-rendered) mar
   background-color: var(--cloze-bg-color);
   color: var(--cloze-bg-color);
   text-decoration: underline var(--cloze-decoration) var(--cloze-decoration-color);
+  border-radius:5px;
+    padding:2px;
 }
 
 body:not(.remove-cloze-style) .cm-s-obsidian .cm-formatting.cm-formatting-highlight.cm-highlight~span.cm-formatting-strikethrough.cm-highlight.cm-strikethrough~span.cm-highlight.cm-strikethrough:not(.cm-em),
@@ -11257,6 +11276,10 @@ body:not(.is-focused) .titlebar-text {
 .outline .tree-item-self.is-clickable:hover {
   background-color: var(--theme-color-translucent-015);
   color: var(--text-normal);
+}
+.outline .tree-item-self
+{
+  font-size: var(--font-size-outline);
 }
 
 .search-result-file-match:hover {
@@ -14709,20 +14732,23 @@ body.image-border img{
   filter: drop-shadow(0px 0px 3px rgba(var(--mono-rgb-100),0.2));
 }
 /* images : reduce displayed size of embedded files, zoom on hover */
-body:not(.obsidian-default-image) :is(.markdown-preview-view,.markdown-rendered)  :not(.canvas-node-content)> img:not([class*="emoji"]) {
+body:not(.obsidian-default-image) :is(.markdown-preview-view, .markdown-rendered) .workspace-leaf-content[data-type="markdown"] img:not([class*="emoji"]) {
   max-width: var(--image-max-width);
   margin-left: auto;
   margin-right: auto;
 }
-body:not(.obsidian-default-image) .print :is(.markdown-preview-view,.markdown-rendered) img:not([class*="emoji"]) {
+
+body:not(.obsidian-default-image) .print :is(.markdown-preview-view, .markdown-rendered) img:not([class*="emoji"]) {
   display: block;
 }
-body:not(.obsidian-default-image) .view-content  :not(.canvas-node-content)>img:not([class*="emoji"]) {
+
+body:not(.obsidian-default-image) .workspace-leaf-content[data-type="markdown"] .view-content  :not(.canvas-node-content)>img:not([class*="emoji"]) {
   cursor: zoom-in;
   display: block;
-  margin-left: auto !important;
-  margin-right: auto !important;
+  margin-left: auto ;
+  margin-right: auto;
 }
+
 body:not(.image-zoom) .markdown-reading-view button img,
 body:not(.image-zoom) .markdown-reading-view .callout-title-inner img {
   pointer-events: none;
@@ -15099,7 +15125,7 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   margin-top: -1px; /* fix item gap */
 }
 body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-self .tree-item-inner {
-  padding-left: 16px;
+  padding-left: 4px;
   overflow: hidden;
   text-overflow: ellipsis;
   height: calc(var(--nav-item-size) * 1.8);
@@ -15112,7 +15138,7 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   border: 2px solid hsla(var(--color-accent-hsl), 0.9);
   border-radius: 50%;
   position: absolute;
-  left: 7px;
+margin-left:-1.5em;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -15138,12 +15164,13 @@ body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-conte
   cursor: pointer;
 }
 body.logseq-outline-style .workspace-leaf-content[data-type=outline] .view-content .outline .tree-item-icon::before {
+  margin-top: 50%;
   width: var(--size-4-2);
   height: var(--size-4-2);
   background-color: hsla(var(--color-accent-hsl), 0.9);
   border-radius: 50%;
   position: absolute;
-  left: 7px;
+  left: 4px;
   top: 50%;
   transform: translateY(-50%);
 }
@@ -15277,17 +15304,7 @@ body.translucent-setting-panel .modal-bg {
   background-color: var(--background-secondary-translucent-1);
 }
 
-body.transparent-setting-panel .modal.mod-settings .vertical-tab-content-container,
-body.transparent-setting-panel .horizontal-tab-content,
-body.transparent-setting-panel .vertical-tab-content {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
-body.transparent-setting-panel .modal-bg,
-body.transparent-setting-panel .modal.mod-settings {
-  background-color: var(--background-secondary-translucent) !important;
-  backdrop-filter: blur(0) !important;
-}
+ 
 
 body.setting-default-frosted-glass .prompt {
   background-color: var(--bg-color-settings-4);
@@ -15354,23 +15371,9 @@ body.translucent-setting-panel .vertical-tab-content {
   background-color: var(--bg-color-settings-1);
 }
 
-body.transparent-setting-panel .modal,
-body.transparent-setting-panel .modal.mod-settings,
-body.transparent-setting-panel .vertical-tab-content {
-  background-color: transparent !important;
-}
+ 
 
-body.transparent-setting-panel .vertical-tab-header,
-body.transparent-setting-panel .horizontal-tab-nav-item,
-body.transparent-setting-panel .vertical-tab-nav-item {
-  background-color: var(--background-secondary-translucent) !important;
-}
-
-body.transparent-setting-panel .vertical-tab-nav-item.is-active {
-  color: var(--text-noraml) !important;
-  font-weight: bolder;
-}
-
+ 
 body.setting-default-frosted-glass .vertical-tab-header-group-title {
   border: none;
 }
@@ -17236,7 +17239,7 @@ body.style-options-for-kanban-plugin-dynamic-neon-three.theme-dark .kanban-plugi
 }
 
 body.style-options-for-kanban-plugin-dynamic-neon-one .kanban-plugin__lane-wrapper:nth-child(n) {
-  background: unset !important;
+
   position: relative;
   z-index: 0;
   border-radius: 10px;
@@ -17254,8 +17257,8 @@ body.style-options-for-kanban-plugin-dynamic-neon-two .kanban-plugin__lane-wrapp
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 250%;
-  height: 300%;
+  width: 38px;
+  height: 125%;
   background-color: var(--background-secondary-alt) !important;
   background-repeat: no-repeat;
   background-size: 50% 50%;
@@ -19875,63 +19878,71 @@ body.hide-titlebar-close-btn.hide-left-ribbon-retention-drawer .file-tree-plugin
 /* ================================== */
 /* ============== webpage export html ============= */
 /* ================================== */
-.flex-container {
---banner-height:300px;
---banner-internal-embed-height:200px;
---banner-preview-embed-height:120px;
-}
 
+.webpage-container {
+  --banner-height:300px;
+  --banner-internal-embed-height:200px;
+  --banner-preview-embed-height:120px;
+  }
+  
+  
+  body.color-scheme-options-simplicity-topaz.theme-dark.background-settings-workplace-background-image .webpage-container::before {
+    filter: blur(var(--blur-depth)) brightness(calc(var(--brightness-4-bg) - 0.5)) saturate(var(--saturate-4-bg));
+  }
+  body.background-settings-workplace-background-image.theme-light .webpage-container::before,
+   body.background-settings-workplace-background-image.theme-dark .webpage-container::before {
+    background-image: var(--theme-background);
+    background-size: cover;
+    filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
+  }
+  body.background-settings-workplace-background-image.background-settings-workplace-waves2-light.theme-light .webpage-container::before,
+  body.background-settings-workplace-background-image.background-settings-workplace-waves2.theme-dark .webpage-container:before {
+    content: "";
+    position: fixed;
+    height: auto;
+    width: 300%;
+    top: 75%;
+    left: -25%;
+    background-image: unset;
+    -webkit-mask-image: var(--theme-background);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
+    background-color: var(--wave2-background-color);
+  }
+  body.background-settings-workplace-background-image .webpage-container::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: -37px;
+    right: -15px;
+    bottom: 0;
+    left: -15px;
+  }
+  
+  body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .webpage-container::before, 
+  body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .webpage-container::before {
+    content: "";
+    position: fixed;
+    height: auto;
+    width: 300%;
+    transform: rotate(180deg);
+    top: 75%;
+    left: -25%;
+    background-image: unset;
+    -webkit-mask-image: var(--theme-background);
+    background-size: 100% 100%;
+    opacity: 0.7;
+    filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
+    background-color: var(--wave-background-color);
+  }
+  
+   
+  .document-container :is(.markdown-preview-view,.markdown-rendered),.document-container .markdown-source-view {
+  
+    background-color: var(--background-primary)!important;
+  }
 
-body.color-scheme-options-simplicity-topaz.theme-dark.background-settings-workplace-background-image .flex-container::before {
-  filter: blur(var(--blur-depth)) brightness(calc(var(--brightness-4-bg) - 0.5)) saturate(var(--saturate-4-bg));
-}
-body.background-settings-workplace-background-image.theme-light .flex-container::before,
- body.background-settings-workplace-background-image.theme-dark .flex-container::before {
-  background-image: var(--theme-background);
-  background-size: cover;
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-}
-body.background-settings-workplace-background-image.background-settings-workplace-waves2-light.theme-light .flex-container::before,
-body.background-settings-workplace-background-image.background-settings-workplace-waves2.theme-dark .flex-container:before {
-  content: "";
-  position: fixed;
-  height: auto;
-  width: 300%;
-  top: 75%;
-  left: -25%;
-  background-image: unset;
-  -webkit-mask-image: var(--theme-background);
-  background-size: 100% 100%;
-  opacity: 0.7;
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-  background-color: var(--wave2-background-color);
-}
-body.background-settings-workplace-background-image .flex-container::before {
-  content: '';
-  display: block;
-  position: absolute;
-  top: -37px;
-  right: -15px;
-  bottom: 0;
-  left: -15px;
-}
-
-body.background-settings-workplace-background-image.background-settings-workplace-waves-light.theme-light .flex-container::before, 
-body.background-settings-workplace-background-image.background-settings-workplace-waves.theme-dark .flex-container::before {
-  content: "";
-  position: fixed;
-  height: auto;
-  width: 300%;
-  transform: rotate(180deg);
-  top: 75%;
-  left: -25%;
-  background-image: unset;
-  -webkit-mask-image: var(--theme-background);
-  background-size: 100% 100%;
-  opacity: 0.7;
-  filter: blur(var(--blur-depth)) brightness(var(--brightness-4-bg)) saturate(var(--saturate-4-bg));
-  background-color: var(--wave-background-color);
-}
 /* ================================== */
 /* ============== quiet-outline ============= */
 /* ================================== */
@@ -21799,7 +21810,7 @@ body.toggle-bg-panel-page.panel-page-bg-theme-light-custom.theme-light {
 }
 
 
-body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
+body.background-image-settings-switch.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background: var(--background-nonoverlapping-note);
 }
 
@@ -21816,18 +21827,18 @@ body.toggle-nonoverlapping-bg .workspace-split.mod-root .view-content {
   background-size: 100% 100%;
 }
 
-body.background-notebook-liked-switch .markdown-reading-view .markdown-embed .markdown-rendered
+body.background-notebook-liked-switch  .markdown-embed .markdown-rendered
 {
   background-image: unset!important;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: linear-gradient(90deg, var(--grid-notebook-line-color-1) 3%, transparent 0), linear-gradient(var(--grid-notebook-line-color-1) 3%, transparent 0);
   background-size: 20px 20px;
 }
 
-body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-reading-view .markdown-rendered,
+body:not(.toggle-fixed-pattern).background-notebook-liked-switch  .markdown-rendered,
 body:not(.toggle-fixed-pattern).background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-scroller {
   background-attachment: local !important;
 }
@@ -21836,7 +21847,7 @@ body.background-notebook-liked-switch .markdown-source-view.mod-cm6 .cm-embed-bl
   background: inherit;
 }
 
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0);
@@ -21844,7 +21855,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
   background-position: 8px 8px;
 }
 
-body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image: radial-gradient(var(--dotted-notebook-dot-color) 10%, transparent 0),
@@ -21854,7 +21865,7 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-dotted-notebo
 }
 
 /*https://www.jianshu.com/p/2b713844cfe9*/
-body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--bg-color-notebook);
   background-image:
@@ -21866,25 +21877,25 @@ body.background-notebook-liked-switch.notebook-liked-markdown-page-grid-notebook
     transparent 0);
   background-size: 75px 75px, 75px 75px, 15px 15px, 15px 15px;
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.03), hsla(0,0%,100%,.03) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-1.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image: repeating-linear-gradient(135deg,
   hsla(0,0%,100%,.3), hsla(0,0%,100%,.3) 13px, transparent 0, transparent 30px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2 .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
   hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px), repeating-linear-gradient(-45deg, hsla(0,0%,100%,.025), hsla(0,0%,100%,.025) 20px, transparent 0, transparent 60px);
 }
-body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-reading-view .markdown-rendered,
+body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light  .markdown-rendered,
 body.background-notebook-liked-switch.notebook-liked-markdown-page-stripe-notebook-2.theme-light .markdown-source-view.mod-cm6 .cm-scroller {
   background: var(--stripe-notebook-stripe-color);
   background-image:repeating-linear-gradient(45deg,
@@ -23217,7 +23228,8 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 }
 
 /* Remove collapse arrow from top level folders */
-body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
+
+body.remove-arrow:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title>.nav-folder-collapse-indicator {
   display: none;
 }
 
@@ -23225,8 +23237,9 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-title {
   color: var(--FoldText);
   padding: var(--nav-item-parent-padding);
-  padding-left: 3px;
- 
+  padding-bottom: 4px;
+  /* padding-left: 3px; */
+   margin-top: 3px;
   /* space between top level sections */
   border-radius: 5px 5px 0 0;
 }
@@ -23238,11 +23251,12 @@ body:is(.folder-style-change-options-colorful,.folder-style-change-options-color
 
 /* General Nav Folder Children (this is the part that expands from each top level folder) */
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-folder.mod-root>.nav-folder-children>.nav-folder>.nav-folder-children {
-  padding-left: 0;
+  
   margin-left: 0;
   border-radius: 0 0 5px 5px;
   padding-bottom: 5px;
   border-left: 0px solid;
+  padding-left:1em;
 }
 
 body:is(.folder-style-change-options-colorful,.folder-style-change-options-colorful-order) .nav-file-title {
@@ -28659,7 +28673,7 @@ body.view-button-front.tab-title-bar-position .workspace-leaf-content[data-mode=
 }
 
 
-body.tab-title-bar-position .markdown-reading-view .markdown-preview-view {
+body.tab-title-bar-position  .markdown-preview-view {
   padding-left: unset;
 }
 
@@ -29332,5 +29346,23 @@ body.canvas-card-text-middle .canvas-node-container .canvas-node-content.markdow
 div#popup-search {
   background-color: var(--color-base-10);
 }
-
  
+/* pdf 匹配暗色模式 */
+
+body {
+    --pdf-background: var(--background-secondary);
+    --pdf-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+    --pdf-thumbnail-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 8px transparent;
+}
+body.theme-dark .pdf-viewer .canvasWrapper,
+body.theme-dark .pdf-thumbnail-view .thumbnailImage {
+    filter: invert(1) hue-rotate(180deg);
+    mix-blend-mode: screen;
+}
+body.theme-dark .pdf-viewer {
+    background-color: var(--pdf-background);
+}
+body.theme-dark .pdf-viewer .page {
+    background-color: var(--background-primary);
+    border-color: var(--pdf-background);
+}

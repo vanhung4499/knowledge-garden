@@ -2,7 +2,7 @@
 categories: [os, computer-science]
 title: Segmentation
 date created: 2023-05-31
-date modified: 2023-07-10
+date modified: 2023-09-19
 tags: [os, computer-science]
 ---
 
@@ -113,7 +113,7 @@ else
 - Tuy nhiên, **[[Paging]]** cũng có vấn đề về sự phân mảnh bên trong (internal fragmentation).
 - Vấn đề với internal fragmentation là như sau: Khi có yêu cầu 15KB, 16KB được cung cấp dưới dạng 8KB * 2 lần và 1KB dung lượng không sử dụng được tạo. Tại thời điểm này, 1KB này là vấn đề phân mảnh bên trong.
 
-**## Review**
+## Review
 
 - Segment làm tăng hiệu quả của không gian bộ nhớ bằng cách tách thành từng Segment (Stack, Heap, Code) để giải quyết không gian chưa sử dụng giữa Stack và Heap.
 - Tuy nhiên, có một vấn đề về phân mảnh bên ngoài và kỹ thuật phân trang đã được sử dụng để giải quyết vấn đề này.

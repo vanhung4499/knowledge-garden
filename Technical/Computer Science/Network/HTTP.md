@@ -1,16 +1,19 @@
 ---
-categories: [network, computer-science]
+categories:
+  - network
+  - computer-science
 title: HTTP
 date created: 2023-05-26
-date modified: 2023-07-10
-tags: [network, computer-science]
-dg-publish: true
+date modified: 2023-09-17
+tags:
+  - network
+  - computer-science
 ---
 
 ## HTTP là gì?
 
-- [[Cards/Network/HTTP|HTTP]] (Hypertext Transfer Protocol) là một giao thức theo mô hình client/server để trao đổi dữ liệu trên Internet.
-- Nó là một giao thức ở tầng Application và hoạt động trên TCP/IP.
+- HTTP (Hypertext Transfer Protocol) là một giao thức theo mô hình client/server để trao đổi dữ liệu trên Internet.
+- Nó là một giao thức ở tầng ứng dụng và hoạt động trên TCP/IP.
 - Có một số loại dữ liệu có thể được gửi qua HTTP, chẳng hạn như HTML, hình ảnh, video, âm thanh và tài liệu văn bản.
 
 ![Pasted image 20230527010658](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Pasted%20image%2020230527010658.png)
@@ -19,50 +22,17 @@ dg-publish: true
 
 ![Pasted image 20230527011004](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Pasted%20image%2020230527011004.png)
 
-[[HTTP]] về cơ bản có cấu trúc **request/response**.
+HTTP về cơ bản có cấu trúc **request/response**.
 
 Khi máy khách (client) gửi HTTP request đến máy chủ (server), máy chủ sẽ gửi lại HTTP response.
 
 Tất cả các giao tiếp giữa máy khách và máy chủ được thực hiện thông qua request và response.
 
-## [[URI]]
-
-[[URI]] (Uniform Resource Identifier) là một giao thức khác độc lập với HTTP.
-
-HTTP là một giao thức vận chuyển và URI là một giao thức để thông báo vị trí của tài nguyên.
-
-Là tên viết tắt của Uniform Resource Identifiers (URI), nó được sử dụng để chỉ ra vị trí của tài nguyên sẽ được truy cập trên World Wide Web (www).
-
-Tài nguyên có thể là bất kỳ thứ gì từ tài liệu HTML, hình ảnh, video, âm thanh và tài liệu văn bản.
-
-[[URI]] được chia thành 2 nhánh: **[[URL]]** và **[[URN]]**
-
-**[[URL]] (Uniform Resource Locator)**
-
-![Pasted image 20230527022534](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Pasted%20image%2020230527022534.png)
-
-[[URL]] (Uniform Resource Locator) là **định vị tài nguyên** hay nói dễ hiểu là URL chỉ ra vị trí và cách thức lấy tài nguyên.  
-
-- [https://google.com]( https://google.com ) : Đây là URL vì vừa chỉ ra địa chỉ tài nguyên ( https, http, file hay ssh…) vừa chỉ ra được giao thức truy cập tài nguyên. Đây cũng có thể gọi là URI).
-- [google.com]( https://google.com ) : Đây không là URL vì không chỉ ra được giao thức truy cập. Đây cũng có thể gọi là URI.
-
-**[[URN]] ( Uniform Resource Name )**
-
-[[URN]] ( Uniform Resource Name ) là **định danh tài nguyên** hay nói dễ hiểu là nó chỉ ra tên của tài nguyên.
-
-- [org/img.png:](http://stg.org/img.png:) Đây là URN vì nó sẽ cung cấp cho ta định danh của tài nguyên này trên mạng, khác URL ở chỗ URN này sẽ không chỉ cho ta chính xác sử dụng giao thức hay cách nào để lấy tài nguyên.
-
-**Tóm lại**
-
-Giống như con người để xác thực một ai đó chúng ta cần tên và địa chỉ của người đó thì [[URL]] sẽ có nhiệm vụ là chỉ ra địa chỉ và phương thức để đi đến người đó, còn [[URN]] sẽ có nhiệm vụ xác định tên của người đó.
-
-![Pasted image 20230527022830](https://raw.githubusercontent.com/vanhung4499/images/master/snap/Pasted%20image%2020230527022830.png)
-
 ## Quá trình phát triển HTTP (HTTP/1.0 - HTTTP/3)
 
 Về cơ bản, HTTP được sử dụng để giao tiếp dịch vụ web dưới dạng tầng ứng dụng phía trên tầng vận chuyển. Làm thế nào mà trang web này bắt đầu?
 
-**Phát minh ra [[WWW]]**  
+**Phát minh ra WWW** (World Wide Web)
 
 HTTP là giao thức cơ bản của World Wide Web. Nó được phát minh bởi Tim Berners-Lee từ năm 1989 đến năm 1991 và ban đầu được gọi là Mesh, nhưng được đổi tên thành World Wide Web (WWW) trong quá trình triển khai vào năm 1990.
 
@@ -192,7 +162,7 @@ Do những vấn đề này (sự chậm trễ), Google đã triển khai và ph
 **Đặc điểm của HTTP/2**
 
 - HTTP/2 hoạt động dựa trên giao thức có tên là SPDY.
-- Và SPDY luôn hoạt động trên **[[TLS]]**(**Transport Layer Security**) (tức là bắt buộc phải có **[[HTTPS]]**)
+- Và SPDY luôn hoạt động trên TLS(Transport Layer Security) (tức là bắt buộc phải có **[[HTTPS]]**)
 
 #### 1. Binary Framing  
 
@@ -221,7 +191,7 @@ Như thể hiện trong hình trên, nhiều stream song song (ba) có thể t�
 
 Nó nén các header tồn tại với nội dung rất giống nhau giữa các yêu cầu liên tiếp trong khi loại bỏ chi phí không cần thiết bằng cách không truyền lại các trường trùng lặp với nội dung của header trước đó.
 
-Tại thời điểm này, một phương pháp nén header được gọi là **HPACK** sử dụng kỹ thuật Mã hóa Huffman **([[Huffman Coding]])** để chỉ truyền lại phần đã thay đổi.
+Tại thời điểm này, một phương pháp nén header được gọi là **HPACK** sử dụng kỹ thuật Mã hóa Huffman để chỉ truyền lại phần đã thay đổi.
 
 #### 4. Server Push
 
@@ -312,7 +282,7 @@ Một header Keep-Alive có thể được gửi thêm.
 
 Một đặc điểm bắt nguồn từ không kết nối, trong đó mỗi request được coi là độc lập.
 
-- Vì máy chủ không duy trì trạng thái của máy khách nên nó sử dụng [[Cookie]], [[Session]], v.v. để xác thực và nhận dạng máy khách.
+- Vì máy chủ không duy trì trạng thái của máy khách nên nó sử dụng Cookie, Session, v.v. để xác thực và nhận dạng máy khách.
 
 ## HTTP Request
 

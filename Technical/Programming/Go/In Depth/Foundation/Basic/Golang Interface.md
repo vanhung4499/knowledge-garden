@@ -1,7 +1,8 @@
 ---
+categories: 
 title: Golang Interface
 date created: 2023-07-01
-date modified: 2023-07-04
+date modified: 2023-09713-04
 tags: [golang]
 ---
 

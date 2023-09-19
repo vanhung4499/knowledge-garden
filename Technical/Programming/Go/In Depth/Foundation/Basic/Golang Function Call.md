@@ -1,7 +1,8 @@
 ---
+categories: 
 title: Golang Function Call
 date created: 2023-07-01
-date modified: 2023-07-01
+date modified: 2023-097-301
 tags: [golang]
 ---
 

@@ -2,9 +2,11 @@
 categories: [network, computer-science]
 title: DNS
 date created: 2023-05-26
-date modified: 2023-07-10
+date modified: 2023-09-17
 tags: [network, computer-science]
 ---
+
+# DNS
 
 Một người có thể được xác định bằng số CCCD có độ dài cố định và tên. Máy tính sẽ thích số CCCD và người bình thường sẽ thích tên hơn.
 

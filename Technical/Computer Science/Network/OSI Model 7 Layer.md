@@ -1,10 +1,12 @@
 ---
 categories: [network, computer-science]
-title: OSI 7 Layer
+title: OSI Model 7 Layer
 date created: 2023-04-30
-date modified: 2023-07-10
+date modified: 2023-09-17
 tags: [network, computer-science]
 ---
+
+# OSI Model
 
 ## Mô hình OSI là gì? 🧐
 

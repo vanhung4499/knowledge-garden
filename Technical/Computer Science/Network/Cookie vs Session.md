@@ -2,7 +2,7 @@
 categories: [network, computer-science]
 title: Cookie vs Session
 date created: 2023-05-28
-date modified: 2023-07-20
+date modified: 2023-09-18
 tags: [network, computer-science]
 ---
 

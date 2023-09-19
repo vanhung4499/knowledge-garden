@@ -1238,7 +1238,7 @@ do
 done
 ```
 
-Trong mỗi lần lặp, `arg` sẽ được gán giá trị từ `elem1` đến `elemN`. Các giá trị này cũng có thể là các ký tự đại diện hoặc [mở rộng dấu ngoặc nhọn](https://github.com/denysdovhan/bash-handbook/blob/master/translations/vi/README.md#m%E1%BB%9F-r%E1%BB%99ng-d%E1%BA%A5u-ngo%E1%BA%B7c-nh%E1%BB%8Fn).
+Trong mỗi lần lặp, `arg` sẽ được gán giá trị từ `elem1` đến `elemN`. Các giá trị này cũng có thể là các ký tự đại diện hoặc [mở rộng dấu ngoặc nhọn](https://github.com/denysdovhan/bash-handbook/tree/master#brace-expansion).
 
 Tất nhiên, chúng ta cũng có thể viết vòng lặp `for` trên một dòng, nhưng điều này yêu cầu phải có một dấu chấm phẩy trước `do`, như sau:
 
@@ -1268,7 +1268,7 @@ done
 
 #### Vòng lặp `while`
 
-Vòng lặp `while` kiểm tra một điều kiện, và chỉ thực thi một khối lệnh khi điều kiện đó là _đúng_. Điều kiện được kiểm tra trong `while` tương tự như trong câu lệnh `if..then` với [nguyên tố](https://github.com/denysdovhan/bash-handbook/blob/master/translations/vi/README.md#nguy%C3%AAn-t%E1%BB%AD-v%C3%A0-m%E1%BA%A3ng) được sử dụng. Vì vậy, một vòng lặp `while` có dạng như sau:
+Vòng lặp `while` kiểm tra một điều kiện, và chỉ thực thi một khối lệnh khi điều kiện đó là _đúng_. Điều kiện được kiểm tra trong `while` tương tự như trong câu lệnh `if..then` với [nguyên tố](https://github.com/denysdovhan/bash-handbook/tree/master#primary-and-combining-expressions) được sử dụng. Vì vậy, một vòng lặp `while` có dạng như sau:
 
 ```shell
 while [[ condition ]]
@@ -1483,14 +1483,14 @@ kết quả là: 100
 
 Bảng biến tham số vị trí:
 
-| Biến       | Mô tả                           |
-| ---------- | ------------------------------ |
-| `$0`       | Tên script                      |
-| `$1 … $9`  | Tham số thứ 1 đến tham số thứ 9 |
-| `${10} …`  | Tham số thứ 10 trở đi           |
-| `$*` hoặc `$@` | Tất cả các tham số trừ `$0`     |
-| `$#`       | Số lượng tham số trừ `$0`       |
-| `$FUNCNAME` | Tên hàm (chỉ có giá trị bên trong hàm) |
+| Biến           | Mô tả                                  |
+| -------------- | -------------------------------------- |
+| `$0`           | Tên script                             |
+| `$1 … $9`      | Tham số thứ 1 đến tham số thứ 9        |
+| `${10} …`      | Tham số thứ 10 trở đi                  |
+| `$*` hoặc `$@` | Tất cả các tham số trừ `$0`            |
+| `$#`           | Số lượng tham số trừ `$0`              |
+| `$FUNCNAME`    | Tên hàm (chỉ có giá trị bên trong hàm) |
 
 **💻 『Mã nguồn ví dụ』**
 

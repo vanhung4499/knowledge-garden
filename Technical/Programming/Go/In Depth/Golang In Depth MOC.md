@@ -3,7 +3,7 @@ tags: [golang, golang-in-depth]
 categories: [golang, golang-in-depth]
 title: Golang In Depth MOC
 date created: 2023-07-04
-date modified: 2023-07-20
+date modified: 2023-09-13
 ---
 
 # Golang In Depth MOC
