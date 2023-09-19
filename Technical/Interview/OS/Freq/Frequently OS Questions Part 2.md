@@ -1,5 +1,5 @@
 ---
-title: Frequent OS Questions Part 2
+title: Frequently OS Questions Part 2
 tags:
   - os
   - interview

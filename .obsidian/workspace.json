@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Interview/OS/Freq/Frequent OS Questions Part 2.md",
+                "file": "Technical/Interview/Interview MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Interview/OS/Freq/Frequent OS Questions Part 2.md"
+                "file": "Technical/Interview/Interview MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Interview/OS/Freq/Frequent OS Questions Part 2.md",
+                "file": "Technical/Interview/Interview MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Interview/OS/Freq/Frequent OS Questions Part 2.md",
+                "file": "Technical/Interview/Interview MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -220,8 +220,9 @@
   },
   "active": "136a6602fef10763",
   "lastOpenFiles": [
-    "Technical/Interview/OS/Freq/Frequent OS Questions Part 1.md",
-    "Technical/Interview/OS/Freq/Frequent OS Questions Part 2.md",
+    "Technical/Interview/OS/Freq/Frequently OS Questions Part 2.md",
+    "Technical/Interview/Interview MOC.md",
+    "Technical/Interview/OS/Freq/Frequently OS Questions Part 1.md",
     "Home.md",
     "Technical/Computer Science/Operating System/Paging.md",
     "Technical/Computer Science/Operating System/Segmentation.md",
@@ -245,7 +246,6 @@
     "Technical/Computer Science/Network/OSI and TCP Model.md",
     "Technical/Computer Science/Network/Application Layer Protocol.md",
     "Technical/Computer Science/Network/Bandwidth.md",
-    "Technical/Computer Science/Network/OSI Model 7 Layer.md",
     "Technical/Interview/OS/Freq",
     "Technical/Interview/Network/Freq",
     "Technical/Interview/OS/All",
