@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md",
+                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "ef70be06709492cb",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md"
+                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md"
               }
             }
           }
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md",
+                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Interview/Interview MOC.md",
+                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,19 +177,7 @@
             }
           },
           {
-            "id": "0adba5aff49558fd",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Home.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "73c0cdf9073c70bb",
+            "id": "a489a98f8c691b86",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -184,7 +185,7 @@
             }
           },
           {
-            "id": "aca207f32382fefb",
+            "id": "6616769d6fcb9bdc",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -192,7 +193,7 @@
             }
           }
         ],
-        "currentTab": 7
+        "currentTab": 6
       }
     ],
     "direction": "horizontal",
@@ -218,12 +219,22 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "136a6602fef10763",
+  "active": "ef70be06709492cb",
   "lastOpenFiles": [
+    "Technical/Programming/Go/Go MOC.md",
+    "Technical/Programming/Go/Questions/Slice/Go Slice as func param.md",
+    "Technical/Programming/Go/Questions/Slice/Go Slice Grow.md",
+    "Technical/Programming/Go/Questions/Slice/Go Slice vs Array.md",
+    "Technical/Programming/Go/Questions/Go Questions MOC.md",
+    "Technical/Programming/Go/Questions/Slice",
+    "Technical/Design Arch/Design Arch MOC.md",
+    "Technical/Programming/Go/Questions",
+    "Technical/Design Arch/System Design",
+    "Technical/Design Arch/Design Pattern",
+    "Home.md",
     "Technical/Interview/OS/Freq/Frequently OS Questions Part 2.md",
     "Technical/Interview/Interview MOC.md",
     "Technical/Interview/OS/Freq/Frequently OS Questions Part 1.md",
-    "Home.md",
     "Technical/Computer Science/Operating System/Paging.md",
     "Technical/Computer Science/Operating System/Segmentation.md",
     "Technical/Computer Science/Operating System/Process and Thread.md",
@@ -240,22 +251,12 @@
     "Technical/Computer Science/Network/HTTPS and HTTP.md",
     "Technical/Computer Science/Network/HTTPS.md",
     "Technical/Computer Science/Network/URI.md",
-    "Technical/Computer Science/Network/Web Flow.md",
-    "Technical/Computer Science/Network/Network Flow 1.md",
-    "Technical/Computer Science/Network/DNS.md",
-    "Technical/Computer Science/Network/OSI and TCP Model.md",
-    "Technical/Computer Science/Network/Application Layer Protocol.md",
-    "Technical/Computer Science/Network/Bandwidth.md",
     "Technical/Interview/OS/Freq",
     "Technical/Interview/Network/Freq",
     "Technical/Interview/OS/All",
     "Technical/Interview/Network/All",
     "Technical/Programming/Go/In Depth/Foundation/Keyword",
     "Technical/Programming/Shell",
-    "docs/linux/ops",
-    "docs/linux",
-    "docs",
-    "Technical/DevOps/Linux/Operations",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",

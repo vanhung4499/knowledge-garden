@@ -3,10 +3,10 @@ title: Design Arch MOC
 tags: [design, arch, moc]
 categories: [design, arch, moc]
 date created: 2023-07-22
-date modified: 2023-09-03
+date modified: 2023-09-20
 ---
 
-# Software Design and Architecture
+# Software Design and Architecture MOC
 
 ## Design Pattern
 
