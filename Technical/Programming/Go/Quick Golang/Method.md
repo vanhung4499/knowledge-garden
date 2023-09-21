@@ -2,13 +2,13 @@
 categories: [golang, quick-golang]
 title: Method
 date created: 2023-04-01
-date modified: 2023-07-10
+date modified: 2023-09-21
 tags: [golang, quick-golang]
 ---
 
 Bài viết này sẽ nói về phương thức, phương thức có thể được coi là một hàm cụ thể, là bước đầu tiên trong lập trình hướng đối tượng Go. Để sử dụng một phương thức tốt, cần có tư tưởng lập trình hướng đối tượng.
 
-## [[Statement]]
+## Statement
 
 Việc khai báo một phương thức cũng tương tự như một hàm, điểm khác biệt giữa chúng là: khi một phương thức được định nghĩa, một tham số sẽ được thêm vào giữa `func` và tên phương thức, và tham số này là **receiver**, vì vậy phương thức chúng ta định nghĩa sẽ được liên kết với **receiver** , hay gọi phương thức của **receiver** này.
 

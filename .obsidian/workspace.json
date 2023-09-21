@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "136a6602fef10763",
+            "id": "9a924f221e988ec1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "ef70be06709492cb",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
+                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md"
+                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md"
               }
             }
           }
@@ -135,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
+                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
+                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -177,7 +164,7 @@
             }
           },
           {
-            "id": "a489a98f8c691b86",
+            "id": "68429f793889d42e",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -185,7 +172,7 @@
             }
           },
           {
-            "id": "6616769d6fcb9bdc",
+            "id": "5813fd1aee40c3e6",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -219,44 +206,44 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "ef70be06709492cb",
+  "active": "c6d173446b8ea23c",
   "lastOpenFiles": [
-    "Technical/Programming/Go/Go MOC.md",
-    "Technical/Programming/Go/Questions/Slice/Go Slice as func param.md",
-    "Technical/Programming/Go/Questions/Slice/Go Slice Grow.md",
-    "Technical/Programming/Go/Questions/Slice/Go Slice vs Array.md",
     "Technical/Programming/Go/Questions/Go Questions MOC.md",
+    "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
+    "Technical/Programming/Go/Questions/Channel/Go Channel Struct.md",
+    "Technical/Programming/Go/Questions/Channel",
+    "Technical/Programming/Go/Questions/Channel/Go Channel CSP.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface compare to CPP.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Polymorphism.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Convert.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Assert.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Construct.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Detect Impl.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Dynamic Typing.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface iface and eface.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Receiver.md",
+    "Technical/Programming/Go/Questions/Interface/Go Interface Duck Typing.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Float as Key.md",
+    "Technical/Programming/Go/Questions/Interface",
+    "Technical/Programming/Go/Questions/Map/Go Map Element Address.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Delete.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Delete On Range.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Extend.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Get.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Principal.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Range.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Thread Safety.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Unordered.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Compare.md",
+    "Technical/Programming/Go/Questions/Map/Go Map Assign.md",
+    "Technical/Programming/Go/Questions/Map",
     "Technical/Programming/Go/Questions/Slice",
-    "Technical/Design Arch/Design Arch MOC.md",
     "Technical/Programming/Go/Questions",
     "Technical/Design Arch/System Design",
     "Technical/Design Arch/Design Pattern",
-    "Home.md",
-    "Technical/Interview/OS/Freq/Frequently OS Questions Part 2.md",
-    "Technical/Interview/Interview MOC.md",
-    "Technical/Interview/OS/Freq/Frequently OS Questions Part 1.md",
-    "Technical/Computer Science/Operating System/Paging.md",
-    "Technical/Computer Science/Operating System/Segmentation.md",
-    "Technical/Computer Science/Operating System/Process and Thread.md",
-    "Technical/Computer Science/Operating System/Process Synchronization.md",
-    "Technical/Computer Science/Operating System/PCB and Context Switching.md",
-    "Technical/Interview/Network/Freq/Frequently Network Questions Part 2.md",
-    "Technical/Computer Science/Network/TCP Reliability Guarantee.md",
-    "Technical/Computer Science/Network/TCP Handshake.md",
-    "Technical/Computer Science/Network/TCP.md",
-    "Technical/Computer Science/Network/Network MOC.md",
-    "Technical/Interview/Network/Freq/Frequently Network Questions Part 1.md",
-    "Technical/Computer Science/Network/Cookie vs Session.md",
-    "Technical/Computer Science/Network/HTTP.md",
-    "Technical/Computer Science/Network/HTTPS and HTTP.md",
-    "Technical/Computer Science/Network/HTTPS.md",
-    "Technical/Computer Science/Network/URI.md",
     "Technical/Interview/OS/Freq",
     "Technical/Interview/Network/Freq",
     "Technical/Interview/OS/All",
-    "Technical/Interview/Network/All",
-    "Technical/Programming/Go/In Depth/Foundation/Keyword",
-    "Technical/Programming/Shell",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",

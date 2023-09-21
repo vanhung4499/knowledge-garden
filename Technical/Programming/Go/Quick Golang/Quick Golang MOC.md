@@ -2,7 +2,7 @@
 categories: [golang, quick-golang, moc]
 title: Quick Golang MOC
 date created: 2023-07-04
-date modified: 2023-07-20
+date modified: 2023-09-21
 tags: [golang, quick-golang, moc]
 ---
 
