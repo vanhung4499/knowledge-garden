@@ -15,6 +15,10 @@
   "enable_folder_templates": true,
   "folder_templates": [
     {
+      "folder": "Technical/DSA/Leetcode",
+      "template": "Extras/Templates/LeetCode Template.md"
+    },
+    {
       "folder": "",
       "template": ""
     }

@@ -1,9 +1,12 @@
 ---
-categories: [golang]
+categories:
+  - golang
+  - quick-golang
 title: Basic Data Types
 date created: 2023-03-28
-date modified: 2023-07-10
-tags: [golang]
+date modified: 2023-09-722-10
+tags:
+  - golang
 ---
 
 Các kiểu dữ liệu của Go được chia thành bốn loại chính:

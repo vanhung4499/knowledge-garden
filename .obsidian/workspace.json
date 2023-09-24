@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "7be138abf7b5fbb7",
+        "id": "605cf22df05e9991",
         "type": "tabs",
         "children": [
           {
-            "id": "9a924f221e988ec1",
+            "id": "cb5cc53b66a03050",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
+                "file": "Technical/DSA/Array/Basic/Array Basic.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md"
+                "file": "Technical/DSA/Array/Basic/Array Basic.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
+                "file": "Technical/DSA/Array/Basic/Array Basic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
+                "file": "Technical/DSA/Array/Basic/Array Basic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +164,7 @@
             }
           },
           {
-            "id": "68429f793889d42e",
+            "id": "eb482b3ab4254fc0",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -172,7 +172,7 @@
             }
           },
           {
-            "id": "5813fd1aee40c3e6",
+            "id": "e58e211b77f3cfa2",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -206,44 +206,44 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c6d173446b8ea23c",
+  "active": "cb5cc53b66a03050",
   "lastOpenFiles": [
-    "Technical/Programming/Go/Questions/Go Questions MOC.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Send.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Struct.md",
+    "Technical/DSA/Leetcode/LeetCode 0289.md",
+    "Technical/DSA/Array/Basic/Array Basic.md",
+    "Technical/DSA/Leetcode/LeetCode 0059.md",
+    "Technical/DSA/Leetcode/LeetCode 0054.md",
+    "Technical/DSA/Leetcode/LeetCode 0073.md",
+    "Extras/Templates/LeetCode Template.md",
+    "Technical/DSA/Leetcode/LeetCode 0048.md",
+    "Technical/DSA/Leetcode/LeetCode 0485.md",
+    "Technical/DSA/Leetcode/LeetCode 0498.md",
+    "Technical/DSA/Leetcode/LeetCode 0238.md",
+    "Technical/DSA/Leetcode/LeetCode 0724.md",
+    "Technical/DSA/Leetcode/LeetCode 0066.md",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Leetcode/Leetcode MOC.md",
+    "Technical/DSA/Leetcode/LeetCode 0189.md",
+    "Technical/DSA/Leetcode/1-100",
+    "Technical/DSA/Array/Sorting/Merge Sort.md",
+    "Technical/DSA/Dynamic Programming",
+    "Technical/DSA/Linked List",
+    "Technical/DSA/Array/Basic",
+    "Technical/DSA/Algorithms/Algorithms MOC.md",
+    "Technical/DSA/Array",
+    "Technical/DSA/Introdution/DSA Intro.md",
+    "Technical/DSA/Introdution/Algorithm Complexity.md",
+    "Home.md",
+    "Technical/DSA/Introdution/DSA Quick Start.md",
+    "Technical/DSA/Introdution/Complexity Analysis.md",
+    "Technical/Interview/Network/Freq/Frequently Network Questions Part 2.md",
+    "Technical/Interview/Network/Freq/Frequently Network Questions Part 1.md",
+    "Technical/Programming/Go/Quick Golang/Method.md",
+    "Technical/Programming/Go/Quick Golang/Map and Struct.md",
+    "Technical/Programming/Go/Questions/Schedule",
     "Technical/Programming/Go/Questions/Channel",
-    "Technical/Programming/Go/Questions/Channel/Go Channel CSP.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface compare to CPP.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Polymorphism.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Convert.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Assert.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Construct.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Detect Impl.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Dynamic Typing.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface iface and eface.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Receiver.md",
-    "Technical/Programming/Go/Questions/Interface/Go Interface Duck Typing.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Float as Key.md",
     "Technical/Programming/Go/Questions/Interface",
-    "Technical/Programming/Go/Questions/Map/Go Map Element Address.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Delete.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Delete On Range.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Extend.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Get.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Principal.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Range.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Thread Safety.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Unordered.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Compare.md",
-    "Technical/Programming/Go/Questions/Map/Go Map Assign.md",
     "Technical/Programming/Go/Questions/Map",
     "Technical/Programming/Go/Questions/Slice",
-    "Technical/Programming/Go/Questions",
-    "Technical/Design Arch/System Design",
-    "Technical/Design Arch/Design Pattern",
-    "Technical/Interview/OS/Freq",
-    "Technical/Interview/Network/Freq",
-    "Technical/Interview/OS/All",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",

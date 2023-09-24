@@ -6,7 +6,7 @@ date created: 2023-09-21
 date modified: 2023-09-22
 ---
 
-# Go Chanel Send
+# Go Chanel: Send
 
 ## Phân tích mã nguồn
 
@@ -247,7 +247,7 @@ Sau khi đánh thức, tiếp tục thực hiện từ dòng mã ngay sau `gopar
 
 Vì vậy, địa chỉ của phần tử gửi đang chờ thực sự được lưu trữ trong cấu trúc sudog, tức là trong goroutine hiện tại.
 
-# Phân tích ví dụ
+## Phân tích ví dụ
 
 Okay, sau khi xem xét mã nguồn, chúng ta tiếp tục phân tích ví dụ. Đoạn mã như sau:
 

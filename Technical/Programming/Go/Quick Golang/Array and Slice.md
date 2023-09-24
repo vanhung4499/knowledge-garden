@@ -2,7 +2,7 @@
 categories: [golang, quick-golang]
 title: Array and Slice
 date created: 2023-03-30
-date modified: 2023-07-10
+date modified: 2023-09-22
 tags: [golang, quick-golang]
 ---
 

@@ -5,7 +5,7 @@ tags:
   - interview
 categories: golang, interview
 date created: 2023-09-20
-date modified: 2023-09-21
+date modified: 2023-09-22
 ---
 
 # Go Questions MOC
@@ -64,6 +64,11 @@ Tổng hợp các câu hỏi phỏng vấn Golang chuyên sâu
 ## Compile
 
 ## Schedule
+
+- [[Goroutine vs Thread]]
+- [[Go Scheduler Intro]]
+- [[Go Scheduler When]]
+- [[Go Scheduler MN Model]]
 
 ## Standard Library
 

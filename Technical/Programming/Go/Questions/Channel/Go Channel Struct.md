@@ -8,7 +8,7 @@ date created: 2023-09-21
 date modified: 2023-09-21
 ---
 
-# Go Channel Struct
+# Go Channel: Struct
 
 ## Cấu trúc dữ liệu
 
