@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-09-24
+date modified: 2023-09-25
 ---
 
 # Data Structure and Algorithms MOC
@@ -30,25 +30,67 @@ date modified: 2023-09-24
 
 ### Sort
 
-- [[Buuble Sort]]
+- [[Bubble Sort]]
 - [[Insertion Sort]]
 - [[Selection Sort]]
 - [[Merge Sort]]
 
 ### Binary Search
 
+- [[Binary Search Part 1]]
+- [[Binary Search Part 2]]
+
 ### Two Pointer
+
+- [[Two Pointer]]
 
 ### Sliding Window
 
+- [[Sliding Window]]
+
 ## Linked List
+
+### Basic
+
+- [[Linked List Basic]]
+
+### Practice
 
 ## Stack
 
+### Basic
+
+- [[Stack Basic]]
+
 ## Queue
+
+### Basic
+
+- [[Queue Basic]]
 
 ## Hash Table
 
+### Basic
+
+- [[Hash Table Basic]]
+
 ## Tree
+
+### Binary Tree
+
+- [[Binary Tree Basic]]
+- [[Binary Tree Traverse]]
+
+### Binary Search Tree
+
+- [[Binary Search Tree]]
+
+### Segment Tree
+
+- [[Segment Tree]]
+
+### Binary Indexed Tree
+
+- [[Binary Indexed Tree]]
 
 ## Graph
