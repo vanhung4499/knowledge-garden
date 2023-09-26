@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-09-25
+date modified: 2023-09-26
 ---
 
 # Data Structure and Algorithms MOC
@@ -31,9 +31,16 @@ date modified: 2023-09-25
 ### Sort
 
 - [[Bubble Sort]]
-- [[Insertion Sort]]
 - [[Selection Sort]]
+- [[Insertion Sort]]
+- [[Shell Sort]]
 - [[Merge Sort]]
+- [[Quick Sort]]
+- [[Heap Sort]]
+- [[Counting Sort]]
+- [[Radix Sort]]
+- [[Bucket Sort]]
+- [[Sorting Problems]]
 
 ### Binary Search
 
@@ -93,4 +100,64 @@ date modified: 2023-09-25
 
 - [[Binary Indexed Tree]]
 
+### Union Find
+
+- [[Union Find]]
+
+## String
+
+### Basic
+
+- [[String basic]]
+
+### Single Pattern Matching
+
+- [[Brute Force Matching]]
+- [[KMP]]
+- [[Rabin Karp]]
+- [[Boyer Moore]]
+- [[Horspool]]
+- [[Sunday]]
+
+### Multi Pattern Matching
+
+- [[Trie]]
+- [[AC Automation]]
+- [[Suffix Array]]
+
 ## Graph
+
+### Basic
+
+- [[Graph Basic]]
+
+### Traversal
+
+- [[DFS]]
+- [[BFS]]
+- [[Topological Sorting]]
+
+### Shortest Path
+
+- [[Bellman-Ford]]
+- [[Dijkstra]]
+
+### Spanning Tree
+
+### Flow - Bipartite
+
+## Algorithm Base
+
+### Enumeration
+
+### Recursion
+
+### Divide and Conquer
+
+### Backtracking
+
+### Greedy
+
+### Bit Operation
+
+## Dynamic Programming
