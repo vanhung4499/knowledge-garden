@@ -1,12 +1,12 @@
 ---
-title: Java Concurrent Basic Mechanism
+title: Java Concurrency Core Mechanism
 tags: [java, javase, concurrency]
 categories: [java, javase, concurrency]
 date created: 2023-07-16
-date modified: 2023-07-17
+date modified: 2023-09-26
 ---
 
-# Cơ chế cốt lõi của Java đối với đồng thời
+# Cơ chế cốt lõi của Java Concurency
 
 > Hỗ trợ đồng thời trong Java chủ yếu tập trung vào `java.util.concurrent`, viết tắt là J.U.C. Và trái tim của J.U.C là `AQS`.
 

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/DSA MOC.md",
+                "file": "Technical/DSA/Stack/Basic/Stack Basic.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/DSA MOC.md"
+                "file": "Technical/DSA/Stack/Basic/Stack Basic.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/DSA MOC.md",
+                "file": "Technical/DSA/Stack/Basic/Stack Basic.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/DSA MOC.md",
+                "file": "Technical/DSA/Stack/Basic/Stack Basic.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -164,7 +164,7 @@
             }
           },
           {
-            "id": "d7bc6eb5a4a3fcba",
+            "id": "feb26adb362c85f7",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -172,11 +172,21 @@
             }
           },
           {
-            "id": "a3280aad09d03eb1",
+            "id": "ab65df2a195650e7",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
               "state": {}
+            }
+          },
+          {
+            "id": "0e8a4607fb8072c6",
+            "type": "leaf",
+            "state": {
+              "type": "file-properties",
+              "state": {
+                "file": "Technical/DSA/Stack/Basic/Stack Basic.md"
+              }
             }
           }
         ],
@@ -206,44 +216,44 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c6d173446b8ea23c",
+  "active": "73798aeca654e8b1",
   "lastOpenFiles": [
-    "Technical/DSA/Array/Sorting/Sorting MOC.md",
-    "Technical/DSA/Array/Sorting/Sorting Problems.md",
-    "Technical/DSA/Leetcode/LeetCode 0169.md",
-    "Technical/DSA/Leetcode/Untitled",
-    "Technical/DSA/Leetcode/LeetCode 0088.md",
-    "Technical/DSA/Leetcode/LeetCode 0506.md",
-    "Technical/DSA/Leetcode/LeetCode 0912.md",
-    "Home.md",
-    "Technical/DSA/Leetcode/LeetCode 0075.md",
-    "Extras/Templates/LeetCode Template.md",
-    "Technical/DSA/Leetcode/LeetCode 0215.md",
+    "Technical/DSA/Stack/Basic/Stack Basic Problems.md",
+    "Technical/DSA/Stack/Basic/Stack Basic.md",
+    "Technical/DSA/Queue/Basic/Queue Basic.md",
+    "Technical/DSA/Queue/Basic",
+    "Technical/DSA/Linked List/Two Pointers/Linked List Two Pointer Problems.md",
+    "Technical/DSA/Stack/Basic",
+    "Technical/DSA/Queue",
+    "Technical/DSA/Stack",
+    "Technical/DSA/Linked List/Two Pointers/Linked List Two Pointers.md",
+    "Technical/DSA/Linked List/Basic/Linked List Basic Problems.md",
+    "Technical/DSA/Linked List/Two Pointers",
+    "Technical/DSA/Array/Two Pointer/Two Pointers Problems.md",
+    "Technical/DSA/Array/Two Pointer/Two Pointers.md",
     "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/Array/Sorting/Heap Sort.md",
-    "Technical/DSA/Leetcode/LeetCode 0283.md",
-    "Technical/DSA/Array/Sorting/Untitled",
-    "Technical/DSA/Array/Sorting/Radix Sort.md",
-    "Technical/DSA/Array/Sorting/Bucket Sort.md",
-    "Technical/DSA/Array/Sorting/Counting Sort.md",
-    "Technical/DSA/Array/Sorting/Quick Sort.md",
-    "Technical/DSA/Array/Sorting/Merge Sort.md",
-    "Technical/DSA/Array/Sorting/Shell Sort.md",
-    "Technical/DSA/Array/Sorting/Bubble Sort.md",
-    "Technical/DSA/Array/Sorting/Insertion Sort.md",
-    "Technical/DSA/Array/Sorting/Selection Sort.md",
+    "Technical/DSA/Tree/Binary Search Tree.md",
+    "Technical/DSA/Linked List/Basic/Linked List Basic.md",
+    "Technical/DSA/Linked List/Basic",
+    "Technical/DSA/Array/Sliding Window/Sliding Window Problems.md",
+    "Technical/DSA/Array/Sliding Window/Sliding Window.md",
+    "Technical/DSA/Array/Sliding Window",
+    "Technical/DSA/Array/Binary Search/Binary Search Problems.md",
+    "Technical/DSA/Array/Two Pointer",
+    "Home.md",
+    "Technical/DSA/Leetcode/LeetCode 0034.md",
+    "Technical/Programming/Java/JavaSE/Concurency/Java Concurrency Core Mechanism.md",
+    "Technical/DSA/Array/Binary Search/Binary Search Part 2.md",
+    "Technical/DSA/Leetcode/LeetCode 0167.md",
     "Technical/DSA/Array/Basic/Array Basic.md",
-    "Technical/DSA/Leetcode/LeetCode 0289.md",
-    "Technical/DSA/Leetcode/LeetCode 0059.md",
-    "Technical/DSA/Leetcode/LeetCode 0054.md",
-    "Technical/DSA/Leetcode/1-100",
-    "Technical/DSA/Dynamic Programming",
-    "Technical/DSA/Linked List",
-    "Technical/DSA/Array/Basic",
-    "Technical/DSA/Array",
-    "Technical/Programming/Go/Questions/Schedule",
-    "Technical/Programming/Go/Questions/Channel",
-    "Technical/Programming/Go/Questions/Interface",
+    "Technical/DSA/Array/Binary Search/Binary Search Part 1.md",
+    "Technical/DSA/Leetcode/LeetCode 0035.md",
+    "Technical/DSA/Leetcode/LeetCode 0374.md",
+    "Technical/DSA/Array/Binary Search/LeetCode XXXX.md",
+    "Technical/DSA/Leetcode/LeetCode 0704.md",
+    "Technical/DSA/Array/Binary Search",
+    "Technical/DSA/Array/Sorting/Sorting MOC.md",
+    "Technical/DSA/Leetcode/Untitled",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",

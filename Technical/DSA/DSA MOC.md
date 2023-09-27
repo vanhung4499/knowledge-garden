@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-09-26
+date modified: 2023-09-27
 ---
 
 # Data Structure and Algorithms MOC
@@ -46,22 +46,28 @@ date modified: 2023-09-26
 
 - [[Binary Search Part 1]]
 - [[Binary Search Part 2]]
+- [[Binary Search Problems]]
 
 ### Two Pointer
 
-- [[Two Pointer]]
+- [[Two Pointers]]
+- [[Two Pointers Problems]]
 
 ### Sliding Window
 
 - [[Sliding Window]]
+- [[Sliding Window Problems]]
 
 ## Linked List
 
 ### Basic
 
 - [[Linked List Basic]]
+- [[Linked List Basic Problems]]
 
-### Practice
+### Two Pointer
+
+- [[Two Pointers Linked List]]
 
 ## Stack
 
