@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/Stack/Basic/Stack Basic.md",
+                "file": "Technical/DSA/DSA MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/Stack/Basic/Stack Basic.md"
+                "file": "Technical/DSA/DSA MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/Stack/Basic/Stack Basic.md",
+                "file": "Technical/DSA/DSA MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/Stack/Basic/Stack Basic.md",
+                "file": "Technical/DSA/DSA MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -185,7 +185,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/Stack/Basic/Stack Basic.md"
+                "file": "Technical/DSA/DSA MOC.md"
               }
             }
           }
@@ -218,8 +218,8 @@
   },
   "active": "73798aeca654e8b1",
   "lastOpenFiles": [
-    "Technical/DSA/Stack/Basic/Stack Basic Problems.md",
     "Technical/DSA/Stack/Basic/Stack Basic.md",
+    "Technical/DSA/Stack/Basic/Stack Basic Problems.md",
     "Technical/DSA/Queue/Basic/Queue Basic.md",
     "Technical/DSA/Queue/Basic",
     "Technical/DSA/Linked List/Two Pointers/Linked List Two Pointer Problems.md",
