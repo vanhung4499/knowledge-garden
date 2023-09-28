@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-09-28
+date modified: 2023-09-29
 ---
 
 # Data Structure and Algorithms MOC
@@ -76,6 +76,11 @@ date modified: 2023-09-28
 
 - [[Stack Basic]]
 - [[Stack Basic Problems]]
+
+### Monotone Stack
+
+- [[Monotone Stack]]
+- - [[Monotone Stack Problems]]
 
 ## Queue
 
