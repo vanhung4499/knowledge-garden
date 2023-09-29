@@ -29,20 +29,20 @@ Chúng ta có thể giải thích định nghĩa của ngăn xếp từ hai khí
 
 - Khía cạnh thứ nhất là **"danh sách tuyến tính"**.
 
-Ngăn xếp đầu tiên là một danh sách tuyến tính, các phần tử trong ngăn xếp có mối quan hệ tuyến tính với nhau. Các phần tử trong ngăn xếp được đưa vào theo thứ tự $a_1, a_2, …, a_n$. Phần tử đỉnh ngăn xếp là $a_n$.
+Ngăn xếp đầu tiên là một danh sách tuyến tính, các phần tử trong ngăn xếp có mối quan hệ tuyến tính với nhau. Các phần tử trong ngăn xếp được đưa vào theo tuần tự $a_1, a_2, …, a_n$. Phần tử đỉnh ngăn xếp là $a_n$.
 
 - Khía cạnh thứ hai là **"nguyên tắc vào sau ra trước"**.
 
 Theo định nghĩa của ngăn xếp, mỗi lần xóa sẽ luôn xóa phần tử đỉnh ngăn xếp hiện tại, tức là phần tử cuối cùng được đưa vào ngăn xếp. Khi thêm phần tử vào ngăn xếp, phần tử đầu tiên được thêm vào sẽ nằm ở đáy ngăn xếp, phần tử cuối cùng được thêm vào sẽ nằm ở đỉnh ngăn xếp. Nghĩa là, việc thêm hoặc xóa phần tử trong ngăn xếp tuân theo nguyên tắc **"vào sau ra trước"**.
 
-## 2. Ngăn xếp lưu trữ theo thứ tự và lưu trữ theo liên kết
+## 2. Ngăn xếp lưu trữ theo tuần tự và lưu trữ theo liên kết
 
-Tương tự như danh sách tuyến tính, ngăn xếp có hai phương pháp lưu trữ: **"ngăn xếp theo thứ tự"** và **"ngăn xếp theo liên kết"**.
+Tương tự như danh sách tuyến tính, ngăn xếp có hai phương pháp lưu trữ: **"ngăn xếp theo tuần tự"** và **"ngăn xếp theo liên kết"**.
 
-- **"Ngăn xếp theo thứ tự"**: Đây là cấu trúc lưu trữ ngăn xếp theo thứ tự. Sử dụng một nhóm đơn vị lưu trữ có địa chỉ liên tiếp để lưu trữ các phần tử từ đáy ngăn xếp đến đỉnh ngăn xếp, đồng thời sử dụng con trỏ `top` để chỉ định vị trí của phần tử đỉnh ngăn xếp trong ngăn xếp theo thứ tự.
+- **"Ngăn xếp theo tuần tự"**: Đây là cấu trúc lưu trữ ngăn xếp theo tuần tự. Sử dụng một nhóm đơn vị lưu trữ có địa chỉ liên tiếp để lưu trữ các phần tử từ đáy ngăn xếp đến đỉnh ngăn xếp, đồng thời sử dụng con trỏ `top` để chỉ định vị trí của phần tử đỉnh ngăn xếp trong ngăn xếp theo tuần tự.
 - **"Ngăn xếp theo liên kết"**: Đây là cấu trúc lưu trữ ngăn xếp theo liên kết. Sử dụng cách thức của danh sách liên kết để triển khai ngăn xếp. Các phần tử trong ngăn xếp được chèn vào trước nút đầu tiên của danh sách liên kết và sử dụng con trỏ `top` để chỉ định phần tử đỉnh ngăn xếp, `top` luôn trỏ đến vị trí của nút đầu tiên trong danh sách liên kết.
 
-Trước khi mô tả cách triển khai cụ thể của ngăn xếp theo thứ tự và theo liên kết, chúng ta hãy xem xét các hoạt động cơ bản của ngăn xếp.
+Trước khi mô tả cách triển khai cụ thể của ngăn xếp theo tuần tự và theo liên kết, chúng ta hãy xem xét các hoạt động cơ bản của ngăn xếp.
 
 ### 2.1 Các hoạt động cơ bản của ngăn xếp
 
@@ -57,11 +57,11 @@ Các hoạt động cơ bản của ngăn xếp như sau:
 - **Xóa phần tử (lấy ra khỏi ngăn xếp, pop)**: Tương đương với việc xóa phần tử cuối cùng của danh sách tuyến tính. Và thay đổi con trỏ `top` để chỉ định vị trí của phần tử đỉnh ngăn xếp.
 - **Lấy phần tử đỉnh ngăn xếp**: Tương đương với việc lấy phần tử cuối cùng của danh sách tuyến tính. Khác với việc chèn và xóa phần tử, hoạt động này không thay đổi con trỏ `top` để chỉ định vị trí của phần tử đỉnh ngăn xếp.
 
-### 2.2 Triển khai ngăn xếp lưu trữ theo thứ tự
+### 2.2 Triển khai ngăn xếp lưu trữ theo tuần tự
 
-Cách đơn giản nhất để triển khai ngăn xếp là sử dụng một mảng để mô tả cấu trúc lưu trữ theo thứ tự của ngăn xếp. Trong `Python`, chúng ta có thể sử dụng danh sách (`list`) để triển khai. Cấu trúc lưu trữ ngăn xếp này cũng được gọi là **"ngăn xếp theo thứ tự"**.
+Cách đơn giản nhất để triển khai ngăn xếp là sử dụng một mảng để mô tả cấu trúc lưu trữ theo tuần tự của ngăn xếp. Trong `Python`, chúng ta có thể sử dụng danh sách (`list`) để triển khai. Cấu trúc lưu trữ ngăn xếp này cũng được gọi là **"ngăn xếp theo tuần tự"**.
 
-#### 2.2.1 Mô tả cơ bản của ngăn xếp lưu trữ theo thứ tự
+#### 2.2.1 Mô tả cơ bản của ngăn xếp lưu trữ theo tuần tự
 
 Chúng ta đặt `self.top` để trỏ đến vị trí của phần tử đỉnh ngăn xếp.
 
@@ -72,7 +72,7 @@ Chúng ta đặt `self.top` để trỏ đến vị trí của phần tử đỉ
 - **Xóa phần tử (lấy ra khỏi ngăn xếp, pop)**: Kiểm tra xem ngăn xếp có rỗng hay không, nếu rỗng, ném ra ngoại lệ. Nếu ngăn xếp không rỗng, xóa phần tử cuối cùng trong danh sách `self.stack` và di chuyển con trỏ `self.top` sang trái `1` vị trí.
 - **Lấy phần tử đỉnh ngăn xếp**: Kiểm tra xem ngăn xếp có rỗng hay không, nếu rỗng, ném ra ngoại lệ. Nếu không rỗng, trả về phần tử đỉnh ngăn xếp mà con trỏ `self.top` trỏ đến, tức là `self.stack[self.top]`.
 
-#### 2.2.2 Mã nguồn triển khai ngăn xếp lưu trữ theo thứ tự
+#### 2.2.2 Mã nguồn triển khai ngăn xếp lưu trữ theo tuần tự
 
 ```python
 class Stack:
@@ -116,7 +116,7 @@ class Stack:
 
 ### 2.3 Triển khai ngăn xếp lưu trữ theo liên kết
 
-Cấu trúc lưu trữ ngăn xếp theo thứ tự có một ưu điểm là không cần di chuyển các phần tử khi ngăn xếp đầy hoặc cần điều chỉnh lại không gian lưu trữ. Thay vào đó, ngăn xếp có thể được triển khai bằng cách sử dụng cấu trúc lưu trữ theo liên kết. Trong `Python`, chúng ta có thể triển khai bằng cách tạo các nút liên kết `Node`. Cấu trúc lưu trữ ngăn xếp này còn được gọi là **"ngăn xếp theo liên kết"**.
+Cấu trúc lưu trữ ngăn xếp theo tuần tự có một ưu điểm là không cần di chuyển các phần tử khi ngăn xếp đầy hoặc cần điều chỉnh lại không gian lưu trữ. Thay vào đó, ngăn xếp có thể được triển khai bằng cách sử dụng cấu trúc lưu trữ theo liên kết. Trong `Python`, chúng ta có thể triển khai bằng cách tạo các nút liên kết `Node`. Cấu trúc lưu trữ ngăn xếp này còn được gọi là **"ngăn xếp theo liên kết"**.
 
 #### 2.3.1 Mô tả cơ bản của ngăn xếp lưu trữ theo liên kết
 

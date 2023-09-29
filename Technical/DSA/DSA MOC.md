@@ -27,6 +27,7 @@ date modified: 2023-09-29
 ### Basic
 
 - [[Array Basic]]
+- [[Array Basic Problems]]
 
 ### Sort
 
@@ -68,7 +69,7 @@ date modified: 2023-09-29
 ### Two Pointer
 
 - [[Linked List Two Pointers]]
-- - [[Linked List Two Pointer Problems]]
+- [[Linked List Two Pointer Problems]]
 
 ## Stack
 
@@ -80,19 +81,26 @@ date modified: 2023-09-29
 ### Monotone Stack
 
 - [[Monotone Stack]]
-- - [[Monotone Stack Problems]]
+- [[Monotone Stack Problems]]
 
 ## Queue
 
 ### Basic
 
 - [[Queue Basic]]
+- [[Queue Basic Problems]]
+
+### Priority Queue
+
+- [[Priority Queue]]
+- [[Priority Queue Problems]]
 
 ## Hash Table
 
 ### Basic
 
-- [[Hash Table Basic]]
+- [[Hash Table]]
+- [[Hash Table Problems]]
 
 ## Tree
 
@@ -152,10 +160,14 @@ date modified: 2023-09-29
 
 ### Shortest Path
 
+- [[Floyd]]
 - [[Bellman-Ford]]
 - [[Dijkstra]]
 
 ### Spanning Tree
+
+- [[KrushKal]]
+- [[Prim]]
 
 ### Flow - Bipartite
 
