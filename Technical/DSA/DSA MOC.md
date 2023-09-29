@@ -97,10 +97,29 @@ date modified: 2023-09-29
 
 ## Hash Table
 
-### Basic
-
 - [[Hash Table]]
 - [[Hash Table Problems]]
+
+## String
+
+### Basic
+
+- [[String Basic]]
+
+### Single Pattern Matching
+
+- [[Brute Force Matching]]
+- [[KMP]]
+- [[Rabin Karp]]
+- [[Boyer Moore]]
+- [[Horspool]]
+- [[Sunday]]
+
+### Multi Pattern Matching
+
+- [[Trie]]
+- [[AC Automation]]
+- [[Suffix Array]]
 
 ## Tree
 
@@ -124,27 +143,6 @@ date modified: 2023-09-29
 ### Union Find
 
 - [[Union Find]]
-
-## String
-
-### Basic
-
-- [[String basic]]
-
-### Single Pattern Matching
-
-- [[Brute Force Matching]]
-- [[KMP]]
-- [[Rabin Karp]]
-- [[Boyer Moore]]
-- [[Horspool]]
-- [[Sunday]]
-
-### Multi Pattern Matching
-
-- [[Trie]]
-- [[AC Automation]]
-- [[Suffix Array]]
 
 ## Graph
 

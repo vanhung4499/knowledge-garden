@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/Leetcode/LeetCode 0149.md",
+                "file": "Technical/DSA/String/Single Pattern Matching/KMP.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/Leetcode/LeetCode 0149.md"
+                "file": "Technical/DSA/String/Single Pattern Matching/KMP.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/Leetcode/LeetCode 0149.md",
+                "file": "Technical/DSA/String/Single Pattern Matching/KMP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/Leetcode/LeetCode 0149.md",
+                "file": "Technical/DSA/String/Single Pattern Matching/KMP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/Leetcode/LeetCode 0149.md"
+                "file": "Technical/DSA/String/Single Pattern Matching/KMP.md"
               }
             }
           },
@@ -218,12 +218,22 @@
   },
   "active": "3c10ff85c6c89027",
   "lastOpenFiles": [
-    "Technical/DSA/Hash Table/Hash Table Problems.md",
+    "Technical/DSA/String/Single Pattern Matching/Rabin Karp.md",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/String/Single Pattern Matching/KMP.md",
+    "Technical/DSA/String/Single Pattern Matching/Brute Force Matching.md",
+    "Technical/DSA/String/Basic/String Basic Problems.md",
+    "Technical/DSA/String/Basic/String Basic.md",
+    "Technical/DSA/String/Single Pattern Matching",
+    "Technical/DSA/String/Basic",
+    "Technical/DSA/Array/Basic/Array Basic Problems.md",
+    "Technical/DSA/String",
+    "Technical/DSA/Array/Array Basic Problems.md",
     "Technical/DSA/Leetcode/LeetCode 0149.md",
+    "Technical/DSA/Hash Table/Hash Table Problems.md",
     "Technical/DSA/Leetcode/LeetCode 0041.md",
     "Technical/DSA/Leetcode/LeetCode 0220.md",
     "Technical/DSA/Hash Table/Hash Table.md",
-    "Technical/DSA/DSA MOC.md",
     "Technical/DSA/Leetcode/LeetCode 0218.md",
     "Technical/DSA/Leetcode/LeetCode 0347.md",
     "Technical/DSA/Queue/Priority/Priority Queue Problems.md",
@@ -236,15 +246,8 @@
     "Technical/DSA/Queue/Priority",
     "Technical/DSA/Queue/Basic/Queue Basic Problems.md",
     "Technical/DSA/Array/Binary Search/Binary Search Problems.md",
-    "Technical/DSA/Array/Basic/Array Basic Problems.md",
     "Technical/DSA/Array/Basic/Array Basic.md",
-    "Technical/DSA/Array Basic Problems.md",
     "Home.md",
-    "Technical/DSA/Stack/Monotone/Monotone Stack Problems.md",
-    "Technical/DSA/Leetcode/LeetCode 0042.md",
-    "Technical/DSA/Array/Two Pointer/Two Pointers.md",
-    "Technical/DSA/Array/Two Pointer/Two Pointers Problems.md",
-    "Technical/DSA/Stack/Monotone/Monotone Stack.md",
     "Extras/Media/20220107101219.png",
     "Extras/Media/20220107102446.png",
     "Technical/DSA/Stack/Monotone",
@@ -253,9 +256,6 @@
     "Technical/DSA/Queue",
     "Technical/DSA/Stack",
     "Technical/DSA/Linked List/Two Pointers",
-    "Technical/DSA/Linked List/Basic",
-    "Technical/DSA/Array/Sliding Window",
-    "Technical/DSA/Array/Two Pointer",
     "Extras/Draws/js-reference-copy.excalidraw.png",
     "Extras/Draws/js-basic-type-copy.excalidraw.png",
     "Extras/Draws/variable-heap.png",
