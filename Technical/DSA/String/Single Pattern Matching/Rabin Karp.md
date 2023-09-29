@@ -7,7 +7,7 @@ categories:
   - dsa
   - algorithm
 date created: 2023-09-29
-date modified: 2023-09-29
+date modified: 2023-09-30
 ---
 
 ## 1. Giới thiệu thuật toán Rabin Karp
@@ -42,17 +42,17 @@ Ví dụ, nếu chuỗi chỉ chứa `26` chữ cái viết thường từ `a` �
 
 Ví dụ, giá trị băm của chuỗi `cat` có thể được biểu diễn như sau:
 
-$\begin{align} Hash(cat) &= c \times 26 \times 26 + a \times 26 + t \times 1 \cr &= 2 \times 26 \times 26 + 0 \times 26 + 19 \times 1 \cr &= 1371 \end{align}$
+$\begin{aligned} Hash(cat) &= c \times 26 \times 26 + a \times 26 + t \times 1 \cr &= 2 \times 26 \times 26 + 0 \times 26 + 19 \times 1 \cr &= 1371 \end{aligned}$
 
 Phương pháp tính giá trị băm này có một đặc điểm: khi tính toán giá trị băm của chuỗi con kế tiếp, chúng ta có thể sử dụng giá trị băm của chuỗi con trước đó.
 
 Ví dụ, nếu chuỗi con kế tiếp của `cat` là `ate`. Theo cách tính giá trị băm trên, giá trị băm của `ate` là:
 
-$\begin{align} Hash(ate) &= a \times 26 \times 26 + t \times 26 + e \times 1 \cr &= 0 \times 26 \times 26 + 19 \times 26 + 4 \times 1 \cr &= 498 \end{align}$
+$\begin{aligned} Hash(ate) &= a \times 26 \times 26 + t \times 26 + e \times 1 \cr &= 0 \times 26 \times 26 + 19 \times 26 + 4 \times 1 \cr &= 498 \end{aligned}$
 
 Nếu tính giá trị băm của `ate` bằng cách sử dụng giá trị băm của chuỗi con trước đó `cat`, giá trị băm của `ate` sẽ là:
 
-$\begin{align} Hash(ate) &= (Hash(cat) - c \times 26 \times 26) \times 26 + e \times 26 \cr &= (1371 - 2 \times 26 \times 26) \times 26 + 4 \times 1 \cr &= 498 \end{align}$
+$\begin{aligned} Hash(ate) &= (Hash(cat) - c \times 26 \times 26) \times 26 + e \times 26 \cr &= (1371 - 2 \times 26 \times 26) \times 26 + 4 \times 1 \cr &= 498 \end{aligned}$
 
 Có thể thấy, hai cách tính giá trị băm này cho kết quả giống nhau. Nhưng cách tính thứ hai không cần duyệt qua chuỗi con, chỉ cần tính toán từng ký tự để có được giá trị băm của toàn bộ chuỗi con. Điều này giúp giảm độ phức tạp tính toán giá trị băm của chuỗi con xuống còn $O(1)$. Sau đó, chúng ta có thể sử dụng thuật toán băm cuộn để nhanh chóng tính toán giá trị băm của chuỗi con.
 

@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-09-29
+date modified: 2023-09-30
 ---
 
 # Data Structure and Algorithms MOC
@@ -109,8 +109,8 @@ date modified: 2023-09-29
 ### Single Pattern Matching
 
 - [[Brute Force Matching]]
-- [[KMP]]
 - [[Rabin Karp]]
+- [[KMP]]
 - [[Boyer Moore]]
 - [[Horspool]]
 - [[Sunday]]
@@ -149,6 +149,7 @@ date modified: 2023-09-29
 ### Basic
 
 - [[Graph Basic]]
+- [[Graph Structure]]
 
 ### Traversal
 
@@ -173,14 +174,73 @@ date modified: 2023-09-29
 
 ### Enumeration
 
+- [[Enumeration]]
+
 ### Recursion
+
+- [[Recursion]]
 
 ### Divide and Conquer
 
+- [[Divide and Conquer]]
+
 ### Backtracking
+
+- [[Backtracking]]
 
 ### Greedy
 
+- [[Greedy]]
+
 ### Bit Operation
 
+- [[Bit Operation]]
+
 ## Dynamic Programming
+
+### Basic
+
+- [[DP Basic]]
+
+### Memoization
+
+- [[DP Memoization]]
+
+### Linear
+
+- [[Linear DP]]
+
+### Knapsack
+
+- [[Knapsack Problem Part 1]]
+- [[Knapsack Problem Part 2]]
+- [[Knapsack Problem Part 3]]
+- [[Knapsack Problem Part 4]]
+
+### Interval
+
+- [[Interval DP]]
+
+### Tree DP
+
+- [[Tree DP]]
+
+### State
+
+- [[State DP]]
+
+### Counting
+
+- [[Counting DP]]
+
+### Digit
+
+### Probability
+
+- [[Probability DP]]
+
+### Optimization
+
+- [[Monotone Stack Queue Optimization]]
+- [[ST BIT Optimization]]
+- [[Slope Optimization]]
