@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/String/Single Pattern Matching/Rabin Karp.md",
+                "file": "Technical/DSA/DSA MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "1a5fccba147b8bd6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/DSA/Tree/BST/BST Problems.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/String/Single Pattern Matching/Rabin Karp.md"
+                "file": "Technical/DSA/Tree/BST/BST Problems.md"
               }
             }
           }
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/String/Single Pattern Matching/Rabin Karp.md",
+                "file": "Technical/DSA/Tree/BST/BST Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/String/Single Pattern Matching/Rabin Karp.md",
+                "file": "Technical/DSA/Tree/BST/BST Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,12 +182,12 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/String/Single Pattern Matching/Rabin Karp.md"
+                "file": "Technical/DSA/Tree/BST/BST Problems.md"
               }
             }
           },
           {
-            "id": "06b9192fea9e1023",
+            "id": "f024d6bf7b9e239f",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -182,7 +195,7 @@
             }
           },
           {
-            "id": "913a8a38d5b9e171",
+            "id": "7b93c8dd613706be",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -216,53 +229,53 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "3c10ff85c6c89027",
+  "active": "1a5fccba147b8bd6",
   "lastOpenFiles": [
-    "Technical/DSA/String/Single Pattern Matching/KMP.md",
     "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/String/Single Pattern Matching/Rabin Karp.md",
-    "Technical/DSA/String/Single Pattern Matching/Brute Force Matching.md",
-    "Technical/DSA/String/Basic/String Basic Problems.md",
-    "Technical/DSA/String/Basic/String Basic.md",
-    "Technical/DSA/String/Single Pattern Matching",
-    "Technical/DSA/String/Basic",
-    "Technical/DSA/Array/Basic/Array Basic Problems.md",
-    "Technical/DSA/String",
-    "Technical/DSA/Array/Array Basic Problems.md",
-    "Technical/DSA/Leetcode/LeetCode 0149.md",
-    "Technical/DSA/Hash Table/Hash Table Problems.md",
-    "Technical/DSA/Leetcode/LeetCode 0041.md",
-    "Technical/DSA/Leetcode/LeetCode 0220.md",
-    "Technical/DSA/Hash Table/Hash Table.md",
-    "Technical/DSA/Leetcode/LeetCode 0218.md",
-    "Technical/DSA/Leetcode/LeetCode 0347.md",
-    "Technical/DSA/Queue/Priority/Priority Queue Problems.md",
-    "Technical/DSA/Leetcode/LeetCode 0295.md",
-    "Technical/DSA/Leetcode/LeetCode 0239.md",
-    "Technical/DSA/Queue/Priority/Priority Queue.md",
-    "Technical/DSA/Queue/Basic/Queue Basic.md",
-    "Technical/DSA/Stack/Basic/Stack Basic.md",
-    "Technical/DSA/Leetcode/LeetCode 0622.md",
-    "Technical/DSA/Queue/Priority",
-    "Technical/DSA/Queue/Basic/Queue Basic Problems.md",
-    "Technical/DSA/Array/Binary Search/Binary Search Problems.md",
-    "Technical/DSA/Array/Basic/Array Basic.md",
     "Home.md",
-    "Extras/Media/20220107101219.png",
-    "Extras/Media/20220107102446.png",
-    "Technical/DSA/Stack/Monotone",
-    "Technical/DSA/Queue/Basic",
-    "Technical/DSA/Stack/Basic",
-    "Technical/DSA/Queue",
-    "Technical/DSA/Stack",
-    "Technical/DSA/Linked List/Two Pointers",
-    "Extras/Draws/js-reference-copy.excalidraw.png",
-    "Extras/Draws/js-basic-type-copy.excalidraw.png",
-    "Extras/Draws/variable-heap.png",
-    "Extras/Draws/variable-heap.svg",
-    "Extras/Draws/variable-heap.excalidraw.svg",
-    "Extras/Draws/variable-heap.excalidraw.png",
-    "Extras/Draws/Excution Context.excalidraw.png",
-    "Extras/Draws/JS Excution Context Lifecycle.excalidraw.png"
+    "Technical/DSA/Tree/Other/B Tree.md",
+    "Technical/DSA/Tree/Other/AVL Tree.md",
+    "Technical/DSA/Tree/UF/Union-Find.md",
+    "Technical/DSA/Tree/Other",
+    "Technical/DSA/Tree/BIT/Binary Indexed Tree.md",
+    "Technical/DSA/Tree/ST/Segment Tree.md",
+    "Technical/DSA/Tree/BST/Binary Search Tree.md",
+    "Technical/DSA/Tree/BST/BST Problems.md",
+    "Technical/DSA/Tree/Binary Tree/Binary Tree Basic.md",
+    "Technical/DSA/Tree/Binary Tree/Binary Tree Problems.md",
+    "Technical/DSA/Tree/Binary Tree/Binary Tree Reduction.md",
+    "Technical/DSA/Tree/UF",
+    "Technical/DSA/Tree/BIT",
+    "Technical/DSA/Tree/ST",
+    "Extras/Media/20230906153409.png",
+    "Extras/Media/20220205003716.png",
+    "Extras/Media/20220205003701.png",
+    "Extras/Media/20220205003647.png",
+    "Extras/Media/20220118152105.png",
+    "Extras/Media/20220118151100.png",
+    "Extras/Media/20220117141211.png",
+    "Extras/Media/20220115182535.png",
+    "Extras/Media/20220115162728.png",
+    "Extras/Media/20220114120000.png",
+    "Technical/DSA/Tree/BST",
+    "Technical/DSA/Tree/Binary Tree/Binary Tree Traversal.md",
+    "Technical/DSA/String/MPM/AC Automation.md",
+    "Technical/DSA/Tree/Binary Tree",
+    "Technical/DSA/String/MPM/Suffix Array.md",
+    "Technical/DSA/String/MPM/Trie.md",
+    "Technical/DSA/Leetcode/LeetCode 0212.md",
+    "Technical/DSA/String/MPM/Trie Problems.md",
+    "Technical/DSA/Leetcode/LeetCode 0677.md",
+    "Technical/DSA/Leetcode/LeetCode 0208.md",
+    "Technical/DSA/String/MPM",
+    "Technical/DSA/String/SPM/Single Matching Pattern Problems.md",
+    "Technical/DSA/String/SPM/Sunday.md",
+    "Technical/DSA/String/SPM/Horspool.md",
+    "Technical/DSA/String/SPM/Boyer Moore.md",
+    "Technical/DSA/String/SPM/Rabin Karp.md",
+    "Technical/DSA/String/SPM/KMP.md",
+    "Technical/DSA/String/SPM",
+    "Technical/DSA/String/Basic",
+    "Technical/DSA/String"
   ]
 }

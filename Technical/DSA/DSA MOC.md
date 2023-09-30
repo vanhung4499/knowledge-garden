@@ -114,6 +114,7 @@ date modified: 2023-09-30
 - [[Boyer Moore]]
 - [[Horspool]]
 - [[Sunday]]
+- [[Single Matching Pattern Problems]]
 
 ### Multi Pattern Matching
 
@@ -126,23 +127,29 @@ date modified: 2023-09-30
 ### Binary Tree
 
 - [[Binary Tree Basic]]
-- [[Binary Tree Traverse]]
+- [[Binary Tree Traversal]]
+- [[Binary Tree Reduction]]
+- [[Binary Tree Problems]]
 
 ### Binary Search Tree
 
 - [[Binary Search Tree]]
+- [[BST Problems]]
 
 ### Segment Tree
 
 - [[Segment Tree]]
+- [[Segment Tree Problems]]
 
 ### Binary Indexed Tree
 
 - [[Binary Indexed Tree]]
+- [[BIT Problems]]
 
 ### Union Find
 
 - [[Union Find]]
+- [[Union-Find Problems]]
 
 ## Graph
 

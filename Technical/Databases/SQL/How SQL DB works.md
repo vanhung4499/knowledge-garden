@@ -32,7 +32,7 @@ tags: [db, sql]
 
 - [[Binary Search Tree]] chỉ yêu cầu truy cấn O(log(n)), trong khi nếu bạn sử dụng mảng trực tiếp, bạn sẽ cần truy vấn O(n)
 
-### [[B-Tree]]
+### [[B Tree]]
 
 > Tree làm việc tốt với việc tìm một giá trị cụ thể, nhưng khi bạn cần phải **tìm nhiều yếu tố giữa hai giá trị**, bạn có thể gặp rắc rối lớn. Chi phí của bạn sẽ là O(N) vì bạn phải tìm mỗi nút của cây để xác định xem nó có nằm giữa 2 giá trị đó hay không (ví dụ: sử dụng inorder traversal trên cây). Và thao tác này không phải là thuận lợi cho Disk I/O, bởi vì bạn phải đọc toàn bộ cây. Chúng ta cần phải tìm một phương pháp truy vấn phạm vi hiệu quả.
 
@@ -41,7 +41,7 @@ tags: [db, sql]
 - Bạn phải duy trì thứ tự giữa các nút trong B+ Tree, nếu không các nút sẽ trở nên lộn xộn và bạn không thể tìm thấy nút bạn muốn.
 - Bạn phải giảm thiểu số lớp của B+ Tree, nếu không độ phức tạp của O (log(N) sẽ trở thành O (N
 
-Nói cách khác, [[B-Tree]] cần phải tự sắp xếp và tự cân bằng. Rất may, chúng có xóa và chèn thông minh. Nhưng điều này cũng mang lại chi phí: trong B+ Tree, chèn và xóa là độ phức tạp O(log(N). Vì vậy, một số người đã nghe nói rằng sử dụng quá nhiều Index không phải là một ý tưởng tốt như vậy. Đúng vậy, bạn đã làm chậm hoạt động của một hàng trong bảng chèn/cập nhật/xóa nhanh chóng vì cơ sở dữ liệu cần phải cập nhật chỉ mục của bảng với chi phí cao cho mỗi hoạt động O(log(N). Hơn nữa, tăng chỉ mục có nghĩa là mang lại nhiều khối lượng công việc hơn cho Transaction Manager (sẽ được đề cập phía dưới).
+Nói cách khác, [[B Tree]] cần phải tự sắp xếp và tự cân bằng. Rất may, chúng có xóa và chèn thông minh. Nhưng điều này cũng mang lại chi phí: trong B+ Tree, chèn và xóa là độ phức tạp O(log(N). Vì vậy, một số người đã nghe nói rằng sử dụng quá nhiều Index không phải là một ý tưởng tốt như vậy. Đúng vậy, bạn đã làm chậm hoạt động của một hàng trong bảng chèn/cập nhật/xóa nhanh chóng vì cơ sở dữ liệu cần phải cập nhật chỉ mục của bảng với chi phí cao cho mỗi hoạt động O(log(N). Hơn nữa, tăng chỉ mục có nghĩa là mang lại nhiều khối lượng công việc hơn cho Transaction Manager (sẽ được đề cập phía dưới).
 
 ### Hash Table
 
@@ -266,7 +266,7 @@ Sử dụng độ phức tạp thời gian dễ dàng hơn nhiều (ít nhất l
 
 #### Chỉ mục (Index)
 
-> Khi nghiên cứu [[B-Tree]], tôi đã nói về Index, hãy nhớ rằng các chỉ số đã được sắp xếp.
+> Khi nghiên cứu [[B Tree]], tôi đã nói về Index, hãy nhớ rằng các chỉ số đã được sắp xếp.
 
 Chỉ để tham khảo: Ngoài ra còn có các loại chỉ mục khác, chẳng hạn như bitmap index, không giống như chi phí của chỉ mục B+ Tree về CPU, Disk I/O và bộ nhớ.
 
