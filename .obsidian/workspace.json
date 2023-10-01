@@ -8,31 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "3c10ff85c6c89027",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/DSA/DSA MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "1a5fccba147b8bd6",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/Tree/BST/BST Problems.md",
+                "file": "Technical/DSA/Graph/Traversal/DFS.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -103,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/Tree/BST/BST Problems.md"
+                "file": "Technical/DSA/Graph/Traversal/DFS.md"
               }
             }
           }
@@ -135,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/Tree/BST/BST Problems.md",
+                "file": "Technical/DSA/Graph/Traversal/DFS.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -152,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/Tree/BST/BST Problems.md",
+                "file": "Technical/DSA/Graph/Traversal/DFS.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -182,12 +169,12 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/Tree/BST/BST Problems.md"
+                "file": "Technical/DSA/Graph/Traversal/DFS.md"
               }
             }
           },
           {
-            "id": "f024d6bf7b9e239f",
+            "id": "86f00df50c761144",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -195,7 +182,7 @@
             }
           },
           {
-            "id": "7b93c8dd613706be",
+            "id": "37fc3bf700971d3d",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -207,7 +194,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 466.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -229,53 +216,53 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "1a5fccba147b8bd6",
+  "active": "c6d173446b8ea23c",
   "lastOpenFiles": [
+    "Extras/Media/20220509113955.png",
+    "Extras/Media/20220509094655.png",
+    "Extras/Media/20220509094635.png",
+    "Extras/Media/20220507174723.png",
+    "Extras/Media/20220507172300.png",
+    "Extras/Media/20220507142647.png",
+    "Extras/Media/20220507112934.png",
+    "Extras/Media/20220505145302.png",
+    "Extras/Media/20220505145234.png",
+    "Extras/Media/20220317163249.png",
+    "Extras/Media/20220317163121.png",
+    "Technical/DSA/Graph/Traversal/DFS Problems.md",
+    "Technical/DSA/Graph/Traversal/BFS Problems.md",
+    "Technical/DSA/Graph/Traversal/BFS.md",
+    "Technical/DSA/Graph/Traversal/DFS.md",
+    "Technical/DSA/Graph/Graph MOC.md",
+    "Technical/DSA/Graph/Cycle",
+    "Technical/DSA/Graph/Traversal/Biconnected Components.md",
+    "Technical/DSA/Graph/Basic/Graph Structure.md",
+    "Technical/DSA/Graph/Basic/Graph Basic.md",
     "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Graph/MST",
+    "Technical/DSA/Graph/FB",
     "Home.md",
+    "Technical/DSA/Graph/Untitled.md",
+    "Technical/DSA/Graph/Traversal",
+    "Technical/DSA/Graph/Basic",
+    "Technical/DSA/Tree/DSU/Union-Find Problems.md",
+    "Technical/DSA/Tree/BIT/Binary Indexed Tree.md",
+    "Technical/DSA/Tree/Other/B+ Tree.md",
     "Technical/DSA/Tree/Other/B Tree.md",
     "Technical/DSA/Tree/Other/AVL Tree.md",
-    "Technical/DSA/Tree/UF/Union-Find.md",
-    "Technical/DSA/Tree/Other",
-    "Technical/DSA/Tree/BIT/Binary Indexed Tree.md",
-    "Technical/DSA/Tree/ST/Segment Tree.md",
-    "Technical/DSA/Tree/BST/Binary Search Tree.md",
+    "Technical/DSA/Tree/DSU/Union-Find.md",
+    "Technical/DSA/Tree/ST/Segment Tree Problems.md",
     "Technical/DSA/Tree/BST/BST Problems.md",
+    "Technical/DSA/Tree/BST/Binary Search Tree.md",
+    "Technical/DSA/Leetcode/LeetCode 0307.md",
+    "Technical/DSA/Leetcode/LeetCode 0303.md",
+    "Technical/DSA/Tree/ST/Segment Tree.md",
+    "Technical/DSA/Tree/Other",
     "Technical/DSA/Tree/Binary Tree/Binary Tree Basic.md",
     "Technical/DSA/Tree/Binary Tree/Binary Tree Problems.md",
-    "Technical/DSA/Tree/Binary Tree/Binary Tree Reduction.md",
-    "Technical/DSA/Tree/UF",
+    "Technical/DSA/Tree/DSU",
     "Technical/DSA/Tree/BIT",
     "Technical/DSA/Tree/ST",
-    "Extras/Media/20230906153409.png",
-    "Extras/Media/20220205003716.png",
-    "Extras/Media/20220205003701.png",
-    "Extras/Media/20220205003647.png",
-    "Extras/Media/20220118152105.png",
-    "Extras/Media/20220118151100.png",
-    "Extras/Media/20220117141211.png",
-    "Extras/Media/20220115182535.png",
-    "Extras/Media/20220115162728.png",
-    "Extras/Media/20220114120000.png",
-    "Technical/DSA/Tree/BST",
-    "Technical/DSA/Tree/Binary Tree/Binary Tree Traversal.md",
-    "Technical/DSA/String/MPM/AC Automation.md",
-    "Technical/DSA/Tree/Binary Tree",
-    "Technical/DSA/String/MPM/Suffix Array.md",
-    "Technical/DSA/String/MPM/Trie.md",
-    "Technical/DSA/Leetcode/LeetCode 0212.md",
-    "Technical/DSA/String/MPM/Trie Problems.md",
-    "Technical/DSA/Leetcode/LeetCode 0677.md",
-    "Technical/DSA/Leetcode/LeetCode 0208.md",
-    "Technical/DSA/String/MPM",
-    "Technical/DSA/String/SPM/Single Matching Pattern Problems.md",
-    "Technical/DSA/String/SPM/Sunday.md",
-    "Technical/DSA/String/SPM/Horspool.md",
-    "Technical/DSA/String/SPM/Boyer Moore.md",
-    "Technical/DSA/String/SPM/Rabin Karp.md",
-    "Technical/DSA/String/SPM/KMP.md",
-    "Technical/DSA/String/SPM",
-    "Technical/DSA/String/Basic",
-    "Technical/DSA/String"
+    "Technical/DSA/Tree/BST"
   ]
 }

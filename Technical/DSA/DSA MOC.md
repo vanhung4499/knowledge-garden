@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-09-30
+date modified: 2023-10-01
 ---
 
 # Data Structure and Algorithms MOC
@@ -20,7 +20,7 @@ date modified: 2023-09-30
 
 - [[DSA Intro]]
 - [[Algorithm Complexity]]
-- [[Leetcode Solutions List]]
+- [[Leetcode Solutions List]] Updating!
 
 ## Array
 
@@ -143,13 +143,19 @@ date modified: 2023-09-30
 
 ### Binary Indexed Tree
 
-- [[Binary Indexed Tree]]
-- [[BIT Problems]]
+- [[Binary Indexed Tree]] Updating!
+- [[BIT Problems]] Updating!
 
 ### Union Find
 
-- [[Union Find]]
+- [[Union-Find]]
 - [[Union-Find Problems]]
+
+### Other
+
+- [[AVL Tree]] Updating!
+- [[B Tree]] Updating!
+- [[B+ Tree]] Updating!
 
 ## Graph
 
