@@ -30,14 +30,17 @@ date modified: 2023-10-01
 ## Backtracking
 
 - [[Backtracking]]
+- [[Backtracking Problems]]
 
 ## Greedy
 
 - [[Greedy]]
+- [[Greedy Problems]]
 
 ## Bit Operation
 
 - [[Bit Operation]]
+- [[Bit Operation Problems]]
 
 ## Sorting
 
@@ -115,7 +118,7 @@ date modified: 2023-10-01
 
 ### Memoization
 
-- [[DP Memoization]]
+- [[DP Memorization]]
 
 ### Linear
 

@@ -3,7 +3,7 @@ categories: [spring, framework, moc, java]
 tags: [spring, framework, moc, java]
 title: Spring MOC
 date created: 2023-07-04
-date modified: 2023-08-11
+date modified: 2023-1080-11
 ---
 
 # Spring Framework MOC

@@ -31,7 +31,7 @@ date modified: 2023-10-01
 
 ## LeetCode
 
-- [[Leetcode MOC]]
+- [[LeetCode MOC]]
 - [[Leetcode Solutions List]] Todo!
 - [[LeetCode By Categories]] Todo!
 - [[LeetCode Top 100]] Todo!

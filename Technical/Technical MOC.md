@@ -1,7 +1,7 @@
 ---
 categories: [moc, tech]
 date created: 2023-07-04
-date modified: 2023-07-22
+date modified: 2023-10701-22
 tags: [moc, tech]
 title: Technical MOC
 ---

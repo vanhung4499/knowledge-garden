@@ -3,10 +3,10 @@ title: Linux MOC
 tags: [linux, moc]
 categories: [linux, moc]
 date created: 2023-07-22
-date modified: 2023-09-03
+date modified: 2023-10-01
 ---
 
-# Linux Tutorial MOC
+# Linux MOC
 
 ## 📖 Contents
 
@@ -38,6 +38,8 @@ date modified: 2023-09-03
 - [[iptables]]
 
 ### Software Administration
+
+> Updating!
 
 - Development Environment
   - [[JDK Installation]]

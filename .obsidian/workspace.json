@@ -8,55 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "8b2f6ab9ec5aede9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/DSA/Algo/Recursion/Recursion.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "ca3e4e71dd8a907c",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/Algo/Alogrithms MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2e11c1234bff033c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/DSA/Algo/Alogrithms MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "677c87b83733c685",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/DSA/Algo/Dividing/Divide and Conquer Problems.md",
+                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "vertical"
@@ -127,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/Algo/Dividing/Divide and Conquer Problems.md"
+                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md"
               }
             }
           }
@@ -159,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/Algo/Dividing/Divide and Conquer Problems.md",
+                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -176,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/Algo/Dividing/Divide and Conquer Problems.md",
+                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -206,12 +169,12 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/Algo/Dividing/Divide and Conquer Problems.md"
+                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md"
               }
             }
           },
           {
-            "id": "05b1a35d90f41a62",
+            "id": "72db8adf4efeb04f",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -219,7 +182,7 @@
             }
           },
           {
-            "id": "1023c80f681969c6",
+            "id": "cfa94a06122965ae",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -253,30 +216,44 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "c6d173446b8ea23c",
+  "active": "ca3e4e71dd8a907c",
   "lastOpenFiles": [
-    "Technical/DSA/Algo/Alogrithms MOC.md",
-    "Technical/DSA/Algo/Dividing/Divide and Conquer Problems.md",
-    "Technical/DSA/Algo/Dividing/Divide and Conquer.md",
-    "Technical/DSA/Algo/Recursion/Recursion Problems.md",
-    "Technical/DSA/Algo/Dividing",
-    "Technical/DSA/DS/Data Structures MOC.md",
-    "Technical/DSA/Algo/Recursion/Recursion.md",
-    "Technical/DSA/Algo/Binary Search/Binary Search Problems.md",
-    "Technical/DSA/Algo/Enumeration/Enumeration Problems.md",
-    "Technical/DSA/Algo/Recursion",
-    "Technical/DSA/Algo/Enumeration/Enumeration.md",
-    "Technical/DSA/Algo/Enumeration",
+    "Technical/DSA/Leetcode/LeetCode 0576.md",
+    "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
+    "Technical/DSA/Leetcode/LeetCode 0375.md",
+    "Technical/DSA/Algo/DP/Basic/DP Basic.md",
+    "Technical/DSA/Algo/DP/Basic/DP Memorization.md",
     "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Introdution/Algorithm Complexity.md",
+    "Technical/DSA/Introdution/DSA Intro.md",
+    "Technical/DSA/Algo/DP/Memorization",
+    "Technical/DSA/Algo/Bit/Bit Operation Problems.md",
+    "Technical/DSA/Algo/Alogrithms MOC.md",
+    "Technical/DSA/Algo/Bit/Bit Operation.md",
+    "Technical/DSA/Algo/Bit",
+    "Home.md",
+    "Technical/DSA/Algo/Enumeration/Enumeration.md",
+    "Technical/DSA/Algo/Recursion/Recursion Problems.md",
+    "Technical/DSA/Algo/Recursion/Recursion.md",
+    "Technical/DSA/Algo/Greedy/Greedy Problems.md",
+    "Technical/DSA/Algo/Greedy/Greedy.md",
+    "Technical/DSA/Algo/Greedy",
+    "Technical/DSA/Algo/Backtracking/Backtracking.md",
+    "Technical/DSA/Algo/Backtracking/Backtracking Problems.md",
+    "Technical/DSA/Algo/Backtracking",
+    "Technical/DSA/DS/Data Structures MOC.md",
+    "Technical/DSA/Leetcode/LeetCode MOC.md",
+    "Technical/Technical MOC.md",
+    "Technical/DevOps/Linux/Operations/Vim.md",
+    "Technical/DevOps/Linux/Linux MOC.md",
+    "Technical/DevOps/Linux/Operations/Linux Operations.md",
+    "Technical/DevOps/Linux/Operations/Firewalld.md",
+    "Technical/DSA/Algo/Dividing",
+    "Technical/DSA/Algo/Recursion",
+    "Technical/DSA/Algo/Enumeration",
     "Technical/DSA/Algo",
     "Technical/DSA/DS",
-    "Technical/DSA/Algo/Graph/Traversal/Topological Sorting Problems.md",
     "Technical/DSA/Algo/DP/Basic",
-    "Technical/DSA/Algo/Graph/Traversal/Topological Sorting.md",
-    "Home.md",
-    "Technical/DSA/Algo/Graph/Graph MOC.md",
-    "Technical/DSA/Algo/Graph/Traversal/BFS Problems.md",
-    "Technical/DSA/Algo/Graph/Traversal/DFS.md",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
     "Extras/Media/20220509094635.png",
@@ -286,20 +263,6 @@
     "Extras/Media/20220507112934.png",
     "Extras/Media/20220505145302.png",
     "Extras/Media/20220505145234.png",
-    "Extras/Media/20220317163249.png",
-    "Technical/DSA/Algo/Graph/Traversal/DFS Problems.md",
-    "Technical/DSA/Algo/Graph/Traversal/BFS.md",
-    "Technical/DSA/Algo/Graph/Cycle",
-    "Technical/DSA/Graph/Traversal/Biconnected Components.md",
-    "Technical/DSA/Algo/Graph/Basic/Graph Structure.md",
-    "Technical/DSA/Algo/Graph/Basic/Graph Basic.md",
-    "Technical/DSA/Algo/Graph/MST",
-    "Technical/DSA/Algo/Graph/FB",
-    "Technical/DSA/Graph/Untitled.md",
-    "Technical/DSA/Algo/Graph/Traversal",
-    "Technical/DSA/DS/Tree/DSU/Union-Find Problems.md",
-    "Technical/DSA/DS/Tree/BIT/Binary Indexed Tree.md",
-    "Technical/DSA/DS/Tree/Other/B+ Tree.md",
-    "Technical/DSA/DS/Tree/Other/B Tree.md"
+    "Extras/Media/20220317163249.png"
   ]
 }
