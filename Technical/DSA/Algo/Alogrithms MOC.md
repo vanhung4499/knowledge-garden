@@ -7,7 +7,7 @@ categories:
   - dsa
   - algorithm
 date created: 2023-10-01
-date modified: 2023-10-01
+date modified: 2023-10-03
 ---
 
 # Alogrithms MOC
@@ -81,8 +81,9 @@ date modified: 2023-10-01
 ### Multi Pattern Matching
 
 - [[Trie]]
-- [[AC Automation]]
-- [[Suffix Array]]
+- [[Trie Problems]]
+- [[AC Automation]] Todo!
+- [[Suffix Array]] Todo!
 
 ## Graph
 
@@ -99,59 +100,77 @@ date modified: 2023-10-01
 
 ### Shortest Path
 
+> Updating!
+
 - [[Floyd]]
 - [[Bellman-Ford]]
 - [[Dijkstra]]
 
 ### Spanning Tree
 
+> Updating!
+
 - [[KrushKal]]
 - [[Prim]]
 
 ### Flow - Bipartite
+
+> Updating!
+
+- [[Flow]]
+- [[Bipartite]]
 
 ## Dynamic Programming
 
 ### Basic
 
 - [[DP Basic]]
-
-### Memoization
-
 - [[DP Memorization]]
+- [[DP Basic Problems]]
 
 ### Linear
 
 - [[Linear DP]]
+- [[Linear DP Problems]]
 
 ### Knapsack
 
-- [[Knapsack Problem Part 1]]
-- [[Knapsack Problem Part 2]]
-- [[Knapsack Problem Part 3]]
-- [[Knapsack Problem Part 4]]
+- [[Knapsack Part 1]]
+- [[Knapsack Part 2]]
+- [[Knapsack Part 3]]
+- [[Knapsack Part 4]]
+- [[Knapsack Part 5]]
+- [[Knapsack Problems]]
 
 ### Interval
 
 - [[Interval DP]]
+- [[Interval DP Problems]]
 
 ### Tree DP
 
 - [[Tree DP]]
+- [[Tree DP Problems]]
 
 ### State
 
 - [[State DP]]
+- [[State DP Problems]]
 
 ### Counting
 
 - [[Counting DP]]
+- [[Counting DP Problems]]
 
 ### Digit
+
+- [[Digit DP]]
+- [[Digit DP Problems]]
 
 ### Probability
 
 - [[Probability DP]]
+- [[Probability DP Problems]]
 
 ### Optimization
 

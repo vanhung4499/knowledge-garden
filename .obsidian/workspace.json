@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
+                "file": "Technical/DSA/Algo/Alogrithms MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md"
+                "file": "Technical/DSA/Algo/Alogrithms MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
+                "file": "Technical/DSA/Algo/Alogrithms MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
+                "file": "Technical/DSA/Algo/Alogrithms MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md"
+                "file": "Technical/DSA/Algo/Alogrithms MOC.md"
               }
             }
           },
@@ -218,17 +218,18 @@
   },
   "active": "ca3e4e71dd8a907c",
   "lastOpenFiles": [
-    "Technical/DSA/Leetcode/LeetCode 0576.md",
+    "Technical/DSA/Algo/String/MPM/AC Automation.md",
+    "Technical/DSA/Algo/Alogrithms MOC.md",
+    "Technical/DSA/Introdution/Algorithm Complexity.md",
     "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
+    "Technical/DSA/Leetcode/LeetCode 0576.md",
     "Technical/DSA/Leetcode/LeetCode 0375.md",
     "Technical/DSA/Algo/DP/Basic/DP Basic.md",
     "Technical/DSA/Algo/DP/Basic/DP Memorization.md",
     "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/Introdution/Algorithm Complexity.md",
     "Technical/DSA/Introdution/DSA Intro.md",
     "Technical/DSA/Algo/DP/Memorization",
     "Technical/DSA/Algo/Bit/Bit Operation Problems.md",
-    "Technical/DSA/Algo/Alogrithms MOC.md",
     "Technical/DSA/Algo/Bit/Bit Operation.md",
     "Technical/DSA/Algo/Bit",
     "Home.md",
@@ -247,7 +248,6 @@
     "Technical/DevOps/Linux/Operations/Vim.md",
     "Technical/DevOps/Linux/Linux MOC.md",
     "Technical/DevOps/Linux/Operations/Linux Operations.md",
-    "Technical/DevOps/Linux/Operations/Firewalld.md",
     "Technical/DSA/Algo/Dividing",
     "Technical/DSA/Algo/Recursion",
     "Technical/DSA/Algo/Enumeration",
