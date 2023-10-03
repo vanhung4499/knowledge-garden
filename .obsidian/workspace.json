@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 3.md",
+                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 3.md"
+                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 3.md",
+                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 3.md",
+                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 3.md"
+                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md"
               }
             }
           },
@@ -218,12 +218,28 @@
   },
   "active": "ca3e4e71dd8a907c",
   "lastOpenFiles": [
-    "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 4.md",
+    "Technical/DSA/Algo/DP/Digit/Digit DP Problems.md",
+    "Technical/DSA/Algo/Alogrithms MOC.md",
+    "Technical/DSA/Algo/DP/Digit/Digit DP.md",
+    "Technical/DSA/Algo/DP/Digit",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Algo/DP/Counting/Counting DP.md",
+    "Technical/DSA/Algo/DP/Counting/Counting DP Problems.md",
+    "Technical/DSA/Algo/DP/State/State DP Problems.md",
+    "Technical/DSA/Algo/DP/Counting",
+    "Technical/DSA/Algo/DP/State/State DP.md",
+    "Technical/DSA/Algo/DP/State",
+    "Technical/DSA/Algo/Base",
+    "Technical/DSA/Algo/DP/Interval/Interval DP Problems.md",
+    "Technical/DSA/Algo/DP/Tree/Tree DP.md",
+    "Technical/DSA/Algo/DP/Tree/Tree DP Problems.md",
+    "Technical/DSA/Algo/DP/Interval/Interval DP.md",
     "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 3.md",
+    "Technical/DSA/Algo/DP/Interval",
+    "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 4.md",
     "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 2.md",
     "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 5.md",
     "Technical/DSA/Algo/DP/Knapsack/Knapsack Problems.md",
-    "Technical/DSA/Algo/Alogrithms MOC.md",
     "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 1.md",
     "Technical/DSA/Algo/DP/Linear/Linear DP Problems.md",
     "Technical/DSA/Algo/DP/Knapsack",
@@ -236,24 +252,8 @@
     "Home.md",
     "Technical/DSA/Algo/String/MPM/AC Automation.md",
     "Technical/DSA/Introdution/Algorithm Complexity.md",
-    "Technical/DSA/Leetcode/LeetCode 0576.md",
-    "Technical/DSA/Leetcode/LeetCode 0375.md",
-    "Technical/DSA/Algo/DP/Basic/DP Basic.md",
-    "Technical/DSA/Algo/DP/Basic/DP Memorization.md",
-    "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/Introdution/DSA Intro.md",
     "Technical/DSA/Algo/DP/Memorization",
-    "Technical/DSA/Algo/Bit/Bit Operation Problems.md",
-    "Technical/DSA/Algo/Bit/Bit Operation.md",
-    "Technical/DSA/Algo/Bit",
-    "Technical/DSA/Algo/Enumeration/Enumeration.md",
-    "Technical/DSA/Algo/Recursion/Recursion Problems.md",
-    "Technical/DSA/Algo/Recursion/Recursion.md",
-    "Technical/DSA/Algo/Greedy",
-    "Technical/DSA/Algo/Backtracking",
-    "Technical/DSA/Algo/Dividing",
-    "Technical/DSA/Algo/Recursion",
-    "Technical/DSA/Algo/Enumeration",
+    "Technical/DSA/Algo/Base/Bit",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
     "Extras/Media/20220509094635.png",

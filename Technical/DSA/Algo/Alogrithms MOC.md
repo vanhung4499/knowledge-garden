@@ -12,37 +12,39 @@ date modified: 2023-10-03
 
 # Alogrithms MOC
 
-## Enumeration
+## Base Algorithms
+
+### Enumeration
 
 - [[Enumeration]]
 - [[Enumeration Problems]]
 
-## Recursion
+### Recursion
 
 - [[Recursion]]
 - [[Recursion Problems]]
 
-## Divide and Conquer
-
-- [[Divide and Conquer]]
-- [[Divide and Conquer Problems]]
-
-## Backtracking
+### Backtracking
 
 - [[Backtracking]]
 - [[Backtracking Problems]]
 
-## Greedy
+### Divide and Conquer
+
+- [[Divide and Conquer]]
+- [[Divide and Conquer Problems]]
+
+### Greedy
 
 - [[Greedy]]
 - [[Greedy Problems]]
 
-## Bit Operation
+### Bit Operation
 
 - [[Bit Operation]]
 - [[Bit Operation Problems]]
 
-## Sorting
+### Sorting
 
 - [[Bubble Sort]]
 - [[Selection Sort]]
@@ -56,7 +58,7 @@ date modified: 2023-10-03
 - [[Bucket Sort]]
 - [[Sorting Problems]]
 
-## Binary Search
+### Binary Search
 
 - [[Binary Search Part 1]]
 - [[Binary Search Part 2]]
