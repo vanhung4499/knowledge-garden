@@ -130,7 +130,8 @@ date modified: 2023-10-03
 
 ### Linear
 
-- [[Linear DP]]
+- [[Linear DP Part 1]]
+- [[Linear DP Part 2]]
 - [[Linear DP Problems]]
 
 ### Knapsack

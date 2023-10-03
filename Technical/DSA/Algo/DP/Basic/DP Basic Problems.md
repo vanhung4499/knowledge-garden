@@ -22,7 +22,7 @@ date modified: 2023-10-03
 | 0494 | [Target Sum](https://leetcode.com/problems/target-sum/) | [[LeetCode XXXX]] | Array, Dynamic Programming, Backtracking | Medium |
 | 0576 | [Out of Boundary Paths](https://leetcode.com/problems/out-of-boundary-paths/) | [[LeetCode 0576]] | Dynamic Programming | Medium |
 | 0087 | [Scramble String](https://leetcode.com/problems/scramble-string/) |  | String, Dynamic Programming | Hard |
-| 0403 | [Frog Jump](https://leetcode.com/problems/frog-jump/) | [[LeetCode XXXX]] | Array, Dynamic Programming | Hard |
+| 0403 | [Frog Jump](https://leetcode.com/problems/frog-jump/) | [[LeetCode 0403]] | Array, Dynamic Programming | Hard |
 | 0552 | [Student Attendance Record II](https://leetcode.com/problems/student-attendance-record-ii/) |  | Dynamic Programming | Hard |
 | 0913 | [Cat and Mouse](https://leetcode.com/problems/cat-and-mouse/) |  | Graph, Topological Sort, Memorization Search, Mathematics, Dynamic Programming, Game Theory | Hard |
 | 0329 | [Longest Increasing Path in a Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/) | [[LeetCode XXXX]] | Depth-First Search, Breadth-First Search, Graph, Topological Sort, Memorization Search, Array, Dynamic Programming, Matrix | Hard |
