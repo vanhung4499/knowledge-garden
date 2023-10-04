@@ -3,7 +3,7 @@ tags: [algorithm]
 categories: [algorithm]
 title: Graph MOC
 date created: 2023-07-08
-date modified: 2023-10-01
+date modified: 2023-10-04
 ---
 
 ## Graph
@@ -21,15 +21,18 @@ date modified: 2023-10-01
 
 ### Shortest Path
 
+- [[Shortest Path]]
 - [[Floyd]]
 - [[Bellman-Ford]]
 - [[Dijkstra]]
+- [[Shortest Path Problems]]
 
 ### Spanning Tree
 
-- [[Minimun Spanning Tree]]
-- [[KrushKal]]
+- [[Minimum Spanning Tree]]
+- [[KrusKal]]
 - [[Prim]]
+- [[MST Problems]]
 
 ### Flow - Bipartite
 

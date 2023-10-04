@@ -7,10 +7,14 @@ categories:
   - dsa
   - data-structure
 date created: 2023-10-01
-date modified: 2023-10-01
+date modified: 2023-10-04
 ---
 
 # Data Structures MOC
+
+> [!Info]  
+> - Tổng hợp kiến thức và thực hành với các cấu trúc dữ liệu cơ bản và nâng cao.
+> - Hiểu và áp dụng các cấu trúc dữ liệu vào các thuật toán để giải quyết các bài toán.
 
 ## Array
 
@@ -83,6 +87,12 @@ date modified: 2023-10-01
 
 - [[Binary Search Tree]]
 - [[BST Problems]]
+- [[AVL Tree]] Todo!
+- [[B Tree]] Todo!
+- [[B+ Tree]] Todo!
+- [[Red Black Tree]] Todo!
+- [[Treap]] Todo!
+- [[Splay Tree]] Todo!
 
 ### Segment Tree
 
@@ -91,16 +101,18 @@ date modified: 2023-10-01
 
 ### Binary Indexed Tree
 
-- [[Binary Indexed Tree]] Updating!
-- [[BIT Problems]] Updating!
+> Updating!
+
+- [[Binary Indexed Tree]]
+- [[BIT Problems]]
 
 ### Union Find
 
-- [[Union-Find]]
+- [[Disjoint Set Union]]
 - [[Union-Find Problems]]
 
 ### Other
 
-- [[AVL Tree]] Updating!
-- [[B Tree]] Updating!
-- [[B+ Tree]] Updating!
+> Updating!
+
+- [[Huffman Tree]]

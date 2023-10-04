@@ -7,7 +7,7 @@ categories:
   - dsa
   - data-structure
 date created: 2023-09-29
-date modified: 2023-09-29
+date modified: 2023-10-04
 ---
 
 ## 1. Giới thiệu hàng đợi ưu tiên
@@ -36,11 +36,11 @@ Nhiều ngôn ngữ cung cấp cài đặt hàng đợi ưu tiên. Ví dụ, tro
 
 Các hoạt động cơ bản liên quan đến hàng đợi ưu tiên tương tự như hàng đợi thông thường, chủ yếu là **"hoạt động thêm phần tử"** và **"hoạt động xóa phần tử"**.
 
-Cách cài đặt hàng đợi ưu tiên cũng có nhiều cách, ngoài cách sử dụng "cài đặt mảng (lưu trữ tuần tự)" và "cài đặt danh sách liên kết", cách phổ biến nhất mà chúng ta thường sử dụng là sử dụng **"cấu trúc heap nhị phân"** để cài đặt hàng đợi ưu tiên. Dưới đây là giới thiệu và tổng kết về ba phương pháp.
+Cách cài đặt hàng đợi ưu tiên cũng có nhiều cách, ngoài cách sử dụng "cài đặt mảng (lưu trữ tuần tự)" và "cài đặt danh sách liên kết", cách phổ biến nhất mà chúng ta thường sử dụng là sử dụng **"cấu trúc Heap"** để cài đặt hàng đợi ưu tiên. Dưới đây là giới thiệu và tổng kết về ba phương pháp.
 
 - **Cài đặt hàng đợi ưu tiên bằng mảng (lưu trữ tuần tự)**: Hoạt động thêm phần tử bằng cách chèn trực tiếp vào cuối mảng, độ phức tạp thời gian là $O(1)$. Hoạt động xóa phần tử cần duyệt qua toàn bộ mảng, tìm phần tử có mức ưu tiên cao nhất, trả về và xóa phần tử đó, độ phức tạp thời gian là $O(n)$.
 - **Cài đặt hàng đợi ưu tiên bằng danh sách liên kết**: Các phần tử trong danh sách liên kết được sắp xếp theo mức ưu tiên, hoạt động thêm phần tử cần tạo nút cho phần tử cần chèn và tìm vị trí chèn phù hợp trong danh sách liên kết, độ phức tạp thời gian là $O(n)$. Hoạt động xóa phần tử trả về phần tử đầu danh sách liên kết và xóa phần tử đó, độ phức tạp thời gian là $O(1)$.
-- **Cài đặt hàng đợi ưu tiên bằng cấu trúc heap nhị phân**: Xây dựng một cấu trúc heap nhị phân, heap nhị phân được sắp xếp theo mức ưu tiên. Hoạt động thêm phần tử là chèn phần tử vào vị trí phù hợp trong heap nhị phân, độ phức tạp thời gian là $O(\log_2n)$. Hoạt động xóa phần tử trả về phần tử có mức ưu tiên cao nhất trong heap nhị phân và xóa phần tử đó, độ phức tạp thời gian cũng là $O(\log n)$.
+- **Cài đặt hàng đợi ưu tiên bằng cấu trúc Heap**: Xây dựng một cấu trúc Heap, Heap được sắp xếp theo mức ưu tiên. Hoạt động thêm phần tử là chèn phần tử vào vị trí phù hợp trong Heap, độ phức tạp thời gian là $O(\log_2n)$. Hoạt động xóa phần tử trả về phần tử có mức ưu tiên cao nhất trong Heap và xóa phần tử đó, độ phức tạp thời gian cũng là $O(\log n)$.
 
 Dưới đây là tổng kết về độ phức tạp thời gian của hoạt động thêm phần tử và hoạt động xóa phần tử trong ba cách cài đặt.
 
@@ -50,30 +50,30 @@ Dưới đây là tổng kết về độ phức tạp thời gian của hoạt 
 | Mảng | $O(1)$                                    | $O(n)$                                                                           |
 | Danh sách liên kết | $O(n)$                             | $O(1)$                                                                           |
 
-Từ bảng trên, chúng ta có thể thấy rằng sử dụng **"cấu trúc heap nhị phân"** để cài đặt hàng đợi ưu tiên là hiệu quả nhất. Dưới đây chúng ta sẽ tìm hiểu cách cài đặt hàng đợi ưu tiên bằng cấu trúc heap nhị phân.
+Từ bảng trên, chúng ta có thể thấy rằng sử dụng **"cấu trúc Heap"** để cài đặt hàng đợi ưu tiên là hiệu quả nhất. Dưới đây chúng ta sẽ tìm hiểu cách cài đặt hàng đợi ưu tiên bằng cấu trúc Heap.
 
-## 4. Cài đặt hàng đợi ưu tiên bằng cấu trúc heap nhị phân
+## 4. Cài đặt hàng đợi ưu tiên bằng cấu trúc Heap
 
-Chúng ta đã từng giới thiệu về heap nhị phân trong [[Heap Sort]]. Ở đây, chúng ta sẽ giới thiệu một lần nữa.
+Chúng ta đã từng giới thiệu về [[Heap]]. Ở đây, chúng ta sẽ ôn lại một lần .
 
-### 4.1 Định nghĩa heap nhị phân
+### 4.1 Định nghĩa Heap
 
-Heap nhị phân: Là một cây nhị phân hoàn chỉnh thỏa mãn một trong hai điều kiện sau:
+Heap: Là một cây nhị phân hoàn chỉnh thỏa mãn một trong hai điều kiện sau:
 
 - Max Heap: Giá trị của nút gốc ≥ giá trị của các nút con.
 - Min Heap: Giá trị của nút gốc ≤ giá trị của các nút con.
 
-### 4.2 Các hoạt động cơ bản của heap nhị phân
+### 4.2 Các hoạt động cơ bản của Heap
 
-Heap nhị phân chủ yếu liên quan đến hai hoạt động cơ bản: "Phương pháp điều chỉnh heap" và "Phương pháp xây dựng mảng thành heap nhị phân".
+Heap chủ yếu liên quan đến hai hoạt động cơ bản: "Phương pháp điều chỉnh heap" và "Phương pháp xây dựng mảng thành Heap".
 
 - **Phương pháp điều chỉnh heap `heapAdjust`**: Tạo một heap mới từ các phần tử còn lại sau khi di chuyển phần tử có giá trị lớn nhất. Cụ thể như sau:
   - Bắt đầu từ nút gốc, điều chỉnh vị trí của các nút từ trên xuống dưới để tạo thành một heap. Đó là, hoán đổi nút có chỉ số `i` với nút con trái (chỉ số `2 * i`) hoặc nút con phải (chỉ số `2 * i + 1`) có giá trị lớn nhất.
   - Vì đã hoán đổi vị trí, các tính chất heap của cây con trái và cây con phải của nút hiện tại đã bị phá vỡ. Do đó, tiếp tục điều chỉnh từ các nút con trái và phải của nút hiện tại từ trên xuống dưới.
   - Tiếp tục quá trình này cho đến khi toàn bộ cây nhị phân hoàn chỉnh trở thành một Max Heap.
-- **Phương pháp xây dựng mảng thành heap nhị phân (phương pháp xây dựng heap ban đầu) `heapify`**:
+- **Phương pháp xây dựng mảng thành Heap (phương pháp xây dựng heap ban đầu) `heapify`**:
   - Nếu cây nhị phân tương ứng với mảng gốc (không nhất thiết là heap) có độ sâu `d`, bắt đầu từ nhánh cuối cùng của tầng `d - 1` (chỉ số là ⌊n/2⌋), ban đầu đặt `i = ⌊n/2⌋`, và gọi phương pháp điều chỉnh heap.
-  - Mỗi lần gọi phương pháp điều chỉnh heap, giảm `i` đi một đơn vị, cho đến khi `i == 1`, và sau đó gọi một lần nữa, mảng gốc đã được xây dựng thành một heap nhị phân.
+  - Mỗi lần gọi phương pháp điều chỉnh heap, giảm `i` đi một đơn vị, cho đến khi `i == 1`, và sau đó gọi một lần nữa, mảng gốc đã được xây dựng thành một Heap.
 
 ### 4.3 Các hoạt động cơ bản của hàng đợi ưu tiên
 
@@ -88,12 +88,12 @@ Trong "3. Cách cài đặt hàng đợi ưu tiên", chúng ta đã đề cập 
   - Hoán đổi phần tử đầu và phần tử cuối của mảng `nums`. Lúc này, phần tử cuối của `nums` là phần tử có giá trị lớn nhất (mức ưu tiên cao nhất), loại bỏ phần tử này khỏi `nums` và lưu trữ nó.
   - Sau khi loại bỏ, gọi phương pháp điều chỉnh heap cho các phần tử còn lại trong `nums`, biến chúng thành một Max Heap.
 
-### 4.4 Cài đặt hàng đợi ưu tiên bằng cấu trúc heap nhị phân
+### 4.4 Cài đặt hàng đợi ưu tiên bằng cấu trúc Heap
 
-Chúng ta sẽ cài đặt hàng đợi ưu tiên bằng cách sử dụng cấu trúc heap nhị phân. Chúng ta sẽ triển khai năm phương thức chính:
+Chúng ta sẽ cài đặt hàng đợi ưu tiên bằng cách sử dụng cấu trúc Heap. Chúng ta sẽ triển khai năm phương thức chính:
 
 - `heapAdjust`: Điều chỉnh cây nhị phân thành Max Heap.
-- `heapify`: Xây dựng mảng thành heap nhị phân (phương pháp xây dựng heap ban đầu).
+- `heapify`: Xây dựng mảng thành Heap (phương pháp xây dựng heap ban đầu).
 - `heappush`: Thêm một phần tử vào heap, cũng là phương thức enqueue của hàng đợi ưu tiên.
 - `heappop`: Xóa phần tử đầu heap, cũng là phương thức dequeue của hàng đợi ưu tiên, trả về phần tử có mức ưu tiên cao nhất trong hàng đợi.
 - `heapSort`: Sắp xếp mảng bằng heap.
@@ -225,7 +225,7 @@ Chúng ta có thể sử dụng hàng đợi ưu tiên để giải quyết vấ
 4. Thêm giá trị lớn nhất vào mảng kết quả và tiếp tục trượt sang phải.
 5. Khi kết thúc quá trình trượt, trả về mảng kết quả.
 
-##### Ý tưởng 1: Mã giả
+##### Ý tưởng 1: Code
 
 ```python
 class Solution:
@@ -288,7 +288,7 @@ Output: [1]
    - Thao tác dequeue: Hoán đổi phần tử đầu hàng đợi ưu tiên với phần tử cuối hàng đợi, loại bỏ phần tử cuối khỏi hàng đợi. Tiếp tục điều chỉnh thành Max Heap.
 5. Lặp lại bước 4 cho đến khi kết thúc `k` lần. Độ phức tạp thời gian của `k` lần là $O(n\log_2 n)$.
 
-##### Ý tưởng 1: Mã giả
+##### Ý tưởng 1: Code
 
 ```python
 class Solution:
@@ -318,5 +318,3 @@ class Solution:
 
 - **Độ phức tạp thời gian**: $O(n \log n)$.
 - **Độ phức tạp không gian**: $O(n)$.
-
-###

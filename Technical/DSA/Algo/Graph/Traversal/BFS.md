@@ -3,7 +3,7 @@ tags: [dsa, algorithm]
 categories: [dsa, algorithm]
 title: BFS
 date created: 2023-05-29
-date modified: 2023-10-01
+date modified: 2023-10-04
 ---
 
 ## 1. Giới thiệu về thuật toán Tìm kiếm theo Chiều Rộng
@@ -34,7 +34,7 @@ Tiếp theo, chúng ta sẽ lấy một đồ thị vô hướng làm ví dụ �
 5. Đánh dấu nút $v$ là đã được duyệt và thêm nó vào hàng đợi, tức là `visited.add(v)` và `queue.append(v)`.
 6. Lặp lại các bước 3-5 cho đến khi hàng đợi $queue$ rỗng.
 
-### 3.2 Code thực hiện tìm kiếm theo chiều rộng sử dụng hàng đợi
+### 3.2 Code triển khai tìm kiếm theo chiều rộng sử dụng hàng đợi
 
 ```python
 import collections

@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "0df316b90451be28",
+        "id": "3b430f81ccedb895",
         "type": "tabs",
         "children": [
           {
-            "id": "ca3e4e71dd8a907c",
+            "id": "e3c417ba36192439",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md",
+                "file": "Technical/DSA/Algo/Alogrithms MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "d66452b094646a9b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/DSA/Algo/Graph/MST/Kruskal.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md"
+                "file": "Technical/DSA/Algo/Graph/MST/Kruskal.md"
               }
             }
           }
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md",
+                "file": "Technical/DSA/Algo/Graph/MST/Kruskal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md",
+                "file": "Technical/DSA/Algo/Graph/MST/Kruskal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,12 +182,12 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/DSA/Algo/DP/Digit/Digit DP.md"
+                "file": "Technical/DSA/Algo/Graph/MST/Kruskal.md"
               }
             }
           },
           {
-            "id": "99c53be2cf7b88d5",
+            "id": "e84e85fa044f64a9",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -182,7 +195,7 @@
             }
           },
           {
-            "id": "5527d42d5a16000f",
+            "id": "29e5a04f3c020ef2",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -216,44 +229,44 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "ca3e4e71dd8a907c",
+  "active": "d66452b094646a9b",
   "lastOpenFiles": [
-    "Technical/DSA/Algo/DP/Digit/Digit DP Problems.md",
+    "Technical/DSA/DS/Tree/DSU/Disjoint Set Union.md",
+    "Technical/DSA/Algo/Graph/MST/Kruskal.md",
+    "Technical/DSA/Algo/Graph/Traversal/BFS.md",
+    "Technical/DSA/Algo/Graph/Traversal/DFS.md",
+    "Technical/DSA/Algo/Base/Sorting/Merge Sort.md",
+    "Technical/DSA/Algo/Base/Sorting/Heap Sort.md",
+    "Technical/DSA/Algo/Base/Sorting/Bucket Sort.md",
+    "Technical/DSA/Algo/Search/Binary Search/Binary Search Part 1.md",
+    "Technical/DSA/Algo/Graph/Traversal/Topological Sorting.md",
     "Technical/DSA/Algo/Alogrithms MOC.md",
-    "Technical/DSA/Algo/DP/Digit/Digit DP.md",
-    "Technical/DSA/Algo/DP/Digit",
+    "Technical/DSA/Algo/Graph/MST/Prim.md",
     "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/Algo/DP/Counting/Counting DP.md",
-    "Technical/DSA/Algo/DP/Counting/Counting DP Problems.md",
-    "Technical/DSA/Algo/DP/State/State DP Problems.md",
+    "Technical/DSA/Algo/Base/Sorting/Bubble Sort.md",
+    "Technical/DSA/Algo/Base/Recursion/Recursion.md",
+    "Technical/DSA/Algo/Graph/MST/MST Problems.md",
+    "Technical/DSA/Algo/Graph/SP/Dijkstra.md",
+    "Technical/DSA/Algo/Graph/SP/Shortest Path.md",
+    "Technical/DSA/Algo/Graph/MST/Minimum Spanning Tree.md",
+    "Technical/DSA/Algo/Graph/SP",
+    "Technical/DSA/Algo/Graph/Graph MOC.md",
+    "Technical/DSA/DS/Queue/Priority/Priority Queue.md",
+    "Technical/DSA/DS/Data Structures MOC.md",
+    "Technical/DSA/Thinking",
+    "Technical/DSA/Algo/Search/Binary Search/Binary Search Part 2.md",
+    "Technical/DSA/Algo/Search/Backtracking/Backtracking Problems.md",
+    "Technical/DSA/Algo/Search/Backtracking/Branch and Bound.md",
+    "Technical/DSA/DS/Heap/Top-K Problem.md",
+    "Technical/DSA/Algo/Search",
+    "Technical/DSA/DS/Heap/Heap.md",
+    "Technical/DSA/DS/Heap",
+    "Technical/DSA/Algo/DP/Digit",
     "Technical/DSA/Algo/DP/Counting",
-    "Technical/DSA/Algo/DP/State/State DP.md",
     "Technical/DSA/Algo/DP/State",
     "Technical/DSA/Algo/Base",
-    "Technical/DSA/Algo/DP/Interval/Interval DP Problems.md",
-    "Technical/DSA/Algo/DP/Tree/Tree DP.md",
-    "Technical/DSA/Algo/DP/Tree/Tree DP Problems.md",
-    "Technical/DSA/Algo/DP/Interval/Interval DP.md",
-    "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 3.md",
     "Technical/DSA/Algo/DP/Interval",
-    "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 4.md",
-    "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 2.md",
-    "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 5.md",
-    "Technical/DSA/Algo/DP/Knapsack/Knapsack Problems.md",
-    "Technical/DSA/Algo/DP/Knapsack/Knapsack Part 1.md",
-    "Technical/DSA/Algo/DP/Linear/Linear DP Problems.md",
     "Technical/DSA/Algo/DP/Knapsack",
-    "Technical/DSA/Algo/DP/Tree",
-    "Technical/DSA/Algo/DP/Linear/Linear DP Part 2.md",
-    "Technical/DSA/Algo/DP/Linear/Linear DP Part 1.md",
-    "Technical/DSA/Algo/DP/Linear",
-    "Technical/DSA/Algo/DP/Basic/DP Basic Problems.md",
-    "Technical/DSA/Leetcode/LeetCode 0403.md",
-    "Home.md",
-    "Technical/DSA/Algo/String/MPM/AC Automation.md",
-    "Technical/DSA/Introdution/Algorithm Complexity.md",
-    "Technical/DSA/Algo/DP/Memorization",
-    "Technical/DSA/Algo/Base/Bit",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
     "Extras/Media/20220509094635.png",
