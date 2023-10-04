@@ -3,9 +3,11 @@ title: Go Channel Recieve
 tags:
   - golang
   - interview
-categories: golang, interview
+categories:
+  - golang
+  - interview
 date created: 2023-09-22
-date modified: 2023-09-22
+date modified: 2023-10904-22
 ---
 
 # Go Channel: Recieve

@@ -5,20 +5,20 @@ tags:
   - interview
 categories: golang, interview
 date created: 2023-09-22
-date modified: 2023-09-22
+date modified: 2023-10-04
 ---
 
 # Go Channel: Application
 
 Kết hợp giữa Channel và goroutine là một công cụ mạnh mẽ trong lập trình đồng thời của Go. Ứng dụng thực tế của Channel thường khiến người ta ngạc nhiên, thông qua việc kết hợp với select, cancel, timer và các thành phần khác, nó có thể thực hiện nhiều chức năng khác nhau. Tiếp theo, chúng ta sẽ tìm hiểu về các ứng dụng của channel.
 
-# Tín hiệu dừng
+## Tín hiệu dừng
 
 Chúng ta đã nói rất nhiều về "cách đóng channel một cách tinh tế" trong phần trước, vì vậy chúng ta sẽ bỏ qua phần này.
 
 Có nhiều tình huống trong đó channel được sử dụng để gửi tín hiệu dừng, thường là đóng một channel hoặc gửi một phần tử vào channel để thông báo cho phía nhận biết thông tin này và thực hiện một số hoạt động khác.
 
-# Lập lịch công việc
+## Lập lịch công việc
 
 Kết hợp với timer, có hai cách chơi chính: thực hiện kiểm soát thời gian chờ và thực hiện định kỳ một nhiệm vụ nào đó.
 
@@ -51,7 +51,7 @@ func worker() {
 
 Mỗi giây, nhiệm vụ định kỳ sẽ được thực hiện một lần.
 
-# Tách biệt nguồn sản xuất và người tiêu dùng
+## Tách biệt nguồn sản xuất và tiêu thụ
 
 Khi dịch vụ khởi động, chúng ta khởi động n worker như là một pool goroutine, các goroutine này làm việc trong một vòng lặp vô hạn `for {}`, tiêu thụ công việc từ một channel cụ thể và thực hiện:
 
@@ -103,7 +103,7 @@ hoàn thành công việc: 7 bởi worker 4
 hoàn thành công việc: 5 bởi worker 2
 ```
 
-# Kiểm soát số lượng đồng thời
+## Kiểm soát số lượng đồng thời
 
 Đôi khi chúng ta cần thực hiện hàng trăm nhiệm vụ theo lịch trình, ví dụ như thực hiện các nhiệm vụ tính toán ngoại tuyến theo thành phố hàng ngày. Tuy nhiên, số lượng đồng thời không thể quá cao vì quá trình thực hiện nhiệm vụ phụ thuộc vào một số tài nguyên bên thứ ba và có giới hạn về tốc độ yêu cầu. Trong trường hợp này, chúng ta có thể sử dụng channel để kiểm soát số lượng đồng thời.
 

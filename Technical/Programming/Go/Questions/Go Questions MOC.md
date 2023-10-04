@@ -5,7 +5,7 @@ tags:
   - interview
 categories: golang, interview
 date created: 2023-09-20
-date modified: 2023-09-22
+date modified: 2023-10-05
 ---
 
 # Go Questions MOC
@@ -58,10 +58,40 @@ Tổng hợp các câu hỏi phỏng vấn Golang chuyên sâu
 - [[Go Channel Graceful Close]]
 - [[Go Channel Principal]]
 - [[Go Channel Leak]]
-- [[Go Channel Happen Before]]
+- [[Go Channel Happened-before]]
 - [[Go Channel Application]]
 
+## Standard Library
+
+### Context
+
+- [[Go Context What]]
+- [[Go Context Why]]
+- [[Go Context Find Value]]
+- [[Go Context cancel]]
+
+### Reflect
+
+- [[Go Reflect What]]
+- [[Go Reflect Why]]
+- [[Go Reflect How]]
+- [[Go Reflect Application]]
+- [[Go Reflect Compare]]
+
+### Unsafe
+
+- [[Go Unsafe Pointer]]
+- [[Go Unsafe Len]]
+- [[Go Unsafe Modify Private]]
+- [[Go Unsafe Zero Conv]]
+
 ## Compile
+
+- [[Go Compile Escape]]
+- [[Go Compile GoPath]]
+- [[Go Compile Link Process]]
+- [[Go Commands]]
+- [[Go Booting]]
 
 ## Schedule
 
@@ -69,7 +99,21 @@ Tổng hợp các câu hỏi phỏng vấn Golang chuyên sâu
 - [[Go Scheduler Intro]]
 - [[Go Scheduler When]]
 - [[Go Scheduler MN Model]]
-
-## Standard Library
+- [[Go Scheduler Work Steal]]
+- [[Go Scheduler GPM]]
+- [[Go Scheduler Init]]
+- [[Go Scheduler Main Goroutine]]
+- [[Go Scheduler g0 Stack]]
+- [[Go Scheduler Loop Boot]]
+- [[Go Scheduler Goroutin Exit]]
+- [[Go Scheduler Loop Exec]]
+- [[Go Scheduler M-Worker]]
+- [[Go Scheduler Sysmon]]
+- [[Go Scheduler Trap]]
 
 ## Memory - GC
+
+- [[Go GC Principal]]
+- [[Go GC Impl]]
+- [[Go GC Optimize]]
+- [[Go GC History]]

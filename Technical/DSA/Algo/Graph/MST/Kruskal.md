@@ -80,6 +80,12 @@ def kruskal(n: int, edges: List[Tuple[int, int, int]]) -> int:
     return mst
 ```
 
+### 2.3 Phân tích thuật toán Kruskal
+
+Giả sử rằng số nút trong đồ thị là `V`, và số cạnh là `E`. Đầu tiên, không gian cần thiết để giữ tất cả các cạnh là `O(E)`, và cấu trúc Union-Find cũng yêu cầu `O(V)`. Vì vậy tổng độ phức tạp không gian của thuật toán Kruskal là `O(V + E)`.
+
+Độ phức tạp về thời gian chủ yếu dành cho việc sắp xếp `O(ElogE)`. Thời gian cần thiết cho tất cả các hoạt động của thuật toán Union-Find chỉ là `O(1)` và vòng lặp for chỉ là `O(E)`, do đó tổng độ phức tạp về thời gian là `O(ElogE)`.
+
 ## 3. Ứng dụng thuật toán Kruskal
 
 Sau đây ta sẽ áp dụng thuật toán kruskal vào giải một số bài trên leetcode.
