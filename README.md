@@ -3,7 +3,7 @@ tags:
 categories: 
 title: README
 date created: 2023-07-09
-date modified: 2023-10-01
+date modified: 2023-10-05
 ---
 
 # Hung Nguyen's Knowledge Garden
@@ -38,6 +38,11 @@ Các bài viết chủ yếu về technical xoay quanh **Computer Science**, **P
 		- [[Redis MOC|Redis]]
 	- [[DevOps MOC|DevOps]]
 		- [[Linux MOC|Linux]]
+		- [[Docker MOC|Docker]]
+		- [[Kubernates MOC|Kubernate]]
+	- [[Design Arch MOC|Sofware Design and Architecture]]
+		- [[System Design MOC|System Design]]
+		- [[Design Pattern MOC|Design Pattern]]
 	- [[Cloud MOC|Cloud]]
 	- [[Interview MOC|Technical Interview]]
 - [[Productivity MOC|Productivity]]

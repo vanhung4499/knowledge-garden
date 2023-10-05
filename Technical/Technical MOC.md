@@ -1,12 +1,14 @@
 ---
 categories: [moc, tech]
 date created: 2023-07-04
-date modified: 2023-10701-22
+date modified: 2023-10-05
 tags: [moc, tech]
 title: Technical MOC
 ---
 
 # Technical MOC
+
+> Tất cả các vấn đề technical: lập trình, database, …
 
 ## Programming
 

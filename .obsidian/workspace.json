@@ -8,12 +8,12 @@
         "type": "tabs",
         "children": [
           {
-            "id": "cfa69d6834b88264",
+            "id": "bf45b411f1d20838",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
+                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md"
+                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
+                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
+                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,7 +169,7 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md"
+                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md"
               }
             }
           },
@@ -186,6 +186,14 @@
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "affb5df08fe6a41f",
+            "type": "leaf",
+            "state": {
+              "type": "mermaid-toolbar-view",
               "state": {}
             }
           }
@@ -216,10 +224,19 @@
       "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "cfa69d6834b88264",
+  "active": "bf45b411f1d20838",
   "lastOpenFiles": [
-    "Technical/Programming/Go/Questions/Slice/Go Slice vs Array.md",
+    "Home.md",
+    "README.md",
+    "Technical/Design Arch/System Design/System Design MOC.md",
+    "Technical/Design Arch/Design Arch MOC.md",
+    "Technical/Technical MOC.md",
+    "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
+    "Technical/Design Arch/Design Pattern/Factory Method Pattern.md",
+    "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+    "Technical/Design Arch/Design Pattern/Simple Factory Pattern.md",
     "Technical/Programming/Go/Questions/Go Questions MOC.md",
+    "Technical/Programming/Go/Questions/Slice/Go Slice vs Array.md",
     "Technical/Programming/TypeScript/TypeScript MOC.md",
     "Technical/Programming/Programming MOC.md",
     "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Zero Conv.md",
@@ -239,16 +256,7 @@
     "Technical/Programming/Go/Questions/stdlib/Context/Go Context Why.md",
     "Technical/Programming/Go/Questions/stdlib/Context",
     "Technical/Programming/Go/Questions/stdlib",
-    "Home.md",
-    "Technical/Programming/Go/Go MOC.md",
-    "Technical/Programming/Go/Questions/Compile/Golang Booting.md",
-    "Technical/Programming/Go/Questions/Compile/Golang Commands.md",
-    "Technical/Programming/Go/Questions/Compile/Golang Compile Link Process.md",
-    "Technical/Programming/Go/Questions/Compile/Golang Compile GoPath.md",
-    "Technical/Programming/Go/Questions/Compile/Golang Compile Escape.md",
     "Technical/Programming/Go/Questions/Compile",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Application.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Happened-before.md",
     "Technical/DSA/Algo/Graph/SP",
     "Technical/DSA/Thinking",
     "Technical/DSA/Algo/Search",
