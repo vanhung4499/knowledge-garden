@@ -8,18 +8,6 @@
         "type": "tabs",
         "children": [
           {
-            "id": "4be047338e5cabf5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Programming/Go/Questions/Go Questions MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "cfa69d6834b88264",
             "type": "leaf",
             "state": {
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -187,7 +174,7 @@
             }
           },
           {
-            "id": "e84e85fa044f64a9",
+            "id": "d09ef364578be96e",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -195,7 +182,7 @@
             }
           },
           {
-            "id": "29e5a04f3c020ef2",
+            "id": "97a118f3297b5ee3",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -231,9 +218,30 @@
   },
   "active": "cfa69d6834b88264",
   "lastOpenFiles": [
+    "Technical/Programming/Go/Questions/Slice/Go Slice vs Array.md",
+    "Technical/Programming/Go/Questions/Go Questions MOC.md",
+    "Technical/Programming/TypeScript/TypeScript MOC.md",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Zero Conv.md",
+    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Pointer.md",
+    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Modify Private.md",
+    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Len.md",
+    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect How.md",
+    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect What.md",
+    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect Application.md",
+    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect Compare.md",
+    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect Why.md",
+    "Technical/Programming/Go/Questions/stdlib/Unsafe",
+    "Technical/Programming/Go/Questions/stdlib/Context/Go Context Cancel.md",
+    "Technical/Programming/Go/Questions/stdlib/Reflect",
+    "Technical/Programming/Go/Questions/stdlib/Context/Go Context Find Value.md",
+    "Technical/Programming/Go/Questions/stdlib/Context/Go Context What.md",
+    "Technical/Programming/Go/Questions/stdlib/Context/Go Context Why.md",
+    "Technical/Programming/Go/Questions/stdlib/Context",
+    "Technical/Programming/Go/Questions/stdlib",
+    "Home.md",
     "Technical/Programming/Go/Go MOC.md",
     "Technical/Programming/Go/Questions/Compile/Golang Booting.md",
-    "Technical/Programming/Go/Questions/Go Questions MOC.md",
     "Technical/Programming/Go/Questions/Compile/Golang Commands.md",
     "Technical/Programming/Go/Questions/Compile/Golang Compile Link Process.md",
     "Technical/Programming/Go/Questions/Compile/Golang Compile GoPath.md",
@@ -241,32 +249,11 @@
     "Technical/Programming/Go/Questions/Compile",
     "Technical/Programming/Go/Questions/Channel/Go Channel Application.md",
     "Technical/Programming/Go/Questions/Channel/Go Channel Happened-before.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Leak.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Principal.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Graceful Close.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Ops.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Read On Close.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Recieve.md",
-    "Technical/Programming/Go/Questions/Channel/Go Channel Close.md",
-    "Technical/DSA/Algo/Alogrithms MOC.md",
-    "Technical/DSA/Algo/Graph/MST/Kruskal.md",
-    "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/DS/Tree/DSU/Disjoint Set Union.md",
-    "Technical/DSA/Algo/Graph/Traversal/BFS.md",
-    "Technical/DSA/Algo/Graph/Traversal/DFS.md",
-    "Technical/DSA/Algo/Base/Sorting/Merge Sort.md",
-    "Technical/DSA/Algo/Base/Sorting/Heap Sort.md",
-    "Technical/DSA/Algo/Base/Sorting/Bucket Sort.md",
-    "Technical/DSA/Algo/Search/Binary Search/Binary Search Part 1.md",
     "Technical/DSA/Algo/Graph/SP",
     "Technical/DSA/Thinking",
     "Technical/DSA/Algo/Search",
     "Technical/DSA/DS/Heap",
     "Technical/DSA/Algo/DP/Digit",
-    "Technical/DSA/Algo/DP/Counting",
-    "Technical/DSA/Algo/DP/State",
-    "Technical/DSA/Algo/Base",
-    "Technical/DSA/Algo/DP/Interval",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
     "Extras/Media/20220509094635.png",

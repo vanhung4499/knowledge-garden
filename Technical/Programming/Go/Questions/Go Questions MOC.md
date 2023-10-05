@@ -10,7 +10,7 @@ date modified: 2023-10-05
 
 # Go Questions MOC
 
-Tổng hợp các câu hỏi phỏng vấn Golang chuyên sâu
+> Tổng hợp các câu hỏi phỏng vấn Golang chuyên sâu!
 
 ## Slice
 
@@ -68,7 +68,7 @@ Tổng hợp các câu hỏi phỏng vấn Golang chuyên sâu
 - [[Go Context What]]
 - [[Go Context Why]]
 - [[Go Context Find Value]]
-- [[Go Context cancel]]
+- [[Go Context Cancel]]
 
 ### Reflect
 
