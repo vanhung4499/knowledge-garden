@@ -13,7 +13,19 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
+                "file": "Technical/Design Arch/Design Arch MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "533cf4fbc60473ed",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Design Arch/Design Pattern/Design Pattern Overview.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +102,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md"
+                "file": "Technical/Design Arch/Design Arch MOC.md"
               }
             }
           }
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
+                "file": "Technical/Design Arch/Design Arch MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
+                "file": "Technical/Design Arch/Design Arch MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -169,24 +181,8 @@
             "state": {
               "type": "file-properties",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md"
+                "file": "Technical/Design Arch/Design Arch MOC.md"
               }
-            }
-          },
-          {
-            "id": "d09ef364578be96e",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "97a118f3297b5ee3",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
-              "state": {}
             }
           },
           {
@@ -196,9 +192,25 @@
               "type": "mermaid-toolbar-view",
               "state": {}
             }
+          },
+          {
+            "id": "9e7e7e2c204651b7",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-view",
+              "state": {}
+            }
+          },
+          {
+            "id": "29ce0c489613f37e",
+            "type": "leaf",
+            "state": {
+              "type": "smart-connections-chat-view",
+              "state": {}
+            }
           }
         ],
-        "currentTab": 7
+        "currentTab": 8
       }
     ],
     "direction": "horizontal",
@@ -226,42 +238,42 @@
   },
   "active": "bf45b411f1d20838",
   "lastOpenFiles": [
-    "Home.md",
-    "README.md",
-    "Technical/Design Arch/System Design/System Design MOC.md",
+    "Technical/Design Arch/Theory/CAP Distributed.md",
+    "Technical/Design Arch/Theory/Conway Microservice.md",
+    "Technical/Design Arch/Theory/Dev Theory MOC.md",
     "Technical/Design Arch/Design Arch MOC.md",
-    "Technical/Technical MOC.md",
-    "Technical/Design Arch/Design Pattern/Abstract Factory Pattern.md",
-    "Technical/Design Arch/Design Pattern/Factory Method Pattern.md",
+    "Technical/Design Arch/Theory/ACID Transaction.md",
+    "Technical/Design Arch/Theory/BASE Distributed.md",
     "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
-    "Technical/Design Arch/Design Pattern/Simple Factory Pattern.md",
-    "Technical/Programming/Go/Questions/Go Questions MOC.md",
-    "Technical/Programming/Go/Questions/Slice/Go Slice vs Array.md",
-    "Technical/Programming/TypeScript/TypeScript MOC.md",
-    "Technical/Programming/Programming MOC.md",
-    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Zero Conv.md",
-    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Pointer.md",
-    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Modify Private.md",
-    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Len.md",
-    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect How.md",
-    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect What.md",
-    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect Application.md",
-    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect Compare.md",
-    "Technical/Programming/Go/Questions/stdlib/Reflect/Go Reflect Why.md",
+    "Technical/Design Arch/Theory",
+    "Technical/Design Arch/Design Pattern/Design Pattern Overview.md",
+    "Technical/Databases/SQL/SQL MOC.md",
+    "Technical/Databases/Databases MOC.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch MOC.md",
+    "Technical/Design Arch/Theory/SOLID OOP.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/State Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Strategy Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Visitor Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Memento Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Observer Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Chain of Responsibility Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Mediator Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Command Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Interpreter Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Iterator Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Template Method Pattern.md",
+    "Technical/Design Arch/System Design/System Design MOC.md",
+    "Technical/Design Arch/Design Pattern/Structural/Proxy Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural/Flyweight Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral",
+    "Technical/Design Arch/Design Pattern/Structural",
+    "Technical/Design Arch/Design Pattern/Creational",
     "Technical/Programming/Go/Questions/stdlib/Unsafe",
-    "Technical/Programming/Go/Questions/stdlib/Context/Go Context Cancel.md",
     "Technical/Programming/Go/Questions/stdlib/Reflect",
-    "Technical/Programming/Go/Questions/stdlib/Context/Go Context Find Value.md",
-    "Technical/Programming/Go/Questions/stdlib/Context/Go Context What.md",
-    "Technical/Programming/Go/Questions/stdlib/Context/Go Context Why.md",
     "Technical/Programming/Go/Questions/stdlib/Context",
     "Technical/Programming/Go/Questions/stdlib",
     "Technical/Programming/Go/Questions/Compile",
     "Technical/DSA/Algo/Graph/SP",
-    "Technical/DSA/Thinking",
-    "Technical/DSA/Algo/Search",
-    "Technical/DSA/DS/Heap",
-    "Technical/DSA/Algo/DP/Digit",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
     "Extras/Media/20220509094635.png",

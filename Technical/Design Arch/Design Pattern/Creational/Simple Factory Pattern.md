@@ -26,7 +26,7 @@ Simple Factory Pattern là một mẫu thiết kế tạo đối tượng. Tuy n
 
 > **Nguyên tắc mở đóng (Open Close Principal)**: Một thực thể phần mềm như lớp, module và hàm nên mở cho việc mở rộng và đóng cho việc sửa đổi.
 
-## Ví dụclassDiagram
+## Ví dụ
 
 Làm thế nào để triển khai một máy tính có chức năng cộng, trừ, nhân, chia cơ bản?
 

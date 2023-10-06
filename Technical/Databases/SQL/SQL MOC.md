@@ -2,7 +2,7 @@
 tags: [db, sql]
 categories: [db, sql]
 date created: 2023-07-04
-date modified: 2023-07-22
+date modified: 2023-10-06
 title: SQL MOC
 ---
 

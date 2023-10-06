@@ -42,7 +42,7 @@ Các bài viết chủ yếu về technical xoay quanh **Computer Science**, **P
 		- [[Kubernates MOC|Kubernate]]
 	- [[Design Arch MOC|Sofware Design and Architecture]]
 		- [[System Design MOC|System Design]]
-		- [[Design Pattern MOC|Design Pattern]]
+		- [[Design Pattern Overview|Design Pattern]]
 	- [[Cloud MOC|Cloud]]
 	- [[Interview MOC|Technical Interview]]
 - [[Productivity MOC|Productivity]]
