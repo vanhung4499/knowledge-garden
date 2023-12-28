@@ -39,8 +39,11 @@ date modified: 2023-10-01
 
 ### Software Administration
 
+<<<<<<< HEAD
 > Updating!
 
+=======
+>>>>>>> 36a29c3 (add ts basic posts)
 - Development Environment
   - [[JDK Installation]]
   - [[Maven Installation]]

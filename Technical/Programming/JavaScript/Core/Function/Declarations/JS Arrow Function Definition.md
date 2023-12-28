@@ -3,7 +3,7 @@ title: JS Arrow Function Definition
 tags: [js, programming]
 categories: [js, programming]
 date created: 2023-08-04
-date modified: 2023-08-04
+date modified: 2023-12-208-04
 ---
 
 # Hàm mũi tên - Arrow Function

@@ -3,12 +3,12 @@ tags: [os, interview]
 categories: [os, interview]
 title: OS Interview
 date created: 2023-05-29
-date modified: 2023-08-18
+date modified: 2023-09-15
 ---
 
 # OS Interview Q&A
 
-## Sự khác biệt và sự liên hệ giữa tiến trình (process), luồng (thread) và hợp tác
+## Sự khác biệt và sự liên hệ giữa tiến trình (process), luồng (thread) và Corountine
 
 |                      | Tiến trình                                                                                                                                           | Luồng                                                                                                  | Corountine                                                                                                                                                           |
 | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -1244,7 +1244,7 @@ Phân mảnh ngoại: Một số khu vực trống trong bộ nhớ vì kích th
 
 Phân bổ theo đoạn: Tổng số bộ nhớ là 100M, ví dụ, phân bổ bộ nhớ lần lượt là 5M, 15M, 50M, 25M. Sau một thời gian chạy, các chương trình 5M và 15M chạy xong và giải phóng bộ nhớ, các chương trình khác vẫn đang chạy, cấp phát thêm 10M bộ nhớ để các chương trình khác sử dụng, chỉ có thể phân bổ từ đầu, điều này dẫn đến phân mảnh ngoại là 10M + 5M.
 
-## 62. Làm thế nào để loại bỏ phân mảnh ngoại
+## Làm thế nào để loại bỏ phân mảnh ngoại
 
 Đối với phân mảnh ngoại, nó có thể được loại bỏ thông qua kỹ thuật **nén gọn**, nghĩa là hệ điều hành thường xuyên di chuyển và sắp xếp các quy trình. Tuy nhiên, điều này yêu cầu hỗ trợ của thanh ghi địa chỉ tái định vị động và tương đối tốn thời gian. Quá trình nén gọn thực tế tương tự như chương trình chống phân mảnh đĩa trong hệ điều hành Windows, chỉ khác là nó nén gọn không gian lưu trữ ngoại vi.
 

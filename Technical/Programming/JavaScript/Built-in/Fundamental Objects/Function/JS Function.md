@@ -3,7 +3,7 @@ title: JS Function
 tags: [js, programming]
 categories: [js, programming]
 date created: 2023-08-07
-date modified: 2023-08-07
+date modified: 2023-12-208-07
 ---
 
 # Function
