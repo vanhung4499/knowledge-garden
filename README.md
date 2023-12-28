@@ -3,7 +3,7 @@ tags:
 categories: 
 title: README
 date created: 2023-07-09
-date modified: 2023-10-05
+date modified: 2023-12-29
 ---
 
 # Hung Nguyen's Knowledge Garden
@@ -27,6 +27,7 @@ Các bài viết chủ yếu về technical xoay quanh **Computer Science**, **P
 		- [[Java MOC|Java]]
 		- [[Go MOC|Golang]]
 		- [[JavaScript MOC|JavaScript]]
+		- [[TypeScript MOC|TypeScript]]
 		- [[Python MOC|Python]]
 	- [[Computer Science MOC|Computer Science]]
 	- [[DSA MOC|Data Structures & Algorithms]]
