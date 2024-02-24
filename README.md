@@ -3,7 +3,7 @@ tags:
 categories: 
 title: README
 date created: 2023-07-09
-date modified: 2023-12-29
+date modified: 2024-02-25
 ---
 
 # Hung Nguyen's Knowledge Garden
@@ -37,6 +37,7 @@ Các bài viết chủ yếu về technical xoay quanh **Computer Science**, **P
 		- [[MySQL MOC|MySQL]]
 		- [[MongoDB MOC|MongoDB]]
 		- [[Redis MOC|Redis]]
+		- [[Elasticsearch MOC|Elasticsearch]]
 	- [[DevOps MOC|DevOps]]
 		- [[Linux MOC|Linux]]
 		- [[Docker MOC|Docker]]

@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Databases/Databases MOC.md",
+                "file": "README.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Databases/Databases MOC.md"
+                "file": "README.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Databases/Databases MOC.md",
+                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Databases/Databases MOC.md",
+                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -207,8 +207,10 @@
   },
   "active": "3e470892277227e0",
   "lastOpenFiles": [
-    "Technical/Databases/SQL/SQL MOC.md",
+    "Home.md",
+    "Technical/Technical MOC.md",
     "Technical/Databases/Databases MOC.md",
+    "Technical/Databases/SQL/SQL MOC.md",
     "Technical/Databases/PostgreSQL/PostgreSQL MOC.md",
     "Technical/Databases/SQL/SQL DB Theory.md",
     "Technical/Databases/Elasticsearch/Elasticsearch MOC.md",
@@ -230,9 +232,7 @@
     "Technical/Databases/Elasticsearch/Elasticsearch Operations.md",
     "Technical/Databases/Elasticsearch/Elasticsearch Cluster and Shard.md",
     "Technical/Databases/Elasticsearch/Elasticsearch performance optimization.md",
-    "Home.md",
     "Technical/Databases/Elasticsearch/Elasticsearch Analyzer.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Aggregations.md",
     "Extras/Draws/es-write-detail.excalidraw.png",
     "Technical/Backend/Spring/Security",
     "Projects/Mall/Architect",
