@@ -1,27 +1,32 @@
 ---
-tags: [db, elasticssearch, nosql]
-categories: [db, elasticssearch, nosql]
+tags:
+  - db
+  - elasticssearch
+categories:
+  - db
+  - elasticssearch
 title: Elasticsearch MOC
 date created: 2023-07-04
-date modified: 2023-07-25
+date modified: 2024-02-25
 ---
 
 # Elasticsearch MOC
 
+> > Elasticsearch là một công cụ tìm kiếm và phân tích dữ liệu dựa trên Lucene, cung cấp một dịch vụ phân tán. Elasticsearch là một sản phẩm mã nguồn mở tuân theo các điều khoản mã nguồn mở của Apache và hiện đang là công cụ tìm kiếm doanh nghiệp phổ biến.
+
 ## 📖 Contents
 
-- [[Elasticsearch Qucik Start]]
+- [[Elasticsearch Quick Start]]
 - [[Elasticsearch Intro]]
 - [[Elasticsearch Index]]
 - [[Elasticsearch Query]]
+- [[Elasticsearch Mapping]]
 - [[Elasticsearch Highlight Search and Display]]
 - [[Elasticsearch Sorting]]
-- [[Elasticsearch Aggregate]]
 - [[Elasticsearch Analyzer]]
-- [[Elasticsearch Aggregate]]
+- [[Elasticsearch Aggregations]]
 - [[Elasticsearch performance optimization]]
 - [[Elasticsearch REST API]]
-- [[High Level REST Client for the ElasticSearch Java API]]
 - [[Elasticsearch Cluster and Shard]]
 - [[Elasticsearch Operations]]
 - [[Elasticsearch Interview]]

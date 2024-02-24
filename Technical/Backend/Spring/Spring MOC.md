@@ -45,9 +45,9 @@ date modified: 2023-1080-11
 
 - [[Spring Data Source]]
 - [[Spring JDBC]]
-- [[Spring Transactions]]
+- [[Spring Transaction]]
 - [[Spring JPA]]
-- [[Spring integrates Mybatis]]
+- [[Spring and Mybatis]]
 - [[Spring Data Integration]]
 - [[Spring Access Redis]]
 - [[Spring Access MongoDB]]
@@ -72,7 +72,7 @@ date modified: 2023-1080-11
 
 ## Spring Security
 
-- [[SpringBoot Security Quick Start]]
+- [[SpringBoot Security]]
 
 ## Other
 

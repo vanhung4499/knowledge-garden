@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "07cbaa04a75d011a",
+        "id": "d836e01088e7f8d1",
         "type": "tabs",
         "children": [
           {
-            "id": "ebaf6ab65a06cf2e",
+            "id": "3e470892277227e0",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Databases/Databases MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "README.md"
+                "file": "Technical/Databases/Databases MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Databases/Databases MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
+                "file": "Technical/Databases/Databases MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +162,7 @@
             }
           },
           {
-            "id": "6ac3ddc265d7f489",
+            "id": "a5780a46562e2be6",
             "type": "leaf",
             "state": {
               "type": "smart-connections-view",
@@ -170,7 +170,7 @@
             }
           },
           {
-            "id": "258208bb48a922d7",
+            "id": "514613162b93b806",
             "type": "leaf",
             "state": {
               "type": "smart-connections-chat-view",
@@ -178,11 +178,12 @@
             }
           }
         ],
-        "currentTab": 6
+        "currentTab": 3
       }
     ],
     "direction": "horizontal",
-    "width": 418.5
+    "width": 418.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -204,44 +205,45 @@
       "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
     }
   },
-  "active": "c6d173446b8ea23c",
+  "active": "3e470892277227e0",
   "lastOpenFiles": [
+    "Technical/Databases/SQL/SQL MOC.md",
+    "Technical/Databases/Databases MOC.md",
+    "Technical/Databases/PostgreSQL/PostgreSQL MOC.md",
+    "Technical/Databases/SQL/SQL DB Theory.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch MOC.md",
+    "Technical/Databases/Elastic/Elastic MOC.md",
+    "Technical/Databases/Elastic/Logstash Operation.md",
+    "Technical/Databases/Elastic/Elastic Stack Logstash.md",
+    "Technical/Databases/Elastic/Elastic Quick Start.md",
+    "Technical/Databases/Elastic/Kibana Operation.md",
+    "Technical/Databases/Elastic/Elastic Stack Kabina.md",
+    "Technical/Databases/Elastic/Elastic Stack Filebeat.md",
+    "Technical/Databases/Elastic/Filebeat Operation.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Quick Start.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Interview.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Intro.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Mapping.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Sorting.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch REST API.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Index.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Operations.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Cluster and Shard.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch performance optimization.md",
     "Home.md",
-    "Technical/Technical MOC.md",
-    "Technical/Programming/Programming MOC.md",
-    "Technical/Programming/TypeScript/TypeScript MOC.md",
-    "Technical/Programming/TypeScript/Intro/What Is TypeScript.md",
-    "Technical/Programming/TypeScript/Intro/Hello TypeScript.md",
-    "Technical/Programming/TypeScript/Intro/Get TypeScript.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Analyzer.md",
+    "Technical/Databases/Elasticsearch/Elasticsearch Aggregations.md",
+    "Extras/Draws/es-write-detail.excalidraw.png",
+    "Technical/Backend/Spring/Security",
+    "Projects/Mall/Architect",
+    "Projects/Mall",
     "Technical/Programming/TypeScript/Intro",
-    "Technical/Programming/TypeScript/Basic/TS Union Types.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Of Object Interfaces.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Of Function.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Of Array.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Inference.md",
-    "Technical/Programming/TypeScript/Basic/TS Primitive Data Types.md",
-    "Technical/Programming/TypeScript/Basic/TS Any.md",
     "Technical/Programming/TypeScript/Basic",
-    "Technical/Interview/Network/Questions/Network Interview Part 5.md",
-    "Technical/Interview/Network/Questions/Network Interview Part 4.md",
-    "Technical/Interview/Network/Questions/Network Interview Part 3.md",
-    "Technical/Interview/Network/Questions/Network Interview Part 2.md",
-    "Technical/Interview/Network/Questions/Network Interview Part 1.md",
     "Technical/Interview/Network/Questions",
-    "Technical/Interview/Network/Frequent/Frequent Network Questions Part 1.md",
     "Technical/Interview/Network/Frequent",
-    "Technical/Interview/Database/Redis/Redis Interview Part 2.md",
-    "Technical/Interview/Database/Redis/Redis Interview Part 1.md",
     "Technical/Interview/Database/Redis",
-    "Technical/Interview/Database/MySQL/MySQL Interview Part 2.md",
-    "Technical/Interview/Database/MySQL/MySQL Interview Part 1.md",
     "Technical/Interview/Database/MySQL",
-    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Zero Conv.md",
-    "Technical/Programming/Go/Questions/stdlib/Unsafe/Go Unsafe Pointer.md",
     "Technical/Programming/Go/Questions/stdlib/Unsafe",
-    "Technical/Programming/Go/Questions/stdlib/Reflect",
-    "Technical/Programming/Go/Questions/stdlib/Context",
-    "Technical/Programming/Go/Questions/stdlib",
     "Extras/Media/20230906153409.png",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
@@ -250,7 +252,6 @@
     "Extras/Media/20220507172300.png",
     "Extras/Media/20220507142647.png",
     "Extras/Media/20220507112934.png",
-    "Extras/Media/20220505145302.png",
-    "Extras/Media/20220505145234.png"
+    "Extras/Media/20220505145302.png"
   ]
 }

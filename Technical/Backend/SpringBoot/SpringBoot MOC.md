@@ -45,7 +45,7 @@ date modified: 2023-07-26
 
 ### Security
 
-- [[SpringBoot Security Quick Start]]
+- [[SpringBoot Security]]
 
 ### Other
 

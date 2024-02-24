@@ -3,26 +3,25 @@ title: Spring Intergate Dubbo
 tags: [spring, java, backend]
 categories: [spring, java, backend]
 date created: 2023-08-11
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
 # Tích hợp Dubbo với ZooKeeper
 
 ## ZooKeeper
 
-ZooKeeper có thể được sử dụng làm trung tâm đăng ký cho Dubbo.
+ZooKeeper có thể được sử dụng như một trung tâm đăng ký cho Dubbo.
 
-Dubbo không thay đổi gì trong phía máy chủ ZooKeeper, chỉ cần cài đặt ZooKeeper máy chủ gốc và tất cả các logic đăng ký sẽ được thực hiện khi gọi client ZooKeeper.
+Dubbo không thực hiện bất kỳ sửa đổi nào đối với máy chủ Zookeeper, chỉ cần cài đặt máy chủ Zookeeper gốc. Tất cả logic trung tâm đăng ký được thích ứng khi gọi khách hàng Zookeeper.
 
 **Cài đặt**
 
-Truy cập [Trung tâm phát hành ZooKeeper](http://zookeeper.apache.org/releases.html) và tải phiên bản phù hợp, sau đó giải nén vào máy cục bộ.
+Truy cập [Trang phát hành ZooKeeper](http://zookeeper.apache.org/releases.html) và tải phiên bản phù hợp, sau đó giải nén vào máy cục bộ.
 
 **Cấu hình**
 
 ```
 vi conf/zoo.cfg
-
 ```
 
 Nếu không cần thiết lập cụm, nội dung của `zoo.cfg` sẽ như sau [2](https://dubbo.gitbooks.io/dubbo-admin-book/content/install/zookeeper.html#fn_2):
@@ -102,15 +101,15 @@ Hoặc:
 
 ## Dubbo
 
-Dubbo sử dụng cấu hình toàn bộ Spring, cho phép tích hợp ứng dụng một cách trong suốt mà không cần can thiệp vào bất kỳ API nào của ứng dụng. Chỉ cần tải cấu hình Dubbo bằng Spring là đủ, Dubbo sử dụng Spring Schema mở rộng để tải cấu hình.
+Dubbo sử dụng cách cấu hình hoàn toàn bằng Spring, tích hợp một cách minh bạch vào ứng dụng, không có bất kỳ sự xâm nhập API nào vào ứng dụng, chỉ cần sử dụng Spring để tải cấu hình Dubbo là đủ. Dubbo dựa trên mở rộng Schema của Spring để tải.
 
-Nếu không muốn sử dụng cấu hình Spring, bạn có thể sử dụng [API](https://dubbo.gitbooks.io/configuration/api.md) để gọi Dubbo.
+Nếu bạn không muốn sử dụng cấu hình Spring, bạn có thể gọi thông qua [API](https://dubbo.gitbooks.io/configuration/api.md).
 
 ## Nhà cung cấp dịch vụ
 
 Để biết thêm chi tiết về quy trình cài đặt đầy đủ, vui lòng xem: [Cài đặt nhà cung cấp ví dụ](https://dubbo.gitbooks.io/dubbo-admin-book/install/provider-demo.html)
 
-### Định nghĩa giao diện dịch vụ
+### Định nghĩa interface dịch vụ
 
 DemoService.java [1](https://dubbo.gitbooks.io/dubbo-user-book/quick-start.html#fn_1):
 
@@ -122,7 +121,7 @@ public interface DemoService {
 }
 ```
 
-### Triển khai giao diện trên phía nhà cung cấp
+### Triển khai interface trên phía nhà cung cấp
 
 DemoServiceImpl.java [2](https://dubbo.gitbooks.io/dubbo-user-book/quick-start.html#fn_2):
 
@@ -138,7 +137,7 @@ public class DemoServiceImpl implements DemoService {
 }
 ```
 
-### Khai báo dịch vụ được tiết lộ bằng cấu hình Spring
+### Sử dụng Spring để khai báo và tiết lộ dịch vụ
 
 provider.xml:
 
@@ -158,7 +157,7 @@ provider.xml:
     <!-- Tiết lộ dịch vụ trên cổng 20880 bằng giao thức Dubbo -->
     <dubbo:protocol name="dubbo" port="20880" />
 
-    <!-- Khai báo giao diện dịch vụ cần tiết lộ -->
+    <!-- Khai báo interface dịch vụ cần tiết lộ -->
     <dubbo:service interface="com.alibaba.dubbo.demo.DemoService" ref="demoService" />
 
     <!-- Triển khai dịch vụ giống như bean cục bộ -->
@@ -184,9 +183,9 @@ public class Provider {
 }
 ```
 
-## Người tiêu dùng dịch vụ
+## Người tiêu thụ dịch vụ
 
-Để biết thêm chi tiết về quy trình cài đặt đầy đủ, vui lòng xem: [Cài đặt người tiêu dùng ví dụ](https://dubbo.gitbooks.io/dubbo-admin-book/install/consumer-demo.html)
+Để biết thêm chi tiết về quy trình cài đặt đầy đủ, vui lòng xem: [Cài đặt người tiêu thụ mẫu](https://dubbo.gitbooks.io/dubbo-admin-book/install/consumer-demo.html)
 
 ### Tham chiếu dịch vụ từ xa bằng cấu hình Spring
 
@@ -231,20 +230,20 @@ public class Consumer {
 }
 ```
 
-> 1. Giao diện này cần được đóng gói riêng, được chia sẻ giữa nhà cung cấp và người tiêu dùng
+> 1. Interface này cần được đóng gói riêng, được chia sẻ giữa nhà cung cấp và người tiêu thụ
 > 2. Ẩn triển khai của nhà cung cấp dịch vụ
 > 3. Cũng có thể sử dụng IOC để tiêm vào
 
-## Câu hỏi thường gặp
+## FAQ
 
 Đề nghị sử dụng phiên bản zookeeper đăng ký trung tâm khách hàng `dubbo-2.3.3` trở lên.
 
-## Tài liệu
+## Tài liệu tham khảo
 
 **Dubbo**
 
-[Github](https://github.com/alibaba/dubbo)
+[Github](https://github.com/alibaba/dubbo) | [Hướng dẫn sử dụng](https://dubbo.gitbooks.io/dubbo-user-book/content/) | [Hướng dẫn phát triển](https://dubbo.gitbooks.io/dubbo-dev-book/content/) | [Hướng dẫn quản trị](https://dubbo.gitbooks.io/dubbo-admin-book/content/)
 
 **ZooKeeper**
 
-[Trang chủ](http://zookeeper.apache.org/)
+[Trang chủ](http://zookeeper.apache.org/) | [Tài liệu chính thức](http://zookeeper.apache.org/doc/trunk/)

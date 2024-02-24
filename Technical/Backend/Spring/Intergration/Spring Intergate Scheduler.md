@@ -3,22 +3,21 @@ title: Spring Intergate Scheduler
 tags: [spring, java, backend]
 categories: [spring, java, backend]
 date created: 2023-08-11
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
 # Spring tích hợp lập lịch
 
 ## Tổng quan
 
-Ngoài việc tích hợp các framework lập lịch như Quartz, bạn cũng có thể sử dụng framework lập lịch của Spring để thực hiện công việc lập lịch trong ứng dụng Spring.  
-Việc sử dụng framework lập lịch của Spring có một số lợi ích, bao gồm hỗ trợ chú thích `@Scheduler` và giảm bớt cấu hình phức tạp.
+Nếu bạn muốn sử dụng chức năng lập lịch tác vụ trong Spring, ngoài việc tích hợp khung lập lịch Quartz, bạn cũng có thể sử dụng khung lập lịch tác vụ của chính Spring. Sử dụng khung lập lịch của Spring có lợi thế là: hỗ trợ annotation `@Scheduler`, có thể giảm bớt một số cấu hình.
 
-## Kích hoạt công việc lập lịch thời gian thực
+## Kích hoạt tác vụ lập lịch theo thời gian thực
 
-### Giao diện TaskScheduler
+### TaskScheduler Interface
 
-Spring 3 đã giới thiệu giao diện TaskScheduler, giao diện này định nghĩa các phương thức trừu tượng để lập lịch các nhiệm vụ.  
-Khai báo giao diện TaskScheduler:
+Spring 3 đã giới thiệu interface TaskScheduler, interface này định nghĩa các phương thức trừu tượng để lập lịch các nhiệm vụ.  
+Khai báo interface TaskScheduler:
 
 ```java
 public interface TaskScheduler {
@@ -38,21 +37,21 @@ public interface TaskScheduler {
 }
 ```
 
-Từ các phương thức trên, ta có thể thấy TaskScheduler có hai loại tham số quan trọng:
+Từ các phương thức trên, bạn có thể thấy TaskScheduler có hai loại tham số quan trọng:
 
-- Một là phương thức cần lập lịch, tức là một lớp luồng thực thi Runnable có phương thức run();
-- Hai là điều kiện kích hoạt.
+- Một là phương thức cần lập lịch, tức là phương thức run() của một lớp luồng đã thực hiện interface Runnable;
+- Một là điều kiện kích hoạt.
 
-**Các lớp triển khai của TaskScheduler**  
-Có ba lớp triển khai: DefaultManagedTaskScheduler, ThreadPoolTaskScheduler và TimerManagerTaskScheduler.  
+**Các lớp thực hiện interface TaskScheduler**  
+Nó có ba lớp thực hiện: `DefaultManagedTaskScheduler`, `ThreadPoolTaskScheduler`, `TimerManagerTaskScheduler`.  
 **DefaultManagedTaskScheduler**: Lập lịch dựa trên JNDI.  
-**TimerManagerTaskScheduler**: Lập lịch dựa trên đối tượng TimerManager được quản lý.  
-**ThreadPoolTaskScheduler**: Cung cấp lập lịch dựa trên quản lý luồng, nó cũng triển khai giao diện TaskExecutor, cho phép một phiên bản duy nhất thực thi một cách bất đồng bộ càng nhanh càng tốt.
+**TimerManagerTaskScheduler**: Lập lịch quản lý các phiên bản `commonj.timers.TimerManager`.  
+**ThreadPoolTaskScheduler**: Lập lịch cung cấp quản lý thread pool, nó cũng thực hiện interface `TaskExecutor`, do đó một thực thể duy nhất có thể thực hiện càng nhanh càng tốt một cách bất đồng bộ.
 
-#### Giao diện Trigger
+#### Interface Trigger
 
-Giao diện Trigger trừu tượng các phương thức cho điều kiện kích hoạt.  
-Khai báo giao diện Trigger:
+Interface Trigger trừu tượng các phương thức cho điều kiện kích hoạt.  
+Khai báo interface Trigger:
 
 ```
 public interface Trigger {
@@ -113,7 +112,7 @@ public class DemoTask implements Runnable {
 ```
 
 **(3) Lắp ráp TaskScheduler và thực hiện nhiệm vụ lập lịch**  
-Sử dụng chú thích `@Autowired` để lắp ráp TaskScheduler trong một lớp Controller.  
+Sử dụng annotation `@Autowired` để lắp ráp TaskScheduler trong một lớp Controller.  
 Sau đó, gọi phương thức schedule của đối tượng TaskScheduler để khởi động lập lịch và thực hiện nhiệm vụ lập lịch.
 
 ```java
@@ -137,7 +136,7 @@ public class SchedulerController {
 }
 ```
 
-Truy cập vào giao diện /scheduler/start, khởi động TaskScheduler, bạn sẽ thấy các thông tin nhật ký sau:
+Truy cập vào interface /scheduler/start, khởi động TaskScheduler, bạn sẽ thấy các thông tin nhật ký sau:
 
 ```
 13:53:15.010 myScheduler-1 o.zp.notes.spring.scheduler.DemoTask.run - call DemoTask.run
@@ -148,11 +147,11 @@ Truy cập vào giao diện /scheduler/start, khởi động TaskScheduler, bạ
 
 ### Cách sử dụng @Scheduler
 
-Một điểm nổi bật của trình lập lịch trong Spring là sử dụng chú thích @Scheduler, điều này giúp tiết kiệm rất nhiều cấu hình phức tạp.
+Một điểm nổi bật của trình lập lịch trong Spring là sử dụng annotation @Scheduler, điều này giúp tiết kiệm rất nhiều cấu hình phức tạp.
 
-#### Kích hoạt chú thích
+#### Kích hoạt annotation
 
-Để sử dụng chú thích @Scheduler, trước tiên cần kích hoạt cơ chế chú thích bằng cách sử dụng `<task:annotation-driven>`.  
+Để sử dụng annotation @Scheduler, trước tiên cần kích hoạt cơ chế annotation bằng cách sử dụng `<task:annotation-driven>`.  
 **_Ví dụ:_**
 
 ```xml
@@ -214,7 +213,7 @@ public void doSomething() {
 
 #### Ví dụ đầy đủ
 
-**(1) Kích hoạt chú thích và xác định trình lập lịch và trình thực thi**
+**(1) Kích hoạt annotation và xác định trình lập lịch và trình thực thi**
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -236,8 +235,8 @@ public void doSomething() {
 </beans>
 ```
 
-**(2) Sử dụng chú thích @Scheduler để trang trí một phương thức cần lập lịch**  
-Dưới đây là ví dụ về cách sử dụng chú thích @Scheduler để xác định các điều kiện kích hoạt khác nhau.
+**(2) Sử dụng annotation @Scheduler để trang trí một phương thức cần lập lịch**  
+Dưới đây là ví dụ về cách sử dụng annotation @Scheduler để xác định các điều kiện kích hoạt khác nhau.
 
 ```java
 import org.slf4j.Logger;
@@ -249,7 +248,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
- * @description Ví dụ về việc sử dụng chú thích @Scheduler để lập lịch nhiệm vụ
+ * @description Ví dụ về việc sử dụng annotation @Scheduler để lập lịch nhiệm vụ
  * @author Victor
  * @date 2016年8月31日
  */
@@ -305,8 +304,8 @@ public class ScheduledMgr {
 ```
 
 Tôi đã cố ý đặt các khoảng thời gian kích hoạt là 5 giây và có một câu lệnh Thread.sleep(6000); trong mỗi phương thức. Điều này đảm bảo rằng phương thức không thể hoàn thành trước thời điểm kích hoạt tiếp theo, để xem xét các phương pháp khác nhau hoạt động như thế nào.  
-Sau khi khởi động dự án Spring, Spring sẽ quét các chú thích @Component và khởi tạo ScheduledMgr.  
-Tiếp theo, Spring sẽ quét các chú thích @Scheduler và khởi tạo trình lập lịch. Trình lập lịch bắt đầu hoạt động khi điều kiện kích hoạt khớp, và in ra các thông tin nhật ký.  
+Sau khi khởi động dự án Spring, Spring sẽ quét các annotation @Component và khởi tạo ScheduledMgr.  
+Tiếp theo, Spring sẽ quét các annotation @Scheduler và khởi tạo trình lập lịch. Trình lập lịch bắt đầu hoạt động khi điều kiện kích hoạt khớp, và in ra các thông tin nhật ký.  
 Tôi sẽ trích dẫn một số thông tin nhật ký để phân tích.
 
 ```
@@ -327,9 +326,13 @@ Tôi sẽ trích dẫn một số thông tin nhật ký để phân tích.
 10:59:15.987 myScheduler-6 o.z.n.s.scheduler.ScheduledTasks.testCron - Current time: 2016-08-31 10:59:15
 ```
 
-Constructor được in ra một lần, thời điểm là 10:58:46.  
-testFixedRate được in ra bốn lần, mỗi lần cách nhau 6 giây. Điều này cho thấy, fixedRate không chờ đợi lần lập lịch trước hoàn thành, mà thực hiện ngay khi đến thời điểm kích hoạt.  
-testFixedDelay được in ra ba lần, mỗi lần cách nhau hơn 6 giây và không đều nhau. Điều này cho thấy, fixedDelay chờ đợi lần lập lịch trước hoàn thành trước khi tính toán thời gian gián cách và thực hiện.  
-testInitialDelay có thời gian khởi động đầu tiên cách thời điểm khởi tạo 7 giây. Điều này cho thấy, initialDelay chờ đợi một khoảng thời gian trễ sau khi khởi tạo trước khi bắt đầu lập lịch.  
-testCron được in ra ba lần, thời gian giữa các lần không phải là 5 giây hoặc 6 giây. Rõ ràng, cron chờ đợi lần lập lịch trước hoàn thành trước khi tính toán thời gian gián cách và thực hiện.  
-Ngoài ra, có thể thấy rằng chỉ có tối đa 10 luồng in ra thông tin nhật ký, cho thấy cấu hình bể luồng trình lập lịch trong 2.1 đã có hiệu lực.
+Phương thức khởi tạo được in ra một lần, thời điểm là 10:58:46.  
+`testFixedRate` được in ra bốn lần, mỗi lần cách nhau 6 giây. Điều này cho thấy, `fixedRate` không chờ đợi lần lập lịch trước hoàn thành, khi thời gian chờ đợi đạt đến, nó sẽ thực thi ngay lập tức.  
+`testFixedDelay` được in ra ba lần, mỗi lần cách nhau hơn 6 giây, và thời gian không cố định. Điều này cho thấy, `fixedDelay` chờ đợi cho đến khi lần lập lịch trước hoàn thành, sau đó bắt đầu tính toán thời gian chờ đợi, sau đó mới thực thi.  
+`testInitialDelay` lần đầu tiên lập lịch và thời gian lập lịch của phương thức khởi tạo cách nhau 7 giây. Điều này cho thấy, `initialDelay` chờ sau khi khởi tạo và chờ đợi một khoảng thời gian chờ đợi cụ thể trước khi bắt đầu lập lịch.  
+`testCron` in ra ba lần, khoảng thời gian không phải là 5 hoặc 6 giây, rõ ràng, `cron` chờ đợi cho đến khi lần lập lịch trước hoàn thành, sau đó bắt đầu tính toán thời gian chờ đợi, sau đó mới thực thi.  
+Ngoài ra, bạn có thể thấy từ nhật ký rằng, số lượng tối đa của các luồng in nhật ký chỉ là 10, cho thấy cấu hình thread pool lập lịch trong phần 2.1 đã có hiệu lực.
+
+## Tham khảo
+
+[Tài liệu chính thức của Spring Framework](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/)

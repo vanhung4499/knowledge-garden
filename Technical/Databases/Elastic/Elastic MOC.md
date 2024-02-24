@@ -3,20 +3,30 @@ title: Elastic MOC
 tags: [db, elastic, moc]
 categories: [db, elastic, moc]
 date created: 2023-07-22
-date modified: 2023-07-25
+date modified: 2024-02-25
 ---
 
-# Elastic MOC
+# Elastic Stack MOC
+
+> **Elastic Stack thường được sử dụng làm giải pháp cho việc thu thập, truy xuất và trực quan hóa nhật ký (log).**
+>
+> ELK là viết tắt của ba sản phẩm thuộc công ty Elastic: [Elasticsearch](https://www.elastic.co/products/elasticsearch), [Logstash](https://www.elastic.co/products/logstash) và [Kibana](https://www.elastic.co/products/kibana).
+>
+> [Logstash](https://www.elastic.co/products/logstash) được sử dụng để truyền và xử lý nhật ký, giao dịch hoặc dữ liệu khác.
+>
+> [Kibana](https://www.elastic.co/products/kibana) được sử dụng để phân tích dữ liệu từ Elasticsearch và hiển thị chúng dưới dạng báo cáo trực quan.
+>
+> Elastic Stack đã mở rộng thêm một số sản phẩm mới trên cơ sở của ELK, chẳng hạn như: [Beats](https://www.elastic.co/products/beats) và [X-Pack](https://www.elastic.co/products/x-pack).
 
 ## 📖 Contents
 
 - [[Elastic Quick Start]]
 - [[Elastic Stack Filebeat]]
-- [[Elastic Operations]]
+- [[Filebeat Operation]]
 - [[Elastic Stack Kabina]]
-- [[Kabina Operations]]
+- [[Kibana Operation]]
 - [[Elastic Stack Logstash]]
-- [[Logstash Operations]]
+- [[Logstash Operation]]
 
 ## 📚 Resources
 

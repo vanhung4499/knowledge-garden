@@ -1,26 +1,26 @@
 ---
-title: Spring Transactions
+title: Spring Transaction
 tags: [spring, java, db, backend]
 categories: [spring, java, db, backend]
 date created: 2023-07-28
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
-# Spring và giao dịch
+# Spring và Transaction
 
-Spring cung cấp một mô hình lập trình nhất quán cho các API giao dịch như Java Transaction API (JTA), JDBC, Hibernate và Java Persistence API (JPA). Spring cung cấp tính năng giao dịch khai báo, cho phép cấu hình giao dịch một cách dễ dàng. Kết hợp với tính năng tự động cấu hình của Spring Boot, hầu hết các dự án Spring Boot chỉ cần đánh dấu phương thức với chú thích `@Transactional` để kích hoạt cấu hình giao dịch cho phương thức đó.
+Spring đã triển khai một mô hình lập trình nhất quán cho các API giao dịch như Java Transaction API (JTA), JDBC, Hibernate và Java Persistence API (JPA). Chức năng giao dịch khai báo của Spring cung cấp một cách cấu hình giao dịch rất tiện lợi. Kết hợp với cấu hình tự động của Spring Boot, hầu hết các dự án Spring Boot chỉ cần đánh dấu phương thức với `@Transactional` để kích hoạt cấu hình giao dịch cho phương thức đó.
 
 ## Hiểu về giao dịch
 
-Trong lĩnh vực phát triển phần mềm, giao dịch là một tập hợp các hoạt động hoặc thao tác mà hoàn toàn hoặc không hoàn toàn được thực hiện. Giao dịch cho phép bạn kết hợp một số hoạt động thành một đơn vị công việc mà hoặc là tất cả xảy ra hoặc không xảy ra. Truyền thống, trong phát triển Java EE, bạn có hai lựa chọn để quản lý giao dịch: giao dịch toàn cầu hoặc giao dịch cục bộ, cả hai đều có những hạn chế lớn.
+Trong lĩnh vực phát triển phần mềm, **giao dịch (transaction)** là một tập hợp các hoạt động hoặc thao tác mà hoàn toàn hoặc không hoàn toàn được thực thi. Giao dịch cho phép bạn kết hợp một số hoạt động thành một đơn vị công việc mà hoặc là xảy ra hoàn toàn hoặc không xảy ra gì cả. Truyền thống, phát triển Java EE có hai lựa chọn cho quản lý giao dịch: **giao dịch toàn cầu** hoặc **giao dịch cục bộ**, cả hai đều có hạn chế lớn.
 
 ### Đặc điểm của giao dịch
 
-Giao dịch nên có 4 thuộc tính: nguyên tử, nhất quán, cô lập và bền vững. Bốn thuộc tính này thường được gọi là ACID.
+Giao dịch nên có 4 thuộc tính: nguyên tử, nhất quán, cô lập và bền vững. Bốn thuộc tính này thường được gọi là **ACID**.
 
-- **Nguyên tử (Atomic)**: Một giao dịch là một đơn vị công việc không thể chia tách, các hoạt động trong giao dịch phải được thực hiện hoặc không được thực hiện.
-- **Nhất quán (Consistent)**: Giao dịch phải đưa cơ sở dữ liệu từ một trạng thái nhất quán sang một trạng thái nhất quán khác. Nhất quán và nguyên tử có mối quan hệ chặt chẽ.
-- **Cô lập (Isolated)**: Một giao dịch đang thực thi không được can thiệp bởi các giao dịch khác. Các hoạt động và dữ liệu trong một giao dịch phải được cô lập và không bị ảnh hưởng bởi các giao dịch song song khác.
+- **Nguyên tử (Atomic)**: Một giao dịch là một đơn vị công việc không thể chia rẽ, các hoạt động bao gồm trong giao dịch phải được thực hiện hoàn toàn hoặc không thực hiện gì cả.
+- **Nhất quán (Consistent)**: Giao dịch phải làm cho cơ sở dữ liệu chuyển từ một trạng thái nhất quán sang một trạng thái nhất quán khác. Nhất quán và nguyên tử liên quan chặt chẽ với nhau.
+- **Cô lập (Isolated)**: Việc thực hiện một giao dịch không thể bị các giao dịch khác can thiệp. Nghĩa là các hoạt động và dữ liệu sử dụng trong một giao dịch đối với các giao dịch khác đang xảy ra đồng thời là cô lập, các giao dịch đang thực hiện đồng thời với nhau không thể can thiệp lẫn nhau.
 - **Bền vững (Durable)**: Bền vững còn được gọi là vĩnh cửu (permanence), chỉ rằng một giao dịch đã được xác nhận thì sự thay đổi dữ liệu trong cơ sở dữ liệu phải là vĩnh viễn. Các hoạt động hoặc sự cố tiếp theo không được ảnh hưởng đến nó.
 
 ### Giao dịch toàn cầu
@@ -35,27 +35,27 @@ Giao dịch cục bộ là giao dịch được chỉ định cho một nguồn 
 
 ### Hỗ trợ giao dịch của Spring
 
-Spring trừu tượng hóa việc triển khai giao dịch thực tế khỏi mã giao dịch. Spring giải quyết nhược điểm của giao dịch toàn cầu và giao dịch cục bộ. Nó cho phép nhà phát triển sử dụng cùng một mô hình lập trình nhất quán trong bất kỳ môi trường nào. Bạn chỉ cần viết mã một lần và nó có thể tận dụng các chiến lược quản lý giao dịch khác nhau từ các môi trường khác nhau. Spring cung cấp hỗ trợ cho quản lý giao dịch dựa trên mã và khai báo, tuy nhiên, trong hầu hết các trường hợp, khuyến nghị sử dụng quản lý giao dịch dựa trên khai báo.
+Spring thông qua cơ chế gọi lại để trừu tượng hóa việc thực hiện giao dịch thực sự từ mã có tính giao dịch. Spring đã giải quyết được nhược điểm của giao dịch toàn cầu và cục bộ. Nó cho phép các nhà phát triển sử dụng một mô hình lập trình nhất quán trong bất kỳ môi trường nào. Bạn chỉ cần viết mã một lần, và nó sẽ được hưởng lợi từ các chiến lược quản lý giao dịch khác nhau trong các môi trường khác nhau. Spring cung cấp hỗ trợ cho quản lý giao dịch lập trình và khai báo, trong hầu hết các trường hợp, quản lý giao dịch khai báo được khuyến nghị.
 
-- Quản lý giao dịch dựa trên mã cho phép người dùng xác định rõ ranh giới giao dịch trong mã.
-- Quản lý giao dịch dựa trên khai báo (dựa trên AOP) giúp người dùng tách biệt hoạt động khỏi quy tắc giao dịch.
+- Quản lý giao dịch lập trình cho phép người dùng xác định chính xác ranh giới giao dịch trong mã
+- Quản lý giao dịch khai báo (dựa trên AOP) giúp người dùng tách rời các hoạt động khỏi quy tắc giao dịch
 
-Với quản lý giao dịch dựa trên mã, người phát triển có thể sử dụng trừu tượng giao dịch của Spring, nó có thể chạy trên bất kỳ cơ sở giao dịch nào dưới nó. Sử dụng mô hình khai báo ưu tiên, người phát triển thường chỉ viết ít hoặc không viết mã liên quan đến quản lý giao dịch, do đó không phụ thuộc vào API giao dịch của Spring hoặc bất kỳ API giao dịch nào khác.
+Thông qua quản lý giao dịch lập trình, nhà phát triển có thể sử dụng trừu tượng giao dịch của Spring, nó có thể chạy trên bất kỳ cơ sở giao dịch nào. Sử dụng mô hình khai báo ưu tiên, nhà phát triển thường viết rất ít hoặc không cần viết mã liên quan đến quản lý giao dịch, do đó không phụ thuộc vào API giao dịch của Spring hoặc bất kỳ API giao dịch nào khác.
 
-### Lợi ích của giao dịch Spring
+### Lợi ích của Spring Transaction
 
-Spring Framework cung cấp một trừu tượng giao dịch nhất quán, với những lợi ích sau:
+Spring Framework ccung cấp một trừu tượng nhất quán cho quản lý giao dịch, mang lại những lợi ích sau:
 
-- Cùng một mô hình lập trình nhất quán qua các API giao dịch khác nhau, chẳng hạn như Java Transaction API (JTA), JDBC, Hibernate và Java Persistence API (JPA).
-- Hỗ trợ quản lý giao dịch dựa trên khai báo.
-- API quản lý giao dịch cho việc lập trình đơn giản hơn so với các API giao dịch phức tạp như JTA.
+- Cung cấp mô hình lập trình nhất quán qua các API giao dịch khác nhau, chẳng hạn như Java Transaction API (JTA), JDBC, Hibernate và Java Persistence API (JPA).
+- Hỗ trợ quản lý giao dịch theo cách khai báo.
+- API dành cho quản lý giao dịch lập trình đơn giản hơn so với các API giao dịch phức tạp (như JTA).
 - Tích hợp hoàn hảo với trừu tượng truy cập dữ liệu của Spring.
 
 ## Các API cốt lõi
 
 ### TransactionManager
 
-Khái niệm quan trọng trong trừu tượng giao dịch của Spring là TransactionManager. TransactionManager được định nghĩa bởi hai giao diện: `PlatformTransactionManager` cho quản lý giao dịch theo cách truyền thống và `ReactiveTransactionManager` cho quản lý giao dịch phản ứng.
+Khái niệm quan trọng trong trừu tượng giao dịch của Spring là TransactionManager. TransactionManager được định nghĩa bởi hai interface: `PlatformTransactionManager` cho quản lý giao dịch theo cách truyền thống và `ReactiveTransactionManager` cho quản lý giao dịch phản ứng.
 
 ![](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20220922073737.png)
 
@@ -74,7 +74,7 @@ public interface PlatformTransactionManager extends TransactionManager {
 }
 ```
 
-`PlatformTransactionManager` là một giao diện SPI, cho phép người dùng sử dụng nó theo cách lập trình. Vì `PlatformTransactionManager` là một giao diện, nó có thể dễ dàng được MOCK hoặc đặt chỗ theo nhu cầu. Nó không phụ thuộc vào các chiến lược tìm kiếm như JNDI. Định nghĩa của `PlatformTransactionManager` giống như bất kỳ đối tượng (hoặc bean) nào khác trong Spring IoC container. Điều này làm cho việc quản lý giao dịch trong Spring trở thành một trừu tượng có giá trị, ngay cả khi bạn sử dụng JTA. So với việc trực tiếp sử dụng JTA, bạn có thể dễ dàng kiểm thử mã giao dịch.
+`PlatformTransactionManager` là một interface SPI, cho phép người dùng sử dụng nó theo cách lập trình. Vì `PlatformTransactionManager` là một interface, nó có thể dễ dàng được MOCK hoặc đặt chỗ theo nhu cầu. Nó không phụ thuộc vào các chiến lược tìm kiếm như JNDI. Định nghĩa của `PlatformTransactionManager` giống như bất kỳ đối tượng (hoặc bean) nào khác trong Spring IoC container. Điều này làm cho việc quản lý giao dịch trong Spring trở thành một trừu tượng có giá trị, ngay cả khi bạn sử dụng JTA. So với việc trực tiếp sử dụng JTA, bạn có thể dễ dàng kiểm thử mã giao dịch.
 
 Tương tự, để phù hợp với triết lý của Spring, bất kỳ phương thức nào của `PlatformTransactionManager` có thể ném ra `TransactionException` (một RuntimeException không được kiểm tra). Lỗi kiến ​​trúc giao dịch hầu như luôn là lỗi nghiêm trọng. Trong một số trường hợp, ứng dụng có thể khôi phục từ lỗi giao dịch và người phát triển có thể chọn bắt và xử lý `TransactionException`. Điểm quan trọng là người phát triển không bị buộc phải làm điều đó.
 
@@ -116,7 +116,7 @@ Nếu ứng dụng của bạn sử dụng Java Persistence API (JPA), bạn c�
 </bean>
 ```
 
-`JpaTransactionManager` chỉ cần một `EntityManagerFactory` (có thể là bất kỳ cài đặt nào của giao diện `javax.persistence.EntityManagerFactory`). `JpaTransactionManager` sẽ làm việc cùng với `EntityManager` được tạo ra từ `EntityManagerFactory` để xây dựng giao dịch.
+`JpaTransactionManager` chỉ cần một `EntityManagerFactory` (có thể là bất kỳ cài đặt nào của interface `javax.persistence.EntityManagerFactory`). `JpaTransactionManager` sẽ làm việc cùng với `EntityManager` được tạo ra từ `EntityManagerFactory` để xây dựng giao dịch.
 
 #### Giao dịch Java Native API (JTA)
 
@@ -145,13 +145,13 @@ public interface ReactiveTransactionManager extends TransactionManager {
 }
 ```
 
-`ReactiveTransactionManager` cũng là một giao diện SPI, cho phép người dùng sử dụng nó theo cách lập trình. Vì `ReactiveTransactionManager` là một giao diện, nó cũng có thể dễ dàng được MOCK hoặc đặt chỗ theo nhu cầu.
+`ReactiveTransactionManager` cũng là một interface SPI, cho phép người dùng sử dụng nó theo cách lập trình. Vì `ReactiveTransactionManager` là một interface, nó cũng có thể dễ dàng được MOCK hoặc đặt chỗ theo nhu cầu.
 
 ### TransactionDefinition
 
 `PlatformTransactionManager` sử dụng phương thức `getTransaction(TransactionDefinition definition)` để lấy giao dịch, trong đó tham số là một đối tượng `TransactionDefinition`. `TransactionDefinition` định nghĩa các thuộc tính cơ bản của giao dịch. Các thuộc tính này có thể được hiểu là cấu hình cơ bản của giao dịch, mô tả cách áp dụng chiến lược giao dịch cho các phương thức.
 
-Giao diện `TransactionDefinition` có nội dung như sau:
+Interface `TransactionDefinition` có nội dung như sau:
 
 ```java
 public interface TransactionDefinition {
@@ -459,7 +459,7 @@ Một trong những khía cạnh cuối cùng của ngũ giác giao dịch là m
 
 ### TransactionStatus
 
-Giao diện `TransactionStatus` cung cấp một cách đơn giản để điều khiển việc thực thi giao dịch và truy vấn trạng thái giao dịch cho mã giao dịch. Các khái niệm này nên quen thuộc vì chúng là chung cho tất cả các API giao dịch. Dưới đây là một ví dụ về giao diện `TransactionStatus`:
+interface `TransactionStatus` cung cấp một cách đơn giản để điều khiển việc thực thi giao dịch và truy vấn trạng thái giao dịch cho mã giao dịch. Các khái niệm này nên quen thuộc vì chúng là chung cho tất cả các API giao dịch. Dưới đây là một ví dụ về interface `TransactionStatus`:
 
 ```java
 public interface TransactionStatus extends TransactionExecution, SavepointManager, Flushable {
@@ -482,7 +482,7 @@ public interface TransactionStatus extends TransactionExecution, SavepointManage
 }
 ```
 
-Có thể thấy rằng giao diện này mô tả các phương thức để điều khiển việc thực thi giao dịch và truy vấn trạng thái giao dịch một cách đơn giản, và cần áp dụng trạng thái giao dịch tương ứng khi rollback hoặc commit.
+Có thể thấy rằng interface này mô tả các phương thức để điều khiển việc thực thi giao dịch và truy vấn trạng thái giao dịch một cách đơn giản, và cần áp dụng trạng thái giao dịch tương ứng khi rollback hoặc commit.
 
 ### TransactionTemplate
 
@@ -535,12 +535,12 @@ Kiểu quản lý giao dịch ảnh hưởng đến loại quản lý giao dịc
 
 ### Ví dụ về quản lý giao dịch theo cách khai báo
 
-Xem xét giao diện và lớp cài đặt đi kèm sau đây. Ví dụ này sử dụng lớp Foo và Bar như các đối tượng giả để bạn có thể tập trung vào việc sử dụng giao dịch mà không cần quan tâm đến mô hình miền cụ thể. Trong trường hợp này, việc lớp DefaultFooService ném một instance UnsupportedOperationException trong thân của mỗi phương thức đã được triển khai là tốt. Hành vi này cho phép bạn xem giao dịch đang được tạo và sau đó rollback để phản hồi UnsupportedOperationException.
+Xem xét interface và lớp cài đặt đi kèm sau đây. Ví dụ này sử dụng lớp Foo và Bar như các đối tượng giả để bạn có thể tập trung vào việc sử dụng giao dịch mà không cần quan tâm đến mô hình miền cụ thể. Trong trường hợp này, việc lớp DefaultFooService ném một instance UnsupportedOperationException trong thân của mỗi phương thức đã được triển khai là tốt. Hành vi này cho phép bạn xem giao dịch đang được tạo và sau đó rollback để phản hồi UnsupportedOperationException.
 
-Dưới đây là một ví dụ về giao diện FooService:
+Dưới đây là một ví dụ về interface FooService:
 
 ```java
-// giao diện dịch vụ mà chúng ta muốn quản lý giao dịch
+// interface dịch vụ mà chúng ta muốn quản lý giao dịch
 package x.y.service;
 
 public interface FooService {
@@ -556,7 +556,7 @@ public interface FooService {
 }
 ```
 
-Dưới đây là một ví dụ về lớp cài đặt cho giao diện trên:
+Dưới đây là một ví dụ về lớp cài đặt cho interface trên:
 
 ```java
 package x.y.service;
@@ -585,7 +585,7 @@ public class DefaultFooService implements FooService {
 }
 ```
 
-Giả sử hai phương thức đầu tiên của giao diện FooService, getFoo(String) và getFoo(String, String), phải chạy trong ngữ cảnh giao dịch chỉ đọc, trong khi các phương thức khác insertFoo(Foo) và updateFoo(Foo) phải chạy trong ngữ cảnh giao dịch đọc/ghi. Cấu hình dưới đây sẽ được giải thích chi tiết trong các phần tiếp theo:
+Giả sử hai phương thức đầu tiên của interface FooService, getFoo(String) và getFoo(String, String), phải chạy trong ngữ cảnh giao dịch chỉ đọc, trong khi các phương thức khác insertFoo(Foo) và updateFoo(Foo) phải chạy trong ngữ cảnh giao dịch đọc/ghi. Cấu hình dưới đây sẽ được giải thích chi tiết trong các phần tiếp theo:
 
 ```xml
 <!-- from the file 'context.xml' -->

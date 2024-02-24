@@ -3,21 +3,22 @@ title: Spring Intergate Caching
 tags: [spring, java, backend]
 categories: [spring, java, backend]
 date created: 2023-08-11
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
-# Spring tích hợp Middleware Cache
+# Spring tích hợp Cache Middleware
 
-> Spring cung cấp một trừu tượng hóa cho tính năng bộ nhớ cache, cho phép bạn linh hoạt thay thế triển khai bộ nhớ cache ở mức độ thấp hơn và tiếp cận cùng một giao diện cache ở mức độ cao hơn.
+> Spring cung cấp một trừu tượng hóa cho tính năng bộ nhớ cache, cho phép bạn linh hoạt thay thế triển khai bộ nhớ cache ở mức độ thấp hơn và tiếp cận cùng một interface cache ở mức độ cao hơn.
 
-## Giao diện Cache
+## Interface Cache
 
-API cache của Spring được cung cấp dưới dạng các chú thích.
+API cache của Spring được cung cấp dưới dạng các annotation.
 
-### Bật chú thích
+### Bật annotation
 
-Spring cung cấp chức năng chú thích cho tính năng bộ nhớ cache, nhưng bạn phải bật chú thích.  
+Spring cung cấp chức năng annotation cho tính năng bộ nhớ cache, nhưng bạn phải bật annotation.  
 Bạn có hai lựa chọn:  
+
 (1) Khai báo trong xml  
 Giống như trong ví dụ spring-ehcache.xml ở phần trước, sử dụng `<cache:annotation-driven/>`
 
@@ -25,8 +26,8 @@ Giống như trong ví dụ spring-ehcache.xml ở phần trước, sử dụng 
 <cache:annotation-driven cache-manager="cacheManager"/>
 ```
 
-(2) Sử dụng chú thích đánh dấu  
-Bạn cũng có thể sử dụng chú thích để đánh dấu một lớp và sử dụng chú thích cache trong lớp đó.  
+(2) Sử dụng annotation đánh dấu  
+Bạn cũng có thể sử dụng annotation để đánh dấu một lớp và sử dụng annotation cache trong lớp đó.  
 Ví dụ:
 
 ```java
@@ -36,16 +37,16 @@ public class AppConfig {
 }
 ```
 
-### Sử dụng chú thích cache
+### Sử dụng annotation cache
 
 Hỗ trợ cache của Spring tương tự như hỗ trợ giao dịch.  
-Đầu tiên, sử dụng chú thích để đánh dấu phương thức, tương đương với việc xác định điểm chạm, sau đó sử dụng kỹ thuật Aop để truy cập vào tham số và giá trị trả về của phương thức trước và sau khi gọi phương thức, từ đó thực hiện logic cache.  
-Dưới đây là ba chú thích phương thức cấp độ:
+Đầu tiên, sử dụng annotation để đánh dấu phương thức, tương đương với việc xác định điểm chạm, sau đó sử dụng kỹ thuật Aop để truy cập vào tham số và giá trị trả về của phương thức trước và sau khi gọi phương thức, từ đó thực hiện logic cache.  
+Dưới đây là ba annotation phương thức cấp độ:
 
 #### @Cacheable
 
-Chỉ định phương thức được chú thích có thể được lưu trữ trong bộ nhớ cache: Khi gọi phương thức lần đầu tiên, kết quả của nó sẽ được lưu trữ trong bộ nhớ cache, và trong khoảng thời gian hiệu lực của bộ nhớ cache, việc truy cập phương thức này sẽ trả về kết quả từ bộ nhớ cache mà không thực hiện lại đoạn mã trong phương thức.  
-Chú thích này có thể sử dụng thuộc tính `condition` để đặt điều kiện, nếu không đáp ứng điều kiện, không sử dụng khả năng cache, thực hiện trực tiếp phương thức.  
+Chỉ định phương thức được annotation có thể được lưu trữ trong bộ nhớ cache: Khi gọi phương thức lần đầu tiên, kết quả của nó sẽ được lưu trữ trong bộ nhớ cache, và trong khoảng thời gian hiệu lực của bộ nhớ cache, việc truy cập phương thức này sẽ trả về kết quả từ bộ nhớ cache mà không thực hiện lại đoạn mã trong phương thức.  
+annotation này có thể sử dụng thuộc tính `condition` để đặt điều kiện, nếu không đáp ứng điều kiện, không sử dụng khả năng cache, thực hiện trực tiếp phương thức.  
 Có thể sử dụng thuộc tính `key` để chỉ định quy tắc tạo khóa.
 
 #### @CachePut
@@ -55,7 +56,7 @@ Nó hỗ trợ các thuộc tính và cách sử dụng tương tự như `@Cach
 
 #### @CacheEvict
 
-Ngược lại với `@Cacheable`, `@CacheEvict` chỉ định rằng phương thức được chú thích được sử dụng để xóa dữ liệu cache không hợp lệ hoặc không sử dụng.  
+Ngược lại với `@Cacheable`, `@CacheEvict` chỉ định rằng phương thức được annotation được sử dụng để xóa dữ liệu cache không hợp lệ hoặc không sử dụng.  
 Dưới đây là một ví dụ về cách sử dụng cơ bản của `@Cacheable`、`@CacheEvict` và `@CachePut`:
 
 ```java
@@ -91,7 +92,7 @@ public class UserService {
 
 #### @Caching
 
-Nếu bạn muốn sử dụng cùng một chú thích cache (`@Cacheable`, `@CacheEvict` hoặc `@CachePut`) nhiều lần để chú thích một phương thức, bạn cần sử dụng `@Caching`.
+Nếu bạn muốn sử dụng cùng một annotation cache (`@Cacheable`, `@CacheEvict` hoặc `@CachePut`) nhiều lần để annotation một phương thức, bạn cần sử dụng `@Caching`.
 
 ```java
 @Caching(evict = { @CacheEvict("primary"), @CacheEvict(cacheNames="secondary", key="#p0") })
@@ -100,7 +101,7 @@ public Book importBooks(String deposit, Date date)
 
 #### @CacheConfig
 
-Khác với các chú thích cache trước đó, đây là một chú thích cấp lớp.  
+Khác với các annotation cache trước đó, đây là một annotation cấp lớp.  
 Nếu tất cả các hoạt động của lớp đều là hoạt động cache, bạn có thể sử dụng `@CacheConfig` để chỉ định lớp, giảm bớt một số cấu hình.
 
 ```java
@@ -209,3 +210,7 @@ Cấu hình tham khảo:
   <cache:annotation-driven cache-manager="caffeineCacheManager"/>
 </beans>
 ```
+
+## Tài liệu tham khảo
+
+- [Tài liệu chính thức của Spring về trừu tượng lưu trữ bộ đệm](https://docs.spring.io/spring/docs/current/spring-framework-reference/integration.html#cache)

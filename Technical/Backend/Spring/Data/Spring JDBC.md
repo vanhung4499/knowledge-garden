@@ -3,20 +3,20 @@ title: Spring JDBC
 tags: [spring, java, db, backend]
 categories: [spring, java, db, backend]
 date created: 2023-07-26
-date modified: 2023-07-28
+date modified: 2024-02-22
 ---
 
 # Spring JDBC
 
-JDBC là một giao diện ứng dụng trong ngôn ngữ Java được sử dụng để quy định cách các chương trình khách hàng truy cập vào cơ sở dữ liệu, cung cấp các phương thức để thêm, xóa, sửa và truy vấn cơ sở dữ liệu.
+JDBC là một application interface trong ngôn ngữ Java được sử dụng để quy định cách các chương trình khách hàng truy cập vào cơ sở dữ liệu, cung cấp các phương thức để thêm, xóa, sửa và truy vấn cơ sở dữ liệu.
 
 ## Ví dụ cơ bản về JDBC
 
 Các bước làm việc cơ bản của JDBC như sau:
 
 1. Tạo lớp thực thể (entity class).
-2. Khai báo giao diện DAO cho việc đọc và ghi vào cơ sở dữ liệu. Việc định nghĩa DAO giúp tách biệt tầng dịch vụ (service layer) và tầng dữ liệu (data layer), khi sử dụng DAO, chỉ cần quan tâm đến các phương thức đọc và ghi được công khai, không cần quan tâm đến cách thức lưu trữ dưới tầng dữ liệu. Điều này giúp dễ dàng thay thế cách thức lưu trữ.
-3. Tạo một lớp thực thi của giao diện DAO, sử dụng JDBC Template của Spring để thực hiện các phương thức.
+2. Khai báo interface DAO cho việc đọc và ghi vào cơ sở dữ liệu. Việc định nghĩa DAO giúp tách biệt tầng dịch vụ (service layer) và tầng dữ liệu (data layer), khi sử dụng DAO, chỉ cần quan tâm đến các phương thức đọc và ghi được công khai, không cần quan tâm đến cách thức lưu trữ dưới tầng dữ liệu. Điều này giúp dễ dàng thay thế cách thức lưu trữ.
+3. Tạo một lớp thực thi của interface DAO, sử dụng JDBC Template của Spring để thực hiện các phương thức.
 4. Cuối cùng, định nghĩa một bean của lớp thực thi DAO và tiêm cấp nguồn dữ liệu vào.
 
 Giả sử chúng ta muốn truy cập vào một bảng dữ liệu MySQL `user` thông qua Spring + JDBC, cấu trúc dữ liệu của bảng `user` như sau:
@@ -62,7 +62,7 @@ public class User {
 }
 ```
 
-### Định nghĩa giao diện DAO
+### Định nghĩa interface DAO
 
 ```java
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -70,7 +70,7 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import java.util.List;
 
 /**
- * Giao diện DAO cho bảng user
+ * interface DAO cho bảng user
  */
 public interface UserDao {
 
@@ -120,7 +120,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Lớp thực thi giao diện DAO cho bảng user
+ * Lớp thực thi interface DAO cho bảng user
  */
 @Repository
 public class UserDaoImpl implements UserDao {
@@ -306,8 +306,6 @@ public class DataJdbcMysqlDataSourceTest {
 ```
 
 ## Spring Boot JDBC
-
-> Ví dụ đầy đủ: [spring-data-jdbc-basics](https://github.com/vanhung4499/spring-tutorial/tree/main/codes/spring-data-jdbc-basics)
 
 ### Thêm dependency của Spring Boot
 
@@ -562,7 +560,7 @@ public class User {
 }
 ```
 
-Thực thể dữ liệu chỉ cần là một Java Bean thuần túy, không cần bất kỳ chú thích nào.
+Thực thể dữ liệu chỉ cần là một Java Bean thuần túy, không cần bất kỳ annotation nào.
 
 ### Phương thức execute
 
@@ -736,8 +734,14 @@ Giải thích mã nguồn của lớp `NamedParameterJdbcTemplateConfiguration`:
 
 ## spring-data-jdbc
 
-Dự án Spring Data bao gồm hỗ trợ lưu trữ JDBC và tự động tạo SQL cho các phương thức trên `CrudRepository`. Đối với các truy vấn phức tạp hơn, nó cung cấp chú thích `@Query`.
+Dự án Spring Data bao gồm hỗ trợ lưu trữ JDBC và tự động tạo SQL cho các phương thức trên `CrudRepository`. Đối với các truy vấn phức tạp hơn, nó cung cấp annotation `@Query`.
 
-Khi các phụ thuộc cần thiết tồn tại trên classpath, Spring Boot sẽ tự động cấu hình lưu trữ JDBC của Spring Data. Chúng có thể được thêm vào dự án thông qua một phụ thuộc duy nhất `spring-boot-starter-data-jdbc`. Nếu cần thiết, bạn có thể điều khiển cấu hình Spring Data JDBC bằng cách thêm chú thích `@EnableJdbcRepositories` hoặc một lớp con của `JdbcConfiguration` vào ứng dụng.
+Khi các phụ thuộc cần thiết tồn tại trên classpath, Spring Boot sẽ tự động cấu hình lưu trữ JDBC của Spring Data. Chúng có thể được thêm vào dự án thông qua một phụ thuộc duy nhất `spring-boot-starter-data-jdbc`. Nếu cần thiết, bạn có thể điều khiển cấu hình Spring Data JDBC bằng cách thêm annotation `@EnableJdbcRepositories` hoặc một lớp con của `JdbcConfiguration` vào ứng dụng.
 
 > Để biết thêm chi tiết về Spring Data JDBC, bạn có thể tham khảo [Spring Data JDBC](http://spring.io/projects/spring-data-jdbc).
+
+## Tài liệu tham khảo
+
+- [Trang chủ Spring](https://spring.io/)
+- [Tài liệu chính thức của Spring Framework](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/index.html)
+- [Tài liệu chính thức của Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html)

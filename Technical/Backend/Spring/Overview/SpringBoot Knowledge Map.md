@@ -3,65 +3,65 @@ title: SpringBoot Knowledge Map
 tags: [spring, springboot, java, backend]
 categories: [spring, springboot, java, backend]
 date created: 2023-07-25
-date modified: 2023-07-26
+date modified: 2024-02-21
 ---
 
-# Bản đồ kiến thức về Spring Boot
+# Danh sách kiến thức SpringBoot
 
-> 1. Cảnh báo: Bài viết này rất dài, khuyến nghị đánh dấu và đọc sau, có thể đây là lần cuối viết một bài dài như vậy.
-> 2. Giải thích: Có 4 phần nhỏ về kiến thức cơ bản về Spring ở phần trước, bao gồm: IOC Container, JavaConfig, Event Listeners, và SpringFactoriesLoader chi tiết. Chúng chiếm phần lớn nội dung của bài viết này. Mặc dù chúng có thể không có quá nhiều liên kết với nhau, nhưng những kiến thức này là rất quan trọng để hiểu rõ nguyên tắc cốt lõi của Spring Boot. Nếu bạn đã thành thạo với Spring Framework, bạn hoàn toàn có thể bỏ qua 4 phần nhỏ này. Vì loạt bài viết này được tạo thành từ những điểm kiến thức không liên quan nhau, nên được đặt tên là "Bản đồ kiến thức".
+> 1. Cảnh báo: Bài viết này rất dài, khuyến nghị đánh dấu trước khi xem!
+> 2. Giải thích: Phần đầu có 4 mục nhỏ về kiến thức cơ bản của Spring, bao gồm: IOC Container, JavaConfig, Lắng nghe sự kiện, Giải thích SpringFactoriesLoader, chúng chiếm phần lớn nội dung của bài viết này. Mặc dù chúng có thể không có nhiều liên hệ với nhau, nhưng những kiến thức này rất quan trọng để hiểu nguyên lý cốt lõi của Spring Boot. Nếu bạn quen thuộc với Spring Framework, bạn hoàn toàn có thể bỏ qua 4 mục nhỏ này. Chính vì loạt bài viết này được tạo thành từ những điểm kiến thức có vẻ không liên quan, nên được đặt tên là Danh sách kiến thức.
 
-Trong vòng hai ba năm qua, Spring Boot framework là điều làm cho cộng đồng Spring hứng thú nhất. Có thể từ cái tên bạn đã có thể nhìn thấy mục đích thiết kế của framework này: khởi động ứng dụng Spring một cách nhanh chóng. Vì vậy, ứng dụng Spring Boot về bản chất là một ứng dụng dựa trên framework Spring, nó là sản phẩm thực hành tốt nhất của triết lý "quy ước quan trọng hơn cấu hình" của Spring. Nó giúp nhà phát triển xây dựng ứng dụng dựa trên hệ sinh thái Spring một cách nhanh chóng và hiệu quả.
+Trong nhiều năm qua trong hệ sinh thái Spring, không gì thú vị hơn framework Spring Boot. Có thể thấy từ tên gọi, mục đích thiết kế ban đầu của framework này là khởi động nhanh ứng dụng Spring. Do đó, ứng dụng Spring Boot về bản chất là một ứng dụng dựa trên Spring Framework, đây là sản phẩm tốt nhất của Spring với triết lý "quy ước trước cấu hình", nó có thể giúp nhà phát triển xây dựng ứng dụng dựa trên hệ sinh thái Spring một cách nhanh chóng và hiệu quả hơn.
 
-Vậy Spring Boot có ma thuật gì? **Tự động cấu hình**, **phụ thuộc khởi động**, **Actuator**, **Command Line Interface (CLI)** là 4 tính năng cốt lõi quan trọng nhất của Spring Boot, trong đó CLI là tính năng tùy chọn của Spring Boot, mặc dù nó mạnh mẽ, nhưng nó cũng giới thiệu một mô hình phát triển không thông thường, vì vậy loạt bài viết này chỉ tập trung vào 3 tính năng còn lại. Như tiêu đề bài viết, phần này sẽ mở cánh cửa của Spring Boot cho bạn, tập trung phân tích quá trình khởi động và nguyên lý thực hiện tự động cấu hình. Để nắm vững nội dung cốt lõi này, hiểu một số kiến thức cơ bản về Spring Framework sẽ giúp bạn tiết kiệm thời gian và công sức.
+Vậy Spring Boot có gì đặc biệt? **Cấu hình tự động**, **phụ thuộc khởi động**, **Actuator**, **interface dòng lệnh (CLI)** là 4 tính năng cốt lõi quan trọng nhất của Spring Boot, trong đó CLI là tính năng tùy chọn của Spring Boot, mặc dù nó rất mạnh mẽ, nhưng cũng đã đưa vào một mô hình phát triển không quá thông thường, do đó, loạt bài viết này chỉ tập trung vào 3 tính năng khác. Như tiêu đề bài viết, bài viết này là phần đầu tiên của loạt bài, sẽ mở cánh cửa Spring Boot cho bạn, tập trung giải thích quá trình khởi động và nguyên lý thực hiện cấu hình tự động. Để nắm bắt phần cốt lõi này, việc hiểu một số kiến thức cơ bản về Spring Framework sẽ giúp bạn hiệu quả hơn.
 
-## 1. Ném gạch để lấy ngọc: Khám phá Spring Container
+## 1. Ném đá dẫn lối: Khám phá Container IoC của Spring
 
-Nếu bạn đã từng xem mã nguồn của phương thức `SpringApplication.run()`, quá trình khởi động dài dòng của Spring Boot chắc chắn đã làm bạn phát điên. Nhìn qua hiện tượng để nhìn thấy bản chất, `SpringApplication` chỉ là mở rộng quá trình khởi động của một ứng dụng Spring điển hình, do đó, hiểu rõ về Spring Container là chìa khóa để mở cánh cửa của Spring Boot.
+Nếu bạn đã xem mã nguồn của phương thức `SpringApplication.run()`, bạn chắc chắn sẽ phát điên với quy trình khởi động dài ngắt ngữ của Spring Boot. Nhìn vào bản chất, SpringApplication chỉ kế thừa quy trình khởi động của một ứng dụng Spring điển hình. Do đó, việc hiểu rõ về Container Spring là chiếc chìa khóa để mở cánh cửa của Spring Boot.
 
-### 1.1. Spring Container
+### 1.1. Container IoC của Spring
 
-Bạn có thể xem Spring Container như một nhà hàng, khi bạn đến nhà hàng, thông thường bạn sẽ gọi phục vụ: Tiểu nhị, gọi món! Còn nguyên liệu món ăn là gì? Làm thế nào để nấu món ăn đó? Có thể bạn hoàn toàn không quan tâm. IoC Container cũng tương tự, bạn chỉ cần nói cho nó biết bạn cần một bean nào đó, nó sẽ trả lại một phiên bản tương ứng (instance) cho bạn, còn việc bean đó có phụ thuộc vào các thành phần khác, cách nào để khởi tạo nó, bạn hoàn toàn không cần quan tâm.
+Bạn có thể coi Container IoC của Spring như một nhà hàng, khi bạn đến nhà hàng, bạn thường sẽ gọi ngay phục vụ: Đặt món! Về nguyên liệu của món ăn? Làm thế nào để từ nguyên liệu tạo ra món ăn? Có thể bạn không quan tâm chút nào. IoC Container cũng tương tự, bạn chỉ cần nói cho nó biết bạn cần một bean nào đó, nó sẽ ném cho bạn một phiên bản tương ứng, về việc bean này có phụ thuộc vào các thành phần khác hay không, làm thế nào để hoàn thành việc khởi tạo của nó, bạn hoàn toàn không cần phải quan tâm.
 
-Như một nhà hàng, muốn nấu món ăn, cần biết nguyên liệu và công thức nấu món, tương tự, IoC Container muốn quản lý các đối tượng kinh doanh và mối quan hệ phụ thuộc giữa chúng, cần thông qua một phương pháp nào đó để ghi lại và quản lý thông tin này. Đối tượng `BeanDefinition` đảm nhận trách nhiệm này: Mỗi bean trong container sẽ có một phiên bản BeanDefinition tương ứng, phiên bản này chịu trách nhiệm lưu trữ tất cả thông tin cần thiết về đối tượng bean, bao gồm loại class của đối tượng bean, xem có phải là abstract class hay không, constructor và tham số của nó, các thuộc tính khác v.v. Khi khách hàng yêu cầu đối tượng từ container, container sẽ dựa vào thông tin này để trả về cho khách hàng một phiên bản hoàn chỉnh của đối tượng bean có thể sử dụng được.
+Để làm một nhà hàng, bạn cần biết nguyên liệu và công thức cho món ăn, tương tự, IoC Container muốn quản lý các đối tượng kinh doanh và mối quan hệ phụ thuộc giữa chúng, cần thông qua một số cách để ghi lại và quản lý thông tin này. Đối tượng `BeanDefinition` đảm nhiệm trách nhiệm này: mỗi bean trong container đều sẽ có một phiên bản BeanDefinition tương ứng, phiên bản này chịu trách nhiệm lưu trữ tất cả thông tin cần thiết về đối tượng bean, bao gồm kiểu lớp của đối tượng bean, liệu nó có phải là một lớp trừu tượng không, phương thức và tham số khởi tạo, các thuộc tính khác, v.v. Khi khách hàng yêu cầu container cung cấp một đối tượng tương ứng, container sẽ sử dụng thông tin này để trả về một phiên bản bean hoàn chỉnh và có thể sử dụng cho khách hàng.
 
-Các nguyên liệu đã sẵn sàng (hãy xem BeanDefinition là nguyên liệu), bắt đầu nấu ăn thôi, chờ chút, bạn cần một công thức nữa. `BeanDefinitionRegistry` và `BeanFactory` chính là cuốn sách này, BeanDefinitionRegistry trừu tượng hóa quy trình đăng ký bean, trong khi BeanFactory trừu tượng hóa quy trình quản lý bean. Các lớp triển khai của BeanFactory cụ thể hoá việc đăng ký và quản lý các bean. Mối quan hệ giữa chúng được minh họa trong biểu đồ dưới đây:
+Nguyên liệu đã được chuẩn bị (xem BeanDefinition như nguyên liệu), bắt đầu nấu ăn, chờ một chút, bạn cần một công thức, `BeanDefinitionRegistry` và `BeanFactory` chính là công thức này, BeanDefinitionRegistry trừu tượng hóa logic đăng ký bean, trong khi BeanFactory thì trừu tượng hóa logic quản lý bean, và các lớp BeanFactory thực hiện cụ thể nhiệm vụ đăng ký và quản lý bean. Mối quan hệ giữa chúng như hình dưới đây:
 
 ![image.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20230725200019.png)
 
-`DefaultListableBeanFactory` là một cài đặt BeanFactory phổ biến, nó cũng triển khai giao diện BeanDefinitionRegistry, do đó nó đảm nhận công việc đăng ký và quản lý bean. Giao diện BeanFactory chứa các phương thức quản lý bean như getBean, containBean, getType, getAliases, trong khi giao diện BeanDefinitionRegistry chứa các phương thức đăng ký và quản lý BeanDefinition như registerBeanDefinition, removeBeanDefinition, getBeanDefinition.
+`DefaultListableBeanFactory` là một triển khai BeanFactory khá phổ biến, đồng thời nó cũng thực hiện interface BeanDefinitionRegistry, do đó nó đảm nhận công việc đăng ký và quản lý Bean. Từ hình, bạn có thể thấy rằng interface BeanFactory chủ yếu bao gồm các phương thức quản lý bean như getBean, containBean, getType, getAliases, v.v., trong khi interface BeanDefinitionRegistry bao gồm các phương thức đăng ký và quản lý BeanDefinition như registerBeanDefinition, removeBeanDefinition, getBeanDefinition, v.v.
 
 Dưới đây là một đoạn mã đơn giản để mô phỏng quá trình làm việc của BeanFactory:
 
 ```java
-// Cài đặt mặc định của container
+// Triển khai container mặc định
 DefaultListableBeanFactory beanRegistry = new DefaultListableBeanFactory();
-// Xây dựng BeanDefinition tương ứng với đối tượng kinh doanh
+// Xây dựng BeanDefinition tương ứng dựa trên đối tượng kinh doanh
 AbstractBeanDefinition definition = new RootBeanDefinition(Business.class,true);
 // Đăng ký định nghĩa bean vào container
 beanRegistry.registerBeanDefinition("beanName",definition);
 // Nếu có nhiều bean, bạn cũng có thể chỉ định mối quan hệ phụ thuộc giữa các bean
 // ........
 
-// Sau đó, bạn có thể lấy phiên bản bean này từ container
-// Lưu ý: beanRegistry thực chất triển khai giao diện BeanFactory, vì vậy có thể ép kiểu,
-// BeanDefinitionRegistry đơn thuần không thể ép kiểu thành kiểu BeanFactory
+// Sau đó, bạn có thể lấy phiên bản của bean này từ container
+// Lưu ý: beanRegistry ở đây thực sự thực hiện interface BeanFactory, vì vậy nó có thể được chuyển đổi,
+// BeanDefinitionRegistry thuần túy không thể chuyển đổi sang kiểu BeanFactory
 BeanFactory container = (BeanFactory)beanRegistry;
 Business business = (Business)container.getBean("beanName");
 ```
 
-Đoạn mã này chỉ để giải thích quá trình làm việc cơ bản của BeanFactory, trong thực tế sẽ phức tạp hơn, ví dụ như mối quan hệ phụ thuộc giữa các bean có thể được xác định trong tệp cấu hình bên ngoài (XML/Properties) hoặc thông qua chú thích. Quá trình làm việc của toàn bộ Spring Container có thể chia thành hai giai đoạn chính:
+Đoạn mã này chỉ để minh họa quy trình làm việc cơ bản của BeanFactory, thực tế sẽ phức tạp hơn, ví dụ, mối quan hệ phụ thuộc giữa các bean có thể được định nghĩa trong các tệp cấu hình bên ngoài (XML/Properties) hoặc bằng cách sử dụng chú thích. Quy trình làm việc toàn diện của Container Spring IoC có thể được chia thành hai giai đoạn:
 
 ①, Giai đoạn khởi động container
 
-Khi khởi động container, nó sẽ tải `Configuration MetaData` thông qua một phương pháp nào đó. Ngoài cách trực tiếp thông qua mã nguồn, trong hầu hết các trường hợp, container cần phụ thuộc vào một số lớp tiện ích, ví dụ: `BeanDefinitionReader`. BeanDefinitionReader sẽ phân tích cú pháp và phân tích `Configuration MetaData` đã tải và tổ chức thông tin đã phân tích thành các BeanDefinition tương ứng. Cuối cùng, nó sẽ đăng ký các BeanDefinition này chứa định nghĩa bean vào BeanDefinitionRegistry tương ứng, từ đó hoàn thành quá trình khởi động của container. Giai đoạn này chủ yếu hoàn thành một số công việc chuẩn bị và tập trung vào việc thu thập thông tin quản lý các đối tượng bean. Tất nhiên, một số công việc xác minh hoặc hỗ trợ cũng được hoàn thành trong giai đoạn này.
+Khi container khởi động, nó sẽ tải `Configuration MetaData` thông qua một số cách. Ngoài việc sử dụng mã một cách trực tiếp, trong hầu hết các trường hợp, container cần phụ thuộc vào một số lớp tiện ích, ví dụ: `BeanDefinitionReader`, BeanDefinitionReader sẽ phân tích và phân tích `Configuration MetaData` đã tải và tổ chức thông tin sau phân tích thành BeanDefinition tương ứng, cuối cùng, các BeanDefinition đã lưu trữ định nghĩa bean sẽ được đăng ký với BeanDefinitionRegistry tương ứng, và công việc khởi động của container sẽ hoàn thành. Giai đoạn này chủ yếu hoàn thành một số công việc chuẩn bị, tập trung hơn vào việc thu thập thông tin quản lý đối tượng bean, tất nhiên, một số công việc xác thực hoặc hỗ trợ cũng được hoàn thành trong giai đoạn này.
 
-Hãy xem một ví dụ đơn giản nhé. Trước đây, tất cả các bean được định nghĩa trong tệp cấu hình XML. Đoạn mã dưới đây sẽ mô phỏng cách BeanFactory tải các định nghĩa và quan hệ phụ thuộc của bean từ tệp cấu hình:
+Hãy xem một ví dụ đơn giản, trong quá khứ, tất cả các bean đều được định nghĩa trong tệp cấu hình XML, mã sau sẽ mô phỏng cách BeanFactory tải định nghĩa bean và mối quan hệ phụ thuộc từ tệp cấu hình:
 
 ```java
-// Thường là một lớp triển khai của BeanDefinitionRegistry, ở đây là DefaultListableBeanFactory
+// Thường là lớp thực hiện BeanDefinitionRegistry, ở đây chúng tôi sử dụng DefaultListabeBeanFactory
 BeanDefinitionRegistry beanRegistry = new DefaultListableBeanFactory();
-// XmlBeanDefinitionReader triển khai giao diện BeanDefinitionReader, được sử dụng để phân tích tệp XML
+// XmlBeanDefinitionReader thực hiện interface BeanDefinitionReader, được sử dụng để phân tích tệp XML
 XmlBeanDefinitionReader beanDefinitionReader = new XmlBeanDefinitionReaderImpl(beanRegistry);
 // Tải tệp cấu hình
 beanDefinitionReader.loadBeanDefinitions("classpath:spring-bean.xml");
@@ -73,21 +73,21 @@ Business business = (Business)container.getBean("beanName");
 
 ②, Giai đoạn khởi tạo bean
 
-Sau giai đoạn một, tất cả các định nghĩa bean đã được đăng ký vào BeanDefinitionRegistry thông qua BeanDefinition. Khi một yêu cầu thông qua phương thức getBean của container yêu cầu một đối tượng cụ thể, hoặc khi container cần gọi getBean một cách ngầm định do mối quan hệ phụ thuộc, hoạt động giai đoạn hai sẽ được kích hoạt: container sẽ kiểm tra xem đối tượng được yêu cầu đã được khởi tạo chưa. Nếu chưa, container sẽ khởi tạo object theo thông tin do BeanDefinition đã cung cấp và tiến hành tiêm các dependency cho nó. Sau khi object này đã được lắp ráp xong, container sẽ ngay lập tức trả về cho phương thức yêu cầu sử dụng.
+Sau giai đoạn đầu tiên, tất cả các định nghĩa bean đều được đăng ký với BeanDefinitionRegistry thông qua BeanDefinition. Khi một yêu cầu nào đó yêu cầu một đối tượng thông qua phương thức getBean của container, hoặc do mối quan hệ phụ thuộc mà container cần gọi getBean một cách ngầm định, nó sẽ kích hoạt hoạt động giai đoạn thứ hai: container sẽ kiểm tra trước xem đối tượng được yêu cầu đã được khởi tạo chưa. Nếu chưa, nó sẽ khởi tạo đối tượng được yêu cầu dựa trên thông tin được cung cấp bởi BeanDefinition đã đăng ký và chèn phụ thuộc vào đối tượng đó. Sau khi đối tượng này được lắp ráp xong, container sẽ ngay lập tức trả nó về cho phương thức yêu cầu để sử dụng.
 
-BeanFactory chỉ là một cách triển khai của Spring Container, nếu không có chỉ định đặc biệt, nó sử dụng chiến lược khởi tạo trì hoãn: chỉ khi truy cập vào một đối tượng cụ thể trong container, nó mới thực hiện khởi tạo và tiêm phụ thuộc cho đối tượng đó. Trong thực tế, chúng ta thường sử dụng một loại container khác: `ApplicationContext`, nó được xây dựng trên nền tảng của BeanFactory, là một container cao cấp hơn, ngoài việc có tất cả các khả năng của BeanFactory, nó còn cung cấp hỗ trợ cho cơ chế lắng nghe sự kiện và hỗ trợ đa ngôn ngữ, v.v. Các đối tượng mà nó quản lý sẽ được khởi tạo và tiêm phụ thuộc vào trong quá trình khởi động của container.
+BeanFactory chỉ là một cách triển khai của container IoC Spring, trừ khi được chỉ định cụ thể, nó sẽ sử dụng chiến lược khởi tạo trễ: chỉ khi truy cập vào một đối tượng nào đó trong container, đối tượng đó mới được khởi tạo và tiêm phụ thuộc. Tuy nhiên, trong các tình huống thực tế, chúng tôi thường sử dụng một loại container khác: `ApplicationContext`. Nó được xây dựng trên cơ sở BeanFactory, là một loại container cấp cao hơn. Ngoài tất cả khả năng của BeanFactory, nó còn cung cấp hỗ trợ cho cơ chế lắng nghe sự kiện cũng như hỗ trợ đa ngôn ngữ, v.v. Tất cả các bean mà nó quản lý, đều hoàn thành khởi tạo và tiêm phụ thuộc khi container khởi động.
 
-### 1.2. Cơ chế mở rộng của Spring Container
+### 1.2. Cơ chế kế thừa của Spring Container
 
-Spring Container có trách nhiệm quản lý vòng đời của tất cả các bean trong container. Trong các giai đoạn khác nhau của vòng đời của bean, Spring cung cấp các điểm mở rộng khác nhau để thay đổi số phận của bean. Trong giai đoạn khởi động của container, `BeanFactoryPostProcessor` cho phép chúng ta thực hiện một số thao tác bổ sung trên thông tin được lưu trữ trong BeanDefinition đã đăng ký trong container trước khi container khởi tạo các đối tượng tương ứng. Điều này có thể bao gồm việc thay đổi một số thuộc tính của định nghĩa bean hoặc thêm thông tin khác.
+Container IoC chịu trách nhiệm quản lý vòng đời của tất cả các bean trong container, và tại các giai đoạn khác nhau của vòng đời bean, Spring cung cấp các điểm kế thừa khác nhau để thay đổi số phận của bean. Trong giai đoạn khởi động của container, `BeanFactoryPostProcessor` cho phép chúng ta thực hiện một số hoạt động bổ sung trên thông tin được lưu trong BeanDefinition đã đăng ký với container trước khi container khởi tạo các đối tượng tương ứng, chẳng hạn như sửa đổi một số thuộc tính của định nghĩa bean hoặc thêm thông tin khác, v.v.
 
-Nếu muốn tùy chỉnh mở rộng lớp, thường chúng ta cần triển khai giao diện `org.springframework.beans.factory.config.BeanFactoryPostProcessor`. Đồng thời, vì container có thể có nhiều BeanFactoryPostProcessor, chúng ta cũng có thể triển khai giao diện `org.springframework.core.Ordered` để đảm bảo BeanFactoryPostProcessor được thực thi theo thứ tự. Spring cung cấp một số triển khai BeanFactoryPostProcessor, chúng ta sẽ lấy `PropertyPlaceholderConfigurer` làm ví dụ để giải thích quá trình làm việc của nó.
+Nếu bạn muốn tùy chỉnh lớp kế thừa, thường cần triển khai interface `org.springframework.beans.factory.config.BeanFactoryPostProcessor`, đồng thời, vì có thể có nhiều BeanFactoryPostProcessor trong container, bạn có thể cần triển khai interface `org.springframework.core.Ordered` để đảm bảo BeanFactoryPostProcessor được thực hiện theo thứ tự. Spring cung cấp một số ít triển khai BeanFactoryPostProcessor, và chúng tôi sẽ sử dụng `PropertyPlaceholderConfigurer` để minh họa quy trình làm việc tổng thể của nó.
 
-Trong tệp cấu hình XML của dự án Spring, thường có thể thấy nhiều giá trị cấu hình được sử dụng với các placeholder và giá trị mà placeholder đại diện cho được cấu hình riêng trong tệp properties độc lập. Điều này giúp quản lý các cấu hình phân tán trong các tệp XML khác nhau một cách hiệu quả, và cũng thuận tiện cho việc điều chỉnh các giá trị khác nhau theo từng môi trường khác nhau. Chức năng rất hữu ích này được `PropertyPlaceholderConfigurer` chịu trách nhiệm triển khai.
+Trong tệp cấu hình XML của dự án Spring, bạn thường thấy nhiều giá trị cấu hình sử dụng placeholder, và giá trị mà placeholder đại diện được cấu hình riêng biệt trong tệp properties riêng biệt, điều này cho phép quản lý tập trung các cấu hình rải rác trong các tệp XML khác nhau, và cũng thuận tiện cho việc cấu hình giá trị khác nhau theo môi trường khác nhau bởi nhóm vận hành. Chức năng rất hữu ích này được thực hiện bởi PropertyPlaceholderConfigurer.
 
-Dựa trên những gì đã được trình bày trước đó, khi BeanFactory hoàn thành việc tải tất cả thông tin cấu hình trong giai đoạn một, các thuộc tính của các đối tượng trong BeanFactory vẫn tồn tại dưới dạng các placeholder, ví dụ `${jdbc.mysql.url}`. Khi `PropertyPlaceholderConfigurer` được áp dụng như một BeanFactoryPostProcessor, nó sẽ sử dụng các giá trị trong tệp cấu hình properties để thay thế các giá trị của các placeholder tương ứng trong BeanDefinition. Khi cần khởi tạo bean, các giá trị thuộc tính trong định nghĩa bean đã được thay thế bằng các giá trị đã được cấu hình. Tất nhiên, việc triển khai thực tế phức tạp hơn mô tả ở trên, ở đây chỉ giải thích nguyên tắc hoạt động chung của nó, chi tiết hơn có thể được tham khảo trong mã nguồn của nó.
+Theo như đã nói ở trên, khi BeanFactory hoàn thành việc tải tất cả thông tin cấu hình ở giai đoạn đầu tiên, các thuộc tính của đối tượng được lưu trong BeanFactory vẫn tồn tại dưới dạng placeholder, chẳng hạn như `${jdbc.mysql.url}`. Khi PropertyPlaceholderConfigurer được áp dụng như một BeanFactoryPostProcessor, nó sẽ sử dụng các giá trị trong tệp cấu hình properties để thay thế giá trị thuộc tính mà placeholder trong BeanDefinition tương ứng đại diện. Khi cần khởi tạo bean, giá trị thuộc tính trong định nghĩa bean đã được thay thế bằng giá trị mà chúng tôi đã cấu hình. Tất nhiên, việc triển khai của nó phức tạp hơn mô tả ở trên, ở đây chỉ để minh họa nguyên tắc làm việc tổng thể, bạn có thể tham khảo mã nguồn của nó để biết thêm chi tiết.
 
-Tương tự, còn có `BeanPostProcessor`, tồn tại trong giai đoạn khởi tạo đối tượng. Tương tự như BeanFactoryPostProcessor, nó xử lý tất cả các đối tượng đã được tạo ra và thỏa mãn các điều kiện trong container. Để so sánh, BeanFactoryPostProcessor xử lý định nghĩa bean, trong khi BeanPostProcessor xử lý đối tượng sau khi nó đã được tạo ra. BeanPostProcessor định nghĩa hai phương thức:
+Tương tự, còn có `BeanPostProcessor`, nó tồn tại trong giai đoạn khởi tạo đối tượng. Giống như BeanFactoryPostProcessor, nó sẽ xử lý tất cả các đối tượng đã khởi tạo và đáp ứng điều kiện trong container. Đơn giản so sánh, BeanFactoryPostProcessor xử lý định nghĩa bean, trong khi BeanPostProcessor xử lý đối tượng sau khi hoàn thành khởi tạo bean. BeanPostProcessor định nghĩa hai interface:
 
 ```java
 public interface BeanPostProcessor {
@@ -102,9 +102,9 @@ public interface BeanPostProcessor {
 
 ![image.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20230725202926.png)
 
-Phương thức `postProcessBeforeInitialization()` tương ứng với bước xử lý trước khi khởi tạo và phương thức `postProcessAfterInitialization()` tương ứng với bước xử lý sau khi khởi tạo. Cả hai phương thức đều nhận tham chiếu đến phiên bản đối tượng bean và cung cấp khả năng mở rộng quá trình khởi tạo đối tượng. Trong đó, bạn có thể thực hiện bất kỳ hoạt động nào trên phiên bản được truyền vào. Các tính năng như chú thích, AOP sử dụng rất nhiều `BeanPostProcessor`, ví dụ: nếu có một chú thích tùy chỉnh, bạn có thể triển khai giao diện BeanPostProcessor và kiểm tra xem đối tượng bean có chú thích đó không. Nếu có, bạn có thể thực hiện bất kỳ hoạt động nào trên phiên bản bean này. Điều đó thật đơn giản, phải không?
+Phương thức `postProcessBeforeInitialization()` và `postProcessAfterInitialization()` tương ứng với các bước xử lý trước và xử lý sau trong hình sẽ thực thi. Cả hai phương thức này đều truyền vào tham chiếu của đối tượng bean, cung cấp sự thuận tiện lớn cho việc kế thừa quá trình khởi tạo đối tượng của container, ở đây bạn có thể thực hiện bất kỳ hoạt động nào trên đối tượng được truyền vào. Chức năng của chú thích, AOP, v.v., đều sử dụng nhiều `BeanPostProcessor`, chẳng hạn như một chú thích tùy chỉnh, bạn hoàn toàn có thể triển khai interface BeanPostProcessor, trong đó xác định xem có chú thích nào trên đầu của đối tượng bean không, nếu có, bạn có thể thực hiện bất kỳ hoạt động nào trên đối tượng bean này, hãy nghĩ xem, có đơn giản không?
 
-Hãy xem một ví dụ phổ biến hơn. Trong Spring, chúng ta thường thấy các giao diện Aware khác nhau, chức năng của chúng là sau khi đối tượng được khởi tạo, chúng sẽ chèn các phụ thuộc được xác định trong giao diện Aware vào đối tượng hiện tại. Ví dụ phổ biến nhất là giao diện `ApplicationContextAware`, bất kỳ lớp nào triển khai giao diện này đều có thể truy cập vào đối tượng ApplicationContext. Khi quá trình khởi tạo từng đối tượng trong container đi qua bước tiền xử lý BeanPostProcessor, container sẽ kiểm tra và gọi ApplicationContextAwareProcessor đã được đăng ký trước đó, sau đó gọi phương thức `postProcessBeforeInitialization()` của nó để kiểm tra và đặt các phụ thuộc liên quan đến Aware. Hãy xem mã sau, nó rất đơn giản:
+Hãy xem một ví dụ phổ biến hơn, trong Spring, bạn thường thấy nhiều interface Aware khác nhau, mục đích của chúng là sau khi hoàn thành khởi tạo đối tượng, chúng sẽ chèn phụ thuộc được định nghĩa trong interface Aware vào đối tượng hiện tại. Chẳng hạn như interface `ApplicationContextAware` phổ biến nhất, các lớp triển khai interface này đều có thể nhận được một đối tượng ApplicationContext. Khi quá trình khởi tạo mỗi đối tượng trong container đi đến bước xử lý trước của BeanPostProcessor, container sẽ phát hiện ra ApplicationContextAwareProcessor đã đăng ký trước đó, sau đó nó sẽ gọi phương thức postProcessBeforeInitialization() của nó, kiểm tra và thiết lập phụ thuộc Aware liên quan. Hãy xem mã, có đơn giản không:
 
 ```java
 // Mã nguồn từ: org.springframework.context.support.ApplicationContextAwareProcessor
@@ -122,13 +122,13 @@ private void invokeAwareInterfaces(Object bean) {
 
 Cuối cùng, để tổng kết, phần này đã điểm lại một số nội dung cốt lõi của Spring Container. Các nội dung cốt lõi này đã đủ để bạn hiểu cách Spring Boot khởi động. Nếu bạn gặp phải những kiến thức khó hiểu trong quá trình đọc tiếp theo, hãy quay lại và xem lại kiến thức cốt lõi của Spring, có thể sẽ có hiệu quả không ngờ.
 
-## 2. Củng cố nền tảng: JavaConfig và Annotation phổ biến
+## 2. Củng cố nền tảng: JavaConfig và các Annotation phổ biến
 
 ### 2.1. JavaConfig
 
-Chúng ta biết rằng `bean` là một khái niệm rất quan trọng trong Spring IOC, nơi mà Spring Container quản lý vòng đời của các bean. Ban đầu, Spring sử dụng cách cấu hình bằng tệp XML để mô tả định nghĩa của bean và các mối quan hệ phụ thuộc giữa chúng. Tuy nhiên, theo sự phát triển của Spring, ngày càng nhiều người cảm thấy không hài lòng với cách tiếp cận này, vì tất cả các lớp kinh doanh trong dự án Spring đều được cấu hình dưới dạng bean trong tệp XML, dẫn đến việc có rất nhiều tệp XML, làm cho dự án trở nên phức tạp và khó quản lý.
+Chúng ta biết rằng `bean` là một khái niệm rất cốt lõi trong Spring IOC, và Spring Container chịu trách nhiệm quản lý vòng đời của bean. Ban đầu, Spring sử dụng tệp cấu hình XML để mô tả định nghĩa của bean cũng như mối quan hệ phụ thuộc giữa chúng, nhưng với sự phát triển của Spring, ngày càng nhiều người không hài lòng với cách tiếp cận này, bởi vì tất cả các lớp dịch vụ của dự án Spring đều được cấu hình dưới dạng bean trong các tệp XML, tạo ra một số lượng lớn tệp XML, khiến dự án trở nên phức tạp và khó quản lý.
 
-Sau đó, dựa trên `Guice` - một framework Dependency Injection chỉ sử dụng Java Annotation thuần tuý, mà hiệu suất rõ ràng vượt trội hơn so với cách cấu hình bằng XML của Spring, thậm chí một số người cho rằng `Guice` có thể hoàn toàn thay thế Spring (tuy nhiên, Guice chỉ là một framework IOC nhẹ, nên vẫn còn lâu mới thay thế hoàn toàn Spring). Chính cảm giác khủng hoảng này đã thúc đẩy Spring và cộng đồng phát triển JavaConfig, một dự án con của Spring và liên tục cải thiện. `JavaConfig` sử dụng mã Java và Annotation để mô tả các mối quan hệ ràng buộc giữa các bean. Ví dụ, dưới đây là cách sử dụng cấu hình XML để mô tả định nghĩa của bean:
+Sau đó, `Guice`, một framework phụ thuộc Injection dựa trên Java Annotation thuần túy, ra đời, hiệu suất của nó rõ ràng vượt trội so với Spring sử dụng cách tiếp cận XML, thậm chí một số người cho rằng `Guice` có thể hoàn toàn thay thế Spring (tuy `Guice` chỉ là một framework IOC nhẹ nhàng, việc thay thế Spring vẫn còn xa). Chính cảm giác khủng hoảng này đã thúc đẩy Spring và cộng đồng giới thiệu và liên tục hoàn thiện dự án con `JavaConfig`, nó dựa trên mã Java và Annotation để mô tả mối quan hệ liên kết phụ thuộc giữa các bean. Ví dụ, dưới đây là cách sử dụng cấu hình XML để mô tả định nghĩa bean:
 
 ```xml
 <bean id="bookService" class="com.moondev.service.BookServiceImpl"></bean>
@@ -140,7 +140,7 @@ Trong khi đó, cấu hình JavaConfig có dạng như sau:
 @Configuration
 public class MoonBookConfiguration {
 
-    // Bất kỳ phương thức nào được đánh dấu @Bean, giá trị trả về của nó sẽ được đăng ký làm một bean trong Spring Container
+    // Bất kỳ phương thức nào được đánh dấu với @Bean, giá trị trả về của nó sẽ được đăng ký như một bean trong Spring IOC Container
     // Tên phương thức mặc định trở thành id của định nghĩa bean
     @Bean
     public BookService bookService() {
@@ -149,7 +149,7 @@ public class MoonBookConfiguration {
 }
 ```
 
-Nếu hai bean có mối quan hệ phụ thuộc vào nhau, trong cấu hình XML sẽ như sau:
+Nếu hai bean có mối quan hệ phụ thuộc, trong cấu hình XML sẽ như sau:
 
 ```xml
 <bean id="bookService" class="com.moondev.service.BookServiceImpl">
@@ -169,7 +169,7 @@ Trong khi đó, trong JavaConfig sẽ như sau:
 @Configuration
 public class MoonBookConfiguration {
 
-    // Nếu một bean phụ thuộc vào một bean khác, chỉ cần gọi phương thức tạo bean tương ứng trong lớp JavaConfig
+    // Nếu một bean phụ thuộc vào một bean khác, chỉ cần gọi phương thức tạo bean phụ thuộc tương ứng trong lớp JavaConfig
     // Ở đây, chúng ta gọi trực tiếp dependencyService()
     @Bean
     public BookService bookService() {
@@ -188,15 +188,15 @@ public class MoonBookConfiguration {
 }
 ```
 
-Bạn có thể nhận thấy trong ví dụ này, có hai bean phụ thuộc vào dependencyService. Điều này có nghĩa là khi khởi tạo bookService, dependencyService() sẽ được gọi, và khi khởi tạo otherService, dependencyService() cũng sẽ được gọi. Vậy câu hỏi đặt ra là, trong IOC Container, có một hoặc hai phiên bản của dependencyService? Câu trả lời cho câu hỏi này để mọi người tự suy nghĩ, ở đây không tiếp tục trình bày.
+Bạn có thể chú ý rằng trong ví dụ này, có hai bean đều phụ thuộc vào dependencyService, tức là khi khởi tạo bookService, chúng ta sẽ gọi `dependencyService()`, và khi khởi tạo otherService, chúng ta cũng sẽ gọi `dependencyService()`. Vậy câu hỏi đặt ra là: trong trường hợp này, trong IOC Container có một hoặc hai instance của dependencyService? Câu hỏi này để cho mọi người suy nghĩ, chúng tôi sẽ không đi sâu vào đây.
 
 ### 2.2. @ComponentScan
 
-Annotation `@ComponentScan` tương ứng với phần tử `<context:component-scan>` trong cấu hình XML, nó cho phép kích hoạt quá trình quét các thành phần (component) trong ứng dụng. Spring sẽ tự động quét và đăng ký các bean được cấu hình bằng Annotation vào trong IOC container. Chúng ta có thể sử dụng các thuộc tính như `basePackages` để chỉ định phạm vi quét của `@ComponentScan`. Nếu không chỉ định, mặc định Spring sẽ quét từ package chứa lớp chứa Annotation `@ComponentScan`. Đây cũng là lý do tại sao lớp khởi chạy của Spring Boot thường được đặt trong thư mục `src/main/java`.
+Annotation `@ComponentScan` tương ứng với phần tử `<context:component-scan>` trong cấu hình XML, đại diện cho việc kích hoạt quét thành phần, Spring sẽ tự động quét tất cả các bean được cấu hình thông qua annotation, sau đó đăng ký chúng vào IOC Container. Chúng ta có thể chỉ định phạm vi quét tự động của `@ComponentScan`thông qua các thuộc tính như `basePackages`, nếu không chỉ định, nó sẽ mặc định quét từ package chứa lớp khai báo `@ComponentScan`. Chính vì điều này, lớp khởi động SpringBoot thường mặc định nằm trong `src/main/java`.
 
 ### 2.3. @Import
 
-Annotation `@Import` được sử dụng để import các lớp cấu hình vào. Ví dụ đơn giản như sau:
+Annotation `@Import` được sử dụng để nhập các lớp cấu hình, hãy xem một ví dụ đơn giản:
 
 ```java
 @Configuration
@@ -208,7 +208,7 @@ public class MoonBookConfiguration {
 }
 ```
 
-Giả sử có một lớp cấu hình khác, ví dụ: `MoonUserConfiguration`, trong đó có một bean phụ thuộc vào `bookService` trong `MoonBookConfiguration`. Làm thế nào để kết hợp hai bean này lại với nhau? Sử dụng `@Import`:
+Bây giờ có một lớp cấu hình khác, ví dụ: `MoonUserConfiguration`, trong lớp cấu hình này có một bean phụ thuộc vào bookService trong `MoonBookConfiguration`. Làm thế nào để kết hợp hai bean này lại với nhau? Chúng ta có thể sử dụng `@Import`:
 
 ```java
 @Configuration
@@ -222,13 +222,13 @@ public class MoonUserConfiguration {
 }
 ```
 
-Lưu ý rằng, trước phiên bản 4.2, Annotation `@Import` chỉ hỗ trợ import các lớp cấu hình. Tuy nhiên, từ phiên bản 4.2 trở đi, nó cũng hỗ trợ import các lớp thông thường và đăng ký lớp này như một định nghĩa bean trong IOC container.
+Cần lưu ý rằng, trước phiên bản 4.2, annotation `@Import` chỉ hỗ trợ nhập các lớp cấu hình, nhưng sau phiên bản 4.2, nó hỗ trợ nhập các lớp thông thường và đăng ký lớp này như một định nghĩa bean vào IOC Container.
 
 ### 2.4. @Conditional
 
-Annotation `@Conditional` được sử dụng để chỉ định rằng một bean chỉ được khởi tạo hoặc một cấu hình chỉ được kích hoạt khi một điều kiện cụ thể được đáp ứng. Thông thường, nó được sử dụng trên các lớp được đánh dấu bằng `@Component`, `@Service`, `@Configuration` hoặc các phương thức được đánh dấu bằng `@Bean`. Nếu một lớp `@Configuration` được đánh dấu bằng `@Conditional`, tất cả các phương thức được đánh dấu bằng `@Bean` trong lớp đó và các lớp liên quan được import bằng `@Import` cũng sẽ tuân theo các điều kiện đó.
+Annotation `@Conditional` chỉ ra rằng chỉ khi một điều kiện nào đó được thỏa mãn, một bean sẽ được khởi tạo hoặc một số cấu hình sẽ được kích hoạt. Nó thường được sử dụng trên các lớp được đánh dấu bởi các annotation như `@Component`, `@Service`, `@Configuration`, hoặc trên các phương thức được đánh dấu bởi `@Bean`. Nếu một lớp `@Configuration` được đánh dấu với `@Conditional`, thì tất cả các phương thức được đánh dấu `@Bean` và các lớp liên quan được nhập bởi annotation `@Import` sẽ tuân theo các điều kiện này.
 
-Trong Spring, bạn có thể dễ dàng viết các lớp điều kiện tùy chỉnh của riêng bạn bằng cách triển khai giao diện `Condition` và ghi đè phương thức `matches()`. Ví dụ, lớp điều kiện đơn giản sau chỉ định rằng bean chỉ được tạo ra khi lớp `JdbcTemplate` tồn tại trong classpath:
+Trong Spring, bạn có thể dễ dàng viết lớp điều kiện của riêng mình, chỉ cần thực hiện interface `Condition` và ghi đè phương thức `matches()`của nó. Ví dụ, lớp điều kiện đơn giản dưới đây chỉ có hiệu lực khi lớp `JdbcTemplate` tồn tại trong `Classpath`:
 
 ```java
 public class JdbcTemplateCondition implements Condition {
@@ -256,26 +256,26 @@ public MyService service() {
 }
 ```
 
-Trong ví dụ này, bean `MyService` chỉ được tạo ra khi điều kiện trong lớp `JdbcTemplateCondition` được đáp ứng. Điều này có nghĩa là việc khai báo bean này sẽ bị bỏ qua nếu không có `JdbcTemplate` tồn tại trong `classpath`.
+Trong ví dụ này, bean MyService chỉ được tạo khi điều kiện của lớp `JdbcTemplateCondition` được thỏa mãn. Điều này nghĩa là việc tạo bean MyService phụ thuộc vào việc `JdbcTemplate` có mặt trong `classpath` hay không, nếu không, khai báo bean này sẽ bị bỏ qua.
 
-Spring Boot định nghĩa nhiều điều kiện thú vị và áp dụng chúng vào các lớp cấu hình, tạo nên cơ sở của cấu hình tự động của Spring Boot. Cách Spring Boot áp dụng cấu hình có điều kiện là: định nghĩa nhiều Annotation có điều kiện đặc biệt và áp dụng chúng vào các lớp cấu hình. Dưới đây là một số Annotation có điều kiện mà Spring Boot cung cấp:
+`Spring Boot` đã định nghĩa nhiều điều kiện thú vị và áp dụng chúng vào các lớp cấu hình, những lớp cấu hình này tạo nên cơ sở của cấu hình tự động trong `Spring Boot`. Phương pháp mà `Spring Boot` sử dụng để cấu hình có điều kiện là: định nghĩa nhiều annotation có điều kiện đặc biệt và áp dụng chúng lên các lớp cấu hình. Dưới đây là một số annotation có điều kiện mà `Spring Boot` cung cấp:
 
-| Annotation có điều kiện         | Điều kiện cấu hình được kích hoạt                          |
-| ------------------------------- | ------------------------------------------------------- |
-| @ConditionalOnBean              | Đã cấu hình một bean cụ thể                              |
-| @ConditionalOnMissingBean       | Không có bean cụ thể được cấu hình                       |
-| @ConditionalOnClass             | Classpath có một lớp cụ thể                              |
-| @ConditionalOnMissingClass      | Classpath không có một lớp cụ thể                         |
-| @ConditionalOnExpression        | Kết quả của biểu thức Spring Expression Language là true |
-| @ConditionalOnJava              | Phiên bản Java khớp với một giá trị cụ thể hoặc một phạm vi giá trị |
-| @ConditionalOnProperty          | Thuộc tính cấu hình cụ thể phải có một giá trị xác định |
-| @ConditionalOnResource          | Classpath có một tài nguyên cụ thể                       |
-| @ConditionalOnWebApplication    | Đây là một ứng dụng Web                                  |
-| @ConditionalOnNotWebApplication | Đây không phải là một ứng dụng Web                        |
+|Annotation có điều kiện|Điều kiện để cấu hình có hiệu lực|
+|---|---|
+|@ConditionalOnBean|Cấu hình một bean cụ thể|
+|@ConditionalOnMissingBean|Không cấu hình một bean cụ thể|
+|@ConditionalOnClass|Có một lớp cụ thể trong Classpath|
+|@ConditionalOnMissingClass|Không có một lớp cụ thể trong Classpath|
+|@ConditionalOnExpression|Biểu thức Spring Expression Language trả về true|
+|@ConditionalOnJava|Phiên bản Java phù hợp với một giá trị cụ thể hoặc phạm vi|
+|@ConditionalOnProperty|Một thuộc tính cấu hình cụ thể có một giá trị rõ ràng|
+|@ConditionalOnResource|Có một tài nguyên cụ thể trong Classpath|
+|@ConditionalOnWebApplication|Đây là một ứng dụng Web|
+|@ConditionalOnNotWebApplication|Đây không phải là một ứng dụng Web|
 
 ### 2.5. @ConfigurationProperties và @EnableConfigurationProperties
 
-Khi giá trị của một số thuộc tính cần được cấu hình, chúng ta thường tạo các mục cấu hình trong tệp `application.properties` và sử dụng Annotation `@Value` để lấy giá trị cấu hình đó trong bean. Ví dụ, đoạn mã sau cấu hình nguồn dữ liệu:
+Khi giá trị của một số thuộc tính cần được cấu hình, chúng ta thường tạo các mục cấu hình mới trong tệp `application.properties`, sau đó sử dụng annotation `@Value` trong bean để lấy giá trị cấu hình. Ví dụ như đoạn mã cấu hình nguồn dữ liệu (datasource) dưới đây:
 
 ```java
 // Cấu hình jdbc
@@ -307,7 +307,7 @@ public class HikariDataSourceConfiguration {
 }
 ```
 
-Cách sử dụng Annotation `@Value` để tiêm giá trị vào thuộc tính thường đơn giản và nếu cùng một cấu hình được sử dụng ở nhiều nơi, việc bảo trì có thể trở nên không thuận tiện (nếu bạn muốn thay đổi tên cấu hình này, bạn sẽ phải thay đổi ở nhiều nơi). Đối với cấu hình phức tạp hơn, Spring Boot cung cấp một cách triển khai thanh lịch hơn, đó là sử dụng Annotation `@ConfigurationProperties`. Chúng ta có thể viết lại đoạn mã trên như sau:
+Các thuộc tính được tiêm bằng annotation `@Value` thường khá đơn giản, nhưng nếu một cấu hình được sử dụng ở nhiều nơi, việc duy trì cũng trở nên khó khăn (hãy tưởng tượng nếu có hàng chục nơi sử dụng một cấu hình nào đó, và bây giờ bạn muốn thay đổi tên, bạn sẽ làm gì?). Đối với các cấu hình phức tạp hơn, Spring Boot cung cấp một cách thực hiện tinh tế hơn, đó là annotation `@ConfigurationProperties`. Chúng ta có thể viết lại đoạn mã trên như sau:
 
 ```java
 @Component
@@ -332,13 +332,13 @@ public class HikariDataSourceConfiguration {
         hikariConfig.setJdbcUrl(config.url);
         hikariConfig.setUsername(config.username);
         hikariConfig.setPassword(config.password);
-        // Các dòng mã bị bỏ qua
+        // Bỏ qua một số đoạn mã
         return new HikariDataSource(hikariConfig);
     }
 }
 ```
 
-Annotation `@ConfigurationProperties` rất linh hoạt trong việc xử lý cấu hình phức tạp hơn. Ví dụ, nếu có tệp cấu hình như sau:
+`@ConfigurationProperties` rất tiện lợi khi xử lý các cấu hình phức tạp hơn, chẳng hạn như tệp cấu hình sau:
 
 ```java
 #App
@@ -355,7 +355,7 @@ app.compiler.output-folder=/temp/
 app.error=/error/
 ```
 
-Chúng ta có thể định nghĩa một lớp cấu hình như sau để nhận các thuộc tính này:
+Bạn có thể định nghĩa lớp cấu hình sau để nhận các thuộc tính này:
 
 ```java
 @Component
@@ -379,25 +379,26 @@ public class AppProperties {
 }
 ```
 
-Annotation `@EnableConfigurationProperties` cho phép hỗ trợ lồng nhúng `@ConfigurationProperties` và mặc định sẽ tiêm lớp Properties tương ứng như một bean vào trong IOC container, nghĩa là không cần thêm Annotation `@Component` trên lớp Properties tương ứng.
+Annotation `@EnableConfigurationProperties` cho biết sự hỗ trợ nhúng của `@ConfigurationProperties`. Theo mặc định, nó sẽ đưa lớp Properties tương ứng vào IOC container dưới dạng một bean, tức là không cần phải thêm annotation `@Component` vào lớp Properties tương ứng.
 
 ## 3. Cắt sắt như bùn: Giải thích chi tiết về SpringFactoriesLoader
 
-JVM cung cấp 3 loại ClassLoader: `BootstrapClassLoader`, `ExtClassLoader` và `AppClassLoader` tương ứng với việc tải các thư viện lõi của Java, các thư viện mở rộng và các thư viện trên đường dẫn lớp của ứng dụng (CLASSPATH). JVM sử dụng mô hình ủy quyền kép để tải lớp, chúng ta cũng có thể triển khai ClassLoader riêng của mình bằng cách kế thừa java.lang.classloader.
+JVM cung cấp 3 loại class loader: `BootstrapClassLoader`, `ExtClassLoader`, `AppClassLoader` để tải lớp thư viện cốt lõi Java, thư viện kế thừa và thư viện lớp của ứng dụng (đường dẫn `CLASSPATH`) tương ứng. JVM sử dụng mô hình ủy quyền cho cha mẹ (parent delegation model) để tải lớp, và chúng ta cũng có thể tạo class loader của riêng mình bằng cách kế thừa từ `java.lang.classloader`.
 
-Mô hình ủy quyền kép là gì? Khi một ClassLoader nhận nhiệm vụ tải lớp, nó sẽ trước tiên ủy quyền vụ này cho ClassLoader cha của nó để hoàn thành, do đó nhiệm vụ tải cuối cùng sẽ được chuyển đến BootstrapClassLoader ở đỉnh cùng, chỉ khi ClassLoader cha không thể hoàn thành nhiệm vụ tải , nó mới cố gắng tự tải lớp.
+Mô hình ủy quyền cho cha mẹ là gì? Khi một class loader nhận nhiệm vụ tải lớp, nó sẽ trước tiên giao nhiệm vụ đó cho class loader cha của mình để hoàn thành. Do đó, cuối cùng nhiệm vụ tải sẽ được chuyển đến class loader ở cấp độ cao nhất, `BootstrapClassLoader`. Chỉ khi class loader cha không thể hoàn thành nhiệm vụ tải lớp, class loader này mới thử tải lớp bằng chính nó.
 
-Một lợi ích của việc sử dụng mô hình ủy quyền kép là đảm bảo các ClassLoader khác nhau sử dụng cùng một đối tượng, điều này đảm bảo tính an toàn của loại hình lõi của Java, ví dụ: tải lớp `java.lang.Object` trong gói rt.jar, bất kể ClassLoader nào tải lớp này, cuối cùng đều được ủy quyền cho BootstrapClassLoader ở đỉnh cùng để tải, điều này đảm bảo rằng bất kỳ ClassLoader nào cũng nhận được cùng một đối tượng Object. Xem mã nguồn của ClassLoader, bạn sẽ hiểu rõ hơn về mô hình ủy quyền kép:
+Một lợi ích của việc sử dụng mô hình ủy quyền cho cha mẹ là đảm bảo rằng các đối tượng thu được từ các class loader khác nhau đều là cùng một đối tượng. Điều này giúp đảm bảo tính an toàn của kiểu dữ liệu trong thư viện cốt lõi Java. Ví dụ, khi tải lớp `java.lang.Object` nằm trong gói rt.jar, bất kể class loader nào tải lớp này, cuối cùng nó đều được ủy quyền cho `BootstrapClassLoader` ở cấp độ cao nhất để tải. Điều này đảm bảo rằng bất kỳ class loader nào cũng sẽ nhận được cùng một đối tượng Object. Khi xem mã nguồn của ClassLoader, bạn sẽ có cái nhìn trực quan hơn về mô hình ủy quyền cho cha mẹ:
 
 ```java
 protected Class<?> loadClass(String name, boolean resolve) {
     synchronized (getClassLoadingLock(name)) {
-    // Đầu tiên, kiểm tra xem lớp đã được tải chưa, nếu tìm thấy lớp trong bộ nhớ cache của JVM, trả về trực tiếp
+    // Đầu tiên, kiểm tra xem lớp này đã được tải hay chưa.
+    // Nếu tìm thấy lớp này trong bộ nhớ đệm JVM, thì trả về ngay lập tức.
     Class<?> c = findLoadedClass(name);
     if (c == null) {
         try {
-            // Tuân thủ mô hình ủy quyền kép, trước tiên sẽ tìm kiếm từ ClassLoader cha theo đệ quy,
-            // cho đến khi ClassLoader cha là BootstrapClassLoader
+            // Tuân theo mô hình ủy quyền cho cha mẹ, đầu tiên sẽ tìm từ class loader cha thông qua đệ quy,
+            // cho đến khi class loader cha là BootstrapClassLoader.
             if (parent != null) {
                 c = parent.loadClass(name, false);
             } else {
@@ -405,9 +406,9 @@ protected Class<?> loadClass(String name, boolean resolve) {
             }
         } catch (ClassNotFoundException e) {}
         if (c == null) {
-            // Nếu vẫn không tìm thấy, thử tìm kiếm bằng phương thức findClass
-            // findClass được để lại để người phát triển tự triển khai, nghĩa là
-            // khi triển khai ClassLoader tùy chỉnh, chỉ cần ghi đè phương thức này
+            // Nếu vẫn không tìm thấy, thử tìm qua phương thức findClass.
+            // Phương thức findClass được dành cho nhà phát triển tự triển khai,
+            // tức là, khi tạo class loader tùy chỉnh, bạn chỉ cần ghi đè phương thức này.
            c = findClass(name);
         }
     }
@@ -417,11 +418,12 @@ protected Class<?> loadClass(String name, boolean resolve) {
     return c;
     }
 }
+
 ```
 
-Tuy nhiên, mô hình ủy quyền kép không thể giải quyết tất cả các vấn đề về lớp tải, ví dụ, Java cung cấp nhiều giao diện nhà cung cấp dịch vụ (Service Provider Interface - SPI), cho phép bên thứ ba cung cấp cài đặt cho các giao diện này. Các SPI phổ biến bao gồm JDBC, JNDI, JAXP, v.v. Các giao diện SPI này được cung cấp bởi thư viện lõi của Java, nhưng được cài đặt bởi bên thứ ba. Vấn đề ở đây là giao diện SPI là một phần của thư viện lõi của Java và được tải bởi BootstrapClassLoader; trong khi các lớp Java cài đặt SPI thường được tải bởi AppClassLoader. BootstrapClassLoader không thể tìm thấy các lớp cài đặt SPI vì nó chỉ tải các thư viện lõi của Java. Nó cũng không thể ủy quyền cho AppClassLoader vì nó là lớp tải trên cùng. Điều này có nghĩa là mô hình ủy quyền kép không thể giải quyết vấn đề này.
+Tuy nhiên, mô hình ủy quyền cho cha mẹ không thể giải quyết tất cả các vấn đề liên quan đến class loader. Ví dụ, Java cung cấp nhiều interface cung cấp dịch vụ (`Service Provider Interface`, SPI), cho phép bên thứ ba cung cấp các triển khai cho các interface này. Các SPI phổ biến bao gồm JDBC, JNDI, JAXP, v.v. interface của các SPI này được cung cấp bởi thư viện cốt lõi, nhưng được triển khai bởi bên thứ ba, điều này tạo ra một vấn đề: interface SPI là một phần của thư viện cốt lõi Java, được `BootstrapClassLoader` tải; các lớp Java triển khai SPI thường được `AppClassLoader` tải. `BootstrapClassLoader` không thể tìm thấy lớp triển khai SPI, vì nó chỉ tải thư viện cốt lõi Java. Nó cũng không thể ủy quyền cho `AppClassLoader`, vì nó là class loader ở cấp độ cao nhất. Nói cách khác, mô hình ủy quyền cho cha mẹ không thể giải quyết vấn đề này.
 
-ClassLoader của ngữ cảnh luồng (`ContextClassLoader`) giải quyết vấn đề này một cách hoàn hảo. Từ tên gọi, có thể hiểu lầm rằng nó là một loại trình tải lớp mới, nhưng thực tế chỉ là một biến của lớp Thread và có thể được thiết lập và truy xuất thông qua `setContextClassLoader(ClassLoader cl)` và `getContextClassLoader()`. Nếu không thiết lập gì cả, trình tải lớp ngữ cảnh của luồng trong ứng dụng Java sẽ mặc định là AppClassLoader. Khi sử dụng giao diện SPI trong thư viện lõi, trình tải lớp tải được chuyển qua lớp tải ngữ cảnh của luồng, điều này cho phép tải thành công các lớp cài đặt SPI. Lớp tải ngữ cảnh của luồng được sử dụng trong nhiều cài đặt SPI. Tuy nhiên, trong JDBC, bạn có thể thấy một cách triển khai trực tiếp hơn, ví dụ, trong phương thức `loadInitialDrivers()` của DriverManager trong `java.sql.Driver`, bạn có thể thấy cách JDK tải các trình điều khiển:
+Class loader ngữ cảnh của luồng (`ContextClassLoader`) giải quyết được vấn đề này. Từ tên, bạn có thể hiểu lầm rằng đây là một loại class loader mới. Trên thực tế, nó chỉ là một biến của lớp Thread, có thể được thiết lập và lấy thông qua các phương thức `setContextClassLoader(ClassLoader cl)` và `getContextClassLoader()`. Nếu không thiết lập gì, class loader ngữ cảnh của luồng trong ứng dụng Java mặc định sẽ là `AppClassLoader`. Khi thư viện cốt lõi sử dụng interface SPI, class loader được truyền đi sử dụng class loader ngữ cảnh của luồng, từ đó có thể tải thành công lớp triển khai SPI. Class loader ngữ cảnh của luồng được sử dụng trong nhiều triển khai SPI. Tuy nhiên, trong JDBC, bạn có thể thấy một cách triển khai trực tiếp hơn. Ví dụ, trong quản lý driver JDBC `java.sql.Driver`, trong phương thức `loadInitialDrivers()`, bạn có thể thấy trực tiếp cách JDK tải driver:
 
 ```java
 for (String aDriver : driversList) {
@@ -434,9 +436,9 @@ for (String aDriver : driversList) {
 }
 ```
 
-Thực tế, giải thích về lớp tải ngữ cảnh của luồng (Thread Context ClassLoader) chủ yếu là để mọi người không cảm thấy mơ hồ khi nhìn thấy `Thread.currentThread().getClassLoader()` và `Thread.currentThread().getContextClassLoader()`. Ngoài việc lấy ClassLoader từ các framework cấp thấp, hai phương thức này thường giống nhau trong hầu hết các tình huống kinh doanh, chỉ cần biết chúng tồn tại để giải quyết vấn đề gì là đủ.
+Thực ra, mục đích chính khi giải thích về class loader ngữ cảnh của luồng là để khi bạn gặp `Thread.currentThread().getClassLoader()` và `Thread.currentThread().getContextClassLoader()`, bạn sẽ không cảm thấy bối rối. Ngoại trừ việc class loader thu được từ nhiều khung sườn cơ sở có thể khác nhau khi sử dụng hai phương thức này, trong hầu hết các tình huống khác, chúng đều giống nhau. Bạn chỉ cần biết rằng nó tồn tại để giải quyết vấn đề gì.
 
-Ngoài việc tải lớp, classloader còn có một chức năng quan trọng khác, đó là tải tài nguyên. Nó có thể đọc bất kỳ tệp tài nguyên nào từ gói jar, ví dụ: phương thức `ClassLoader.getResources(String name)` được sử dụng để đọc tệp tài nguyên từ gói jar, mã của nó như sau:
+Ngoài việc tải class, class loader còn có một chức năng rất quan trọng khác, đó là tải tài nguyên. Nó có thể đọc bất kỳ tệp tài nguyên nào từ gói jar, ví dụ, phương thức `ClassLoader.getResources(String name)`được sử dụng để đọc tệp tài nguyên trong gói jar, mã của nó như sau:
 
 ```java
 public Enumeration<URL> getResources(String name) throws IOException {
@@ -451,9 +453,9 @@ public Enumeration<URL> getResources(String name) throws IOException {
 }
 ```
 
-Cảm thấy hơi quen mắt phải không? Đúng vậy, logic của nó thực tế là giống như logic của việc tải lớp. Trước tiên, kiểm tra xem bộ tải lớp cha có rỗng hay không, nếu không rỗng thì uỷ quyền cho bộ tải lớp cha để thực hiện nhiệm vụ tìm kiếm tài nguyên, cho đến khi đến BootstrapClassLoader, cuối cùng mới đến lượt tự mình tìm kiếm. Và các trình tải lớp khác nhau chịu trách nhiệm quét các gói jar ở các đường dẫn khác nhau, giống như việc tải lớp, cuối cùng sẽ quét qua toàn bộ các gói jar và tìm ra các tệp tài nguyên phù hợp.
+Bạn có cảm giác quen thuộc không? Đúng vậy, logic của nó thực sự giống với logic tải lớp. Đầu tiên, nó kiểm tra xem class loader cha có rỗng không, nếu không rỗng thì ủy quyền cho class loader cha thực hiện nhiệm vụ tìm kiếm tài nguyên, cho đến khi đến BootstrapClassLoader, cuối cùng mới đến lượt nó tự tìm kiếm. Và class loader khác nhau sẽ quét các gói jar ở các đường dẫn khác nhau, giống như tải class, cuối cùng nó sẽ quét tất cả các gói jar, tìm thấy các tệp tài nguyên phù hợp.
 
-Phương thức `findResources(name)` của lớp ClassLoader sẽ duyệt qua tất cả các gói jar mà nó chịu trách nhiệm tải, và tìm ra các tệp nguồn có tên là name trong các gói jar đó. Tại đây, nguồn có thể là bất kỳ loại tệp nào, thậm chí là file `.class`. Ví dụ dưới đây được sử dụng để tìm kiếm tệp `Array.class`:
+Phương thức `findResources(name)` của class loader sẽ duyệt qua tất cả các gói jar mà nó có trách nhiệm tải, tìm thấy các tệp tài nguyên có tên là name trong gói jar. Tài nguyên ở đây có thể là bất kỳ tệp nào, thậm chí là tệp .class, ví dụ dưới đây, được sử dụng để tìm tệp Array.class:
 
 ```java
 // Tìm tệp Array.class
@@ -468,15 +470,15 @@ public static void main(String[] args) throws Exception{
 }
 ```
 
-Sau khi chạy, kết quả sẽ như sau:
+Khi chạy, bạn có thể nhận được kết quả sau:
 
 ```
 $JAVA_HOME/jre/lib/rt.jar!/java/sql/Array.class
 ```
 
-Dựa trên URL của tệp tài nguyên, bạn có thể xây dựng tệp tương ứng để đọc nội dung tài nguyên.
+Dựa vào URL của tệp tài nguyên, bạn có thể tạo tệp tương ứng để đọc nội dung tài nguyên.
 
-Khi nhìn thấy điều này, bạn có thể cảm thấy khá lạ lẫm, vì tôi đã nói sẽ giải thích về `SpringFactoriesLoader`, nhưng lại bắt đầu bằng việc giải thích về ClassLoader. Hãy xem mã nguồn của nó, bạn sẽ hiểu:
+Đến đây, bạn có thể thấy rất lạ, bạn không phải đang giải thích `SpringFactoriesLoader` sao? Tại sao lại nói một đống về ClassLoader? Hãy xem mã nguồn của nó, bạn sẽ hiểu:
 
 ```java
 public static final String FACTORIES_RESOURCE_LOCATION = "META-INF/spring.factories";
@@ -501,26 +503,28 @@ public static List<String> loadFactoryNames(Class<?> factoryClass, ClassLoader c
 }
 ```
 
-Với kiến thức về ClassLoader đã được trình bày trước đó, khi hiểu mã nguồn này, bạn sẽ cảm thấy mọi thứ rõ ràng hơn: nó tìm kiếm tất cả các tệp cấu hình `META-INF/spring.factories` trong mỗi gói jar trong `CLASSPATH`, sau đó phân tích tệp properties và trả về các giá trị cấu hình tương ứng. Cần lưu ý rằng, nó không chỉ tìm kiếm trong đường dẫn ClassPath, mà còn quét tất cả các gói jar trong tất cả các đường dẫn, chỉ có tệp này chỉ xuất hiện trong các gói jar trong ClassPath. Hãy xem nội dung của tệp `spring.factories` một chút:
+Với kiến thức về ClassLoader từ trước, việc hiểu đoạn mã này trở nên dễ dàng hơn: Tìm kiếm tất cả các tệp cấu hình `META-INF/spring.factories` từ mỗi gói Jar trong `CLASSPATH`, sau đó phân tích tệp properties, tìm thấy cấu hình với tên chỉ định và trả về. Điều cần lưu ý là, ở đây không chỉ tìm kiếm trong đường dẫn ClassPath, mà còn quét tất cả các gói Jar ở tất cả các đường dẫn, nhưng tệp này chỉ có trong các gói jar trong Classpath. Hãy xem nội dung của tệp `spring.factories`:
 
 ```java
-// Đến từ `org.springframework.boot.autoconfigure` trong `META-INF/spring.factories`
-// EnableAutoConfiguration sẽ được giải thích sau, nó được sử dụng để kích hoạt chức năng tự động cấu hình của Spring Boot
+// Từ META-INF/spring.factories dưới org.springframework.boot.autoconfigure
+// EnableAutoConfiguration sẽ được giới thiệu sau, nó được sử dụng để kích hoạt chức năng cấu hình tự động của Spring Boot
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
 org.springframework.boot.autoconfigure.admin.SpringApplicationAdminJmxAutoConfiguration,\
 org.springframework.boot.autoconfigure.aop.AopAutoConfiguration,\
 org.springframework.boot.autoconfigure.amqp.RabbitAutoConfiguration\
+
 ```
 
-Sau khi chạy `loadFactoryNames(EnableAutoConfiguration.class, classLoader)`, bạn sẽ nhận được một danh sách các lớp `@Configuration`, bạn có thể khởi tạo các lớp này bằng phản chiếu và tiêm vào bên trong IOC Container. Cuối cùng, container sẽ có một loạt các lớp cấu hình JavaConfig được đánh dấu bằng `@Configuration`.
+Sau khi thực hiện `loadFactoryNames(EnableAutoConfiguration.class, classLoader)`, chúng tôi nhận được một nhóm các lớp `@Configuration`,  
+chúng tôi có thể khởi tạo các lớp này thông qua phản xạ sau đó tiêm vào container IOC, cuối cùng trong container sẽ có một loạt các lớp cấu hình dưới dạng JavaConfig được đánh dấu với `@Configuration`.
 
-Đây chính là `SpringFactoriesLoader`, nó thực chất là một phương pháp mở rộng riêng của Spring Framework, tương tự như SPI, nhiều chức năng cốt lõi của Spring Boot dựa trên nó, hy vọng rằng mọi người có thể hiểu được.
+Đó chính là `SpringFactoriesLoader`, về bản chất, nó là một phương pháp kế thừa riêng của Spring Framework, tương tự như SPI, nhiều chức năng cốt lõi của Spring Boot trên cơ sở Spring đều dựa trên điều này, hy vọng mọi người có thể hiểu.
 
 ## 4. Một vũ khí khác: Cơ chế lắng nghe sự kiện của Spring Container
 
-Trong quá khứ, cơ chế lắng nghe sự kiện thường được sử dụng trong lập trình giao diện đồ họa, ví dụ như: nhấp chuột vào nút, nhập nội dung vào ô văn bản, v.v. được gọi là sự kiện. Khi sự kiện xảy ra, ứng dụng sẽ phản ứng tương ứng. Trên máy chủ, cơ chế lắng nghe sự kiện được sử dụng nhiều hơn cho thông báo bất đồng bộ, giám sát và xử lý ngoại lệ. Java cung cấp hai lớp cơ bản để triển khai cơ chế lắng nghe sự kiện: lớp sự kiện tùy chỉnh mở rộng từ `java.util.EventObject` và lớp lắng nghe sự kiện mở rộng từ `java.util.EventListener`. Hãy xem một ví dụ đơn giản: giám sát thời gian thực hiện một phương thức.
+Trước đây, cơ chế nghe sự kiện thường được sử dụng nhiều trong lập trình giao diện đồ họa, ví dụ: **Click** nút, **nhập** nội dung vào hộp văn bản, v.v., được gọi là sự kiện, và khi sự kiện được kích hoạt, ứng dụng phản ứng theo một cách nhất định, có nghĩa là ứng dụng đã nghe sự kiện này. Trên máy chủ, cơ chế nghe sự kiện thường được sử dụng nhiều hơn để thông báo không đồng bộ cũng như giám sát và xử lý ngoại lệ. Java cung cấp hai lớp cơ bản để thực hiện cơ chế nghe sự kiện: loại sự kiện tùy chỉnh kế thừa từ `java.util.EventObject`, người nghe sự kiện kế thừa từ `java.util.EventListener`. Hãy xem một ví dụ đơn giản: giám sát thời gian thực hiện của một phương thức.
 
-Đầu tiên, định nghĩa loại sự kiện, thường là mở rộng từ EventObject, các trạng thái tương ứng thường được đóng gói trong lớp này khi sự kiện xảy ra:
+Đầu tiên, hãy định nghĩa loại sự kiện, phương pháp thông thường là kế thừa EventObject, cùng với sự kiện, trạng thái tương ứng thường được đóng gói trong lớp này:
 
 ```java
 public class MethodMonitorEvent extends EventObject {
@@ -533,17 +537,17 @@ public class MethodMonitorEvent extends EventObject {
 }
 ```
 
-Sau khi sự kiện được phát hành, lắng nghe sự kiện tương ứng có thể xử lý loại sự kiện này. Chúng ta có thể phát hành một sự kiện "begin" trước khi phương thức bắt đầu thực thi và phát hành một sự kiện "end" sau khi phương thức kết thúc. Tương ứng, lắng nghe sự kiện cần cung cấp phương thức để xử lý hai trường hợp này:
+Sau khi sự kiện được phát hành, người nghe tương ứng có thể xử lý loại sự kiện này, chúng tôi có thể phát hành một sự kiện bắt đầu trước khi phương thức bắt đầu thực hiện và phát hành một sự kiện kết thúc sau khi phương thức thực hiện xong, tương ứng, người nghe sự kiện cần cung cấp phương thức để xử lý các sự kiện nhận được trong hai trường hợp này:
 
 ```java
-// 1. Định nghĩa giao diện lắng nghe sự kiện
+// 1. Định nghĩa interface lắng nghe sự kiện
 public interface MethodMonitorEventListener extends EventListener {
     // Xử lý sự kiện được phát hành trước khi phương thức bắt đầu thực thi
     public void onMethodBegin(MethodMonitorEvent event);
     // Xử lý sự kiện được phát hành khi phương thức kết thúc
     public void onMethodEnd(MethodMonitorEvent event);
 }
-// 2. Triển khai giao diện lắng nghe sự kiện: xử lý như thế nào
+// 2. Triển khai interface lắng nghe sự kiện: xử lý như thế nào
 public class AbstractMethodMonitorEventListener implements MethodMonitorEventListener {
 
     @Override
@@ -561,7 +565,7 @@ public class AbstractMethodMonitorEventListener implements MethodMonitorEventLis
 }
 ```
 
-Giao diện lắng nghe sự kiện định nghĩa các phương thức xử lý cho các sự kiện được phát hành trước khi phương thức bắt đầu và sau khi phương thức kết thúc. Quan trọng nhất là các phương thức này chỉ nhận tham số MethodMonitorEvent, cho thấy lớp lắng nghe sự kiện chỉ đảm nhận việc lắng nghe và xử lý sự kiện tương ứng. Sau khi có sự kiện và lắng nghe sự kiện, chỉ cần phát hành sự kiện và cho phép lắng nghe tương ứng lắng nghe và xử lý. Thông thường, chúng ta sẽ có một nguồn phát sự kiện, nó là nguồn sự kiện trong chính nó và trong thời điểm thích hợp, nó sẽ phát hành sự kiện tương ứng cho lắng nghe sự kiện tương ứng:
+Interface lắng nghe sự kiện định nghĩa các phương thức xử lý cho các sự kiện được phát hành trước khi phương thức bắt đầu và sau khi phương thức kết thúc. Quan trọng nhất là các phương thức này chỉ nhận tham số MethodMonitorEvent, cho thấy lớp lắng nghe sự kiện chỉ đảm nhận việc lắng nghe và xử lý sự kiện tương ứng. Sau khi có sự kiện và lắng nghe sự kiện, chỉ cần phát hành sự kiện và cho phép lắng nghe tương ứng lắng nghe và xử lý. Thông thường, chúng ta sẽ có một nguồn phát sự kiện, nó là nguồn sự kiện trong chính nó và trong thời điểm thích hợp, nó sẽ phát hành sự kiện tương ứng cho lắng nghe sự kiện tương ứng:
 
 ```java
 public class MethodMonitorEventPublisher {
@@ -613,11 +617,11 @@ Bạn đã đoán được rồi đúng không?
 
 ApplicationEvent kế thừa từ EventObject, Spring cung cấp một số triển khai mặc định, ví dụ: `ContextClosedEvent` đại diện cho sự kiện được phát hành khi container sắp đóng, `ContextRefreshedEvent` đại diện cho sự kiện được phát hành khi container được khởi tạo hoặc làm mới, v.v.
 
-Container sử dụng ApplicationListener làm giao diện lắng nghe sự kiện, nó kế thừa từ EventListener. Khi ApplicationContext khởi động, nó sẽ tự động nhận dạng và tải các bean kiểu ApplicationListener. Khi có sự kiện được phát hành trong container, các ApplicationListener đã đăng ký sẽ được thông báo về các sự kiện này.
+Container sử dụng ApplicationListener làm interface lắng nghe sự kiện, nó kế thừa từ EventListener. Khi ApplicationContext khởi động, nó sẽ tự động nhận dạng và tải các bean kiểu ApplicationListener. Khi có sự kiện được phát hành trong container, các ApplicationListener đã đăng ký sẽ được thông báo về các sự kiện này.
 
-Giao diện ApplicationContext kế thừa từ giao diện ApplicationEventPublisher, giao diện này cung cấp phương thức `void publishEvent(ApplicationEvent event)` để định nghĩa, không khó nhận ra rằng ApplicationContext đóng vai trò như một nguồn phát sự kiện. Nếu quan tâm, bạn có thể xem mã nguồn của phương thức `AbstractApplicationContext.publishEvent(ApplicationEvent event)`: ApplicationContext chịu trách nhiệm cho việc phát hành sự kiện và quản lý lắng nghe sự kiện bằng cách sử dụng một triển khai của giao diện ApplicationEventMulticaster. Khi container khởi động, nó sẽ kiểm tra xem trong container có đối tượng ApplicationEventMulticaster có tên là applicationEventMulticaster không. Nếu có, nó sẽ sử dụng triển khai này, nếu không, nó sẽ khởi tạo một SimpleApplicationEventMulticaster mặc định làm triển khai.
+Interface ApplicationContext kế thừa từ interface ApplicationEventPublisher, interface này cung cấp phương thức `void publishEvent(ApplicationEvent event)` để định nghĩa, không khó nhận ra rằng ApplicationContext đóng vai trò như một nguồn phát sự kiện. Nếu quan tâm, bạn có thể xem mã nguồn của phương thức `AbstractApplicationContext.publishEvent(ApplicationEvent event)`: ApplicationContext chịu trách nhiệm cho việc phát hành sự kiện và quản lý lắng nghe sự kiện bằng cách sử dụng một triển khai của interface ApplicationEventMulticaster. Khi container khởi động, nó sẽ kiểm tra xem trong container có đối tượng ApplicationEventMulticaster có tên là applicationEventMulticaster không. Nếu có, nó sẽ sử dụng triển khai này, nếu không, nó sẽ khởi tạo một SimpleApplicationEventMulticaster mặc định làm triển khai.
 
-Cuối cùng, nếu chúng ta cần phát hành sự kiện trong container, chỉ cần tiêm phụ thuộc vào ApplicationEventPublisher: triển khai giao diện ApplicationEventPublisherAware hoặc ApplicationContextAware (hãy xem lại phần Aware trong bài viết trước).
+Cuối cùng, nếu chúng ta cần phát hành sự kiện trong container, chỉ cần tiêm phụ thuộc vào ApplicationEventPublisher: triển khai interface ApplicationEventPublisherAware hoặc ApplicationContextAware (hãy xem lại phần Aware trong bài viết trước).
 
 ## 5. Tuyệt vời: Làm sáng tỏ nguyên tắc cấu hình tự động
 
@@ -761,7 +765,7 @@ private void initialize(Object[] sources) {
 }
 ```
 
-Trong quá trình khởi tạo, điều quan trọng nhất là sử dụng SpringFactoriesLoader để tìm các lớp triển khai của hai giao diện `ApplicationContextInitializer` và `ApplicationListener` được cấu hình trong tệp `spring.factories`, để xây dựng các thể hiện tương ứng sau này. Mục đích chính của `ApplicationContextInitializer` là cấu hình hoặc xử lý thêm cho thể hiện `ConfigurableApplicationContext` trước khi nó được làm mới. `ConfigurableApplicationContext` kế thừa từ `ApplicationContext` và cung cấp khả năng cấu hình cho `ApplicationContext`.
+Trong quá trình khởi tạo, điều quan trọng nhất là sử dụng SpringFactoriesLoader để tìm các lớp triển khai của hai interface `ApplicationContextInitializer` và `ApplicationListener` được cấu hình trong tệp `spring.factories`, để xây dựng các thể hiện tương ứng sau này. Mục đích chính của `ApplicationContextInitializer` là cấu hình hoặc xử lý thêm cho thể hiện `ConfigurableApplicationContext` trước khi nó được làm mới. `ConfigurableApplicationContext` kế thừa từ `ApplicationContext` và cung cấp khả năng cấu hình cho `ApplicationContext`.
 
 Việc triển khai `ApplicationContextInitializer` rất đơn giản vì nó chỉ có một phương thức, nhưng trong hầu hết các trường hợp, chúng ta không cần phải tạo ra một `ApplicationContextInitializer` tùy chỉnh. Ngay cả trong Spring Boot, nó cũng chỉ đăng ký hai triển khai mặc định. Sau cùng, Spring Container đã rất thành công và ổn định, bạn không cần phải thay đổi nó.
 
@@ -781,7 +785,7 @@ Về quá trình khởi tạo của SpringApplication, chúng ta chỉ nói đ�
 
 ### 6.2 Quy trình khởi động của Spring Boot
 
-Toàn bộ quy trình khởi động ứng dụng Spring Boot được đóng gói trong phương thức SpringApplication.run, quy trình này thực sự rất dài và phức tạp, nhưng về bản chất chỉ là mở rộng trên nền tảng khởi động của Spring Container. Hãy xem mã nguồn theo cách này:
+Toàn bộ quy trình khởi động ứng dụng Spring Boot được đóng gói trong phương thức SpringApplication.run, quy trình này thực sự rất dài và phức tạp, nhưng về bản chất chỉ là kế thừa trên nền tảng khởi động của Spring Container. Hãy xem mã nguồn theo cách này:
 
 ```
 public ConfigurableApplicationContext run(String... args) {
@@ -855,7 +859,7 @@ public void starting() {
 }
 ```
 
-Theo luồng logic này, bạn có thể tìm thấy ở ② trong mã nguồn của phương thức prepareEnvironment() dòng mã `listeners.environmentPrepared(environment);` tức là phương thức thứ hai của giao diện SpringApplicationRunListener, và không ngạc nhiên, nó lại phát ra một sự kiện khác là ApplicationEnvironmentPreparedEvent. Tiếp theo sẽ xảy ra gì, bạn có thể tự tìm hiểu được rồi đúng không?
+Theo luồng logic này, bạn có thể tìm thấy ở ② trong mã nguồn của phương thức prepareEnvironment() dòng mã `listeners.environmentPrepared(environment);` tức là phương thức thứ hai của interface SpringApplicationRunListener, và không ngạc nhiên, nó lại phát ra một sự kiện khác là ApplicationEnvironmentPreparedEvent. Tiếp theo sẽ xảy ra gì, bạn có thể tự tìm hiểu được rồi đúng không?
 
 ② Tạo và cấu hình `Environment` sẽ được ứng dụng sử dụng. Environment được sử dụng để mô tả môi trường chạy hiện tại của ứng dụng, nó trừu tượng hóa hai khía cạnh: cấu hình (profile) và thuộc tính (properties). Những người có kinh nghiệm phát triển sẽ không xa lạ với hai khái niệm này: các môi trường khác nhau (ví dụ: môi trường sản xuất, môi trường staging) có thể sử dụng các tệp cấu hình khác nhau, và thuộc tính có thể được lấy từ các nguồn như tệp cấu hình, biến môi trường, tham số dòng lệnh, v.v. Do đó, khi Environment đã sẵn sàng, bạn có thể truy cập tài nguyên từ Environment bất kỳ lúc nào trong ứng dụng.
 

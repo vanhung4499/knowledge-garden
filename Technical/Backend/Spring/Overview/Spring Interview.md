@@ -3,7 +3,7 @@ title: Spring Interview
 tags: [spring, java, backend, interview]
 categories: [spring, java, backend, interview]
 date created: 2023-07-26
-date modified: 2023-07-26
+date modified: 2024-02-21
 ---
 
 # Phỏng vấn Spring
@@ -21,13 +21,13 @@ date modified: 2023-07-26
 
 ## Tổng hợp
 
-### Spring Framework các phiên bản khác nhau có những chức năng chính nào?
+### Các phiên bản khác nhau của Spring Framework có những tính năng chính nào?
 
-| Phiên bản | Chức năng chính                                                                 |
-| --------- | ------------------------------------------------------------------------------ |
-| Spring 2.5 | Phát hành vào năm 2007. Đây là phiên bản đầu tiên hỗ trợ chú thích.              |
-| Spring 3.0 | Phát hành vào năm 2009. Nó tận dụng hoàn toàn các cải tiến trong Java 5 và hỗ trợ JEE6. |
-| Spring 4.0 | Phát hành vào năm 2013. Đây là phiên bản đầu tiên hoàn toàn hỗ trợ JAVA 8.       |
+|Phiên bản|Tính năng|
+|---|---|
+|Spring 2.5|Phát hành vào năm 2007. Đây là phiên bản đầu tiên hỗ trợ annotation.|
+|Spring 3.0|Phát hành vào năm 2009. Phiên bản này tận dụng tối đa các cải tiến trong Java5 và cung cấp hỗ trợ cho JEE6.|
+|Spring 4.0|Phát hành vào năm 2013. Đây là phiên bản đầu tiên hỗ trợ hoàn toàn JAVA8.|
 
 ### Spring Framework là gì?
 
@@ -94,14 +94,14 @@ Một ứng dụng Spring thông thường bao gồm các thành phần sau:
 - **Tệp cấu hình Bean (Bean Configuration File)** - Chứa thông tin về lớp và cách cấu hình chúng.
 - **Chương trình người dùng (User Program)** - Sử dụng các giao diện.
 
-### Có những cách nào để sử dụng Spring?
+### Các cách sử dụng Spring là gì?
 
-Có các cách sau để sử dụng Spring:
+Các cách sử dụng Spring như sau:
 
-- Sử dụng làm ứng dụng web Spring hoàn chỉnh.
-- Sử dụng làm framework web bên thứ ba, sử dụng lớp trung gian của Spring Framework.
-- Sử dụng từ xa.
-- Sử dụng làm Java Bean doanh nghiệp, có thể bao bọc các POJO (Plain Old Java Objects) hiện có.
+- Như một ứng dụng web Spring hoàn chỉnh.
+- Như một framework web của bên thứ ba, sử dụng lớp trung gian của Spring Frameworks.
+- Để sử dụng từ xa.
+- Như một Enterprise Java Bean, nó có thể bọc các POJO (Plain Old Java Objects) hiện có.
 
 ## Core
 

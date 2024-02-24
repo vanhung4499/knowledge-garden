@@ -1,9 +1,18 @@
 ---
 title: Spring Access ElasticSearch
-tags: [spring, java, db, backend]
-categories: [spring, java, db, backend]
+tags:
+  - spring
+  - java
+  - db
+  - backend
+  - elasticssearch
+categories:
+  - spring
+  - java
+  - db
+  - backend
 date created: 2023-08-11
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
 # Spring Accessing Elasticsearch
@@ -84,17 +93,7 @@ Thực tế, Spring Data JPA và Spring Data Elasticsearch chia sẻ cơ sở h�
 
 ## Mã nguồn
 
-Ví dụ đầy đủ: [Mã nguồn](https://github.com/dunwu/spring-boot-tutorial/tree/master/codes/spring-boot-data-elasticsearch)
-
-Cách sử dụng:
-
-```bash
-mvn clean package
-cd target
-java -jar spring-boot-data-elasticsearch.jar
-```
-
-## Phiên bản
+Ví dụ đầy đủ: Comming soon
 
 Spring và Elasticsearch tương ứng với phiên bản như sau:
 

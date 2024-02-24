@@ -1,16 +1,25 @@
 ---
 title: Spring Access Redis
-tags: [spring, java, db, backend]
-categories: [spring, java, db, backend]
+tags:
+  - spring
+  - java
+  - db
+  - backend
+  - redis
+categories:
+  - spring
+  - java
+  - db
+  - backend
 date created: 2023-08-11
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
 # Truy cập Redis trong Spring
 
 ## Giới thiệu
 
-[Redis](https://redis.io/) là một cơ sở dữ liệu bộ nhớ mở được sử dụng bởi hàng triệu nhà phát triển như một cơ sở dữ liệu, bộ nhớ cache, công cụ xử lý luồng và trung gian tin nhắn.
+[Redis](https://redis.io/) là một cơ sở dữ liệu mã nguồn mở được sử dụng bởi hàng triệu nhà phát triển như một cơ sở dữ liệu, bộ nhớ cache, công cụ xử lý luồng và hàng đợi tin nhắn.
 
 Trong Spring, dự án [spring-data-redis](https://github.com/spring-projects/spring-data-redis) cung cấp một API để truy cập [Redis](https://redis.io/), giúp việc truy cập trở nên dễ dàng hơn. [spring-data-redis](https://github.com/spring-projects/spring-data-redis) là một dự án con của [spring-data](https://spring.io/projects/spring-data), nó cung cấp các tính năng mạnh mẽ để làm việc với Redis.
 
@@ -65,7 +74,7 @@ public class User implements Serializable {
 }
 ```
 
-### Định nghĩa giao diện CRUD
+### Định nghĩa service interface CRUD
 
 ```java
 import java.util.Map;
@@ -83,7 +92,7 @@ public interface UserService {
 }
 ```
 
-### Triển khai giao diện CRUD
+### Triển khai service CRUD
 
 ```java
 import cn.hutool.core.bean.BeanUtil;
@@ -189,7 +198,7 @@ public class RedisQuickstartApplication {
 }
 ```
 
-### Kiểm tra
+### Test
 
 ```java
 @Slf4j

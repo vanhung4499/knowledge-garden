@@ -3,18 +3,18 @@ title: Spring Data Integration
 tags: [spring, java, db, backend]
 categories: [spring, java, db, backend]
 date created: 2023-08-11
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
-# Tổng quan về Spring Data
+# Tổng hợp về Spring Data
 
-Mục tiêu chính của Spring Data Repository là giảm đáng kể mã lặp lại khi truy cập vào lưu trữ.
+Mục tiêu của Spring Data Repository là giảm đáng kể số lượng mã mẫu cần thiết để truy cập các kho lưu trữ dữ liệu.
 
 ## Khái niệm cốt lõi
 
-Repository là một giao diện cốt lõi của Spring Data. Giao diện này chủ yếu được sử dụng như một giao diện đánh dấu để xác định loại dữ liệu sẽ được sử dụng và giúp bạn khám phá các giao diện kế thừa giao diện này. Giao diện `CrudRepository` và `ListCrudRepository` cung cấp các chức năng CRUD phức tạp cho các lớp thực thể được quản lý. `ListCrudRepository` cung cấp các phương thức tương tự, nhưng chúng trả về `List` trong khi các phương thức của `CrudRepository` trả về `Iterable`.
+Repository là interface cốt lõi của Spring Data. Interface này chủ yếu được sử dụng như một interface đánh dấu, để nắm bắt các loại sẽ sử dụng và giúp bạn phát hiện các interface kế thừa từ interface này. `CrudRepository` và `ListCrudRepository` cung cấp chức năng CRUD phức tạp cho các lớp thực thể được quản lý. `ListCrudRepository` cung cấp các phương thức tương đương nhưng chúng trả về `List`, trong khi các phương thức `CrudRepository` trả về `Iterable`.
 
-Giao diện `CrudRepository` được định nghĩa như sau:
+Định nghĩa interface `CrudRepository`:
 
 ```java
 public interface CrudRepository<T, ID> extends Repository<T, ID> {
@@ -35,9 +35,9 @@ public interface CrudRepository<T, ID> extends Repository<T, ID> {
 }
 ```
 
-> Dự án Spring Data cũng cung cấp các giao diện trừu tượng cho một số công nghệ lưu trữ cụ thể, chẳng hạn như JpaRepository hoặc MongoRepository. Các giao diện này mở rộng CrudRepository và tiếp cận các chức năng cơ bản của công nghệ lưu trữ cụ thể.
+> Các dự án Spring Data cũng cung cấp một số abstract interface cho các công nghệ lưu trữ cụ thể, như: JpaRepository hoặc MongoRepository. Những interface này kế thừa CrudRepository và tiết lộ một số chức năng cơ bản của công nghệ lưu trữ.
 
-Ngoài `CrudRepository`, còn có một giao diện `PagingAndSortingRepository` mở rộng thêm các phương thức để đơn giản hóa việc truy cập phân trang vào thực thể:
+Ngoài `CrudRepository`, còn có một interface `PagingAndSortingRepository` mà thêm vào các phương thức bổ sung để đơn giản hóa việc truy cập phân trang đến các thực thể:
 
 ```java
 public interface PagingAndSortingRepository<T, ID>  {
@@ -55,7 +55,7 @@ PagingAndSortingRepository<User, Long> repository = // … get access to a bean
 Page<User> users = repository.findAll(PageRequest.of(1, 20));
 ```
 
-Ngoài các phương thức truy vấn, cũng có sẵn các phương thức truy vấn cho việc đếm và xóa.
+Ngoài các phương thức truy vấn, truy vấn cũng có sẵn khi đếm và xóa.
 
 【Ví dụ】Đếm theo họ
 
@@ -80,13 +80,13 @@ interface UserRepository extends CrudRepository<User, Long> {
 
 Để truy vấn cơ sở dữ liệu bằng Spring Data, bạn cần thực hiện bốn bước sau:
 
-1. Khai báo một giao diện mở rộng `Repository` hoặc một giao diện con của nó và chỉ định kiểu dữ liệu chung (lớp thực thể và kiểu ID), như ví dụ dưới đây:
+1. Khai báo một interface kế thừa `Repository` hoặc một interface con của nó và chỉ định kiểu dữ liệu chung (lớp thực thể và kiểu ID), như ví dụ dưới đây:
 
    ```java
    interface PersonRepository extends Repository<Person, Long> { … }
    ```
 
-2. Trong giao diện, khai báo các phương thức truy vấn
+2. Trong interface, khai báo các phương thức truy vấn
 
    ```java
    interface PersonRepository extends Repository<Person, Long> {
@@ -94,7 +94,7 @@ interface UserRepository extends CrudRepository<User, Long> {
    }
    ```
 
-3. Sử dụng [JavaConfig](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#repositories.create-instances.java-config) hoặc [Cấu hình XML](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#repositories.create-instances) để tạo các đối tượng proxy cho các giao diện này
+3. Sử dụng [JavaConfig](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#repositories.create-instances.java-config) hoặc [Cấu hình XML](https://docs.spring.io/spring-data/jdbc/docs/current/reference/html/#repositories.create-instances) để tạo các đối tượng proxy cho các interface này
 
    ```java
    @EnableJpaRepositories
@@ -120,7 +120,7 @@ interface UserRepository extends CrudRepository<User, Long> {
 
 ## Định nghĩa Repository
 
-Đầu tiên, bạn cần định nghĩa một giao diện Repository, giao diện này phải mở rộng từ Repository và chỉ định các kiểu dữ liệu chung (lớp thực thể và kiểu ID). Nếu bạn muốn tiếp cận các phương thức CRUD cho thực thể này, bạn có thể mở rộng giao diện CrudRepository.
+Đầu tiên, bạn cần định nghĩa một interface Repository, interface này phải kế thừa từ Repository và chỉ định các kiểu dữ liệu chung (lớp thực thể và kiểu ID). Nếu bạn muốn tiếp cận các phương thức CRUD cho thực thể này, bạn có thể kế thừa interface CrudRepository.
 
 ### Tinh chỉnh định nghĩa Repository
 
@@ -136,9 +136,9 @@ Nếu bạn sử dụng framework phản ứng, bạn có thể sử dụng `Rea
 
 `PagingAndSortingRepository` cung cấp chức năng phân trang và sắp xếp.
 
-Nếu bạn không muốn mở rộng các giao diện Spring Data, bạn có thể sử dụng chú thích `@RepositoryDefinition` trên giao diện Repository của bạn. Khi làm như vậy, bạn có thể thay đổi kiểu trả về của các phương thức. Nếu có thể, Spring Data sẽ tuân thủ kiểu trả về. Ví dụ, đối với các phương thức trả về nhiều thực thể, bạn có thể chọn `Iterable<T>`, `List<T>`, `Collection<T>` hoặc danh sách `VAVR`.
+Nếu bạn không muốn kế thừa các interface Spring Data, bạn có thể sử dụng annotation `@RepositoryDefinition` trên interface Repository của bạn. Khi làm như vậy, bạn có thể thay đổi kiểu trả về của các phương thức. Nếu có thể, Spring Data sẽ tuân thủ kiểu trả về. Ví dụ, đối với các phương thức trả về nhiều thực thể, bạn có thể chọn `Iterable<T>`, `List<T>`, `Collection<T>` hoặc danh sách `VAVR`.
 
-Khi tạo một giao diện Repository tùy chỉnh, bạn phải đánh dấu nó với `@NoRepositoryBean`. Điều này ngăn Spring Data cố gắng tạo một phiên bản của nó và thất bại vì nó không thể xác định thực thể của Repository vì nó vẫn chứa một biến kiểu chung.
+Khi tạo một interface Repository tùy chỉnh, bạn phải đánh dấu nó với `@NoRepositoryBean`. Điều này ngăn Spring Data cố gắng tạo một phiên bản của nó và thất bại vì nó không thể xác định thực thể của Repository vì nó vẫn chứa một biến kiểu chung.
 
 Dưới đây là ví dụ về cách chọn lọc các phương thức CRUD (trong trường hợp này là findById và save):
 
@@ -158,13 +158,13 @@ interface UserRepository extends MyBaseRepository<User, Long> {
 
 ### Sử dụng nhiều module Spring Data
 
-Đôi khi, trong chương trình cần sử dụng nhiều module Spring Data. Trong trường hợp này, cần phải phân biệt công nghệ lưu trữ. Khi phát hiện nhiều nhà máy Repository trên đường dẫn lớp, Spring Data chuyển sang chế độ cấu hình nghiêm ngặt.
+Đôi khi, trong chương trình cần sử dụng nhiều module Spring Data. Trong trường hợp này, cần phải phân biệt công nghệ lưu trữ. Khi phát hiện nhiều Repository Factory trên đường dẫn lớp, Spring Data chuyển sang chế độ cấu hình nghiêm ngặt.
 
-Nếu Repository được định nghĩa mở rộng từ Repository trong một module cụ thể, nó sẽ là ứng cử viên hợp lệ cho module Spring Data cụ thể đó.
+Nếu Repository được định nghĩa kế thừa từ Repository trong một module cụ thể, nó sẽ là ứng cử viên hợp lệ cho module Spring Data cụ thể đó.
 
-Nếu lớp thực thể sử dụng chú thích loại cụ thể của module, nó sẽ là ứng cử viên hợp lệ cho module Spring Data cụ thể đó. module Spring Data chấp nhận chú thích bên thứ ba (ví dụ: `@Entity` của JPA) hoặc cung cấp chú thích riêng (ví dụ: `@Document` cho Spring Data MongoDB và Spring Data Elasticsearch).
+Nếu lớp thực thể sử dụng annotation loại cụ thể của module, nó sẽ là ứng cử viên hợp lệ cho module Spring Data cụ thể đó. module Spring Data chấp nhận annotation bên thứ ba (ví dụ: `@Entity` của JPA) hoặc cung cấp annotation riêng (ví dụ: `@Document` cho Spring Data MongoDB và Spring Data Elasticsearch).
 
-Ví dụ dưới đây cho thấy một Repository sử dụng giao diện cụ thể cho module JPA:
+Ví dụ dưới đây cho thấy một Repository sử dụng interface cụ thể cho module JPA:
 
 ```java
 interface MyRepository extends JpaRepository<User, Long> { }
@@ -175,9 +175,9 @@ interface MyBaseRepository<T, ID> extends JpaRepository<T, ID> { … }
 interface UserRepository extends MyBaseRepository<User, Long> { … }
 ```
 
-MyRepository và UserRepository mở rộng JpaRepository. Chúng là ứng cử viên hợp lệ cho module Spring Data JPA.
+MyRepository và UserRepository kế thừa JpaRepository. Chúng là ứng cử viên hợp lệ cho module Spring Data JPA.
 
-Ví dụ dưới đây cho thấy một Repository sử dụng giao diện chung:
+Ví dụ dưới đây cho thấy một Repository sử dụng interface chung:
 
 ```java
 interface AmbiguousRepository extends Repository<User, Long> { … }
@@ -188,9 +188,9 @@ interface MyBaseRepository<T, ID> extends CrudRepository<T, ID> { … }
 interface AmbiguousUserRepository extends MyBaseRepository<User, Long> { … }
 ```
 
-AmbiguousRepository và AmbiguousUserRepository chỉ mở rộng Repository và CrudRepository. Mặc dù điều này tốt khi chỉ sử dụng một module Spring Data duy nhất, nhưng khi có nhiều module, không thể phân biệt được Repository này nên liên kết với module Spring Data cụ thể nào.
+AmbiguousRepository và AmbiguousUserRepository chỉ kế thừa Repository và CrudRepository. Mặc dù điều này tốt khi chỉ sử dụng một module Spring Data duy nhất, nhưng khi có nhiều module, không thể phân biệt được Repository này nên liên kết với module Spring Data cụ thể nào.
 
-Ví dụ dưới đây cho thấy một Repository sử dụng lớp thực thể được chú thích:
+Ví dụ dưới đây cho thấy một Repository sử dụng lớp thực thể được annotation:
 
 ```java
 interface PersonRepository extends Repository<Person, Long> { … }
@@ -204,9 +204,9 @@ interface UserRepository extends Repository<User, Long> { … }
 class User { … }
 ```
 
-PersonRepository tham chiếu đến Person, nó được đánh dấu bằng chú thích @Entity của JPA, do đó Repository này rõ ràng thuộc về Spring Data JPA. UserRepository tham chiếu đến User, nó được đánh dấu bằng chú thích @Document của Spring Data MongoDB.
+PersonRepository tham chiếu đến Person, nó được đánh dấu bằng annotation @Entity của JPA, do đó Repository này rõ ràng thuộc về Spring Data JPA. UserRepository tham chiếu đến User, nó được đánh dấu bằng annotation @Document của Spring Data MongoDB.
 
-Ví dụ lỗi dưới đây cho thấy một Repository sử dụng lớp thực thể có chú thích kết hợp:
+Ví dụ lỗi dưới đây cho thấy một Repository sử dụng lớp thực thể có annotation kết hợp:
 
 ```java
 interface JpaPersonRepository extends Repository<Person, Long> { … }
@@ -218,7 +218,7 @@ interface MongoDBPersonRepository extends Repository<Person, Long> { … }
 class Person { … }
 ```
 
-Trong ví dụ này, lớp thực thể sử dụng chú thích của cả JPA và Spring Data MongoDB. Đã định nghĩa hai Repository: JpaPersonRepository và MongoDBPersonRepository. Một cái cho JPA và một cái cho MongoDB. Spring Data không còn có thể phân biệt được Repository, điều này dẫn đến hành vi không xác định.
+Trong ví dụ này, lớp thực thể sử dụng annotation của cả JPA và Spring Data MongoDB. Đã định nghĩa hai Repository: JpaPersonRepository và MongoDBPersonRepository. Một cái cho JPA và một cái cho MongoDB. Spring Data không còn có thể phân biệt được Repository, điều này dẫn đến hành vi không xác định.
 
 Phương pháp phân biệt Repository cuối cùng là xác định phạm vi quét gói của Repository.
 
@@ -239,7 +239,7 @@ Các tùy chọn có sẵn phụ thuộc vào lưu trữ thực tế. Tuy nhiên
 
 ### Chiến lược truy vấn
 
-Các chiến lược sau có sẵn cho cơ sở hạ tầng Repository để giải quyết các truy vấn. Trong Java configuration, bạn có thể sử dụng thuộc tính queryLookupStrategy của chú thích EnableJpaRepositories. Một số cơ sở dữ liệu cụ thể có thể không hỗ trợ một số chiến lược.
+Các chiến lược sau có sẵn cho cơ sở hạ tầng Repository để giải quyết các truy vấn. Trong Java configuration, bạn có thể sử dụng thuộc tính queryLookupStrategy của annotation EnableJpaRepositories. Một số cơ sở dữ liệu cụ thể có thể không hỗ trợ một số chiến lược.
 
 - `CREATE`: Cố gắng tạo truy vấn cụ thể cho lưu trữ từ tên phương thức.
 - `USE_DECLARED_QUERY`: Cố gắng tìm kiếm truy vấn đã được khai báo, nếu không tìm thấy sẽ ném ra ngoại lệ.
@@ -269,7 +269,7 @@ interface PersonRepository extends Repository<Person, Long> {
 }
 ```
 
-Phân tích tên phương thức truy vấn thành chủ ngữ và vị ngữ. Phần đầu tiên (find…By, exists…By) xác định chủ ngữ của truy vấn, phần thứ hai tạo thành vị ngữ. Chủ ngữ có thể chứa các biểu thức mở rộng hơn. Bất kỳ văn bản nào giữa `find` (hoặc từ khóa giới thiệu khác) và `By` được coi là mô tả, trừ khi sử dụng một trong các từ khóa giới hạn kết quả như `Distinct` để đặt cờ khác nhau trên truy vấn được tạo ra hoặc `Top`/`First` để giới hạn kết quả truy vấn.
+Phân tích tên phương thức truy vấn thành chủ ngữ và vị ngữ. Phần đầu tiên (find…By, exists…By) xác định chủ ngữ của truy vấn, phần thứ hai tạo thành vị ngữ. Chủ ngữ có thể chứa các biểu thức kế thừa hơn. Bất kỳ văn bản nào giữa `find` (hoặc từ khóa giới thiệu khác) và `By` được coi là mô tả, trừ khi sử dụng một trong các từ khóa giới hạn kết quả như `Distinct` để đặt cờ khác nhau trên truy vấn được tạo ra hoặc `Top`/`First` để giới hạn kết quả truy vấn.
 
 > Tham khảo:
 >
@@ -281,4 +281,4 @@ Phân tích tên phương thức truy vấn thành chủ ngữ và vị ngữ. P
 
 ## Tự định nghĩa triển khai Repository
 
-## Mở rộng Spring Data
+## Kế thừa Spring Data

@@ -3,7 +3,7 @@ title: Spring Bean
 tags: [spring, java, backend]
 categories: [spring, java, backend]
 date created: 2023-07-26
-date modified: 2023-07-26
+date modified: 2024-02-21
 ---
 
 # Spring Bean

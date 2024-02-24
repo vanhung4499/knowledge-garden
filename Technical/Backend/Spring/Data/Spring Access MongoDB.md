@@ -1,9 +1,18 @@
 ---
 title: Spring Access MongoDB
-tags: [spring, java, db, backend]
-categories: [spring, java, db, backend]
+tags:
+  - spring
+  - java
+  - db
+  - backend
+  - mongodb
+categories:
+  - spring
+  - java
+  - db
+  - backend
 date created: 2023-08-11
-date modified: 2023-08-11
+date modified: 20243-20228-11
 ---
 
 # Truy cập MongoDB bằng Spring
@@ -12,7 +21,7 @@ date modified: 2023-08-11
 
 [MongoDB](https://www.mongodb.org/) là một cơ sở dữ liệu dựa trên việc lưu trữ tệp phân tán. Nó được viết bằng ngôn ngữ C++. MongoDB nhằm cung cấp một giải pháp lưu trữ dữ liệu có hiệu suất cao và có khả năng mở rộng cho các ứng dụng web. MongoDB lưu trữ dữ liệu dưới dạng tài liệu, cấu trúc dữ liệu bao gồm các cặp khóa-giá trị. Tài liệu MongoDB tương tự như đối tượng JSON. Giá trị của trường có thể chứa các tài liệu khác, mảng và mảng tài liệu.
 
-Trong Spring, dự án [spring-data-mongodb](https://github.com/spring-projects/spring-data-mongodb) cung cấp một giao diện API để truy cập vào MongoDB và cung cấp cách tiếp cận dễ dàng. Spring Data MongoDB tập trung vào một mô hình trung tâm dựa trên POJO để tương tác với `DBCollection` của MongoDB và dễ dàng viết lớp truy cập dữ liệu dạng `Repository`.
+Trong Spring, dự án [spring-data-mongodb](https://github.com/spring-projects/spring-data-mongodb) cung cấp một interface API để truy cập vào MongoDB và cung cấp cách tiếp cận dễ dàng. Spring Data MongoDB tập trung vào một mô hình trung tâm dựa trên POJO để tương tác với `DBCollection` của MongoDB và dễ dàng viết lớp truy cập dữ liệu dạng `Repository`.
 
 Dự án [spring-boot](https://github.com/spring-projects/spring-boot) có một mô-đun con [spring-boot-starter-data-mongodb](https://github.com/spring-projects/spring-boot/tree/main/spring-boot-project/spring-boot-starters/spring-boot-starter-data-mongodb) dựa trên dự án [spring-data-mongodb](https://github.com/spring-projects/spring-data-mongodb), cung cấp một cách tiếp cận đơn giản hóa cho việc cấu hình MongoDB.
 
@@ -76,7 +85,7 @@ public class Customer {
 
 [spring-data-mongodb](https://github.com/spring-projects/spring-data-mongodb) kế thừa khả năng của dự án [Spring Data Commons](https://github.com/spring-projects/spring-data-commons), vì vậy bạn có thể sử dụng API chung của nó - `Repository`.
 
-Đầu tiên, hãy định nghĩa một lớp `CustomerRepository`, kế thừa từ giao diện `MongoRepository` và chỉ định các tham số kiểu của nó: `Customer` và `String`. Giao diện `MongoRepository` hỗ trợ nhiều phương thức thao tác, bao gồm CRUD và truy vấn phân trang. Trong ví dụ dưới đây, chúng ta định nghĩa hai phương thức truy vấn:
+Đầu tiên, hãy định nghĩa một lớp `CustomerRepository`, kế thừa từ interface `MongoRepository` và chỉ định các tham số kiểu của nó: `Customer` và `String`. interface `MongoRepository` hỗ trợ nhiều phương thức thao tác, bao gồm CRUD và truy vấn phân trang. Trong ví dụ dưới đây, chúng ta định nghĩa hai phương thức truy vấn:
 
 ```java
 import java.util.List;

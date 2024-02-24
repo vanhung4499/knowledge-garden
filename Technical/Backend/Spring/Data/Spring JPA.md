@@ -3,15 +3,15 @@ title: Spring JPA
 tags: [spring, java, db, backend]
 categories: [spring, java, db, backend]
 date created: 2023-07-28
-date modified: 2023-08-11
+date modified: 2024-02-22
 ---
 
 # JPA trong Spring
 
-JPA cung cấp một mô hình lưu trữ dựa trên POJO cho ánh xạ đối tượng-quan hệ.
+JPA cung cấp một mô hình lưu trữ dựa trên POJO cho ánh xạ Entity-Relation.
 
-- Đơn giản hóa việc phát triển mã lưu trữ dữ liệu.
-- Ẩn đi sự khác biệt giữa các API lưu trữ khác nhau trong cộng đồng Java.
+- Đơn giản hóa việc phát triển mã giao tiếp với cơ sở dữ liệu.
+- Che giấu sự khác biệt giữa các API cơ sở dữ liệu khác nhau cho cộng đồng Java
 
 ## Bắt đầu nhanh
 
@@ -24,7 +24,7 @@ JPA cung cấp một mô hình lưu trữ dựa trên POJO cho ánh xạ đối 
 </dependency>
 ```
 
-(2) Đặt chú thích khởi chạy
+(2) Đặt annotation khởi chạy
 
 ```java
 // 【Tùy chọn】Chỉ định thư mục Entity để quét, nếu không chỉ định, sẽ quét toàn bộ thư mục
@@ -49,7 +49,7 @@ spring.datasource.url = jdbc:mysql://localhost:3306/spring_tutorial?serverTimezo
 spring.datasource.driver-class-name = com.mysql.cj.jdbc.Driver
 spring.datasource.username = root
 spring.datasource.password = root
-# Có hiển thị SQL log của JPA hay không
+# Có in ra nhật ký SQL JPA hay không
 spring.jpa.show-sql = true
 # Chiến lược DDL của Hibernate
 spring.jpa.hibernate.ddl-auto = create-drop
@@ -140,7 +140,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     /**
      * Tìm người dùng theo tên người dùng
      * <p>
-     * Ví dụ: http://localhost:8080/user/search/findByName?name=lisi
+     * Ví dụ: http://localhost:8080/user/search/findByName?name=hung
      *
      * @param name Tên người dùng
      * @return {@link User}
@@ -150,7 +150,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
     /**
      * Tìm người dùng theo email
      * <p>
-     * Ví dụ: http://localhost:8080/user/search/findByEmail?email=xxx@163.com
+     * Ví dụ: http://localhost:8080/user/search/findByEmail?email=abc@gmail.com
      *
      * @param email Email
      * @return {@link User}
@@ -169,7 +169,7 @@ public interface UserRepository extends JpaRepository<User, Long> {
 }
 ```
 
-(6) Kiểm thử
+(6) Test
 
 ```java
 @Slf4j
@@ -186,7 +186,7 @@ public class DataJpaTests {
 
     @Test
     public void insert() {
-        User user = new User("AA", 18, "NY", "user1@163.com");
+        User user = new User("AA", 18, "NY", "user1@gmail.com");
         repository.save(user);
         Optional<User> optional = repository.findById(user.getId());
         assertThat(optional).isNotNull();
@@ -196,10 +196,10 @@ public class DataJpaTests {
     @Test
     public void batchInsert() {
         List<User> users = new ArrayList<>();
-        users.add(new User("AA", 18, "NY", "user1@163.com"));
-        users.add(new User("BB", 19, "HN", "user1@163.com"));
-        users.add(new User("CC", 18, "HCM", "user1@163.com"));
-        users.add(new User("DD", 20, "CF", "user1@163.com"));
+        users.add(new User("AA", 18, "NY", "user1@gmail.com"));
+        users.add(new User("BB", 19, "HN", "user1@gmail.com"));
+        users.add(new User("CC", 18, "HCM", "user1@gmail.com"));
+        users.add(new User("DD", 20, "CF", "user1@gmail.com"));
         repository.saveAll(users);
 
         long count = repository.count();
@@ -215,10 +215,10 @@ public class DataJpaTests {
     @Test
     public void delete() {
         List<User> users = new ArrayList<>();
-        users.add(new User("AA", 18, "NY", "user1@163.com"));
-        users.add(new User("BB", 19, "HN", "user1@163.com"));
-        users.add(new User("CC", 18, "HCM", "user1@163.com"));
-        users.add(new User("DD", 20, "CF", "user1@163.com"));
+        users.add(new User("AA", 18, "NY", "user1@gmail.com"));
+        users.add(new User("BB", 19, "HN", "user1@gmail.com"));
+        users.add(new User("CC", 18, "HCM", "user1@gmail.com"));
+        users.add(new User("DD", 20, "CF", "user1@gmail.com"));
         repository.saveAll(users);
 
         repository.deleteByName("AA");
@@ -232,10 +232,10 @@ public class DataJpaTests {
     @Test
     public void findAllInPage() {
         List<User> users = new ArrayList<>();
-        users.add(new User("AA", 18, "NY", "user1@163.com"));
-        users.add(new User("BB", 19, "HN", "user1@163.com"));
-        users.add(new User("CC", 18, "HCM", "user1@163.com"));
-        users.add(new User("DD", 20, "CF", "user1@163.com"));
+        users.add(new User("AA", 18, "NY", "user1@gmail.com"));
+        users.add(new User("BB", 19, "HN", "user1@gmail.com"));
+        users.add(new User("CC", 18, "HCM", "user1@gmail.com"));
+        users.add(new User("DD", 20, "CF", "user1@gmail.com"));
         repository.saveAll(users);
 
         PageRequest pageRequest = PageRequest.of(1, 2);
@@ -252,7 +252,7 @@ public class DataJpaTests {
 
     @Test
     public void update() {
-        User oldUser = new User("AA", 18, "NY", "user1@163.com");
+        User oldUser = new User("AA", 18, "NY", "user1@gmail.com");
         oldUser.setName("AAA");
         repository.save(oldUser);
 
@@ -263,7 +263,7 @@ public class DataJpaTests {
 }
 ```
 
-## Các chú thích JPA phổ biến
+## Các annotation JPA phổ biến
 
 ### Entity
 
@@ -281,7 +281,7 @@ Khi tên entity và tên bảng không khớp, bạn có thể sử dụng `@Tab
 
 #### `@Id`
 
-Chú thích `@Id` được sử dụng để khai báo thuộc tính của entity là khóa chính trong cơ sở dữ liệu.
+annotation `@Id` được sử dụng để khai báo thuộc tính của entity là khóa chính trong cơ sở dữ liệu.
 
 #### `@GeneratedValue`
 
@@ -302,18 +302,18 @@ public enum GenerationType {
 
 - `IDENTITY`: Sử dụng cách tăng tự động ID của cơ sở dữ liệu để tạo khóa chính, Oracle không hỗ trợ cách này.
 - `AUTO`: JPA tự động chọn chiến lược phù hợp, đây là giá trị mặc định.
-- `SEQUENCE`: Sử dụng chuỗi để tạo khóa chính, thông qua chú thích `@SequenceGenerator` để chỉ định tên chuỗi, MySQL không hỗ trợ cách này.
+- `SEQUENCE`: Sử dụng chuỗi để tạo khóa chính, thông qua annotation `@SequenceGenerator` để chỉ định tên chuỗi, MySQL không hỗ trợ cách này.
 - `TABLE`: Sử dụng bảng để tạo khóa chính, framework sử dụng bảng để mô phỏng chuỗi tạo khóa chính, việc sử dụng chiến lược này giúp ứng dụng dễ dàng di chuyển cơ sở dữ liệu.
 
 #### `@SequenceGenerator`
 
 `@SequenceGenerator` được sử dụng để chỉ định tên chuỗi khi sử dụng chiến lược `SEQUENCE` để sinh khóa chính.
 
-### Mapping
+### Thực thể
 
 #### `@Column`
 
-Khi tên thuộc tính entity và tên cột trong cơ sở dữ liệu không khớp, bạn có thể sử dụng `@Column` để chỉ định rõ ràng. Nó cũng có thể thiết lập một số thuộc tính.
+Khi thuộc tính entity của bạn không giống với tên trường trong cơ sở dữ liệu, bạn có thể sử dụng `@Column` để chỉ định rõ ràng, nó cũng có thể đặt một số thuộc tính
 
 ```java
 @Column(length = 10, nullable = false, unique = true)
@@ -324,33 +324,33 @@ Khi tên thuộc tính entity và tên cột trong cơ sở dữ liệu không k
 private int age;
 ```
 
-Các tham số được hỗ trợ bởi `@Column`:
+Các tham số mà `@Column` hỗ trợ:
 
-- `unique`: Xác định xem trường có phải là duy nhất hay không, mặc định là false. Nếu bảng có một trường cần định danh duy nhất, bạn có thể sử dụng cả hai chú thích `@Column` và `@UniqueConstraint`.
-- `nullable`: Xác định xem trường có thể chứa giá trị null hay không, mặc định là true.
-- `insertable`: Xác định xem trường có cần chèn giá trị của nó khi sử dụng câu lệnh INSERT hay không.
-- `updatable`: Xác định xem trường có cần cập nhật giá trị của nó khi sử dụng câu lệnh UPDATE hay không. `insertable` và `updatable` thường được sử dụng cho các trường chỉ đọc, ví dụ như khóa chính và khóa ngoại. Những trường này thường được tự động tạo ra.
-- `columnDefinition`: Xác định câu lệnh SQL tạo trường khi tạo bảng. Thường được sử dụng khi tạo định nghĩa bảng từ Entity.
-- `table`: Xác định tên bảng chứa trường khi có nhiều bảng được ánh xạ. Giá trị mặc định là tên bảng chính của entity.
-- `length`: Xác định độ dài của trường, chỉ có hiệu lực khi kiểu trường là `varchar`. Giá trị mặc định là 255 ký tự.
-- `precision` và `scale`: Xác định độ chính xác của trường, chỉ có hiệu lực khi kiểu trường là `double`. `precision` đại diện cho tổng số chữ số của giá trị, `scale` đại diện cho số chữ số sau dấu thập phân.
+- Thuộc tính `unique` biểu thị trường này có phải là định danh duy nhất hay không, mặc định là false. Nếu có một trường trong bảng cần định danh duy nhất, thì bạn có thể sử dụng thẻ này hoặc `@UniqueConstraint` trong thẻ `@Table`.
+- Thuộc tính `nullable` biểu thị trường này có thể có giá trị `null`hay không, mặc định là true.
+- Thuộc tính `insertable` biểu thị khi sử dụng `INSERT` để chèn dữ liệu, có cần chèn giá trị của trường này hay không.
+- Thuộc tính `updatable` biểu thị khi sử dụng `UPDATE` để cập nhật dữ liệu, có cần cập nhật giá trị của trường này hay không. `insertable`và `updatable` thường được sử dụng cho các thuộc tính chỉ đọc, như khóa chính và khóa ngoại, v.v. Giá trị của các trường này thường được tạo tự động.
+- Thuộc tính `columnDefinition` biểu thị câu lệnh SQL tạo trường khi tạo bảng, thường được sử dụng khi tạo định nghĩa bảng thông qua Entity.
+- Thuộc tính `table` biểu thị khi ánh xạ nhiều bảng, chỉ định trường trong bảng. Giá trị mặc định là tên của bảng chính.
+- Thuộc tính `length` biểu thị độ dài của trường, khi loại trường là `varchar`, thuộc tính này mới có hiệu lực, mặc định là 255 ký tự.
+- Thuộc tính `precision` và thuộc tính `scale` biểu thị độ chính xác, khi loại trường là `double`, `precision` biểu thị độ dài tổng cộng của giá trị, `scale` biểu thị số chữ số chiếm dụng bởi dấu phẩy.
 
 #### `@JoinTable`
 
 #### `@JoinColumn`
 
-### Quan hệ
+### Mối quan hệ
 
-Ánh xạ bảng (mối quan hệ hai chiều)
+Ánh xạ mối quan hệ giữa các bảng (ánh xạ hai chiều)
 
-- `@OneToOne`: Mối quan hệ một một
-- `@OneToMany`: Mối quan hệ một nhiều
-- `@ManyToMany` (không khuyến nghị, thay vào đó sử dụng đối tượng trung gian, chia mối quan hệ nhiều nhiều thành hai mối quan hệ một nhiều)
+- `@OneToOne`: Mối quan hệ một một (1-1)
+- `@OneToMany`: Mối quan hệ một nhiều (1-n)
+- `@ManyToMany`: Mối quan hệ nhiều nhiều (n-n) (không khuyến nghị, thay vào đó sử dụng đối tượng trung gian, chia mối quan hệ nhiều nhiều thành hai mối quan hệ một nhiều)
 
-Ánh xạ trường (mối quan hệ một chiều):
+Ánh xạ trường (ánh xạ một chiều):
 
-- `@Embedded`, `@Embeddable`: Mối quan hệ nhúng (một chiều)
-- `@ElementCollection`: Mối quan hệ một nhiều với tập hợp (một chiều)
+- `@Embedded`, `@Embeddable`: Mối quan hệ nhúng (ánh xạ một chiều)
+- `@ElementCollection`: Mối quan hệ một-nhiều với tập hợp (ánh xạ một chiều)
 
 #### `@OneToOne`
 
@@ -372,15 +372,15 @@ Các tham số được hỗ trợ bởi `@Column`:
 
 ## Truy vấn
 
-Có các phương thức sau để truy vấn:
+Có các cách truy vấn sau:
 
 - Truy vấn theo tên phương thức
     
-- Truy vấn bằng chú thích `@Query`
+- Truy vấn bằng cách sử dụng annotation `@Query`
     
-- Truy vấn SQL động
+- Truy vấn bằng cách sử dụng SQL động
     
-- Truy vấn bằng Example
+- Truy vấn theo phong cách Example
 
 `JpaRepository` cung cấp các truy vấn tích hợp sẵn như sau:
 
@@ -390,9 +390,9 @@ Có các phương thức sau để truy vấn:
 - `List<T> findAll(Sort var1);` - Trả về tất cả các entity, sắp xếp theo thứ tự chỉ định.
 - `Page<T> findAll(Pageable var1);` - Trả về danh sách entity, phân trang theo `Pageable`.
 
-### Phương thức truy vấn bằng tên
+### Truy vấn bằng tên phương thức
 
-Spring Data sử dụng tên phương thức và tên tham số để tự động tạo câu truy vấn JPQL.
+Spring Data tự động xây dựng một truy vấn JPA QQL dựa trên tên phương thức và tên tham số.
 
 ```java
 public interface UserRepository extends JpaRepository<User, Integer> {
@@ -400,13 +400,17 @@ public interface UserRepository extends JpaRepository<User, Integer> {
 }
 ```
 
-Tên phương thức và tên tham số phải tuân theo một số quy tắc nhất định để Spring Data JPA có thể tự động chuyển đổi thành JPQL:
+Tên phương thức và tên tham số cần tuân theo một số quy tắc nhất định để Spring Data JPA có thể tự động chuyển đổi thành JPQL:
 
-- Tên phương thức thường chứa nhiều thuộc tính thực thể để truy vấn, các thuộc tính có thể được kết nối bằng `AND` và `OR`, cũng hỗ trợ `Between`, `LessThan`, `GreaterThan`, `Like`;
-- Tên phương thức có thể bắt đầu bằng `findBy`, `getBy`, `queryBy`;
-- Kết quả truy vấn có thể được sắp xếp, tên phương thức chứa OrderBy+thuộc tính+ASC (DESC);
-- Có thể giới hạn kết quả truy vấn bằng `Top`, `First`;
-- Một số tham số đặc biệt có thể xuất hiện trong danh sách tham số, như `Pageable`, `Sort`
+- Tên phương thức thường bao gồm nhiều thuộc tính thực thể để truy vấn, các thuộc tính có thể được kết nối với nhau bằng `AND` và `OR`, cũng hỗ trợ `Between`, `LessThan`, `GreaterThan`, `Like`;
+    
+- Tên phương thức có thể bắt đầu bằng `findBy`, `getBy`, `queryBy`;
+    
+- Kết quả truy vấn có thể được sắp xếp, tên phương thức bao gồm OrderBy+ thuộc tính +ASC (DESC);
+    
+- Có thể sử dụng `Top`, `First` để giới hạn tập kết quả truy vấn;
+    
+- Một số tham số đặc biệt có thể xuất hiện trong danh sách tham số, như `Pageeable`, `Sort`.
 
 Ví dụ:
 
@@ -457,9 +461,100 @@ public User findByNameLike(String name);
 | `False`             | `findByActiveFalse()`                                     | `… where x.active = false`                                         |
 | `IgnoreCase`        | `findByFirstnameIgnoreCase`                               | `… where UPPER(x.firstame) = UPPER(?1)`                            |
 
-### Phương thức truy vấn theo Example
+### Truy vấn bằng annotation @Query
 
-Spring Data JPA cho phép tạo một đối tượng Example dựa trên thực thể để xây dựng câu truy vấn JPQL. Tuy nhiên, phương thức này không linh hoạt và chỉ hỗ trợ các điều kiện AND, không thể sử dụng OR, các điều kiện lớn hơn, nhỏ hơn, hoặc between.
+Annotation `@Query` cho phép sử dụng JPQL trên các phương thức.
+
+Các thao tác được thực hiện đối với tên đối tượng và tên thuộc tính đối tượng, chứ không phải tên bảng và tên trường trong cơ sở dữ liệu.
+
+```java
+@Query("select u from User u where u.name=?1 and u.department.id=?2")
+public User findUser(String name, Integer departmentId);
+```
+
+```java
+@Query("from User u where u.name=?1 and u.department.id=?2")
+public User findUser(String name, Integer departmentId);
+```
+
+Nếu bạn muốn sử dụng SQL thay vì JPSQL, bạn có thể sử dụng thuộc tính `nativeQuery`, đặt giá trị là true.
+
+```java
+@Query(value="select * from user where name=?1 and department_id=?2", nativeQuery=true)
+public User nativeQuery(String name, Integer departmentId);
+```
+
+Dù là JPQL hay SQL, cả hai đều hỗ trợ "tham số đặt tên":
+
+```java
+@Query(value="select * from user where name=:name and department_id=:departmentId", nativeQuery=true)
+public User nativeQuery2(String name, Integer departmentId);
+```
+
+Nếu kết quả truy vấn SQL hoặc JPQL không phải là Entity, bạn có thể sử dụng mảng `Object[]` để thay thế, ví dụ như thống kê số lượng người dùng theo từng phần
+
+```java
+@Query(value="select department_id,count(*) from user group by department_id", nativeQuery=true)
+public List<Object[]> queryUserCount();
+```
+
+Truy vấn này sẽ trả về một mảng, loại đối tượng phụ thuộc vào kết quả truy vấn, trong ví dụ này, trả về loại `String` và `BigInteger`.
+
+Khi truy vấn, bạn có thể sử dụng `Pageable` và `Sort` để hoàn thành việc phân trang và sắp xếp.
+
+```java
+@Query("select u from User u where department.id=?1")
+public Page<User> QueryUsers(Integer departmentId, Pageable page);
+```
+
+`@Query` cũng cho phép các câu lệnh SQL cập nhật, xóa, trong trường hợp này, bạn phải sử dụng kèm với `@Modifying`, ví dụ:
+
+```java
+@Modifying
+@Query("update User u set u.name= ?1 where u.id= ?2")
+int updateName(String name, Integer id);
+```
+
+### Truy vấn bằng SQL động
+
+Truy vấn SQL động rất hữu ích khi bạn cần xây dựng truy vấn dựa trên một số điều kiện đầu vào không xác định trước. Spring Data JPA hỗ trợ truy vấn SQL động thông qua các tiện ích như `Criteria API` và `Specifications`.
+
+1. **Criteria API**: Criteria API cho phép bạn xây dựng truy vấn SQL động và an toàn kiểu trong cùng một lúc. Bạn có thể tạo ra các truy vấn phức tạp mà không cần phải lo lắng về các vấn đề về chuỗi hoặc SQL Injection.
+2. **Specifications**: Specifications là một phương pháp khác để tạo ra các truy vấn SQL động trong Spring Data JPA. Specifications được xây dựng trên Criteria API và đơn giản hóa việc tạo ra các truy vấn phức tạp.
+
+Ví dụ về việc sử dụng Specifications:
+
+```java
+public interface UserRepository extends JpaRepository<User, Long>, JpaSpecificationExecutor<User> {
+}
+
+@Service
+public class UserService {
+    @Autowired
+    private UserRepository userRepository;
+
+    public List<User> findUsers(String name, Integer age) {
+        return userRepository.findAll((root, query, cb) -> {
+            List<Predicate> predicates = new ArrayList<>();
+            if (name != null) {
+                predicates.add(cb.equal(root.get("name"), name));
+            }
+            if (age != null) {
+                predicates.add(cb.equal(root.get("age"), age));
+            }
+            return cb.and(predicates.toArray(new Predicate[0]));
+        });
+    }
+}
+```
+
+Trong ví dụ trên, chúng ta tạo ra một truy vấn SQL động dựa trên các tham số `name` và `age`. Nếu một tham số nào đó không được cung cấp, chúng ta sẽ không thêm điều kiện tương ứng vào truy vấn.
+
+Để biết thêm chi tiết, bạn có thể tham khảo bài viết: [SpringDataJpa 中的复杂查询和动态查询，多表查询](https://juejin.cn/post/6844904160807092237) (bài viết này được viết bằng tiếng Trung, nhưng bạn có thể sử dụng công cụ dịch trực tuyến để hiểu nội dung).
+
+### Truy vấn bằng phương pháp Example
+
+Phương thức này cho phép tạo ra một đối tượng Example từ một entity, và Spring Data sẽ sử dụng đối tượng Example này để xây dựng câu lệnh JPQL. Tuy nhiên, việc sử dụng phương thức này có hạn chế về tính linh hoạt - các điều kiện chỉ được kết hợp bằng AND, không thể sử dụng OR, cũng như không thể sử dụng các toán tử so sánh như lớn hơn, nhỏ hơn, between, v.v. trong các điều kiện.
 
 Kế thừa `JpaRepository`
 
@@ -467,6 +562,8 @@ Kế thừa `JpaRepository`
 <S extends T> List<S> findAll(Example<S> var1);
 <S extends T> List<S> findAll(Example<S> var1, Sort var2);
 ```
+
+Ví dụ về việc sử dụng Example:
 
 ```java
 public List<User> getByExample(String name) {
@@ -482,9 +579,9 @@ public List<User> getByExample(String name) {
 }
 ```
 
-Trong đoạn mã trên, đầu tiên tạo một đối tượng User và thiết lập các điều kiện truy vấn, trong đó tên là tham số name và id của phòng ban là 1. Sau đó, sử dụng `Example.of` để xây dựng câu truy vấn dựa trên đối tượng này.
+Trong đoạn mã trên, chúng ta tạo ra một đối tượng User và đặt các điều kiện truy vấn: tên là tham số `name` và id của phòng ban là 1. Chúng ta sử dụng `Example.of` để xây dựng truy vấn này.
 
-Trong hầu hết các trường hợp, truy vấn không phải là truy vấn khớp hoàn toàn, ExampleMatcher cung cấp các điều kiện chỉ định. Ví dụ, để lấy tất cả các người dùng bắt đầu bằng xxx, bạn có thể sử dụng mã sau:
+Đối với hầu hết các truy vấn, chúng ta không chỉ muốn tìm kiếm các kết quả khớp hoàn toàn. `ExampleMatcher` cung cấp thêm các điều kiện. Ví dụ, nếu bạn muốn tìm tất cả người dùng có tên bắt đầu bằng "xxx", bạn có thể xây dựng truy vấn như sau:
 
 ```java
 ExampleMatcher matcher = ExampleMatcher.matching().withMatcher("xxx",
@@ -494,7 +591,7 @@ Example<User> example = Example.of(user, matcher);
 
 ### Sắp xếp (Sort)
 
-Đối tượng Sort được sử dụng để chỉ định thứ tự sắp xếp, cách đơn giản nhất để tạo đối tượng Sort là truyền vào một danh sách tên thuộc tính (không phải tên cột trong cơ sở dữ liệu, mà là tên thuộc tính). Mặc định sẽ sắp xếp theo thứ tự tăng dần.
+Đối tượng Sort được sử dụng để chỉ định thứ tự sắp xếp. Cách đơn giản nhất để tạo một đối tượng Sort là truyền vào một danh sách tên thuộc tính (không phải tên cột trong cơ sở dữ liệu, mà là tên thuộc tính). Thứ tự sắp xếp mặc định là tăng dần.
 
 ```java
 Sort sort = new Sort("id");
@@ -502,29 +599,27 @@ Sort sort = new Sort("id");
 return userDao.findAll(sort);
 ```
 
-Hibernate sẽ xây dựng điều kiện sắp xếp dựa trên đối tượng Sort, Sort("id") đại diện cho sắp xếp theo id theo thứ tự tăng dần.
+Hibernate sẽ xây dựng điều kiện sắp xếp dựa trên đối tượng Sort. `Sort.by("id")` có nghĩa là sắp xếp theo `id` theo thứ tự tăng dần.
 
-Các phương thức khởi tạo Sort khác bao gồm:
+Các phương thức khởi tạo khác của Sort bao gồm:
 
-- `public Sort(String… properties)`: Sắp xếp theo danh sách thuộc tính chỉ định theo thứ tự tăng dần.
-- `public Sort(Sort.Direction direction, String… properties)`: Sắp xếp theo danh sách thuộc tính chỉ định theo thứ tự được chỉ định bởi direction, direction là một enum có `Direction.ASC` và `Direction.DESC`.
-- `public Sort(Sort.Order… orders)`: Có thể tạo bằng cách sử dụng các phương thức tĩnh của Order:
-  - `public static Sort.Order asc(String property)`
-  - `public static Sort.Order desc(String property)`
+- `Sort.by(String… properties)`: Sắp xếp tăng dần theo danh sách thuộc tính đã chỉ định.
+- `Sort.by(Sort.Direction direction, String… properties)`: Sắp xếp theo danh sách thuộc tính đã chỉ định, thứ tự sắp xếp được xác định bởi `direction`, `direction` là một kiểu Enum, có `Sort.Direction.ASC` và `Sort.Direction.DESC`.
+- `Sort.by(Sort.Order… orders)`: Bạn cũng có thể tạo đối tượng Sort bằng cách sử dụng các phương thức tĩnh của `Sort.Order`như `Sort.Order.asc(String property)` và `Sort.Order.desc(String property)`.
 
 ### Phân trang (Page và Pageable)
 
-Giao diện Pageable được sử dụng để xây dựng truy vấn phân trang, PageRequest là một lớp triển khai của nó, có thể tạo PageRequest bằng cách sử dụng các phương thức tạo của nó:
+Interface Pageable được sử dụng để xây dựng truy vấn phân trang, PageRequest là một lớp triển khai của nó, bạn có thể tạo PageRequest bằng cách sử dụng các phương thức tĩnh sau:
 
 Lưu ý rằng tôi đang sử dụng spring boot 2.0.2, phiên bản jpa là 2.0.8, cách thao tác với phiên bản mới khác với phiên bản trước đó.
 
-- `public static PageRequest of(int page, int size)`
-- `public static PageRequest of(int page, int size, Sort sort)`: Cũng có thể thêm sắp xếp vào PageRequest
-- `public static PageRequest of(int page, int size, Direction direction, String… properties)`: Hoặc tùy chỉnh quy tắc sắp xếp
+- `public static PageRequest of(int page, int size)`: : Tạo một yêu cầu phân trang mới với số lượng phần tử cụ thể trên mỗi trang.
+- `public static PageRequest of(int page, int size, Sort sort)`: Tạo một yêu cầu phân trang mới với số lượng phần tử cụ thể trên mỗi trang và sắp xếp cụ thể.
+- `public static PageRequest of(int page, int size, Direction direction, String… properties)`: Tạo một yêu cầu phân trang mới với số lượng phần tử cụ thể trên mỗi trang và sắp xếp tuỳ chỉnh.
 
-Trang bắt đầu từ 0, đại diện cho trang truy vấn, size đại diện cho số hàng mong muốn trên mỗi trang.
+Trong đó, `page` bắt đầu từ 0, biểu thị trang cần truy vấn, `size` chỉ số lượng dòng mong muốn trên mỗi trang.
 
-Spring Data luôn trả về đối tượng Page cho truy vấn phân trang, đối tượng Page cung cấp các phương thức phổ biến sau:
+Truy vấn phân trang của Spring Data luôn trả về một đối tượng Page. Đối tượng Page cung cấp các phương thức thường được sử dụng sau:
 
 - `int getTotalPages()`: Tổng số trang
 - `long getTotalElements()`: Trả về tổng số phần tử
@@ -533,3 +628,9 @@ Spring Data luôn trả về đối tượng Page cho truy vấn phân trang, đ
 ## Core API
 
 ![image.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20230811152211.png)
+
+## Tài liệu tham khảo
+
+- [Trang chủ của Spring](https://spring.io/)
+- [Tài liệu chính thức của Spring Framework](https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/index.html)
+- [Tài liệu chính thức của Spring Boot](https://docs.spring.io/spring-boot/docs/current/reference/html/data.html)

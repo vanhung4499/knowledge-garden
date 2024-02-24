@@ -5,7 +5,6 @@ categories: [spring, java, db, backend]
 date created: 2023-07-26
 date modified: 2023-07-26
 ---
-
 # Data Source trong Spring
 
 > Bài viết này dựa trên phiên bản Spring Boot 2.7.3.

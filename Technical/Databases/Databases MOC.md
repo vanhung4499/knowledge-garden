@@ -2,13 +2,15 @@
 categories: [db, moc]
 title: Databases MOC
 date created: 2023-07-04
-date modified: 2023-10-06
+date modified: 2024-02-25
 tags: [db, moc]
 ---
 
 # Databases MOC
 
 ## SQL
+
+> Lý thuyết chung về SQL
 
 - [[SQL MOC]]
 
@@ -40,8 +42,10 @@ tags: [db, moc]
 
 #### Elasticsearch
 
+> Elasticsearch là một công cụ tìm kiếm và phân tích dữ liệu dựa trên Lucene, cung cấp một dịch vụ phân tán. Elasticsearch là một sản phẩm mã nguồn mở tuân theo các điều khoản mã nguồn mở của Apache và hiện đang là công cụ tìm kiếm doanh nghiệp phổ biến.
+
 - [[Elasticsearch MOC]]
 
-#### Elastic
+#### Elastic Stack
 
 - [[Elastic MOC]]
