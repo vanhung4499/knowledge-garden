@@ -16,8 +16,14 @@ Just run `node section1.js` to see the result.
 
 ### Section II
 
+The solution is presented in [section2.md](docs/section2/section-2.md).
+
 ### Section III
 
+The solution is presented in [section3.md](docs/section3/section-3.md).
+
 ### Section IV
+
+
 
 ### Section V
