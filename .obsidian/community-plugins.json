@@ -7,8 +7,6 @@
   "table-editor-obsidian",
   "omnisearch",
   "obsidian-style-settings",
-  "obsidian-textgenerator-plugin",
-  "smart-connections",
   "obsidian42-strange-new-worlds",
   "obsidian42-brat",
   "obsidian-icon-folder",
@@ -25,5 +23,7 @@
   "homepage",
   "obsidian-advanced-uri",
   "mermaid-tools",
-  "note-refactor-obsidian"
+  "copilot",
+  "obsidian-minimal-settings",
+  "obsidian-hider"
 ]

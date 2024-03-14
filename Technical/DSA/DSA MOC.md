@@ -3,7 +3,7 @@ tags: [dsa, algorithm, data-structure]
 categories: [dsa, algorithm, data-structure]
 title: DSA MOC
 date created: 2023-07-08
-date modified: 2023-10-01
+date modified: 2024-03-12
 ---
 
 # Data Structure and Algorithms MOC
@@ -14,7 +14,7 @@ date modified: 2023-10-01
 > - Thật sự rất khó để tách biệt Data Structure và Algorithm, nên tôi sẽ viết lồng ghép giữa chúng vào các chủ đề lớn. Vì chúng thật sự là có mối liên hệ chặt chẽ với nhau!
 
 > [!info]  
-> Đa số tôi dùng Python để giải quyết các bài toán vì sự ngắn gọn và dễ hiểu của nó.
+> Ngôn ngữ chính mà tôi dùng là Python để giải các bài toán vì ngắn gọn của nó.
 
 ## Introduction
 

@@ -62,7 +62,6 @@
   "anuppuccin-theme-settings@@anp-table-toggle": true,
   "anuppuccin-theme-settings@@anp-table-width": true,
   "anuppuccin-theme-settings@@anp-table-auto": true,
-  "anuppuccin-theme-settings@@anp-th-highlight": true,
   "anuppuccin-theme-settings@@anp-td-highlight": "anp-td-alt-rows",
   "anuppuccin-theme-settings@@anp-table-align-td": "left",
   "anuppuccin-theme-settings@@anp-header-color-toggle": true,
@@ -101,5 +100,6 @@
   "blue-topaz-theme@@background-settings-workplace-theme-dark": "background-settings-workplace-theme-dark-in-the-sky",
   "blue-topaz-theme@@toggle-bg-panel-page": false,
   "blue-topaz-theme@@search-bar-style-option": "default-search-bar",
-  "blue-topaz-theme@@bt-status-on": false
+  "blue-topaz-theme@@bt-status-on": false,
+  "minimal-style@@tabs-style": "tabs-modern"
 }

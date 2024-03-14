@@ -1,7 +1,7 @@
 ---
 categories: [moc, tech]
 date created: 2023-07-04
-date modified: 2023-10-05
+date modified: 2024-02-27
 tags: [moc, tech]
 title: Technical MOC
 ---
@@ -29,6 +29,10 @@ title: Technical MOC
 ## Databases
 
 - [[Databases MOC]]
+
+## Distributed
+
+- [[Distributed MOC]]
 
 ## Frontend
 
