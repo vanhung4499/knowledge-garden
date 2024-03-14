@@ -1,9 +1,11 @@
 {
   "accentColor": "",
-  "cssTheme": "Blue Topaz",
+  "cssTheme": "Minimal",
   "enabledCssSnippets": [
     "supercharged-links-gen"
   ],
   "nativeMenus": true,
-  "translucency": false
+  "translucency": false,
+  "theme": "obsidian",
+  "showViewHeader": true
 }

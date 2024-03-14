@@ -33,8 +33,8 @@ Hướng dẫn về TypeScript. Trước khi tìm hiểu TS, bắt buộc bạn 
 
 ## Advanced
 
-- [[TS Type Aliases]]
-- [[TS String Literal Types]]
+- [[TS Type Alias]]
+- [[TS String Literal Type]]
 - [[TS Tuple]]
 - [[TS Enum]]
 - [[TS Class]]

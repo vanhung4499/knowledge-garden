@@ -4,19 +4,15 @@
     "type": "split",
     "children": [
       {
-        "id": "d836e01088e7f8d1",
+        "id": "046ea2c7f8ab4d35",
         "type": "tabs",
         "children": [
           {
-            "id": "3e470892277227e0",
+            "id": "b01386723d215616",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "README.md",
-                "mode": "source",
-                "source": false
-              }
+              "type": "empty",
+              "state": {}
             }
           }
         ]
@@ -31,7 +27,7 @@
       {
         "id": "4bb57e58b8f80419",
         "type": "tabs",
-        "dimension": 62.007168458781365,
+        "dimension": 54.22222222222223,
         "children": [
           {
             "id": "c6d173446b8ea23c",
@@ -80,18 +76,16 @@
         ]
       },
       {
-        "id": "4291af2bb5f79574",
+        "id": "6ef78510c55f19c6",
         "type": "tabs",
-        "dimension": 37.992831541218635,
+        "dimension": 45.77777777777778,
         "children": [
           {
             "id": "de9bbc59fe5a4b25",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {
-                "file": "README.md"
-              }
+              "state": {}
             }
           }
         ]
@@ -122,7 +116,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "README.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,22 +132,13 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "README.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
             }
           },
           {
-            "id": "f0730ee2735a8bac",
-            "type": "leaf",
-            "state": {
-              "type": "Strange New Worlds",
-              "state": {}
-            }
-          },
-          {
-            "id": "7c414c46e655c221",
+            "id": "d73aaa045adc44e7",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -162,28 +146,18 @@
             }
           },
           {
-            "id": "a5780a46562e2be6",
+            "id": "b3ca465051d9ac5d",
             "type": "leaf",
             "state": {
-              "type": "smart-connections-view",
-              "state": {}
-            }
-          },
-          {
-            "id": "514613162b93b806",
-            "type": "leaf",
-            "state": {
-              "type": "smart-connections-chat-view",
+              "type": "Strange New Worlds",
               "state": {}
             }
           }
-        ],
-        "currentTab": 3
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 418.5,
-    "collapsed": true
+    "width": 245.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -201,49 +175,49 @@
       "dbfolder:Create a new database table": false,
       "homepage:Open homepage": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
-      "obsidian-textgenerator-plugin:Generate Text!": false,
-      "obsidian-textgenerator-plugin:Text Generator: Templates Packages Manager": false
+      "copilot:Copilot Chat": false
     }
   },
-  "active": "3e470892277227e0",
+  "active": "b01386723d215616",
   "lastOpenFiles": [
+    "Technical/Programming/TypeScript/Engineering/TS Lint.md",
+    "Technical/Programming/TypeScript/Engineering/TS Compiler Options.md",
+    "Technical/Programming/TypeScript/Advanced/TS Class.md",
+    "Technical/Programming/TypeScript/Advanced/TS Class and Interface.md",
+    "Technical/Programming/TypeScript/Advanced/TS Declaration Merging.md",
+    "Technical/Programming/TypeScript/Advanced/TS Enum.md",
+    "Technical/Programming/TypeScript/Advanced/TS Generics.md",
+    "Technical/Programming/TypeScript/Advanced/TS String Literal Type.md",
+    "Technical/Programming/TypeScript/Advanced/TS Tuple.md",
+    "Technical/Programming/TypeScript/Advanced/TS Type Alias.md",
+    "Technical/Programming/TypeScript/Basic/TS Type Of Object Interfaces.md",
+    "Technical/Programming/TypeScript/Basic/TS Union Types.md",
+    "Technical/Programming/TypeScript/TypeScript MOC.md",
+    "Technical/Programming/TypeScript/Basic/TS Type Of Function.md",
+    "Technical/Programming/TypeScript/Basic/TS Type Of Array.md",
+    "Technical/Programming/TypeScript/Basic/TS Type Assertion.md",
+    "Technical/Programming/TypeScript/Basic/[].md",
+    "Technical/Programming/TypeScript/Engineering",
+    "Technical/Programming/Programming MOC.md",
+    "Technical/Programming/TypeScript/Basic/TS Built-in Objects.md",
+    "Technical/Programming/TypeScript/Advanced",
+    "Technical/Programming/TypeScript/Basic/TS Declaration Files.md",
+    "Technical/Programming/TypeScript/Basic/TS Any.md",
+    "Technical/Programming/TypeScript/Basic/TS Type Inference.md",
     "Home.md",
-    "Technical/Technical MOC.md",
-    "Technical/Databases/Databases MOC.md",
-    "Technical/Databases/SQL/SQL MOC.md",
-    "Technical/Databases/PostgreSQL/PostgreSQL MOC.md",
-    "Technical/Databases/SQL/SQL DB Theory.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch MOC.md",
-    "Technical/Databases/Elastic/Elastic MOC.md",
-    "Technical/Databases/Elastic/Logstash Operation.md",
-    "Technical/Databases/Elastic/Elastic Stack Logstash.md",
-    "Technical/Databases/Elastic/Elastic Quick Start.md",
-    "Technical/Databases/Elastic/Kibana Operation.md",
-    "Technical/Databases/Elastic/Elastic Stack Kabina.md",
-    "Technical/Databases/Elastic/Elastic Stack Filebeat.md",
-    "Technical/Databases/Elastic/Filebeat Operation.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Quick Start.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Interview.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Intro.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Mapping.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Sorting.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch REST API.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Index.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Operations.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Cluster and Shard.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch performance optimization.md",
-    "Technical/Databases/Elasticsearch/Elasticsearch Analyzer.md",
+    "Technical/DSA/DS/Data Structures MOC.md",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/Leetcode/LeetCode 0375.md",
+    "Extras/Draws/cpu-cache-work.svg",
+    "Projects/Interview/UDT/Backend",
+    "Projects/Interview/UDT",
+    "Projects/Interview",
+    "Technical/Distributed",
     "Extras/Draws/es-write-detail.excalidraw.png",
     "Technical/Backend/Spring/Security",
     "Projects/Mall/Architect",
     "Projects/Mall",
     "Technical/Programming/TypeScript/Intro",
-    "Technical/Programming/TypeScript/Basic",
-    "Technical/Interview/Network/Questions",
-    "Technical/Interview/Network/Frequent",
-    "Technical/Interview/Database/Redis",
-    "Technical/Interview/Database/MySQL",
-    "Technical/Programming/Go/Questions/stdlib/Unsafe",
     "Extras/Media/20230906153409.png",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
@@ -251,7 +225,6 @@
     "Extras/Media/20220507174723.png",
     "Extras/Media/20220507172300.png",
     "Extras/Media/20220507142647.png",
-    "Extras/Media/20220507112934.png",
-    "Extras/Media/20220505145302.png"
+    "Extras/Media/20220507112934.png"
   ]
 }
