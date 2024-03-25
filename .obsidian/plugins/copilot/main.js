@@ -80623,9 +80623,12 @@ var _ChainFactory = class {
    * @param {ConversationalRetrievalChainParams} args - the parameters for the retrieval chain
    * @return {RunnableSequence} a new conversational retrieval chain
    */
-  static createConversationalRetrievalChain(args, onDocumentsRetrieved) {
+  static createConversationalRetrievalChain(args, onDocumentsRetrieved, debug3) {
     const { llm, retriever } = args;
-    const condenseQuestionTemplate = `Given the following conversation and a follow up question, rephrase the follow up question to be a standalone question, in its original language.
+    const condenseQuestionTemplate = `Given the following conversation and a follow up question,
+    summarize the conversation as context and keep the follow up question unchanged, in its original language.
+    Then combine the summary and the follow up question to construct a standalone question.
+    Make sure to keep any [[]] wrapped note titles in the question unchanged.
 
     Chat History:
     {chat_history}
@@ -80649,8 +80652,17 @@ Assistant: ${dialogueTurn[1]}`
     };
     const standaloneQuestionChain = RunnableSequence.from([
       {
-        question: (input) => input.question,
-        chat_history: (input) => formatChatHistory(input.chat_history)
+        question: (input) => {
+          if (debug3)
+            console.log("Input Question: ", input.question);
+          return input.question;
+        },
+        chat_history: (input) => {
+          const formattedChatHistory = formatChatHistory(input.chat_history);
+          if (debug3)
+            console.log("Formatted Chat History: ", formattedChatHistory);
+          return formattedChatHistory;
+        }
       },
       CONDENSE_QUESTION_PROMPT,
       llm,
@@ -80703,24 +80715,14 @@ var OPENAI_MODELS = /* @__PURE__ */ new Set([
   "GPT-4 32K" /* GPT_4_32K */,
   "LM STUDIO (LOCAL)" /* LM_STUDIO */
 ]);
-var AZURE_MODELS = /* @__PURE__ */ new Set([
-  "AZURE OPENAI" /* AZURE_OPENAI */
-]);
-var GOOGLE_MODELS = /* @__PURE__ */ new Set([
-  "GEMINI PRO" /* GEMINI_PRO */
-]);
-var ANTHROPIC_MODELS = /* @__PURE__ */ new Set([
-  "CLAUDE 3" /* CLAUDE */
-]);
+var AZURE_MODELS = /* @__PURE__ */ new Set(["AZURE OPENAI" /* AZURE_OPENAI */]);
+var GOOGLE_MODELS = /* @__PURE__ */ new Set(["GEMINI PRO" /* GEMINI_PRO */]);
+var ANTHROPIC_MODELS = /* @__PURE__ */ new Set(["CLAUDE 3" /* CLAUDE */]);
 var OPENROUTERAI_MODELS = /* @__PURE__ */ new Set([
   "OPENROUTER.AI" /* OPENROUTERAI */
 ]);
-var OLLAMA_MODELS = /* @__PURE__ */ new Set([
-  "OLLAMA (LOCAL)" /* OLLAMA */
-]);
-var LM_STUDIO_MODELS = /* @__PURE__ */ new Set([
-  "LM STUDIO (LOCAL)" /* LM_STUDIO */
-]);
+var OLLAMA_MODELS = /* @__PURE__ */ new Set(["OLLAMA (LOCAL)" /* OLLAMA */]);
+var LM_STUDIO_MODELS = /* @__PURE__ */ new Set(["LM STUDIO (LOCAL)" /* LM_STUDIO */]);
 var DISPLAY_NAME_TO_MODEL = {
   ["GPT-3.5" /* GPT_35_TURBO */]: "gpt-3.5-turbo" /* GPT_35_TURBO */,
   ["GPT-3.5 16K" /* GPT_35_TURBO_16K */]: "gpt-3.5-turbo-16k" /* GPT_35_TURBO_16K */,
@@ -80785,6 +80787,7 @@ var DEFAULT_SETTINGS = {
   stream: true,
   defaultSaveFolder: "copilot-conversations",
   indexVaultToVectorStore: "NEVER" /* NEVER */,
+  qaExclusionPaths: "",
   chatNoteContextPath: "",
   chatNoteContextTags: [],
   debug: false,
@@ -80799,8 +80802,18 @@ var isFolderMatch = (fileFullpath, inputPath) => {
   const fileSegments = fileFullpath.split("/").map((segment) => segment.toLowerCase());
   return fileSegments.includes(inputPath.toLowerCase());
 };
+async function getNoteFileFromTitle(vault, noteTitle) {
+  const files = vault.getMarkdownFiles();
+  for (const file of files) {
+    const title = file.basename;
+    if (title === noteTitle) {
+      return file;
+    }
+  }
+  return null;
+}
 var getNotesFromPath = async (vault, path2) => {
-  const files = await vault.getMarkdownFiles();
+  const files = vault.getMarkdownFiles();
   if (path2 === "/") {
     return files;
   }
@@ -80811,11 +80824,22 @@ var getNotesFromPath = async (vault, path2) => {
   });
 };
 async function getTagsFromNote(file, vault) {
-  var _a4, _b2;
   const fileContent = await vault.cachedRead(file);
-  const frontMatter = (0, import_obsidian.parseYaml)((_b2 = (_a4 = fileContent.split("---")) == null ? void 0 : _a4[1]) != null ? _b2 : "") || {};
-  const tags = frontMatter.tags || [];
-  return tags.map((tag) => tag.replace("#", ""));
+  if (fileContent.startsWith("---")) {
+    const frontMatterBlock = fileContent.split("---", 3);
+    if (frontMatterBlock.length >= 3) {
+      const frontMatterContent = frontMatterBlock[1];
+      try {
+        const frontMatter = (0, import_obsidian.parseYaml)(frontMatterContent) || {};
+        const tags = frontMatter.tags || [];
+        return tags.map((tag) => tag.replace("#", "")).map((tag) => tag.toLowerCase());
+      } catch (error) {
+        console.error("Error parsing YAML frontmatter:", error);
+        return [];
+      }
+    }
+  }
+  return [];
 }
 async function getNotesFromTags(vault, tags, noteFiles) {
   if (tags.length === 0) {
@@ -80831,6 +80855,21 @@ async function getNotesFromTags(vault, tags, noteFiles) {
     }
   }
   return filesWithTag;
+}
+function isPathInList(filePath, pathList) {
+  var _a4;
+  if (!pathList)
+    return false;
+  const fileName = (_a4 = filePath.split("/").pop()) == null ? void 0 : _a4.toLowerCase();
+  const normalizedFilePath = filePath.toLowerCase();
+  return pathList.split(",").map(
+    (path2) => path2.trim().replace(/^\[\[|\]\]$/g, "").replace(/^\//, "").toLowerCase()
+    // Convert to lowercase for case-insensitive comparison
+  ).some((normalizedPath) => {
+    const isExactMatch = normalizedFilePath === normalizedPath || normalizedFilePath.startsWith(normalizedPath + "/") || normalizedFilePath.endsWith("/" + normalizedPath) || normalizedFilePath.includes("/" + normalizedPath + "/");
+    const isFileNameMatch = fileName === normalizedPath + ".md";
+    return isExactMatch || isFileNameMatch;
+  });
 }
 var stringToChainType = (chain) => {
   switch (chain) {
@@ -81023,6 +81062,14 @@ function extractChatHistory(memoryVariables) {
     chatHistory.push([userMessage, aiMessage]);
   }
   return chatHistory;
+}
+function extractNoteTitles(query2) {
+  const regex2 = /\[\[(.*?)\]\]/g;
+  const matches = query2.match(regex2);
+  const uniqueTitles = new Set(
+    matches ? matches.map((match2) => match2.slice(2, -2)) : []
+  );
+  return Array.from(uniqueTitles);
 }
 function processVariableNameForNotePath(variableName) {
   variableName = variableName.trim();
@@ -87279,6 +87326,122 @@ var VectorDBManager = class {
 };
 var vectorDBManager_default = VectorDBManager;
 
+// node_modules/langchain/dist/retrievers/score_threshold.js
+var ScoreThresholdRetriever = class extends VectorStoreRetriever {
+  constructor(input) {
+    var _a4, _b2, _c;
+    super(input);
+    Object.defineProperty(this, "minSimilarityScore", {
+      enumerable: true,
+      configurable: true,
+      writable: true,
+      value: void 0
+    });
+    Object.defineProperty(this, "kIncrement", {
+      enumerable: true,
+      configurable: true,
+      writable: true,
+      value: 10
+    });
+    Object.defineProperty(this, "maxK", {
+      enumerable: true,
+      configurable: true,
+      writable: true,
+      value: 100
+    });
+    this.maxK = (_a4 = input.maxK) != null ? _a4 : this.maxK;
+    this.minSimilarityScore = (_b2 = input.minSimilarityScore) != null ? _b2 : this.minSimilarityScore;
+    this.kIncrement = (_c = input.kIncrement) != null ? _c : this.kIncrement;
+  }
+  async getRelevantDocuments(query2) {
+    let currentK = 0;
+    let filteredResults = [];
+    do {
+      currentK += this.kIncrement;
+      const results = await this.vectorStore.similaritySearchWithScore(query2, currentK, this.filter);
+      filteredResults = results.filter(([, score]) => score >= this.minSimilarityScore);
+    } while (filteredResults.length >= currentK && currentK < this.maxK);
+    return filteredResults.map((documents) => documents[0]).slice(0, this.maxK);
+  }
+  static fromVectorStore(vectorStore, options) {
+    return new this({ ...options, vectorStore });
+  }
+};
+
+// src/search/hybridRetriever.ts
+var HybridRetriever = class extends BaseRetriever {
+  constructor(db, vault, options, debug3) {
+    super();
+    this.db = db;
+    this.vault = vault;
+    this.options = options;
+    this.debug = debug3;
+    this.lc_namespace = ["hybrid_retriever"];
+  }
+  async getRelevantDocuments(query2) {
+    const noteTitles = extractNoteTitles(query2);
+    const explicitChunks = await this.getExplicitChunks(noteTitles);
+    if (this.debug) {
+      console.log(
+        "*** HYBRID RETRIEVER DEBUG INFO: ***",
+        "\nHybrid Retriever Query: ",
+        query2,
+        "\nNote Titles extracted: ",
+        noteTitles,
+        "\nExplicit Chunks:",
+        explicitChunks
+      );
+    }
+    const vectorChunks = await this.getVectorChunks(query2);
+    const uniqueChunks = new Set(
+      explicitChunks.map((chunk) => chunk.pageContent)
+    );
+    const combinedChunks = [...explicitChunks];
+    for (const chunk of vectorChunks) {
+      const chunkContent = chunk.pageContent;
+      if (!uniqueChunks.has(chunkContent)) {
+        uniqueChunks.add(chunkContent);
+        combinedChunks.push(chunk);
+      }
+    }
+    return combinedChunks.slice(0, this.options.maxK);
+  }
+  async getExplicitChunks(noteTitles) {
+    var _a4;
+    const explicitChunks = [];
+    for (const noteTitle of noteTitles) {
+      const noteFile = await getNoteFileFromTitle(this.vault, noteTitle);
+      const docHash = vectorDBManager_default.getDocumentHash((_a4 = noteFile == null ? void 0 : noteFile.path) != null ? _a4 : "");
+      const memoryVectors = await vectorDBManager_default.getMemoryVectors(
+        this.db,
+        docHash
+      );
+      if (memoryVectors) {
+        const matchingChunks = memoryVectors.map(
+          (memoryVector) => new Document({
+            pageContent: memoryVector.content,
+            metadata: memoryVector.metadata
+          })
+        );
+        explicitChunks.push(...matchingChunks);
+      }
+    }
+    return explicitChunks;
+  }
+  async getVectorChunks(query2) {
+    const retriever = ScoreThresholdRetriever.fromVectorStore(
+      this.options.vectorStore,
+      {
+        minSimilarityScore: this.options.minSimilarityScore,
+        maxK: this.options.maxK,
+        kIncrement: this.options.kIncrement
+      }
+    );
+    const vectorChunks = await retriever.getRelevantDocuments(query2);
+    return vectorChunks;
+  }
+};
+
 // node_modules/langchain/dist/retrievers/multi_query.js
 init_llm_chain();
 init_prompt2();
@@ -87408,48 +87571,6 @@ var MultiQueryRetriever = class extends BaseRetriever {
     const documents = await this._retrieveDocuments(queries, runManager);
     const uniqueDocuments = this._uniqueUnion(documents);
     return uniqueDocuments;
-  }
-};
-
-// node_modules/langchain/dist/retrievers/score_threshold.js
-var ScoreThresholdRetriever = class extends VectorStoreRetriever {
-  constructor(input) {
-    var _a4, _b2, _c;
-    super(input);
-    Object.defineProperty(this, "minSimilarityScore", {
-      enumerable: true,
-      configurable: true,
-      writable: true,
-      value: void 0
-    });
-    Object.defineProperty(this, "kIncrement", {
-      enumerable: true,
-      configurable: true,
-      writable: true,
-      value: 10
-    });
-    Object.defineProperty(this, "maxK", {
-      enumerable: true,
-      configurable: true,
-      writable: true,
-      value: 100
-    });
-    this.maxK = (_a4 = input.maxK) != null ? _a4 : this.maxK;
-    this.minSimilarityScore = (_b2 = input.minSimilarityScore) != null ? _b2 : this.minSimilarityScore;
-    this.kIncrement = (_c = input.kIncrement) != null ? _c : this.kIncrement;
-  }
-  async getRelevantDocuments(query2) {
-    let currentK = 0;
-    let filteredResults = [];
-    do {
-      currentK += this.kIncrement;
-      const results = await this.vectorStore.similaritySearchWithScore(query2, currentK, this.filter);
-      filteredResults = results.filter(([, score]) => score >= this.minSimilarityScore);
-    } while (filteredResults.length >= currentK && currentK < this.maxK);
-    return filteredResults.map((documents) => documents[0]).slice(0, this.maxK);
-  }
-  static fromVectorStore(vectorStore, options) {
-    return new this({ ...options, vectorStore });
   }
 };
 
@@ -91658,7 +91779,8 @@ var _ChainManager = class {
                 return doc.metadata.path === ((_a4 = options.noteFile) == null ? void 0 : _a4.path);
               })
             },
-            _ChainManager.storeRetrieverDocuments.bind(_ChainManager)
+            _ChainManager.storeRetrieverDocuments.bind(_ChainManager),
+            options.debug
           );
           console.log("Existing vector store for document hash: ", docHash);
         } else {
@@ -91685,10 +91807,11 @@ var _ChainManager = class {
               llm: chatModel,
               retriever
             },
-            _ChainManager.storeRetrieverDocuments.bind(_ChainManager)
+            _ChainManager.storeRetrieverDocuments.bind(_ChainManager),
+            options.debug
           );
           console.log(
-            "New conversational retrieval QA chain with multi-query retriever created for document hash: ",
+            "New Long Note QA chain with multi-query retriever created for document hash: ",
             docHash
           );
         }
@@ -91708,22 +91831,29 @@ var _ChainManager = class {
           this.getDbVectorStores(),
           embeddingsAPI
         );
-        const retriever = ScoreThresholdRetriever.fromVectorStore(vectorStore, {
-          minSimilarityScore: 0.3,
-          // TODO: Make this a user setting
-          maxK: this.settings.maxSourceChunks,
-          // The maximum number of docs (chunks) to retrieve
-          kIncrement: 2
-        });
+        const retriever = new HybridRetriever(
+          this.getDbVectorStores(),
+          this.app.vault,
+          {
+            vectorStore,
+            minSimilarityScore: 0.3,
+            // TODO: Make this a setting
+            maxK: this.settings.maxSourceChunks,
+            // The maximum number of docs (chunks) to retrieve
+            kIncrement: 2
+          },
+          options.debug
+        );
         _ChainManager.retrievalChain = chainFactory_default.createConversationalRetrievalChain(
           {
             llm: chatModel,
             retriever
           },
-          _ChainManager.storeRetrieverDocuments.bind(_ChainManager)
+          _ChainManager.storeRetrieverDocuments.bind(_ChainManager),
+          options.debug
         );
         console.log(
-          "New conversational retrieval QA chain with multi-query retriever created for entire vault"
+          "New Vault QA chain with hybrid retriever created for entire vault"
         );
         this.langChainParams.chainType = "vault_qa" /* VAULT_QA_CHAIN */;
         console.log("Set chain:", "vault_qa" /* VAULT_QA_CHAIN */);
@@ -91781,6 +91911,7 @@ var _ChainManager = class {
     const chatModel = _ChainManager.chain.last.bound;
     const chatStream = await _ChainManager.chain.stream({
       input: userMessage
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     });
     try {
       switch (chainType) {
@@ -92147,7 +92278,7 @@ function registerBuiltInCommands(plugin) {
   plugin.addCommand({
     id: "count-total-vault-tokens",
     name: "Count total tokens in your vault",
-    editorCallback: async (editor) => {
+    callback: async () => {
       const totalTokens = await plugin.countTotalTokens();
       new import_obsidian6.Notice(`Total tokens in your vault: ${totalTokens}`);
     }
@@ -92383,7 +92514,7 @@ var ChatNoteContextModal = class extends import_obsidian9.Modal {
       if (pathValue.startsWith("/") && pathValue.length > 1) {
         pathValue = pathValue.slice(1);
       }
-      const tagsValue = tagsField.value.split(",").map((tag) => tag.trim()).map((tag) => tag.replace("#", "")).filter((tag) => tag !== "");
+      const tagsValue = tagsField.value.split(",").map((tag) => tag.trim()).map((tag) => tag.toLowerCase()).map((tag) => tag.replace("#", "")).filter((tag) => tag !== "");
       this.onSubmit(pathValue, tagsValue);
       this.close();
     });
@@ -92578,7 +92709,8 @@ var ChatIcons = ({
   addMessage,
   vault,
   vault_qa_strategy,
-  proxyServer
+  proxyServer,
+  debug: debug3
 }) => {
   const [selectedChain, setSelectedChain] = (0, import_react3.useState)(currentChain);
   const handleModelChange = async (event) => {
@@ -92637,7 +92769,7 @@ Please note that this is a retrieval-based QA for notes longer than the model co
         };
         addMessage(activeNoteOnMessage);
         if (noteContent) {
-          setCurrentChain(selectedChain, { noteFile });
+          setCurrentChain(selectedChain, { noteFile, debug: debug3 });
         }
         return;
       } else if (selectedChain === "vault_qa" /* VAULT_QA_CHAIN */) {
@@ -92655,7 +92787,7 @@ Please note that this is a retrieval-based QA. Specific questions are encouraged
         };
         addMessage(activeNoteOnMessage);
       }
-      setCurrentChain(selectedChain);
+      setCurrentChain(selectedChain, { debug: debug3 });
     };
     handleChainSelection();
   }, [selectedChain]);
@@ -92701,6 +92833,25 @@ Please note that this is a retrieval-based QA. Specific questions are encouraged
 };
 var ChatIcons_default = ChatIcons;
 
+// src/components/ NoteTitleModal.tsx
+var import_obsidian11 = require("obsidian");
+var NoteTitleModal = class extends import_obsidian11.FuzzySuggestModal {
+  constructor(app2, noteTitles, onChooseNoteTitle) {
+    super(app2);
+    this.noteTitles = noteTitles;
+    this.onChooseNoteTitle = onChooseNoteTitle;
+  }
+  getItems() {
+    return this.noteTitles;
+  }
+  getItemText(noteTitle) {
+    return noteTitle;
+  }
+  onChooseItem(noteTitle, evt) {
+    this.onChooseNoteTitle(noteTitle);
+  }
+};
+
 // src/components/ChatComponents/ChatInput.tsx
 var import_react5 = __toESM(require_react());
 var ChatInput = ({
@@ -92714,8 +92865,25 @@ var ChatInput = ({
   const [shouldFocus, setShouldFocus] = (0, import_react5.useState)(false);
   const textAreaRef = (0, import_react5.useRef)(null);
   const handleInputChange = (event) => {
-    setInputMessage(event.target.value);
-    updateRows(event.target.value);
+    const inputValue = event.target.value;
+    setInputMessage(inputValue);
+    updateRows(inputValue);
+    if (inputValue.slice(-2) === "[[") {
+      showNoteTitleModal();
+    }
+  };
+  const showNoteTitleModal = () => {
+    const fetchNoteTitles = async () => {
+      const noteTitles = app.vault.getMarkdownFiles().map((file) => file.basename);
+      new NoteTitleModal(
+        app,
+        noteTitles,
+        (noteTitle) => {
+          setInputMessage(inputMessage.slice(0, -2) + ` [[${noteTitle}]]`);
+        }
+      ).open();
+    };
+    fetchNoteTitles();
   };
   const updateRows = (text4) => {
     const lineHeight = 20;
@@ -101345,7 +101513,7 @@ var React8 = __toESM(require_react());
 var AppContext = React8.createContext(void 0);
 
 // src/customPromptProcessor.ts
-var import_obsidian11 = require("obsidian");
+var import_obsidian12 = require("obsidian");
 var _CustomPromptProcessor = class {
   constructor(vault) {
     this.vault = vault;
@@ -101394,7 +101562,7 @@ var _CustomPromptProcessor = class {
       if (notes.length > 0) {
         variablesWithContent.push(JSON.stringify(notes));
       } else {
-        new import_obsidian11.Notice(
+        new import_obsidian12.Notice(
           `Warning: No valid notes found for the provided path '${variableName}'.`
         );
       }
@@ -101431,7 +101599,7 @@ var CustomPromptProcessor = _CustomPromptProcessor;
 CustomPromptProcessor.instance = null;
 
 // src/langchainStream.ts
-var import_obsidian12 = require("obsidian");
+var import_obsidian13 = require("obsidian");
 var getAIResponse = async (userMessage, chainManager, addMessage, updateCurrentAiMessage, updateShouldAbort, options = {}) => {
   const abortController = new AbortController();
   updateShouldAbort(abortController);
@@ -101445,7 +101613,7 @@ var getAIResponse = async (userMessage, chainManager, addMessage, updateCurrentA
     );
   } catch (error) {
     console.error("Model request failed:", error);
-    new import_obsidian12.Notice("Model request failed:", error);
+    new import_obsidian13.Notice("Model request failed:", error);
   }
 };
 
@@ -101489,7 +101657,7 @@ function useSharedState(sharedState) {
 var sharedState_default = SharedState;
 
 // src/components/Chat.tsx
-var import_obsidian13 = require("obsidian");
+var import_obsidian14 = require("obsidian");
 var import_react12 = __toESM(require_react());
 var Chat3 = ({
   sharedState,
@@ -101521,16 +101689,36 @@ var Chat3 = ({
   const handleSendMessage = async () => {
     if (!inputMessage)
       return;
+    let processedUserMessage = inputMessage;
+    if (currentChain === "llm_chain" /* LLM_CHAIN */) {
+      const noteTitles = extractNoteTitles(inputMessage);
+      for (const noteTitle of noteTitles) {
+        const noteFile = await getNoteFileFromTitle(app2.vault, noteTitle);
+        if (noteFile) {
+          const noteContent = await getFileContent(noteFile, app2.vault);
+          processedUserMessage = `${processedUserMessage}
+
+[[${noteTitle}]]: 
+${noteContent}`;
+        }
+      }
+    }
     const userMessage = {
       message: inputMessage,
       sender: USER_SENDER,
       isVisible: true
     };
+    const promptMessageHidden = {
+      message: processedUserMessage,
+      sender: USER_SENDER,
+      isVisible: false
+    };
     addMessage(userMessage);
+    addMessage(promptMessageHidden);
     setInputMessage("");
     setLoading(true);
     await getAIResponse(
-      userMessage,
+      promptMessageHidden,
       chainManager,
       addMessage,
       setCurrentAiMessage,
@@ -101587,11 +101775,11 @@ var Chat3 = ({
     const file = app2.workspace.getActiveFile();
     if (noteFiles.length === 0) {
       if (!file) {
-        new import_obsidian13.Notice("No active note found.");
+        new import_obsidian14.Notice("No active note found.");
         console.error("No active note found.");
         return;
       }
-      new import_obsidian13.Notice("No valid Chat context provided. Defaulting to the active note.");
+      new import_obsidian14.Notice("No valid Chat context provided. Defaulting to the active note.");
       noteFiles = [file];
     }
     const notes = [];
@@ -101638,14 +101826,14 @@ var Chat3 = ({
     }
     const file = app2.workspace.getActiveFile();
     if (!file) {
-      new import_obsidian13.Notice("No active note found.");
+      new import_obsidian14.Notice("No active note found.");
       console.error("No active note found.");
       return;
     }
     const noteContent = await getFileContent(file, app2.vault);
     const noteName = getFileName(file);
     if (!noteContent) {
-      new import_obsidian13.Notice("No note content found.");
+      new import_obsidian14.Notice("No note content found.");
       console.error("No note content found.");
       return;
     }
@@ -101676,7 +101864,7 @@ var Chat3 = ({
       return;
     }
     await plugin.indexVaultToVectorStore();
-    new import_obsidian13.Notice("Vault index refreshed.");
+    new import_obsidian14.Notice("Vault index refreshed.");
   };
   const clearCurrentAiMessage = () => {
     setCurrentAiMessage("");
@@ -101840,7 +102028,8 @@ var Chat3 = ({
       addMessage,
       vault: app2.vault,
       vault_qa_strategy: plugin.settings.indexVaultToVectorStore,
-      proxyServer: plugin.proxyServer
+      proxyServer: plugin.proxyServer,
+      debug: debug3
     }
   ), /* @__PURE__ */ import_react12.default.createElement(
     ChatInput_default,
@@ -101857,10 +102046,10 @@ var Chat_default = Chat3;
 
 // src/components/CopilotView.tsx
 var import_events = require("events");
-var import_obsidian14 = require("obsidian");
+var import_obsidian15 = require("obsidian");
 var React10 = __toESM(require_react());
 var import_client3 = __toESM(require_client5());
-var CopilotView = class extends import_obsidian14.ItemView {
+var CopilotView = class extends import_obsidian15.ItemView {
   constructor(leaf, plugin) {
     super(leaf);
     this.plugin = plugin;
@@ -101924,8 +102113,8 @@ var CopilotView = class extends import_obsidian14.ItemView {
 };
 
 // src/components/ListPromptModal.tsx
-var import_obsidian15 = require("obsidian");
-var ListPromptModal = class extends import_obsidian15.FuzzySuggestModal {
+var import_obsidian16 = require("obsidian");
+var ListPromptModal = class extends import_obsidian16.FuzzySuggestModal {
   constructor(app2, promptTitles, onChoosePromptTitle) {
     super(app2);
     this.promptTitles = promptTitles;
@@ -101942,11 +102131,47 @@ var ListPromptModal = class extends import_obsidian15.FuzzySuggestModal {
   }
 };
 
+// src/components/QAExclusionModal.tsx
+var import_obsidian17 = require("obsidian");
+var QAExclusionModal = class extends import_obsidian17.Modal {
+  constructor(app2, settings, onSubmit) {
+    super(app2);
+    this.settings = settings;
+    this.onSubmit = onSubmit;
+  }
+  onOpen() {
+    const formContainer = this.contentEl.createEl("div", { cls: "copilot-command-modal" });
+    const pathContainer = formContainer.createEl("div", { cls: "copilot-command-input-container" });
+    pathContainer.createEl("h3", { text: "Exclude by Folder Path or Note Title", cls: "copilot-command-header" });
+    const descFragment = createFragment((frag) => {
+      frag.appendText("All notes under the paths will be excluded from indexing");
+    });
+    pathContainer.appendChild(descFragment);
+    const pathField = pathContainer.createEl(
+      "input",
+      {
+        type: "text",
+        cls: "copilot-command-input",
+        value: this.settings.qaExclusionPaths,
+        placeholder: "Enter /folderPath, [[note title]] separated by commas"
+      }
+    );
+    pathField.setAttribute("name", "folderPath");
+    const submitButtonContainer = formContainer.createEl("div", { cls: "copilot-command-save-btn-container" });
+    const submitButton = submitButtonContainer.createEl("button", { text: "Submit", cls: "copilot-command-save-btn" });
+    submitButton.addEventListener("click", () => {
+      const pathsValue = pathField.value.split(",").map((pathValue) => pathValue.trim()).filter((pathValue) => pathValue !== "").join(",");
+      this.onSubmit(pathsValue);
+      this.close();
+    });
+  }
+};
+
 // src/encryptionService.ts
-var import_obsidian16 = require("obsidian");
+var import_obsidian18 = require("obsidian");
 var safeStorage;
 var _a3, _b;
-if (import_obsidian16.Platform.isDesktop) {
+if (import_obsidian18.Platform.isDesktop) {
   safeStorage = (_b = (_a3 = require("electron")) == null ? void 0 : _a3.remote) == null ? void 0 : _b.safeStorage;
 }
 var _EncryptionService = class {
@@ -102048,12 +102273,12 @@ var ProxyServer = class {
 };
 
 // src/settings/SettingsPage.tsx
-var import_obsidian18 = require("obsidian");
+var import_obsidian20 = require("obsidian");
 var import_react21 = __toESM(require_react());
 var import_client4 = __toESM(require_client5());
 
 // src/settings/components/SettingsMain.tsx
-var import_obsidian17 = require("obsidian");
+var import_obsidian19 = require("obsidian");
 var import_react20 = __toESM(require_react());
 
 // src/settings/components/AdvancedSettings.tsx
@@ -102511,13 +102736,13 @@ function SettingsMain({ plugin, reloadPlugin }) {
     plugin.settings.ollamaBaseUrl = ollamaBaseUrl;
     await plugin.saveSettings();
     await reloadPlugin();
-    new import_obsidian17.Notice("Settings have been saved and the plugin has been reloaded.");
+    new import_obsidian19.Notice("Settings have been saved and the plugin has been reloaded.");
   };
   const resetToDefaultSettings = async () => {
     plugin.settings = DEFAULT_SETTINGS;
     await plugin.saveSettings();
     await reloadPlugin();
-    new import_obsidian17.Notice("Settings have been reset to their default values.");
+    new import_obsidian19.Notice("Settings have been reset to their default values.");
   };
   return /* @__PURE__ */ import_react20.default.createElement(import_react20.default.Fragment, null, /* @__PURE__ */ import_react20.default.createElement("div", null, /* @__PURE__ */ import_react20.default.createElement("h2", null, "Copilot Settings"), /* @__PURE__ */ import_react20.default.createElement("div", { className: "button-container" }, /* @__PURE__ */ import_react20.default.createElement("button", { className: "mod-cta", onClick: saveAllSettings }, "Save and Reload"), /* @__PURE__ */ import_react20.default.createElement("button", { className: "mod-cta", onClick: resetToDefaultSettings }, "Reset to Default Settings")), /* @__PURE__ */ import_react20.default.createElement("div", { className: "warning-message" }, "Please Save and Reload the plugin when you change any setting below!"), /* @__PURE__ */ import_react20.default.createElement(
     DropdownComponent,
@@ -102643,7 +102868,7 @@ function SettingsMain({ plugin, reloadPlugin }) {
 }
 
 // src/settings/SettingsPage.tsx
-var CopilotSettingTab = class extends import_obsidian18.PluginSettingTab {
+var CopilotSettingTab = class extends import_obsidian20.PluginSettingTab {
   constructor(app2, plugin) {
     super(app2, plugin);
     this.plugin = plugin;
@@ -102655,9 +102880,9 @@ var CopilotSettingTab = class extends import_obsidian18.PluginSettingTab {
       await app2.plugins.disablePlugin("copilot");
       await app2.plugins.enablePlugin("copilot");
       app2.setting.openTabById("copilot").display();
-      new import_obsidian18.Notice("Plugin reloaded successfully.");
+      new import_obsidian20.Notice("Plugin reloaded successfully.");
     } catch (error) {
-      new import_obsidian18.Notice("Failed to reload the plugin. Please reload manually.");
+      new import_obsidian20.Notice("Failed to reload the plugin. Please reload manually.");
       console.error("Error reloading plugin:", error);
     }
   }
@@ -102672,7 +102897,7 @@ var CopilotSettingTab = class extends import_obsidian18.PluginSettingTab {
     );
     const devModeHeader = containerEl.createEl("h1", { text: "Additional Settings" });
     devModeHeader.style.marginTop = "40px";
-    new import_obsidian18.Setting(containerEl).setName("Enable Encryption").setDesc(
+    new import_obsidian20.Setting(containerEl).setName("Enable Encryption").setDesc(
       createFragment((frag) => {
         frag.appendText("Enable encryption for the API keys.");
       })
@@ -102682,7 +102907,7 @@ var CopilotSettingTab = class extends import_obsidian18.PluginSettingTab {
         await this.plugin.saveSettings();
       })
     );
-    new import_obsidian18.Setting(containerEl).setName("Debug mode").setDesc(
+    new import_obsidian20.Setting(containerEl).setName("Debug mode").setDesc(
       createFragment((frag) => {
         frag.appendText("Debug mode will log all API requests and prompts to the console.");
       })
@@ -102697,7 +102922,7 @@ var CopilotSettingTab = class extends import_obsidian18.PluginSettingTab {
 
 // src/main.ts
 var import_crypto_js2 = __toESM(require_crypto_js());
-var import_obsidian19 = require("obsidian");
+var import_obsidian21 = require("obsidian");
 
 // node_modules/pouchdb/lib/index-browser.es.js
 var import_immediate = __toESM(require_lib4());
@@ -111318,7 +111543,7 @@ PouchDB.plugin(IDBPouch).plugin(HttpPouch$1).plugin(mapreduce).plugin(replicatio
 var index_browser_es_default = PouchDB;
 
 // src/main.ts
-var CopilotPlugin = class extends import_obsidian19.Plugin {
+var CopilotPlugin = class extends import_obsidian21.Plugin {
   constructor() {
     super(...arguments);
     this.activateViewPromise = null;
@@ -111379,9 +111604,9 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
         new AddPromptModal(this.app, async (title, prompt) => {
           try {
             await this.dbPrompts.put({ _id: title, prompt });
-            new import_obsidian19.Notice("Custom prompt saved successfully.");
+            new import_obsidian21.Notice("Custom prompt saved successfully.");
           } catch (e) {
-            new import_obsidian19.Notice(
+            new import_obsidian21.Notice(
               "Error saving custom prompt. Please check if the title already exists."
             );
             console.error(e);
@@ -111399,7 +111624,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
             promptTitles,
             async (promptTitle) => {
               if (!promptTitle) {
-                new import_obsidian19.Notice("Please select a prompt title.");
+                new import_obsidian21.Notice("Please select a prompt title.");
                 return;
               }
               try {
@@ -111407,7 +111632,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
                   promptTitle
                 );
                 if (!doc.prompt) {
-                  new import_obsidian19.Notice(
+                  new import_obsidian21.Notice(
                     `No prompt found with the title "${promptTitle}".`
                   );
                   return;
@@ -111419,12 +111644,12 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
                 );
               } catch (err) {
                 if (err.name === "not_found") {
-                  new import_obsidian19.Notice(
+                  new import_obsidian21.Notice(
                     `No prompt found with the title "${promptTitle}".`
                   );
                 } else {
                   console.error(err);
-                  new import_obsidian19.Notice("An error occurred.");
+                  new import_obsidian21.Notice("An error occurred.");
                 }
               }
             }
@@ -111443,7 +111668,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
               this.processCustomPrompt(editor, "applyAdhocPrompt", adhocPrompt);
             } catch (err) {
               console.error(err);
-              new import_obsidian19.Notice("An error occurred.");
+              new import_obsidian21.Notice("An error occurred.");
             }
           }
         );
@@ -111463,7 +111688,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
             promptTitles,
             async (promptTitle) => {
               if (!promptTitle) {
-                new import_obsidian19.Notice("Please select a prompt title.");
+                new import_obsidian21.Notice("Please select a prompt title.");
                 return;
               }
               try {
@@ -111472,20 +111697,20 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
                   await this.dbPrompts.remove(
                     doc
                   );
-                  new import_obsidian19.Notice(`Prompt "${promptTitle}" has been deleted.`);
+                  new import_obsidian21.Notice(`Prompt "${promptTitle}" has been deleted.`);
                 } else {
-                  new import_obsidian19.Notice(
+                  new import_obsidian21.Notice(
                     `Failed to delete prompt "${promptTitle}": No revision found.`
                   );
                 }
               } catch (err) {
                 if (err.name === "not_found") {
-                  new import_obsidian19.Notice(
+                  new import_obsidian21.Notice(
                     `No prompt found with the title "${promptTitle}".`
                   );
                 } else {
                   console.error(err);
-                  new import_obsidian19.Notice("An error occurred while deleting the prompt.");
+                  new import_obsidian21.Notice("An error occurred while deleting the prompt.");
                 }
               }
             }
@@ -111507,7 +111732,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
             promptTitles,
             async (promptTitle) => {
               if (!promptTitle) {
-                new import_obsidian19.Notice("Please select a prompt title.");
+                new import_obsidian21.Notice("Please select a prompt title.");
                 return;
               }
               try {
@@ -111522,25 +111747,25 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
                         ...doc,
                         prompt: newPrompt
                       });
-                      new import_obsidian19.Notice(`Prompt "${title}" has been updated.`);
+                      new import_obsidian21.Notice(`Prompt "${title}" has been updated.`);
                     },
                     doc._id,
                     doc.prompt,
                     true
                   ).open();
                 } else {
-                  new import_obsidian19.Notice(
+                  new import_obsidian21.Notice(
                     `No prompt found with the title "${promptTitle}".`
                   );
                 }
               } catch (err) {
                 if (err.name === "not_found") {
-                  new import_obsidian19.Notice(
+                  new import_obsidian21.Notice(
                     `No prompt found with the title "${promptTitle}".`
                   );
                 } else {
                   console.error(err);
-                  new import_obsidian19.Notice("An error occurred.");
+                  new import_obsidian21.Notice("An error occurred.");
                 }
               }
             }
@@ -111558,13 +111783,13 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
           this.dbVectorStores = new index_browser_es_default(
             `copilot_vector_stores_${this.getVaultIdentifier()}`
           );
-          new import_obsidian19.Notice("Local vector store cleared successfully.");
+          new import_obsidian21.Notice("Local vector store cleared successfully.");
           console.log(
             "Local vector store cleared successfully, new instance created."
           );
         } catch (err) {
           console.error("Error clearing the local vector store:", err);
-          new import_obsidian19.Notice(
+          new import_obsidian21.Notice(
             "An error occurred while clearing the local vector store."
           );
         }
@@ -111591,13 +111816,13 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
             );
           });
           await Promise.all(deletePromises);
-          new import_obsidian19.Notice("Local vector store garbage collected successfully.");
+          new import_obsidian21.Notice("Local vector store garbage collected successfully.");
           console.log(
             "Local vector store garbage collected successfully, new instance created."
           );
         } catch (err) {
           console.error("Error clearing the local vector store:", err);
-          new import_obsidian19.Notice(
+          new import_obsidian21.Notice(
             "An error occurred while clearing the local vector store."
           );
         }
@@ -111609,7 +111834,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
       callback: async () => {
         try {
           const indexedFileCount = await this.indexVaultToVectorStore();
-          new import_obsidian19.Notice(
+          new import_obsidian21.Notice(
             `${indexedFileCount} vault files indexed to vector store.`
           );
           console.log(
@@ -111617,7 +111842,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
           );
         } catch (err) {
           console.error("Error indexing vault to vector store:", err);
-          new import_obsidian19.Notice("An error occurred while indexing vault to vector store.");
+          new import_obsidian21.Notice("An error occurred while indexing vault to vector store.");
         }
       }
     });
@@ -111627,7 +111852,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
       callback: async () => {
         try {
           const indexedFileCount = await this.indexVaultToVectorStore(true);
-          new import_obsidian19.Notice(
+          new import_obsidian21.Notice(
             `${indexedFileCount} vault files indexed to vector store.`
           );
           console.log(
@@ -111635,7 +111860,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
           );
         } catch (err) {
           console.error("Error re-indexing vault to vector store:", err);
-          new import_obsidian19.Notice(
+          new import_obsidian21.Notice(
             "An error occurred while re-indexing vault to vector store."
           );
         }
@@ -111656,6 +111881,16 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
         ).open();
       }
     });
+    this.addCommand({
+      id: "set-vault-qa-exclusion",
+      name: "Set exclusion for Vault QA mode",
+      callback: async () => {
+        new QAExclusionModal(this.app, this.settings, async (paths) => {
+          this.settings.qaExclusionPaths = paths;
+          await this.saveSettings();
+        }).open();
+      }
+    });
     this.registerEvent(
       this.app.vault.on("delete", (file) => {
         const docHash = vectorDBManager_default.getDocumentHash(file.path);
@@ -111667,7 +111902,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
         await this.indexVaultToVectorStore();
       } catch (err) {
         console.error("Error saving vault to vector store:", err);
-        new import_obsidian19.Notice("An error occurred while saving vault to vector store.");
+        new import_obsidian21.Notice("An error occurred while saving vault to vector store.");
       }
     }
   }
@@ -111679,7 +111914,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
     var _a4;
     const embeddingInstance = this.embeddingsManager.getEmbeddingsAPI();
     if (!embeddingInstance) {
-      new import_obsidian19.Notice("Embedding instance not found.");
+      new import_obsidian21.Notice("Embedding instance not found.");
       return;
     }
     const fileContent = await this.app.vault.cachedRead(file);
@@ -111702,11 +111937,12 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
       this.dbVectorStores
     );
     const currEmbeddingModel = EmbeddingManager.getModelName(embeddingInstance);
-    console.log(
-      "Prev vs Current embedding models:",
-      prevEmbeddingModel,
-      currEmbeddingModel
-    );
+    if (this.settings.debug)
+      console.log(
+        "Prev vs Current embedding models:",
+        prevEmbeddingModel,
+        currEmbeddingModel
+      );
     if (!areEmbeddingModelsSame(prevEmbeddingModel, currEmbeddingModel)) {
       overwrite = true;
       try {
@@ -111714,7 +111950,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
         this.dbVectorStores = new index_browser_es_default(
           `copilot_vector_stores_${this.getVaultIdentifier()}`
         );
-        new import_obsidian19.Notice(
+        new import_obsidian21.Notice(
           "Detected change in embedding model. Rebuild vector store from scratch."
         );
         console.log(
@@ -111722,7 +111958,7 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
         );
       } catch (err) {
         console.error("Error clearing vector store for reindexing:", err);
-        new import_obsidian19.Notice("Error clearing vector store for reindexing.");
+        new import_obsidian21.Notice("Error clearing vector store for reindexing.");
       }
     }
     const latestMtime = await vectorDBManager_default.getLatestFileMtime(
@@ -111732,6 +111968,10 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
       if (!latestMtime || overwrite)
         return true;
       return file.stat.mtime > latestMtime;
+    }).filter((file) => {
+      if (!this.settings.qaExclusionPaths)
+        return true;
+      return !isPathInList(file.path, this.settings.qaExclusionPaths);
     });
     const fileContents = await Promise.all(
       files.map((file) => this.app.vault.cachedRead(file))
@@ -111741,40 +111981,52 @@ var CopilotPlugin = class extends import_obsidian19.Plugin {
     );
     const totalFiles = files.length;
     if (totalFiles === 0) {
-      new import_obsidian19.Notice("Copilot vault index is up-to-date.");
+      new import_obsidian21.Notice("Copilot vault index is up-to-date.");
       return 0;
     }
     let indexedCount = 0;
-    const indexNotice = new import_obsidian19.Notice(
+    const indexNotice = new import_obsidian21.Notice(
       `Copilot is indexing your vault...
 0/${totalFiles} files processed.`,
       0
     );
+    const errors = [];
     const loadPromises = files.map(async (file, index2) => {
       var _a4, _b2;
-      const noteFile = {
-        basename: file.basename,
-        path: file.path,
-        mtime: file.stat.mtime,
-        content: fileContents[index2],
-        metadata: (_b2 = (_a4 = fileMetadatas[index2]) == null ? void 0 : _a4.frontmatter) != null ? _b2 : {}
-      };
-      const result = await vectorDBManager_default.indexFile(
-        this.dbVectorStores,
-        embeddingInstance,
-        noteFile
-      );
-      indexedCount++;
-      indexNotice.setMessage(
-        `Copilot is indexing your vault...
+      try {
+        const noteFile = {
+          basename: file.basename,
+          path: file.path,
+          mtime: file.stat.mtime,
+          content: fileContents[index2],
+          metadata: (_b2 = (_a4 = fileMetadatas[index2]) == null ? void 0 : _a4.frontmatter) != null ? _b2 : {}
+        };
+        const result = await vectorDBManager_default.indexFile(
+          this.dbVectorStores,
+          embeddingInstance,
+          noteFile
+        );
+        indexedCount++;
+        indexNotice.setMessage(
+          `Copilot is indexing your vault...
 ${indexedCount}/${totalFiles} files processed.`
-      );
-      return result;
+        );
+        return result;
+      } catch (err) {
+        console.error("Error indexing file:", err);
+        errors.push(`Error indexing file: ${file.basename}`);
+      }
     });
     await Promise.all(loadPromises);
     setTimeout(() => {
       indexNotice.hide();
     }, 2e3);
+    if (errors.length > 0) {
+      new import_obsidian21.Notice(
+        `Indexing completed with errors. Check the console for details.`
+      );
+      console.log("Indexing Errors:", errors.join("\n"));
+    }
     return files.length;
   }
   async processText(editor, eventType, eventSubtype, checkSelectedText = true) {

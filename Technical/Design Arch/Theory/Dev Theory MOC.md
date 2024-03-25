@@ -1,5 +1,5 @@
 ---
-title: Theory MOC
+title: Dev Theory MOC
 tags:
   - moc
   - theory
@@ -7,7 +7,7 @@ categories:
   - moc
   - theory
 date created: 2023-10-06
-date modified: 2023-10-06
+date modified: 2024-03-25
 ---
 
 # Theory MOC

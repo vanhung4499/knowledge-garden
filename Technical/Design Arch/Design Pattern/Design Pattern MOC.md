@@ -7,7 +7,7 @@ categories:
   - design-pattern
   - moc
 date created: 2023-10-06
-date modified: 2023-10-06
+date modified: 2024-03-25
 ---
 
 # Design Pattern MOC
@@ -15,6 +15,10 @@ date modified: 2023-10-06
 > Tổng hợp về Design Pattern
 
 ## 📖 Nội dung
+
+> [!info] Info
+>
+> Phần này là lý thuyết về design parttern
 
 ### Basic
 
@@ -39,7 +43,7 @@ date modified: 2023-10-06
 - [[Flyweight Pattern]]
 - [[Proxy Pattern]]
 
-### Behavioral
+### Behaviour
 
 - [[Template Method Pattern]]
 - [[Command Pattern]]
@@ -52,6 +56,15 @@ date modified: 2023-10-06
 - [[Strategy Pattern]]
 - [[Visitor Pattern]]
 - [[State Pattern]]
+
+## 🚚 Thực chiến
+
+> [!info] Info
+>
+>  Phần này áp dụng design parttern để giải quyết các thực tế.  
+>  Sử dụng Java để triển khai các mẫu thiết kế.
+
+- [[Factory Pattern Practice]]
 
 ## 📚 Tài liệu
 
