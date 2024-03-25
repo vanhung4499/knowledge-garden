@@ -5,7 +5,7 @@ tags:
 categories:
   - design-pattern
 date created: 2023-10-05
-date modified: 2023-10-06
+date modified: 2024-03-25
 ---
 
 # Tổng quan về mẫu thiết kế
@@ -55,7 +55,7 @@ Có thể xem xét áp dụng mẫu thiết kế tạo đối tượng trong cá
 - Một lớp chỉ có thể có một phiên bản và phiên bản này có thể truy cập từ bất kỳ đâu.
 - Phiên bản phải có khả năng mở rộng mà không cần sửa đổi.
 
-### Mẫu thiết kế tạo đối tượng (Creational Pattern)
+## Mẫu thiết kế tạo đối tượng (Creational Pattern)
 
 > Mẫu thiết kế tạo đối tượng cung cấp cơ chế tạo đối tượng, giúp tăng tính linh hoạt và khả năng tái sử dụng của mã hiện có.
 
@@ -66,7 +66,7 @@ Có thể xem xét áp dụng mẫu thiết kế tạo đối tượng trong cá
 - [[Prototype Pattern]]
 - [[Singleton Pattern]]
 
-### Mẫu thiết kế cấu trúc (Structural Pattern)
+## Mẫu thiết kế cấu trúc (Structural Pattern)
 
 > Mẫu thiết kế cấu trúc giúp tổ chức các đối tượng và lớp thành các cấu trúc lớn hơn, đồng thời duy trì tính linh hoạt và hiệu suất của cấu trúc đó.
 
@@ -78,7 +78,7 @@ Có thể xem xét áp dụng mẫu thiết kế tạo đối tượng trong cá
 - [[Flyweight Pattern]]
 - [[Proxy Pattern]]
 
-### Mẫu thiết kế hành vi (Behavioral pattern)
+## Mẫu thiết kế hành vi (Behavioral pattern)
 
 > Mẫu thiết kế hành vi đảm nhận trách nhiệm giao tiếp hiệu quả giữa các đối tượng và phân phối trách nhiệm.
 

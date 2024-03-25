@@ -5,8 +5,10 @@ tags:
 categories:
   - design-pattern
 date created: 2023-10-05
-date modified: 2023-10-05
+date modified: 2024-03-25
 ---
+
+# Simple Factory Pattern
 
 ## Giới thiệu
 

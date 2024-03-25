@@ -1,7 +1,6 @@
 [
   "obsidian-image-auto-upload-plugin",
   "obsidian-excalidraw-plugin",
-  "dataview",
   "calendar",
   "templater-obsidian",
   "table-editor-obsidian",
@@ -14,7 +13,6 @@
   "quickadd",
   "obsidian-auto-link-title",
   "cm-editor-syntax-highlight-obsidian",
-  "execute-code",
   "obsidian-linter",
   "obsidian-admonition",
   "tag-wrangler",
@@ -23,7 +21,6 @@
   "homepage",
   "obsidian-advanced-uri",
   "mermaid-tools",
-  "copilot",
   "obsidian-minimal-settings",
   "obsidian-hider"
 ]

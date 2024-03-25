@@ -4,18 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "046ea2c7f8ab4d35",
+        "id": "7c5d068ef092ba3f",
         "type": "tabs",
         "children": [
           {
-            "id": "b01386723d215616",
+            "id": "a9819de78fbd001a",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "53cf443251ea8a4d",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Design Arch/Design Pattern/Practical/Factory Pattern Practice.md",
+                "mode": "source",
+                "source": false
+              }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -27,7 +44,7 @@
       {
         "id": "4bb57e58b8f80419",
         "type": "tabs",
-        "dimension": 54.22222222222223,
+        "dimension": 54.222222222222214,
         "children": [
           {
             "id": "c6d173446b8ea23c",
@@ -78,21 +95,23 @@
       {
         "id": "6ef78510c55f19c6",
         "type": "tabs",
-        "dimension": 45.77777777777778,
+        "dimension": 45.777777777777786,
         "children": [
           {
             "id": "de9bbc59fe5a4b25",
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "Technical/Design Arch/Design Pattern/Practical/Factory Pattern Practice.md"
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
-    "width": 268.5
+    "width": 298.5
   },
   "right": {
     "id": "8cf2b2f99d2fd9eb",
@@ -101,6 +120,7 @@
       {
         "id": "aa73b7c38d889831",
         "type": "tabs",
+        "dimension": 62.29372937293729,
         "children": [
           {
             "id": "7e94e118fbed72e4",
@@ -116,6 +136,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "Technical/Design Arch/Design Pattern/Practical/Factory Pattern Practice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -132,6 +153,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "Technical/Design Arch/Design Pattern/Practical/Factory Pattern Practice.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,10 +176,25 @@
             }
           }
         ]
+      },
+      {
+        "id": "9f3bb4353b344f94",
+        "type": "tabs",
+        "dimension": 37.70627062706271,
+        "children": [
+          {
+            "id": "ee7c19dda36d12a2",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
       }
     ],
     "direction": "horizontal",
-    "width": 245.5
+    "width": 300.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -170,54 +207,52 @@
       "obsidian-excalidraw-plugin:Create new drawing": false,
       "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "omnisearch:Omnisearch": false,
       "obsidian42-brat:BRAT": false,
       "dbfolder:Create a new database table": false,
-      "homepage:Open homepage": false,
       "mermaid-tools:Open Mermaid Toolbar": false,
-      "copilot:Copilot Chat": false
+      "omnisearch:Omnisearch": false,
+      "homepage:Open homepage": false
     }
   },
-  "active": "b01386723d215616",
+  "active": "c6d173446b8ea23c",
   "lastOpenFiles": [
-    "Technical/Programming/TypeScript/Engineering/TS Lint.md",
-    "Technical/Programming/TypeScript/Engineering/TS Compiler Options.md",
-    "Technical/Programming/TypeScript/Advanced/TS Class.md",
-    "Technical/Programming/TypeScript/Advanced/TS Class and Interface.md",
-    "Technical/Programming/TypeScript/Advanced/TS Declaration Merging.md",
-    "Technical/Programming/TypeScript/Advanced/TS Enum.md",
-    "Technical/Programming/TypeScript/Advanced/TS Generics.md",
-    "Technical/Programming/TypeScript/Advanced/TS String Literal Type.md",
-    "Technical/Programming/TypeScript/Advanced/TS Tuple.md",
-    "Technical/Programming/TypeScript/Advanced/TS Type Alias.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Of Object Interfaces.md",
-    "Technical/Programming/TypeScript/Basic/TS Union Types.md",
-    "Technical/Programming/TypeScript/TypeScript MOC.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Of Function.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Of Array.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Assertion.md",
-    "Technical/Programming/TypeScript/Basic/[].md",
-    "Technical/Programming/TypeScript/Engineering",
-    "Technical/Programming/Programming MOC.md",
-    "Technical/Programming/TypeScript/Basic/TS Built-in Objects.md",
-    "Technical/Programming/TypeScript/Advanced",
-    "Technical/Programming/TypeScript/Basic/TS Declaration Files.md",
-    "Technical/Programming/TypeScript/Basic/TS Any.md",
-    "Technical/Programming/TypeScript/Basic/TS Type Inference.md",
-    "Home.md",
-    "Technical/DSA/DS/Data Structures MOC.md",
-    "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/Leetcode/LeetCode 0375.md",
+    "Technical/Design Arch/Design Pattern/Creational",
+    "Technical/Design Arch/Design Pattern/Behavioral/Visitor Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Template Method Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Strategy Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/State Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Observer Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Memento Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Mediator Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Iterator Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Interpreter Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Command Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral/Chain of Responsibility Pattern.md",
+    "Technical/Design Arch/Design Pattern/Behavioral",
+    "Technical/Design Arch/Design Pattern/Structural/Proxy Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural/Flyweight Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural/Facade Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural/Decorator Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural/Composite Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural/Bridge Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural/Adapter Pattern.md",
+    "Technical/Design Arch/Design Pattern/Structural",
+    "Technical/Design Arch/Design Pattern/Creational/Singleton Pattern.md",
+    "Technical/Design Arch/Design Pattern/Creational/Simple Factory Pattern.md",
+    "Technical/Design Arch/Design Pattern/Creational/Prototype Pattern.md",
+    "Technical/Design Arch/Design Pattern/Creational/Factory Method Pattern.md",
+    "Technical/Design Arch/Design Pattern/Creational/Builder Pattern.md",
+    "Technical/Design Arch/Design Pattern/Creational/Abstract Factory Pattern.md",
+    "Technical/Design Arch/Design Pattern/Design Pattern Overview.md",
+    "Technical/Design Arch/Design Pattern/Practical",
+    "Technical/Design Arch/Design Pattern/Partterns",
+    "Technical/Big Data/Hive",
+    "Technical/Big Data/Installation",
+    "Technical/Big Data/Hadoop/HDFS",
+    "Technical/Big Data/Spark",
+    "Technical/Big Data/HBase",
     "Extras/Draws/cpu-cache-work.svg",
-    "Projects/Interview/UDT/Backend",
-    "Projects/Interview/UDT",
-    "Projects/Interview",
-    "Technical/Distributed",
     "Extras/Draws/es-write-detail.excalidraw.png",
-    "Technical/Backend/Spring/Security",
-    "Projects/Mall/Architect",
-    "Projects/Mall",
-    "Technical/Programming/TypeScript/Intro",
     "Extras/Media/20230906153409.png",
     "Extras/Media/20220509113955.png",
     "Extras/Media/20220509094655.png",
