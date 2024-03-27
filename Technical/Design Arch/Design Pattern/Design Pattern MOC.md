@@ -74,6 +74,14 @@ date modified: 2024-03-27
 
 ### Structural
 
+- [[Adapter Pattern Practice]]
+- [[Bridge Pattern Practice]]
+- [[Composite Pattern Practice]]
+- [[Decorator Pattern Practice]]
+- [[Facade Pattern Practice]]
+- [[Flyweight Pattern Practice]]
+- [[Proxy Pattern Practice]]
+
 ## 📚 Tài liệu
 
 - [Head First Design Patterns](https://www.amazon.com/Head-First-Design-Patterns-Brain-Friendly/dp/0596007124)

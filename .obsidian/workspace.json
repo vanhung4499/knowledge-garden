@@ -8,43 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "9fc98b9e545b2535",
+            "id": "357803588c2a9beb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "93a168e8c72c8ee5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "cc1f58ba68893f1f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -115,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md"
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md"
               }
             }
           }
@@ -147,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -164,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -211,12 +186,16 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "cc1f58ba68893f1f",
+  "active": "357803588c2a9beb",
   "lastOpenFiles": [
-    "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Creational",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+    "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Prototype Pattern Practice.md",
+    "Extras/Draws/Drawing 2024-03-27 20.12.16.excalidraw.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural",
+    "Technical/Design Arch/Design Pattern/Practical/Creational",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Factory Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Builder Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Abstract Factory Pattern Practice.md",
@@ -239,15 +218,12 @@
     "Technical/Design Arch/Design Pattern/Behavioral/Command Pattern.md",
     "Technical/Design Arch/Design Pattern/Behavioral/Chain of Responsibility Pattern.md",
     "Technical/Design Arch/Design Pattern/Behavioral",
-    "Technical/Design Arch/Design Pattern/Structural/Proxy Pattern.md",
-    "Technical/Design Arch/Design Pattern/Structural/Flyweight Pattern.md",
     "Technical/Design Arch/Design Pattern/Structural",
     "Technical/Design Arch/Design Pattern/Practical",
     "Technical/Design Arch/Design Pattern/Partterns",
     "Technical/Big Data/Hive",
     "Technical/Big Data/Installation",
     "Technical/Big Data/Hadoop/HDFS",
-    "Technical/Big Data/Spark",
     "Extras/Draws/cpu-cache-work.svg",
     "Extras/Draws/es-write-detail.excalidraw.png",
     "Extras/Media/20230906153409.png",
