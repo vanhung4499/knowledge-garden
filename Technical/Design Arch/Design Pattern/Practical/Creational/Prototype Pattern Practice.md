@@ -65,7 +65,7 @@ Tuy nhiên, từ một phần nội dung có thể làm bài kiểm tra trực t
 
 Bởi vì cần triển khai một dịch vụ để chọn câu hỏi cho kỳ thi trực tuyến, vì vậy ở đây tạo một thông tin lớp học về câu hỏi trong ngân hàng câu hỏi, được sử dụng để tạo ra; `Câu hỏi chọn lựa` (_choices_) và `Câu hỏi trả lời` (_responses_).
 
-### Mô phỏng Tình huống Dự án
+### Mô phỏng Dự án Tình huống
 
 ```shell
 design-demo-4-00/
