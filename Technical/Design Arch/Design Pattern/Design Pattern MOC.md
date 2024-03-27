@@ -7,7 +7,7 @@ categories:
   - design-pattern
   - moc
 date created: 2023-10-06
-date modified: 2024-03-25
+date modified: 2024-03-27
 ---
 
 # Design Pattern MOC
@@ -64,7 +64,15 @@ date modified: 2024-03-25
 >  Phần này áp dụng design parttern để giải quyết các thực tế.  
 >  Sử dụng Java để triển khai các mẫu thiết kế.
 
+### Creational
+
 - [[Factory Pattern Practice]]
+- [[Abstract Factory Pattern Practice]]
+- [[Builder Pattern Practice]]
+- [[Prototype Pattern Practice]]
+- [[Singleton Pattern Practice]]
+
+### Structural
 
 ## 📚 Tài liệu
 

@@ -3,7 +3,7 @@ tags:
 categories: 
 title: README
 date created: 2023-07-09
-date modified: 2024-02-25
+date modified: 2024-03-26
 ---
 
 # Hung Nguyen's Knowledge Garden
@@ -44,7 +44,7 @@ Các bài viết chủ yếu về technical xoay quanh **Computer Science**, **P
 		- [[Kubernates MOC|Kubernate]]
 	- [[Design Arch MOC|Sofware Design and Architecture]]
 		- [[System Design MOC|System Design]]
-		- [[Design Pattern Overview|Design Pattern]]
+		- [[Design Pattern MOC|Design Pattern]]
 	- [[Cloud MOC|Cloud]]
 	- [[Interview MOC|Technical Interview]]
 - [[Productivity MOC|Productivity]]

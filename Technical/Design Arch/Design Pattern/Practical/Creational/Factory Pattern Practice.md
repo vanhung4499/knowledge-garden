@@ -4,10 +4,10 @@ tags:
   - design-pattern
 categories: 
 date created: 2024-03-25
-date modified: 2024-03-25
+date modified: 2024-03-27
 ---
 
-# Thực chiến Factory Method Pattern "Xây dựng dịch vụ phát thưởng thống nhất cho nhiều loại hàng hóa khác nhau"
+# Factory Method Pattern: Xây dựng dịch vụ phát thưởng thống nhất cho nhiều loại hàng hóa khác nhau
 
 ## Giới thiệu
 
@@ -34,8 +34,8 @@ Thực ra, một phần của người không đọc kỹ sách và tài liệu 
 | Dự án             | Mô tả                                                                                       |
 | ----------------- | ------------------------------------------------------------------------------------------- |
 | demo-design-1-00  | Dự án mô phỏng, cung cấp interface phát thưởng cho ba nhóm sản phẩm khác nhau               |
-| demo-design-1-01  | Sử dụng mã nguồn lạng lách để triển khai business requiremetnt, cũng là việc sử dụng ifelse |
-| idemo-design-1-02 | Tối ưu mã nguồn thông qua mấu thiết kể, tạo ra sự so sánh để học hỏi                    |
+| demo-design-1-01  | Sử dụng mã nguồn lồng nhau để triển khai business requiremetnt, cũng là việc sử dụng ifelse |
+| idemo-design-1-02 | Tối ưu mã nguồn thông qua mấu thiết kể, tạo ra sự so sánh để học hỏi                        |
 
 > [!info] Cách đánh thứ tự
 > - 1-00, 1 đại diện cho mấu thiết kể đầu tiên, Factory Method Pattern
@@ -44,7 +44,9 @@ Thực ra, một phần của người không đọc kỹ sách và tài liệu 
 
 ## ## Giới thiệu về Mẫu thiết kế Factory Method
 
-Mẫu thiết kế Factory, còn được gọi là mẫu thiết kế Factory Method, là một mẫu thiết kế tạo đối tượng, trong đó phương thức tạo đối tượng được cung cấp trong lớp cha, cho phép lớp con quyết định loại đối tượng được khởi tạo.
+![image.png](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20240326130012.png)
+
+Factory Pattern, còn được gọi là Factory Method Pattern, là một mẫu thiết kế tạo đối tượng, trong đó phương thức tạo đối tượng được cung cấp trong lớp cha, cho phép lớp con quyết định loại đối tượng được khởi tạo.
 
 Mẫu thiết kế này cũng là một trong những mẫu thiết kế phổ biến nhất trong phát triển Java. Mục đích chính của nó là xác định một interface tạo đối tượng, để cho phép các lớp con tự quyết định khởi tạo đối tượng nào, mẫu thiết kế factory cho phép quá trình tạo ra trì hoãn cho lớp con.
 
@@ -248,6 +250,30 @@ Mô phỏng việc phát thẻ game Garena: 012345678, AQY1xjkUodl8LO975GdfrYUio
 Tiếp theo, chúng ta sẽ sử dụng Factory Method Pattern để tối ưu hóa mã, đây cũng được coi là một ví dụ nhỏ về **Refactoring**. Sau khi Refactoring, bạn sẽ thấy cấu trúc mã rõ ràng hơn và có khả năng mở rộng cho các yêu cầu nghiệp vụ mới trong tương lai. Tuy nhiên, trong thực tế, chúng ta sẽ tiếp tục hoàn thiện nó, phần hiện tại chỉ tóm tắt phần cốt lõi nhất để bạn dễ dàng học tập.
 
 ### Cấu trúc dự án
+
+```shell
+design-demo-1-02/
+├── pom.xml
+└── src
+    ├── main
+    │   └── java
+    │       └── com
+    │           └── hnv99
+    │               └── design
+    │                   ├── StoreFactory.java
+    │                   └── store
+    │                       ├── ICommodity.java
+    │                       └── impl
+    │                           ├── CardCommodityService.java
+    │                           ├── CouponCommodityService.java
+    │                           └── GoodsCommodityService.java
+    └── test
+        └── java
+            └── com
+                └── hnv99
+                    └── design
+                        └── ApiTest.java
+```
 
 - Đầu tiên, hãy nhìn vào cấu trúc dự án trên, bạn có cảm nhận gì? Ví dụ:
 	- Nó có vẻ rõ ràng hơn.
