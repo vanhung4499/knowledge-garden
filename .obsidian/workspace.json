@@ -5,15 +5,23 @@
     "children": [
       {
         "id": "fc2b352a566d3a08",
+        "id": "fc2b352a566d3a08",
         "type": "tabs",
         "children": [
           {
+            "id": "357803588c2a9beb",
             "id": "357803588c2a9beb",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
+                "mode": "source",
+                "source": false
+              }
+              "type": "markdown",
+              "state": {
+                "file": "Home.md",
                 "mode": "source",
                 "source": false
               }
@@ -31,6 +39,7 @@
       {
         "id": "4bb57e58b8f80419",
         "type": "tabs",
+        "dimension": 54.222222222222214,
         "dimension": 54.222222222222214,
         "children": [
           {
@@ -83,6 +92,7 @@
         "id": "6ef78510c55f19c6",
         "type": "tabs",
         "dimension": 45.777777777777786,
+        "dimension": 45.777777777777786,
         "children": [
           {
             "id": "de9bbc59fe5a4b25",
@@ -92,12 +102,16 @@
               "state": {
                 "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md"
               }
+              "state": {
+                "file": "Home.md"
+              }
             }
           }
         ]
       }
     ],
     "direction": "horizontal",
+    "width": 298.5
     "width": 298.5
   },
   "right": {
@@ -123,6 +137,7 @@
               "type": "backlink",
               "state": {
                 "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
+                "file": "Home.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -140,6 +155,7 @@
               "type": "outgoing-link",
               "state": {
                 "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
+                "file": "Home.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -147,16 +163,20 @@
           },
           {
             "id": "b3ca465051d9ac5d",
+            "id": "b3ca465051d9ac5d",
             "type": "leaf",
             "state": {
+              "type": "Strange New Worlds",
               "type": "Strange New Worlds",
               "state": {}
             }
           },
           {
             "id": "36acbf9bd78859a3",
+            "id": "36acbf9bd78859a3",
             "type": "leaf",
             "state": {
+              "type": "mermaid-toolbar-view",
               "type": "mermaid-toolbar-view",
               "state": {}
             }
@@ -167,9 +187,12 @@
     "direction": "horizontal",
     "width": 300.5,
     "collapsed": true
+    "width": 300.5,
+    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
+      "copilot:Copilot Chat": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -184,45 +207,48 @@
       "mermaid-tools:Open Mermaid Toolbar": false,
       "omnisearch:Omnisearch": false,
       "homepage:Open homepage": false
+      "omnisearch:Omnisearch": false,
+      "homepage:Open homepage": false
     }
   },
   "active": "357803588c2a9beb",
+  "active": "357803588c2a9beb",
   "lastOpenFiles": [
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
+    "Home.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Prototype Pattern Practice.md",
-    "Extras/Draws/Drawing 2024-03-27 20.12.16.excalidraw.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural",
-    "Technical/Design Arch/Design Pattern/Practical/Creational",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Factory Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Builder Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Abstract Factory Pattern Practice.md",
-    "Home.md",
-    "Extras/Draws/AbstractFactoryStructure.excalidraw.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Simple Factory Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Factory Method Pattern.md",
-    "README.md",
-    "Technical/Design Arch/System Design/System Design MOC.md",
-    "Technical/Design Arch/Design Pattern/Creational",
-    "Technical/Design Arch/Design Pattern/Behavioral/Visitor Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Template Method Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Strategy Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/State Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Observer Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Memento Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Mediator Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Iterator Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Interpreter Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Command Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral/Chain of Responsibility Pattern.md",
-    "Technical/Design Arch/Design Pattern/Behavioral",
-    "Technical/Design Arch/Design Pattern/Structural",
+    "Technical/Design Arch/Design Pattern/Practical/Structural",
+    "Technical/Design Arch/Design Pattern/Practical/Creational",
     "Technical/Design Arch/Design Pattern/Practical",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural/Proxy Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural/Flyweight Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural/Facade Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural/Decorator Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural/Composite Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural/Bridge Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural/Adapter Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Creational/Singleton Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Creational/Simple Factory Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Creational/Prototype Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Creational/Factory Method Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Creational/Builder Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Creational/Abstract Factory Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Visitor Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Template Method Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Strategy Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/State Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Observer Pattern.md",
+    "Technical/Design Arch/Design Pattern/Partterns/Structural",
+    "Technical/Design Arch/Design Pattern/Partterns/Creational",
+    "Technical/Design Arch/Design Pattern/Partterns/Behavioral",
     "Technical/Design Arch/Design Pattern/Partterns",
-    "Technical/Big Data/Hive",
     "Technical/Big Data/Installation",
+    "Technical/Big Data/Hive",
     "Technical/Big Data/Hadoop/HDFS",
     "Extras/Draws/cpu-cache-work.svg",
     "Extras/Draws/es-write-detail.excalidraw.png",
