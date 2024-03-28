@@ -4,30 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "fc2b352a566d3a08",
-        "id": "fc2b352a566d3a08",
+        "id": "0c148f7a3e31db4f",
         "type": "tabs",
         "children": [
           {
-            "id": "357803588c2a9beb",
-            "id": "357803588c2a9beb",
+            "id": "bfab8a84cf674a85",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
+                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
                 "mode": "source",
                 "source": false
               }
+            }
+          },
+          {
+            "id": "b6aa12735d505c92",
+            "type": "leaf",
+            "state": {
               "type": "markdown",
               "state": {
-                "file": "Home.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -39,7 +44,6 @@
       {
         "id": "4bb57e58b8f80419",
         "type": "tabs",
-        "dimension": 54.222222222222214,
         "dimension": 54.222222222222214,
         "children": [
           {
@@ -92,7 +96,6 @@
         "id": "6ef78510c55f19c6",
         "type": "tabs",
         "dimension": 45.777777777777786,
-        "dimension": 45.777777777777786,
         "children": [
           {
             "id": "de9bbc59fe5a4b25",
@@ -100,10 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md"
-              }
-              "state": {
-                "file": "Home.md"
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md"
               }
             }
           }
@@ -111,7 +111,6 @@
       }
     ],
     "direction": "horizontal",
-    "width": 298.5
     "width": 298.5
   },
   "right": {
@@ -136,8 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
-                "file": "Home.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -154,8 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
-                "file": "Home.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -163,36 +160,30 @@
           },
           {
             "id": "b3ca465051d9ac5d",
-            "id": "b3ca465051d9ac5d",
             "type": "leaf",
             "state": {
-              "type": "Strange New Worlds",
               "type": "Strange New Worlds",
               "state": {}
             }
           },
           {
-            "id": "36acbf9bd78859a3",
-            "id": "36acbf9bd78859a3",
+            "id": "7d56d01f9077359d",
             "type": "leaf",
             "state": {
-              "type": "mermaid-toolbar-view",
               "type": "mermaid-toolbar-view",
               "state": {}
             }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
     "width": 300.5,
     "collapsed": true
-    "width": 300.5,
-    "collapsed": true
   },
   "left-ribbon": {
     "hiddenItems": {
-      "copilot:Copilot Chat": false,
       "switcher:Open quick switcher": false,
       "canvas:Create new canvas": false,
       "daily-notes:Open today's daily note": false,
@@ -207,15 +198,19 @@
       "mermaid-tools:Open Mermaid Toolbar": false,
       "omnisearch:Omnisearch": false,
       "homepage:Open homepage": false
-      "omnisearch:Omnisearch": false,
-      "homepage:Open homepage": false
     }
   },
-  "active": "357803588c2a9beb",
-  "active": "357803588c2a9beb",
+  "active": "b6aa12735d505c92",
   "lastOpenFiles": [
-    "Home.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Composite Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+    "Technical/DSA/DSA MOC.md",
+    "Technical/DSA/DS/Data Structures MOC.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
+    "Technical/Design Arch/Design Arch MOC.md",
+    "Technical/Design Arch/Theory/Dev Theory MOC.md",
+    "Home.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Prototype Pattern Practice.md",
@@ -236,13 +231,6 @@
     "Technical/Design Arch/Design Pattern/Partterns/Creational/Simple Factory Pattern.md",
     "Technical/Design Arch/Design Pattern/Partterns/Creational/Prototype Pattern.md",
     "Technical/Design Arch/Design Pattern/Partterns/Creational/Factory Method Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Builder Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Abstract Factory Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Visitor Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Template Method Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Strategy Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/State Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Behavioral/Observer Pattern.md",
     "Technical/Design Arch/Design Pattern/Partterns/Structural",
     "Technical/Design Arch/Design Pattern/Partterns/Creational",
     "Technical/Design Arch/Design Pattern/Partterns/Behavioral",
