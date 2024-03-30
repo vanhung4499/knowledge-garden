@@ -4,23 +4,11 @@
     "type": "split",
     "children": [
       {
-        "id": "0c148f7a3e31db4f",
+        "id": "7995589242937813",
         "type": "tabs",
         "children": [
           {
-            "id": "bfab8a84cf674a85",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b6aa12735d505c92",
+            "id": "4ee3162938bc0d15",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -31,8 +19,7 @@
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,17 +187,21 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "b6aa12735d505c92",
+  "active": "4ee3162938bc0d15",
   "lastOpenFiles": [
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Composite Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Flyweight Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Proxy Pattern Practice.md",
+    "Extras/Draws/Drawing 2024-03-30 14.49.16.excalidraw.md",
     "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+    "Home.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Facade Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Composite Pattern Practice.md",
     "Technical/DSA/DSA MOC.md",
     "Technical/DSA/DS/Data Structures MOC.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
     "Technical/Design Arch/Design Arch MOC.md",
     "Technical/Design Arch/Theory/Dev Theory MOC.md",
-    "Home.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Creational/Prototype Pattern Practice.md",
@@ -227,10 +218,6 @@
     "Technical/Design Arch/Design Pattern/Partterns/Structural/Composite Pattern.md",
     "Technical/Design Arch/Design Pattern/Partterns/Structural/Bridge Pattern.md",
     "Technical/Design Arch/Design Pattern/Partterns/Structural/Adapter Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Singleton Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Simple Factory Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Prototype Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational/Factory Method Pattern.md",
     "Technical/Design Arch/Design Pattern/Partterns/Structural",
     "Technical/Design Arch/Design Pattern/Partterns/Creational",
     "Technical/Design Arch/Design Pattern/Partterns/Behavioral",
