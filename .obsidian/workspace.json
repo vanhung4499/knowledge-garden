@@ -4,22 +4,35 @@
     "type": "split",
     "children": [
       {
-        "id": "7995589242937813",
+        "id": "cd93c2380bd975dc",
         "type": "tabs",
         "children": [
           {
-            "id": "4ee3162938bc0d15",
+            "id": "653d9d494bd2f19a",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
+                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "6c7b5565e22a2bc8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -90,7 +103,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md"
+                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md"
               }
             }
           }
@@ -122,7 +135,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +152,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
+                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +167,7 @@
             }
           },
           {
-            "id": "7d56d01f9077359d",
+            "id": "e2d1083e6c5a8753",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -187,44 +200,44 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "4ee3162938bc0d15",
+  "active": "6c7b5565e22a2bc8",
   "lastOpenFiles": [
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Flyweight Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Proxy Pattern Practice.md",
-    "Extras/Draws/Drawing 2024-03-30 14.49.16.excalidraw.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Template Method Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Strategy Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/State Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Iterator Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Observer Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Memento Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Mediator Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Interpreter Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Command Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Design Pattern Overview.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Proxy Pattern Practice.md",
     "Home.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Facade Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Chain of Responsibility Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Flyweight Pattern Practice.md",
+    "Extras/Draws/Drawing 2024-03-30 14.49.16.excalidraw.md",
+    "Technical/Design Arch/Design Pattern/Practical/Structural/Facade Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Composite Pattern Practice.md",
     "Technical/DSA/DSA MOC.md",
     "Technical/DSA/DS/Data Structures MOC.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
     "Technical/Design Arch/Design Arch MOC.md",
     "Technical/Design Arch/Theory/Dev Theory MOC.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Creational/Prototype Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Creational/Factory Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Creational/Builder Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Creational/Abstract Factory Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural",
     "Technical/Design Arch/Design Pattern/Practical/Creational",
     "Technical/Design Arch/Design Pattern/Practical",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural/Proxy Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural/Flyweight Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural/Facade Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural/Decorator Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural/Composite Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural/Bridge Pattern.md",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural/Adapter Pattern.md",
     "Technical/Design Arch/Design Pattern/Partterns/Structural",
     "Technical/Design Arch/Design Pattern/Partterns/Creational",
     "Technical/Design Arch/Design Pattern/Partterns/Behavioral",
     "Technical/Design Arch/Design Pattern/Partterns",
     "Technical/Big Data/Installation",
     "Technical/Big Data/Hive",
-    "Technical/Big Data/Hadoop/HDFS",
     "Extras/Draws/cpu-cache-work.svg",
     "Extras/Draws/es-write-detail.excalidraw.png",
     "Extras/Media/20230906153409.png",

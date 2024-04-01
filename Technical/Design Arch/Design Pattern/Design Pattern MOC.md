@@ -7,7 +7,7 @@ categories:
   - design-pattern
   - moc
 date created: 2023-10-06
-date modified: 2024-03-27
+date modified: 2024-04-01
 ---
 
 # Design Pattern MOC
@@ -45,13 +45,13 @@ date modified: 2024-03-27
 
 ### Behaviour
 
-- [[Template Method Pattern]]
+- [[Chain of Responsibility Pattern]]
 - [[Command Pattern]]
+- [[Template Method Pattern]]
 - [[Iterator Pattern]]
 - [[Observer Pattern]]
 - [[Interpreter Pattern]] Updating!
 - [[Mediator Pattern]]
-- [[Chain of Responsibility Pattern]]
 - [[Memento Pattern]]
 - [[Strategy Pattern]]
 - [[Visitor Pattern]]
@@ -81,6 +81,19 @@ date modified: 2024-03-27
 - [[Facade Pattern Practice]]
 - [[Flyweight Pattern Practice]]
 - [[Proxy Pattern Practice]]
+
+### Behaviour
+
+- [[Chain of Responsibility Pattern Practice]]
+- [[Command Pattern Practice]]
+- [[Iterator Pattern Practice]]
+- [[Memento Pattern Practice]]
+- [[Observer Pattern Practice]]
+- [[State Pattern Practice]]
+- [[Template Method Pattern Practice]]
+- [[Interpreter Pattern Practice]]
+- [[Strategy Pattern Practice]]
+- [[Visitor Pattern Practice]]
 
 ## 📚 Tài liệu
 
