@@ -13,26 +13,13 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "6c7b5565e22a2bc8",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
                 "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "vertical"
@@ -200,19 +187,20 @@
       "homepage:Open homepage": false
     }
   },
-  "active": "6c7b5565e22a2bc8",
+  "active": "653d9d494bd2f19a",
   "lastOpenFiles": [
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Template Method Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Command Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
+    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Template Method Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/Strategy Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/State Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/Iterator Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/Observer Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/Memento Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/Mediator Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral/Interpreter Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Command Pattern Practice.md",
     "Technical/Design Arch/Design Pattern/Design Pattern Overview.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural/Proxy Pattern Practice.md",
     "Home.md",
@@ -228,7 +216,6 @@
     "Technical/DSA/DSA MOC.md",
     "Technical/DSA/DS/Data Structures MOC.md",
     "Technical/Design Arch/Design Arch MOC.md",
-    "Technical/Design Arch/Theory/Dev Theory MOC.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural",
     "Technical/Design Arch/Design Pattern/Practical/Creational",
     "Technical/Design Arch/Design Pattern/Practical",
