@@ -5,7 +5,7 @@ tags:
   - project
 categories: 
 date created: 2024-02-05
-date modified: 2024-02-05
+date modified: 2024-04-20
 ---
 
 # Mall MOC
@@ -27,7 +27,6 @@ date modified: 2024-02-05
 > Tổng quan về kiến ​​trúc và cơ sở dữ liệu của dự án cũng như các điểm kiến ​​thức được đề xuất cần thiết.
 
 - [[Mall Overview]]
-
 
 ## Architechture
 

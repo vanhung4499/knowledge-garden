@@ -3,7 +3,7 @@ title: Java SPI In Depth
 tags: [java, javase]
 categories: [java, javase]
 date created: 2023-07-14
-date modified: 2023-07-14
+date modified: 2024-04-18
 ---
 
 # Hiểu sâu về Java SPI cấp độ mã nguồn
@@ -12,18 +12,18 @@ date modified: 2023-07-14
 
 SPI viết tắt của **Service Provider Interface**, là một cơ chế trong Java được thiết kế để cho phép các bên thứ ba triển khai hoặc mở rộng các API. Nó là một cơ chế để tải động dịch vụ. SPI trong Java có bốn yếu tố chính:
 
-- **Giao diện SPI**: Đây là giao diện hoặc lớp trừu tượng mà các lớp triển khai dịch vụ phải tuân thủ.
+- **SPI Interface**: Đây là Interface hoặc lớp trừu tượng mà các lớp triển khai dịch vụ phải tuân thủ.
 - **Lớp triển khai SPI**: Đây là các lớp cụ thể cung cấp dịch vụ.
-- **Cấu hình SPI**: Đây là tệp cấu hình theo quy ước của SPI, cung cấp logic để tìm kiếm các lớp triển khai dịch vụ. Tệp cấu hình phải được đặt trong thư mục `META-INF/services` và tên tệp phải trùng với tên đầy đủ của giao diện dịch vụ. Mỗi dòng trong tệp chứa thông tin chi tiết về lớp triển khai dịch vụ, cũng là tên đầy đủ của lớp triển khai dịch vụ.
+- **Cấu hình SPI**: Đây là tệp cấu hình theo quy ước của SPI, cung cấp logic để tìm kiếm các lớp triển khai dịch vụ. Tệp cấu hình phải được đặt trong thư mục `META-INF/services` và tên tệp phải trùng với tên đầy đủ của Interface dịch vụ. Mỗi dòng trong tệp chứa thông tin chi tiết về lớp triển khai dịch vụ, cũng là tên đầy đủ của lớp triển khai dịch vụ.
 - **ServiceLoader**: Đây là lớp cốt lõi của SPI Java, được sử dụng để tải các lớp triển khai SPI. Lớp `ServiceLoader` cung cấp các phương thức hữu ích để lấy các triển khai cụ thể, lặp qua chúng hoặc tải lại dịch vụ.
 
 ## Ví dụ về SPI
 
 Để hiểu rõ hơn, chúng ta có thể xem xét một ví dụ cụ thể về cách sử dụng Java SPI.
 
-### Giao diện SPI
+### Interface SPI
 
-Đầu tiên, chúng ta cần định nghĩa một giao diện SPI, không có gì khác biệt so với việc định nghĩa một giao diện thông thường.
+Đầu tiên, chúng ta cần định nghĩa một Interface SPI, không có gì khác biệt so với việc định nghĩa một Interface thông thường.
 
 ```java
 package com.hnv99.javacore.spi;
@@ -64,11 +64,11 @@ public class RedisStorage implements DataStorage {
 }
 ```
 
-Đến đây, việc định nghĩa giao diện và triển khai giao diện không có gì khác biệt so với việc định nghĩa và triển khai một giao diện Java thông thường.
+Đến đây, việc định nghĩa Interface và triển khai Interface không có gì khác biệt so với việc định nghĩa và triển khai một Interface Java thông thường.
 
 ### Cấu hình SPI
 
-Nếu muốn tìm hiểu về dịch vụ bằng cơ chế SPI Java, chúng ta cần định nghĩa logic tìm kiếm dịch vụ trong cấu hình SPI. Tệp cấu hình SPI phải được đặt trong thư mục `META-INF/services` và tên tệp phải trùng với tên đầy đủ của giao diện dịch vụ. Ví dụ mã nguồn này, tên tệp cấu hình phải là `com.hnv99.javacore.spi.DataStorage` và nội dung tệp như sau:
+Nếu muốn tìm hiểu về dịch vụ bằng cơ chế SPI Java, chúng ta cần định nghĩa logic tìm kiếm dịch vụ trong cấu hình SPI. Tệp cấu hình SPI phải được đặt trong thư mục `META-INF/services` và tên tệp phải trùng với tên đầy đủ của Interface dịch vụ. Ví dụ mã nguồn này, tên tệp cấu hình phải là `com.hnv99.javacore.spi.DataStorage` và nội dung tệp như sau:
 
 ```
 com.hnv99.javacore.spi.MysqlStorage  
@@ -103,7 +103,7 @@ Kết quả:
 
 ## Nguyên lý của SPI
 
-Trong phần trước, chúng ta đã tìm hiểu về các yếu tố và cách sử dụng Java SPI. Bạn có bao giờ tự hỏi Java SPI khác biệt như thế nào so với giao diện Java thông thường và làm thế nào Java SPI hoạt động không? Thực tế, cơ chế Java SPI phụ thuộc vào lớp `ServiceLoader` để phân tích và tải dịch vụ. Do đó, nắm vững quy trình làm việc của `ServiceLoader` có nghĩa là bạn đã hiểu nguyên lý của SPI. Mã nguồn của `ServiceLoader` rất ngắn gọn, tiếp theo, chúng ta hãy đọc mã nguồn để từng bước hiểu quy trình làm việc của `ServiceLoader`.
+Trong phần trước, chúng ta đã tìm hiểu về các yếu tố và cách sử dụng Java SPI. Bạn có bao giờ tự hỏi Java SPI khác biệt như thế nào so với Interface Java thông thường và làm thế nào Java SPI hoạt động không? Thực tế, cơ chế Java SPI phụ thuộc vào lớp `ServiceLoader` để phân tích và tải dịch vụ. Do đó, nắm vững quy trình làm việc của `ServiceLoader` có nghĩa là bạn đã hiểu nguyên lý của SPI. Mã nguồn của `ServiceLoader` rất ngắn gọn, tiếp theo, chúng ta hãy đọc mã nguồn để từng bước hiểu quy trình làm việc của `ServiceLoader`.
 
 ### Biến thành viên của ServiceLoader
 
@@ -148,7 +148,7 @@ public final class ServiceLoader<S> implements Iterable<S> {
 Ở đây, trích dẫn mã nguồn liên quan đến `ServiceLoader.load` như sau:
 
 ```java
-// service là loại giao diện SPI được mong muốn tải
+// service là loại Interface SPI được mong muốn tải
 // loader là ClassLoader được sử dụng để tải dịch vụ SPI
 public static <S> ServiceLoader<S> load(Class<S> service,
 										ClassLoader loader)
@@ -173,7 +173,7 @@ private ServiceLoader(Class<S> svc, ClassLoader cl) {
 
 (2) Ứng dụng duyệt qua các phiên bản SPI bằng phương thức `iterator` của `ServiceLoader`
 
-Lớp `ServiceLoader` được định nghĩa là triển khai của giao diện `Iterable<T>`, vì vậy nó có thể được lặp lại. Thực tế, lớp `ServiceLoader` duy trì một bộ nhớ đệm providers (`LinkedHashMap`), bộ nhớ đệm providers này chứa các phiên bản SPI đã tải thành công, trong đó khóa của Map là tên đầy đủ của lớp triển khai SPI và giá trị là một đối tượng thể hiện của lớp triển khai đó.
+Lớp `ServiceLoader` được định nghĩa là triển khai của Interface `Iterable<T>`, vì vậy nó có thể được lặp lại. Thực tế, lớp `ServiceLoader` duy trì một bộ nhớ đệm providers (`LinkedHashMap`), bộ nhớ đệm providers này chứa các phiên bản SPI đã tải thành công, trong đó khóa của Map là tên đầy đủ của lớp triển khai SPI và giá trị là một đối tượng thể hiện của lớp triển khai đó.
 
 Khi ứng dụng gọi phương thức `iterator` của `ServiceLoader`, `ServiceLoader` sẽ kiểm tra xem bộ nhớ đệm providers có dữ liệu không: nếu có, nó sẽ trả về trình lặp của bộ nhớ đệm providers; nếu không, nó sẽ trả về trình lặp lười biếng của nó.
 
@@ -211,7 +211,7 @@ Trong mã nguồn trên, đã đề cập đến `lookupIterator` là một trì
 Ở đây, trích dẫn mã nguồn quan trọng của `LazyIterator`:
 
 - Phương thức `hasNextService`:
-  1. Ghép `META-INF/services/` + tên đầy đủ của giao diện SPI
+  1. Ghép `META-INF/services/` + tên đầy đủ của Interface SPI
   2. Thử tải tệp cấu hình bằng ClassLoader
   3. Phân tích nội dung tệp cấu hình để lấy tên đầy đủ của lớp triển khai SPI `nextName`
 
@@ -293,10 +293,10 @@ Ví dụ: `java.lang.Object` được lưu trữ trong `rt.jar`. Nếu chúng
 
 **Hạn chế của ủy quyền kép**: ClassLoader con có thể sử dụng các lớp đã được tải bởi ClassLoader cha, trong khi ClassLoader cha không thể sử dụng các lớp đã được tải bởi ClassLoader con. Điều này dẫn đến việc mô hình ủy quyền kép không thể giải quyết tất cả các vấn đề về ClassLoader. Java SPI đối mặt với vấn đề này:
 
-- Giao diện SPI là một phần của thư viện lõi Java, được tải bởi `BootstrapClassLoader`;
+- Interface SPI là một phần của thư viện lõi Java, được tải bởi `BootstrapClassLoader`;
 - Trong khi các lớp Java triển khai SPI thường được tải bởi `AppClassLoader`. `BootstrapClassLoader` không thể tìm thấy các lớp triển khai SPI, vì nó chỉ tải thư viện lõi Java. Nó cũng không thể ủy quyền cho `AppClassLoader`, vì nó là ClassLoader cấp cao nhất. Điều này giải thích tại sao khi tải dịch vụ SPI, chúng ta cần chỉ định ClassLoader. Vì nếu không chỉ định ClassLoader, chúng ta sẽ không thể lấy được dịch vụ SPI.
 
-Nếu không có cài đặt nào, ClassLoader ngữ cảnh của luồng ứng dụng Java mặc định là `AppClassLoader`. Khi sử dụng giao diện SPI trong thư viện lõi, ClassLoader được truyền vào sử dụng ClassLoader ngữ cảnh của luồng, từ đó có thể tải được lớp triển khai SPI. ClassLoader ngữ cảnh của luồng thường được sử dụng trong nhiều cài đặt SPI.
+Nếu không có cài đặt nào, ClassLoader ngữ cảnh của luồng ứng dụng Java mặc định là `AppClassLoader`. Khi sử dụng Interface SPI trong thư viện lõi, ClassLoader được truyền vào sử dụng ClassLoader ngữ cảnh của luồng, từ đó có thể tải được lớp triển khai SPI. ClassLoader ngữ cảnh của luồng thường được sử dụng trong nhiều cài đặt SPI.
 
 Thường có thể sử dụng `Thread.currentThread().getClassLoader()` và `Thread.currentThread().getContextClassLoader()` để lấy ClassLoader ngữ cảnh của luồng.
 
@@ -310,7 +310,7 @@ Java SPI có một số hạn chế:
 
 ## Ứng dụng của SPI
 
-SPI được sử dụng rộng rãi trong phát triển Java. Đầu tiên, trong gói `java.util.spi` của Java đã định nghĩa nhiều giao diện SPI. Dưới đây là một số giao diện SPI:
+SPI được sử dụng rộng rãi trong phát triển Java. Đầu tiên, trong gói `java.util.spi` của Java đã định nghĩa nhiều Interface SPI. Dưới đây là một số Interface SPI:
 
 - [_TimeZoneNameProvider:_](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/util/spi/TimeZoneNameProvider.html) Cung cấp tên múi giờ được địa phương hóa cho lớp TimeZone.
 - [_DateFormatProvider:_](https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/text/spi/DateFormatProvider.html) Cung cấp định dạng ngày tháng và thời gian cho một ngôn ngữ cụ thể.
@@ -337,8 +337,8 @@ Class.forName("com.mysql.jdbc.Driver")
 
 Tuy nhiên, **kể từ JDBC 4.0**, không cần sử dụng phương thức **`Class.forName(XXX)`** để tải trình điều khiển cơ sở dữ liệu nữa, chỉ cần lấy kết nối trực tiếp. Điều này rõ ràng rất tiện lợi, nhưng làm thế nào để thực hiện điều này?
 
-- Giao diện JDBC: Đầu tiên, Java đã tích hợp giao diện `java.sql.Driver` cho JDBC.
-- Triển khai giao diện JDBC: Các trình điều khiển cơ sở dữ liệu riêng biệt tự triển khai giao diện `java.sql.Driver` để quản lý kết nối cơ sở dữ liệu.
+- Interface JDBC: Đầu tiên, Java đã tích hợp Interface `java.sql.Driver` cho JDBC.
+- Triển khai Interface JDBC: Các trình điều khiển cơ sở dữ liệu riêng biệt tự triển khai Interface `java.sql.Driver` để quản lý kết nối cơ sở dữ liệu.
 	- Mysql: Trong gói trình điều khiển Java của Mysql `mysql-connector-java-XXX.jar`, bạn có thể tìm thấy thư mục `META-INF/services`. Thư mục này chứa một tệp có tên `java.sql.Driver`, nội dung của tệp là `com.mysql.cj.jdbc.Driver`. `com.mysql.cj.jdbc.Driver` chính là triển khai của `java.sql.Driver` cho Mysql. Như hình dưới đây:
 
 	  ![](https://raw.githubusercontent.com/vanhung4499/images/master/snap/20220505201455.png)
@@ -429,7 +429,7 @@ ServiceLoader<Driver> loadedDrivers = ServiceLoader.load(Driver.class);
 
 ### Ứng dụng SPI - Common-Logging
 
-common-logging (còn được gọi là Jakarta Commons Logging, viết tắt là JCL) là một công cụ giao diện log phổ biến.
+common-logging (còn được gọi là Jakarta Commons Logging, viết tắt là JCL) là một công cụ Interface log phổ biến.
 
 Lớp cốt lõi của common-logging là `LogFactory`, `LogFactory` là một lớp trừu tượng, nó có trách nhiệm tải cài đặt log cụ thể.
 

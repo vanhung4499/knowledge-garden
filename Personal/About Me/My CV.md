@@ -2,7 +2,7 @@
 tags: 
 categories: 
 date created: 2023-06-27
-date modified: 2023-07-10
+date modified: 2024-04-18
 title: My CV
 ---
 
@@ -70,9 +70,9 @@ I don’t really like to do repetitive and manual tasks. Thus, whenever possible
 
 ## 🚀 Projects
 
-### my-knowledge-garden
+### knowledge-garden
 
-URL: [https://github.com/vanhung4499/my-knowledge-garden.git](https://github.com/vanhung4499/my-knowledge-garden.git)
+URL: [https://github.com/vanhung4499/knowledge-garden.git](https://github.com/vanhung4499/knowledge-garden.git)
 
 `Second Brain + Digital Garden = Digital Garden`
 

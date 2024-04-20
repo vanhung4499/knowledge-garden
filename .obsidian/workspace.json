@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "cd93c2380bd975dc",
+        "id": "cbbcb1cdc6c0629d",
         "type": "tabs",
         "children": [
           {
-            "id": "653d9d494bd2f19a",
+            "id": "c53af60a66f229e8",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
+                "file": "Projects/Mall/Mall MOC.md",
                 "mode": "source",
                 "source": false
               }
@@ -90,7 +90,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md"
+                "file": "Projects/Mall/Mall MOC.md"
               }
             }
           }
@@ -122,7 +122,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
+                "file": "Projects/Mall/Mall MOC.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +139,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
+                "file": "Projects/Mall/Mall MOC.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -154,7 +154,7 @@
             }
           },
           {
-            "id": "e2d1083e6c5a8753",
+            "id": "875d80d35a24f5a8",
             "type": "leaf",
             "state": {
               "type": "mermaid-toolbar-view",
@@ -182,49 +182,49 @@
       "table-editor-obsidian:Advanced Tables Toolbar": false,
       "obsidian42-brat:BRAT": false,
       "dbfolder:Create a new database table": false,
-      "mermaid-tools:Open Mermaid Toolbar": false,
       "omnisearch:Omnisearch": false,
-      "homepage:Open homepage": false
+      "homepage:Open homepage": false,
+      "mermaid-tools:Open Mermaid Toolbar": false
     }
   },
-  "active": "653d9d494bd2f19a",
+  "active": "c53af60a66f229e8",
   "lastOpenFiles": [
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Command Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Design Pattern MOC.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Visitor Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Creational/Singleton Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Template Method Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Strategy Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/State Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Iterator Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Observer Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Memento Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Mediator Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Interpreter Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Design Pattern Overview.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Proxy Pattern Practice.md",
+    "Projects/MiniDB/MiniDB MOC.md",
+    "Projects/MiniDB/MiniDB Client & Server.md",
+    "Projects/MiniDB/MiniDB Field & Table.md",
+    "Projects/MiniDB/MiniDB Index.md",
+    "Projects/MiniDB/MiniDB Deadlock & VM.md",
     "Home.md",
-    "Technical/Design Arch/Design Pattern/Practical/Behavioral/Chain of Responsibility Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Bridge Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Adapter Pattern Practice.md",
+    "Projects/MiniDB/MiniDB Page Index.md",
+    "Projects/MiniDB/MiniDB Log & Recovery.md",
+    "Projects/MiniDB/MiniDB Arch & Run.md",
+    "Projects/MiniDB/MiniDB Transaction Isolation.md",
+    "Projects/Projects MOC.md",
+    "Projects/MiniDB/MiniDB Transaction Manager.md",
+    "Projects/MiniDB/MiniDB Page & Cache.md",
+    "Projects/MiniDB/MiniDB Cache & Sharing Memory.md",
+    "Projects/Mall/Mall MOC.md",
+    "Projects/Mall/Mall Overview.md",
+    "Projects/CodeForum/GS/CF Overview.md",
+    "Projects/CodeForum/Doc/CF Tech Arch Design.md",
+    "Projects/CodeForum/Doc/CF Solution Design.md",
+    "Projects/MiniDB",
+    "Technical/Programming/Java/Java MOC.md",
+    "Technical/Programming/Java/JavaSE/Advanced/Java SPI In Depth.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Exception In Depth.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Method.md",
+    "Technical/Programming/Java/JavaSE/Basic/Java Development Environment.md",
+    "Technical/Programming/Java/JavaEE/JavaWeb/JavaWeb Servlet Guide.md",
+    "Technical/Programming/Java/JavaEE/JavaWeb/JavaWeb JSP Guide.md",
+    "Projects/CodeForum/UI",
+    "Projects/CodeForum/Basics",
+    "Projects/CodeForum/Doc",
+    "Projects/CodeForum/GS",
+    "Extras/Media/IORegistryExplorer.zip",
+    "Projects/CodeForum",
+    "Projects/Mall/Untitled",
     "Technical/Design Arch/Design Pattern/Practical/Behavioral",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Decorator Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Flyweight Pattern Practice.md",
-    "Extras/Draws/Drawing 2024-03-30 14.49.16.excalidraw.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Facade Pattern Practice.md",
-    "Technical/Design Arch/Design Pattern/Practical/Structural/Composite Pattern Practice.md",
-    "Technical/DSA/DSA MOC.md",
-    "Technical/DSA/DS/Data Structures MOC.md",
-    "Technical/Design Arch/Design Arch MOC.md",
     "Technical/Design Arch/Design Pattern/Practical/Structural",
-    "Technical/Design Arch/Design Pattern/Practical/Creational",
-    "Technical/Design Arch/Design Pattern/Practical",
-    "Technical/Design Arch/Design Pattern/Partterns/Structural",
-    "Technical/Design Arch/Design Pattern/Partterns/Creational",
-    "Technical/Design Arch/Design Pattern/Partterns/Behavioral",
-    "Technical/Design Arch/Design Pattern/Partterns",
-    "Technical/Big Data/Installation",
-    "Technical/Big Data/Hive",
     "Extras/Draws/cpu-cache-work.svg",
     "Extras/Draws/es-write-detail.excalidraw.png",
     "Extras/Media/20230906153409.png",

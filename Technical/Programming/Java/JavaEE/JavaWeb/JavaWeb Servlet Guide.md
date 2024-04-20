@@ -38,8 +38,8 @@ Các tài nguyên Web trên Internet mà người dùng có thể truy cập chi
 
 Servlet (Server Applet) là một chương trình máy chủ được viết bằng Java, có tính năng độc lập với nền tảng và giao thức. Chức năng chính của Servlet là tương tác và tạo ra dữ liệu trang web động.
 
-- Servlet theo nghĩa hẹp chỉ đề cập đến một giao diện được triển khai bằng Java.
-- Servlet theo nghĩa rộng hơn đề cập đến bất kỳ lớp nào triển khai giao diện Servlet đó.
+- Servlet theo nghĩa hẹp chỉ đề cập đến một Interface được triển khai bằng Java.
+- Servlet theo nghĩa rộng hơn đề cập đến bất kỳ lớp nào triển khai Interface Servlet đó.
 
 Servlet chạy trên các máy chủ ứng dụng hỗ trợ Java. Về cơ bản, Servlet có thể phản hồi bất kỳ loại yêu cầu nào, nhưng hầu hết các trường hợp, Servlet chỉ được sử dụng để mở rộng máy chủ Web dựa trên giao thức HTTP.
 
@@ -48,7 +48,7 @@ Servlet chạy trên các máy chủ ứng dụng hỗ trợ Java. Về cơ bả
 Trước khi có công nghệ Servlet, Web chủ yếu sử dụng công nghệ CGI. Sự khác biệt giữa chúng như sau:
 
 - Servlet được viết bằng Java, chạy trong quá trình máy chủ và có thể chạy service() bằng cách sử dụng nhiều luồng, một thể hiện có thể phục vụ nhiều yêu cầu và thường không bị hủy bỏ.
-- CGI (Common Gateway Interface) là giao diện cổng thông tin chung. Nó tạo một quá trình mới cho mỗi yêu cầu và bị hủy sau khi dịch vụ hoàn thành, do đó hiệu suất thấp hơn Servlet.
+- CGI (Common Gateway Interface) là Interface cổng thông tin chung. Nó tạo một quá trình mới cho mỗi yêu cầu và bị hủy sau khi dịch vụ hoàn thành, do đó hiệu suất thấp hơn Servlet.
 
 ### Phiên bản Servlet và tính năng chính
 
@@ -95,9 +95,9 @@ Java Servlet được viết bằng Java và chạy trên máy chủ web có h�
 
 Java Servlet được tạo và biên dịch giống như bất kỳ lớp Java nào khác. Sau khi bạn cài đặt gói Servlet và thêm chúng vào Classpath của máy tính, bạn có thể biên dịch Servlet bằng trình biên dịch Java của JDK hoặc bất kỳ trình biên dịch nào khác.
 
-### Giao diện Servlet
+### Interface Servlet
 
-Giao diện Servlet định nghĩa năm phương thức sau:
+Interface Servlet định nghĩa năm phương thức sau:
 
 ```java
 public interface Servlet {
